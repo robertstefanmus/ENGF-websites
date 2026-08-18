@@ -220,9 +220,13 @@
         // Hamburger Menu Toggle
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mobileNav = document.getElementById('mobileNav');
+        const body = document.body;
+        const html = document.documentElement;
 
         hamburgerBtn.addEventListener('click', function() {
             mobileNav.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            html.classList.toggle('menu-open');
             hamburgerBtn.setAttribute('aria-expanded', 
                 hamburgerBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
             hamburgerBtn.classList.toggle('active');
@@ -233,6 +237,8 @@
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileNav.classList.remove('active');
+                body.classList.remove('menu-open');
+                html.classList.remove('menu-open');
                 hamburgerBtn.classList.remove('active');
                 hamburgerBtn.setAttribute('aria-expanded', 'false');
             });
@@ -242,6 +248,8 @@
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.topbar')) {
                 mobileNav.classList.remove('active');
+                body.classList.remove('menu-open');
+                html.classList.remove('menu-open');
                 hamburgerBtn.classList.remove('active');
                 hamburgerBtn.setAttribute('aria-expanded', 'false');
             }

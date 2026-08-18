@@ -14,6 +14,14 @@ body {
     box-sizing: border-box;
 }
 
+html.menu-open,
+body.menu-open {
+    overflow: hidden !important;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -708,8 +716,8 @@ body {
 
     .topbar {
         min-height: 56px;
-        padding: 8px 6px 8px 8px;
-        gap: 6px;
+        padding: 2px 6px 3px 8px;
+        gap: 2px;
     }
 
     .logo {
@@ -741,7 +749,8 @@ body {
         height: 28px;
         padding: 0 6px;
         order: 2;
-        margin-left: 0;
+        margin-left: 215px;
+        /* margin-right: 8px; */
     }
 
     .lang-switcher label:not(:last-child)::after {
@@ -767,26 +776,27 @@ body {
 
         flex-direction: column;
 
-        background: #f4ede2;
-
         width: 100%;
-        max-width: 280px;
 
         text-align: left;
 
         transition: left 0.3s ease;
 
-        border-right: 1px solid #e9dec6;
-
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: none;
 
         gap: 0;
 
-        padding: 20px 0;
+        padding: 0;
+
+        margin: 0;
 
         z-index: 999;
 
         min-width: auto;
+
+        border: none;
+
+        align-items: flex-start;
     }
 
     .nav.active {
@@ -794,7 +804,7 @@ body {
     }
 
     .nav a {
-        padding: 16px 24px;
+        padding: 34px 24px;
 
         display: block;
 
@@ -803,6 +813,14 @@ body {
         border-bottom: 1px solid #e9dec6;
 
         position: relative;
+
+        width: 100%;
+
+        background: #ece9e4;
+
+        color: #393333;
+
+        margin: 0;
     }
 
     .nav a::after {
@@ -825,7 +843,7 @@ body {
 
     .hero-inner {
         min-height: calc(100vh - 56px);
-        padding: 40px 16px 50px;
+        padding: 2px 16px 50px;
         align-items: center;
     }
 
@@ -941,7 +959,7 @@ body {
 
     .ecosystem-content p {
         font-size: 0.8rem;
-        line-heig8px 10px;
+        line-height: 1.45;
         gap: 8px;
     }
 
@@ -1063,7 +1081,7 @@ body {
     .topbar {
         min-height: 48px;
         padding: 8px 6px 8px 8px;
-        gap: 6px;
+        gap: 2px;
     }
 
     .logo {
@@ -1093,7 +1111,8 @@ body {
         height: 26px;
         padding: 0 5px;
         order: 2;
-        margin-left: 0;
+        margin-left: auto;
+        margin-right: 6px;
     }
 
     .lang-switcher label:not(:last-child)::after {
@@ -1119,13 +1138,22 @@ body {
 
     .nav {
         top: 48px;
-        max-width: 220px;
-        padding: 16px 0;
+        width: 100%;
+        height: calc(100vh - 48px);
+        max-width: none;
+        padding: 0;
+        margin: 0;
+        align-items: flex-start;
+        background: white;
     }
 
     .nav a {
         padding: 12px 16px;
         font-size: 0.65rem;
+        width: 100%;
+        background: white;
+        color: #393333;
+        margin: 0;
     }
 
     .get-involved-btn {
