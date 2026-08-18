@@ -33,8 +33,14 @@
 
         </a>
 
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
 
-        <nav class="nav" aria-label="Main navigation">
+        <nav class="nav" aria-label="Main navigation" id="mobileNav">
 
             <a href="#">ABOUT</a>
             <a href="#">OUR WORK</a>
@@ -209,6 +215,38 @@
         </footer>
 
     </main>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburgerBtn.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            hamburgerBtn.setAttribute('aria-expanded', 
+                hamburgerBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+            hamburgerBtn.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = mobileNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.topbar')) {
+                mobileNav.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 
 </body>
 
