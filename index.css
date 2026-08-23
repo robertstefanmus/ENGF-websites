@@ -483,6 +483,9 @@ a {
 .dot-red      { background: #a74d45; }
 .dot-teal     { background: #527f7c; }
 
+.mob-view {
+  background: white;
+}
 /* =========================================================
    OPPORTUNITIES
    ========================================================= */
@@ -1235,6 +1238,10 @@ a {
         border-top: 1px solid rgba(112, 78, 49, 0.12);
         border-left: 0;
     }
+
+    .ptitle{
+  font-size: 2.2rem !important;
+}
 
     .newsletter__content {
         width: 100%;

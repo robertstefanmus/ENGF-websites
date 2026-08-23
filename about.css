@@ -1,0 +1,143 @@
+@impotitet url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  --color-bg: #f4ede2;
+  --color-bg-soft: #f2efea;
+  --color-bg-hover: #f1e9dc;
+
+  --color-primary: #4c0d17;
+  --color-primary-dark: #2a070d;
+  --color-burgundy: #581d22;
+
+  --color-text: #393333;
+  --color-text-soft: #4d4a47;
+  --color-muted: #746d68;
+  --color-muted-light: #aaa39b;
+
+  --color-border: #e5dccb;
+  --color-border-dark: #e9dec6;
+
+  --color-gold: #b58c3c;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
+
+  --container: 1600px;
+  --container-wide: 1500px;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.25s ease;
+}
+
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(100% - 120px, 1200px);
+  margin-inline: auto;
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* SECTION 1 */
+
+.about-title {
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.70rem;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+  padding: 0 180px;
+}
+
+.about-subtitle1 {
+  margin-bottom: 42px;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 0.85;
+  color: var(--color-primary);
+  padding: 0 180px;
+}
+
+.about-subtitle2 {
+  margin-bottom: 42px;
+  padding: 0 180px 42px;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--color-muted);
+
+  /* line below the last text */
+  border-bottom: 1px solid var(--color-bag);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-subtitle1 {
+    width: 350px;
+    max-width: calc(100% - 60px);
+    padding: 0;
+    margin-left: 30px;
+    font-size: 2rem;
+  }
+
+  .about-subtitle2 {
+    padding: 0 30px 30px;
+    font-size: 1.1rem;
+  }
+
+  .about-title {
+    padding: 0 30px;
+  }
+}
