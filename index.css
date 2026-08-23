@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap");
+@impotitet url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap");
 
 /* =========================================================
    DESIGN TOKENS
@@ -489,17 +489,19 @@ a {
 .opportunities {
   background: var(--color-bg-soft);
   color: var(--color-burgundy);
-  padding-block: 40px;
+  padding-block: 60px;
 }
 
 .top-bar {
-  width: 100%;
-  margin-bottom: 30px;
-  padding: 0 60px 10px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-bottom: 35px;
+  padding: 0 80px 10px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   border-bottom: 1px solid rgba(88, 29, 34, 0.15);
+  box-sizing: border-box;
 }
 
 .title-group {
@@ -508,7 +510,6 @@ a {
   gap: 24px;
 }
 
-.sub-heading,
 .all-opportunities {
   font-size: 11px;
   font-weight: 600;
@@ -516,7 +517,7 @@ a {
 }
 
 .sub-heading {
-  color: #7a3138;
+  color: #7a3138 !important;
 }
 
 .main-title {
@@ -652,10 +653,15 @@ a {
 
 .research-header,
 .events-header {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-bottom: 35px;
+  padding: 0 80px 10px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(88, 29, 34, 0.2);
+  border-bottom: 1px solid rgba(88, 29, 34, 0.15);
+  box-sizing: border-box;
 }
 
 .research-header {
@@ -715,12 +721,19 @@ a {
 }
 
 .research-meta,
-.research-status {
+.research-status,
+.sub-heading {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
-  color: #7a3138;
+  color: #323131;
+  opacity: 0.9;
   text-transform: uppercase;
+}
+
+.research-title {
+  font-size: 1.4rem !important;
+  font-weight: 600;
 }
 
 .research-meta {
@@ -799,6 +812,11 @@ a {
   text-transform: uppercase;
 }
 
+.partnership-btn:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
 .partnership-image-wrap {
   width: 100%;
   max-width: 760px;
@@ -830,27 +848,29 @@ a {
 }
 
 .event-row {
-  min-height: 110px;
+  min-height: 70px;
   display: grid;
   grid-template-columns:
     minmax(180px, 1.1fr)
     minmax(300px, 2.5fr)
     minmax(200px, 1.1fr);
-  column-gap: 24px;
+  column-gap: 14px;
   align-items: center;
   border-bottom: 1px solid rgba(88, 29, 34, 0.18);
 }
 
 .event-row:last-child {
+  margin-bottom: 80px;
   border-bottom: 0;
 }
 
 .event-date,
 .event-category {
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.14em;
-  color: #7a3138;
+  opacity: 0.9;
+  color: #565656;
   text-transform: uppercase;
 }
 
@@ -859,9 +879,18 @@ a {
   text-align: right;
 }
 
+.etitle,
+.rtitle{
+  font-size: 2.2rem !important;
+}
+
+.ptitle{
+  font-size: 3.2rem !important;
+}
+
 .event-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 2.5vw, 3.2rem);
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 0.95;
   color: var(--color-burgundy);
