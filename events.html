@@ -6,254 +6,385 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/png" href="logo.jpg" />
-    <link rel="stylesheet" href="Homepage.css">
-    <link rel="stylesheet" href="General.css">
-    <title>ENGF - European NextGen Forum</title>
+    <link rel="stylesheet" href="general.css">
+    <title>Events - Conferences & Strategic Dialogue</title>
 </head>
 
 <body>
 
-    <!-- ========================================
+       <!-- =====================================================
          HEADER
-    ======================================== -->
+    ====================================================== -->
 
     <header class="topbar">
-        <img src="logo.jpg" alt="ENGF Logo" class="logo">
 
-        <a href="Homepdage.html" class="brand-group" aria-label="Go to homepage">
+        <!-- Logo -->
+        <a href="index.html"
+           class="brand-group"
+           aria-label="Go to ENGF homepage">
 
+            <img src="logo.jpg"
+                 alt="ENGF Logo"
+                 class="logo">
 
-            <div class="brand-mark">
-                ENGF
-            </div>
+            <span class="brand-text">
 
-            <div class="brand-name">
-                EUROPEAN NEXTGEN FORUM
-            </div>
+                <span class="brand-mark">
+                    ENGF
+                </span>
+
+                <span class="brand-name">
+                    EUROPEAN NEXTGEN FORUM
+                </span>
+
+            </span>
 
         </a>
 
-        <!-- Hamburger Menu Button -->
-        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
 
-        <nav class="nav" aria-label="Main navigation" id="mobileNav">
+        <!-- Main Navigation — Desktop -->
+        <nav class="nav"
+             id="desktopNav"
+             aria-label="Main navigation">
 
-            <a href="about.html" class="brand-group" aria-label="Go to homepage">ABOUT</a>
-            <a href="#">OUR WORK</a>
-            <a href="#">DEPARTMENTS</a>
-            <a href="#">ECOSYSTEM</a>
-            <a href="#">PROGRAMMES</a>
-            <a href="#">EVENTS</a>
-            <a href="#">INSIGHTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="our-work.html">OUR WORK</a>
+            <a href="departments.html">DEPARTMENTS</a>
+            <a href="index.html">ECOSYSTEM</a>
+            <a href="programmes.html">PROGRAMMES</a>
+            <a href="events.html">EVENTS</a>
+            <a href="insights.html">INSIGHTS</a>
 
         </nav>
 
 
-        <!-- LANGUAGE SWITCHER -->
-
-        <div class="lang-switcher" aria-label="Language selector">
+        <!-- Language Switcher -->
+        <fieldset class="lang-switcher">
 
             <label>
-                <input type="radio" name="language" value="EN" checked>
+                <input type="radio"
+                       name="language"
+                       value="EN"
+                       checked>
+
                 <span>EN</span>
             </label>
 
             <label>
-                <input type="radio" name="language" value="RO">
+                <input type="radio"
+                       name="language"
+                       value="RO">
+
                 <span>RO</span>
             </label>
 
             <label>
-                <input type="radio" name="language" value="IT">
+                <input type="radio"
+                       name="language"
+                       value="IT">
+
                 <span>IT</span>
             </label>
+
+        </fieldset>
+
+
+        <!-- CTA -->
+        <a href="get-involved.html"
+           class="get-involved-btn"
+           aria-label="Go to get involved page">
+
+            GET INVOLVED
+
+        </a>
+
+
+        <!-- Mobile Navigation Toggle -->
+        <button type="button"
+                class="hamburger-menu"
+                id="hamburgerBtn"
+                aria-label="Toggle navigation menu"
+                aria-controls="mobileMenu"
+                aria-expanded="false">
+
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+
+        </button>
+
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu"
+             id="mobileMenu">
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+            <a href="our-work.html">
+                OUR WORK
+            </a>
+
+            <a href="departments.html">
+                DEPARTMENTS
+            </a>
+
+            <a href="programmes.html">
+                PROGRAMMES
+            </a>
+
+            <a href="events.html">
+                EVENTS
+            </a>
+
+            <a href="insights.html">
+                INSIGHTS
+            </a>
+
+            <!-- Mobile-only options -->
+            <a href="partners.html">
+                PARTNERS
+            </a>
+
+            <a href="get-involved.html">
+                GET INVOLVED
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+        </div>
+
+    </header>
+
+ <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+<div class="footer-inner">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+
+        <a class="footer-brand-link">
+
+            <img
+                src="logo.jpg"
+                alt="ENGF Logo"
+                class="footer-brand-logo"
+            >
+
+            <span class="footer-brand-name">ENGF</span>
+
+        </a>
+
+        <p class="footer-brand-description">
+            European NextGen Forum is an independent,
+            non-governmental association for education,
+            research, dialogue and civic participation,
+            operating in Romania and across Europe.
+        </p>
+
+    </div>
+
+
+            <!-- Navigation -->
+            <nav class="footer-column"
+                 aria-label="Footer navigation">
+
+                <div class="footer-heading">
+                    NAVIGATION
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="our-work.html">Our Work</a>
+                <a href="departments.html">Departments</a>
+                <a href="programmes.html">Programmes</a>
+                <a href="events.html">Events</a>
+                <a href="insights.html">Insights</a>
+                <a href="get-involved.html">Get Involved</a>
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+
+            <!-- Ecosystem -->
+            <nav class="footer-column"
+                 aria-label="ENGF ecosystem">
+
+                <div class="footer-heading">
+                    ECOSYSTEM
+                </div>
+
+                <a href="departments.html">ENGF Institute</a>
+                <a href="departments.html">ENGF Academy</a>
+                <a href="departments.html">Forumul Tinerilor Buzău</a>
+                <a href="departments.html">Agora ENGF</a>
+                <a href="departments.html">ENGF Forum</a>
+                <a href="departments.html">ENGF Community</a>
+
+                <a href="departments.html">
+                    European NextGen Creative Youth Platform
+                </a>
+
+                <a href="departments.html">
+                    ENGF Digital Education Initiative
+                </a>
+
+            </nav>
+
+
+            <!-- Institutional -->
+            <div class="footer-column footer-column-right">
+
+                <div class="footer-heading">
+                    INSTITUTIONAL
+                </div>
+
+                <a href="about.html">Governance</a>
+                <a href="about.html">Transparency</a>
+                <a href="contact.html">Privacy</a>
+                <a href="contact.html">Terms</a>
+                <a href="contact.html">Safeguarding</a>
+
+
+                <div class="footer-heading footer-social-heading">
+                    SOCIAL
+                </div>
+
+                <a href="index.html">LinkedIn</a>
+                <a href="index.html">Instagram</a>
+                <a href="index.html">Facebook</a>
+                <a href="index.html">YouTube</a>
+
+            </div>
 
         </div>
 
 
-        <!-- GET INVOLVED -->
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
 
-        <button class="get-involved-btn">
-            GET INVOLVED
-        </button>
-
-    </header>
-
-
-
-    <!-- ========================================
-         MAIN
-    ======================================== -->
-
-    <main>
-        <!-- ========================================
-     FOOTER
-======================================== -->
-
-        <footer class="site-footer">
-
-            <div class="footer-inner">
-
-                <!-- BRAND / DESCRIPTION -->
-
-                <div class="footer-brand">
-
-                    <a href="Homepage.html" class="footer-logo">
-
-                        <img src="logo.jpg" alt="ENGF Logo">
-
-                        <span>ENGF</span>
-
-                    </a>
-
-                    <p>
-                        European NextGen Forum is an independent,
-                        non-governmental association for education,
-                        research, dialogue and civic participation,
-                        operating in Romania and across Europe.
-                    </p>
-
-                </div>
-
-
-                <!-- NAVIGATION -->
-
-                <div class="footer-column">
-
-                    <div class="footer-heading">
-                        NAVIGATION
-                    </div>
-
-                    <a href="about.html" class="brand-group" aria-label="Go to homepage">About</a>
-                    <a href="ourWork.html" class="brand-group" aria-label="Go to homepage">Our Work</a>
-                    <a href="departments.html" class="brand-group" aria-label="Go to homepage">Departments</a>
-                    <a href="programmes.html" class="brand-group" aria-label="Go to homepage">Programmes</a>
-                    <a href="events.html" class="brand-group" aria-label="Go to homepage">Events</a>
-                    <a href="insights.html" class="brand-group" aria-label="Go to homepage">Insights</a>
-                    <a href="getInvolved.html" class="brand-group" aria-label="Go to homepage">Get Involved</a>
-                    <a href="#">Contact</a>
-
-                </div>
-
-
-                <!-- ECOSYSTEM -->
-
-                <div class="footer-column">
-
-                    <div class="footer-heading">
-                        ECOSYSTEM
-                    </div>
-
-                    <a href="#">ENGF Institute</a>
-                    <a href="#">ENGF Academy</a>
-                    <a href="#">Forumul Tinerilor Buzău</a>
-                    <a href="#">Agora ENGF</a>
-                    <a href="#">ENGF Forum</a>
-                    <a href="#">ENGF Community</a>
-                    <a href="#">
-                        European NextGen Creative Youth Platform
-                    </a>
-                    <a href="#">
-                        ENGF Digital Education Initiative
-                    </a>
-
-                </div>
-
-
-                <!-- INSTITUTIONAL + SOCIAL -->
-
-                <div class="footer-column footer-column-right">
-
-                    <div class="footer-heading">
-                        INSTITUTIONAL
-                    </div>
-
-                    <a href="#">Governance</a>
-                    <a href="#">Transparency</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Safeguarding</a>
-
-
-                    <div class="footer-heading footer-social-heading">
-                        SOCIAL
-                    </div>
-
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">YouTube</a>
-
-                </div>
-
+            <div class="footer-copyright">
+                © 2026 ENGF — EUROPEAN NEXTGEN FORUM
             </div>
 
-
-            <!-- FOOTER BOTTOM -->
-
-            <div class="footer-bottom">
-
-                <div class="footer-copyright">
-                    © 2026 ENGF — EUROPEAN NEXTGEN FORUM
-                </div>
-
-                <div class="footer-legal">
-                    ENGF Institute, ENGF Academy, Forumul Tinerilor Buzău,
-                    Agora ENGF, ENGF Forum, ENGF Community, European NextGen
-                    Creative Youth Platform and the ENGF Digital Education
-                    Initiative are internal specialised departments and
-                    programme names of ENGF — European NextGen Forum.
-                    They are not separate legal entities and hold no public authority.
-                </div>
-
+            <div class="footer-legal">
+                ENGF Institute, ENGF Academy, Forumul Tinerilor Buzău,
+                Agora ENGF, ENGF Forum, ENGF Community, European NextGen
+                Creative Youth Platform and the ENGF Digital Education
+                Initiative are internal specialised departments and
+                programme names of ENGF — European NextGen Forum.
+                They are not separate legal entities and hold no public authority.
             </div>
 
-        </footer>
+        </div>
 
-    </main>
+    </footer>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION SCRIPT
+    ====================================================== -->
 
     <script>
-        // Hamburger Menu Toggle
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const body = document.body;
-        const html = document.documentElement;
 
-        hamburgerBtn.addEventListener('click', function() {
-            mobileNav.classList.toggle('active');
-            body.classList.toggle('menu-open');
-            html.classList.toggle('menu-open');
-            hamburgerBtn.setAttribute('aria-expanded', 
-                hamburgerBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-            hamburgerBtn.classList.toggle('active');
-        });
+        const hamburgerButton =
+            document.getElementById("hamburgerBtn");
 
-        // Close menu when a link is clicked
-        const navLinks = mobileNav.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileNav.classList.remove('active');
-                body.classList.remove('menu-open');
-                html.classList.remove('menu-open');
-                hamburgerBtn.classList.remove('active');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
-            });
-        });
+        const mobileMenu =
+            document.getElementById("mobileMenu");
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.topbar')) {
-                mobileNav.classList.remove('active');
-                body.classList.remove('menu-open');
-                html.classList.remove('menu-open');
-                hamburgerBtn.classList.remove('active');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
+
+        const closeMenu = () => {
+
+            mobileMenu.classList.remove("active");
+
+            document.body.classList.remove("menu-open");
+            document.documentElement.classList.remove("menu-open");
+
+            hamburgerButton.classList.remove("active");
+
+            hamburgerButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        };
+
+
+        const toggleMenu = () => {
+
+            const isOpen =
+                mobileMenu.classList.toggle("active");
+
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+            document.documentElement.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+            hamburgerButton.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            hamburgerButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        };
+
+
+        hamburgerButton.addEventListener(
+            "click",
+            (event) => {
+
+                event.stopPropagation();
+
+                toggleMenu();
             }
-        });
+        );
+
+
+        mobileMenu.querySelectorAll("a").forEach(
+            (link) => {
+
+                link.addEventListener(
+                    "click",
+                    closeMenu
+                );
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            (event) => {
+
+                if (!event.target.closest(".topbar")) {
+                    closeMenu();
+                }
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (event.key === "Escape") {
+                    closeMenu();
+                }
+            }
+        );
+
     </script>
 
 </body>
