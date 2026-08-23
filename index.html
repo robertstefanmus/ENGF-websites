@@ -8,8 +8,9 @@
     <title>ENGF - European NextGen Forum</title>
 
     <link rel="icon" type="image/png" href="logo.jpg">
-    <link rel="stylesheet" href="General.css">
-    <link rel="stylesheet" href="Homepage.css">
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -21,57 +22,142 @@
     <header class="topbar">
 
         <!-- Logo -->
-        <a href="index.html" class="brand-group" aria-label="Go to ENGF homepage">
-            <img src="logo.jpg" alt="ENGF Logo" class="logo">
+        <a href="index.html"
+           class="brand-group"
+           aria-label="Go to ENGF homepage">
 
-            <span class="brand-mark">ENGF</span>
+            <img src="logo.jpg"
+                 alt="ENGF Logo"
+                 class="logo">
 
-            <span class="brand-name">
-                EUROPEAN NEXTGEN FORUM
+            <span class="brand-text">
+
+                <span class="brand-mark">
+                    ENGF
+                </span>
+
+                <span class="brand-name">
+                    EUROPEAN NEXTGEN FORUM
+                </span>
+
             </span>
+
         </a>
 
-        <!-- Mobile Navigation Toggle -->
-        <button type="button" class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu"
-            aria-controls="mobileNav" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
 
-        <!-- Main Navigation -->
-        <nav class="nav" id="mobileNav" aria-label="Main navigation">
-            <a href="about.html" class="brand-group" aria-label="Go to about page">ABOUT</a>
-            <a href="our-work.html" aria-label="Go to our work page">OUR WORK</a>
-            <a href="departments.html" aria-label="Go to departments page">DEPARTMENTS</a>
-            <a href="index.html" aria-label="Go to ecosystem page">ECOSYSTEM</a>
-            <a href="programmes.html" aria-label="Go to programmes page">PROGRAMMES</a>
-            <a href="events.html" aria-label="Go to events page">EVENTS</a>
-            <a href="insights.html" class="brand-group" aria-label="Go to insights page">INSIGHTS</a>
+        <!-- Main Navigation — Desktop -->
+        <nav class="nav"
+             id="desktopNav"
+             aria-label="Main navigation">
+
+            <a href="about.html">ABOUT</a>
+            <a href="our-work.html">OUR WORK</a>
+            <a href="departments.html">DEPARTMENTS</a>
+            <a href="index.html">ECOSYSTEM</a>
+            <a href="programmes.html">PROGRAMMES</a>
+            <a href="events.html">EVENTS</a>
+            <a href="insights.html">INSIGHTS</a>
+
         </nav>
+
 
         <!-- Language Switcher -->
         <fieldset class="lang-switcher">
+
             <label>
-                <input type="radio" name="language" value="EN" checked>
+                <input type="radio"
+                       name="language"
+                       value="EN"
+                       checked>
+
                 <span>EN</span>
             </label>
 
             <label>
-                <input type="radio" name="language" value="RO">
+                <input type="radio"
+                       name="language"
+                       value="RO">
+
                 <span>RO</span>
             </label>
 
             <label>
-                <input type="radio" name="language" value="IT">
+                <input type="radio"
+                       name="language"
+                       value="IT">
+
                 <span>IT</span>
             </label>
+
         </fieldset>
 
+
         <!-- CTA -->
-        <a href="get-involved.html" class="brand-group" aria-label="Go to get involved page" class="get-involved-btn">
+        <a href="get-involved.html"
+           class="get-involved-btn"
+           aria-label="Go to get involved page">
+
             GET INVOLVED
+
         </a>
+
+
+        <!-- Mobile Navigation Toggle -->
+        <button type="button"
+                class="hamburger-menu"
+                id="hamburgerBtn"
+                aria-label="Toggle navigation menu"
+                aria-controls="mobileMenu"
+                aria-expanded="false">
+
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+
+        </button>
+
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu"
+             id="mobileMenu">
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+            <a href="our-work.html">
+                OUR WORK
+            </a>
+
+            <a href="departments.html">
+                DEPARTMENTS
+            </a>
+
+            <a href="programmes.html">
+                PROGRAMMES
+            </a>
+
+            <a href="events.html">
+                EVENTS
+            </a>
+
+            <a href="insights.html">
+                INSIGHTS
+            </a>
+
+            <!-- Mobile-only options -->
+            <a href="partners.html">
+                PARTNERS
+            </a>
+
+            <a href="get-involved.html">
+                GET INVOLVED
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+        </div>
 
     </header>
 
@@ -97,7 +183,10 @@
                         The Next Generation.
                     </h1>
 
-                    <img src="logo.jpg" alt="" class="hero-logo" aria-hidden="true">
+                    <img src="logo.jpg"
+                         alt=""
+                         class="hero-logo"
+                         aria-hidden="true">
 
                     <p class="hero-subtitle">
                         A platform for the people and ideas shaping Europe's
@@ -107,12 +196,15 @@
 
                     <div class="hero-actions">
 
-                        <a href="about.html" class="brand-group" aria-label="Go to about page"
-                            class="hero-button primary">
+                        <a href="about.html"
+                           aria-label="Go to about page"
+                           class="hero-button primary">
                             EXPLORE ENGF
                         </a>
 
-                        <a href="programmes.html" aria-label="Go to programmes page" class="hero-button secondary">
+                        <a href="programmes.html"
+                           aria-label="Go to programmes page"
+                           class="hero-button secondary">
                             DISCOVER OUR PROGRAMMES
                         </a>
 
@@ -133,7 +225,6 @@
 
             <div class="intro-content">
 
-                <!-- Left -->
                 <div class="intro-left">
 
                     <div class="section-label">
@@ -168,7 +259,6 @@
                 </div>
 
 
-                <!-- Right -->
                 <aside class="intro-right">
 
                     <div class="intro-stat">
@@ -212,7 +302,6 @@
             </div>
 
 
-            <!-- Ecosystem Bar -->
             <div class="ecosystem-bar">
 
                 <span>
@@ -232,11 +321,11 @@
              ENGF ECOSYSTEM
         ================================================== -->
 
-        <section class="ecosystem-section" id="ecosystem">
+        <section class="ecosystem-section"
+                 id="ecosystem">
 
             <div class="ecosystem-list">
 
-                <!-- 01 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -257,12 +346,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-burgundy" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-burgundy"
+                         aria-hidden="true"></div>
 
                 </article>
 
 
-                <!-- 02 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -284,12 +373,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-gold" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-gold"
+                         aria-hidden="true"></div>
 
                 </article>
 
 
-                <!-- 03 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -310,12 +399,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-blue" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-blue"
+                         aria-hidden="true"></div>
 
                 </article>
 
 
-                <!-- 04 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -336,12 +425,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-green" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-green"
+                         aria-hidden="true"></div>
 
                 </article>
 
 
-                <!-- 05 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -362,12 +451,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-orange" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-orange"
+                         aria-hidden="true"></div>
 
                 </article>
 
 
-                <!-- 06 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -388,12 +477,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-purple" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-purple"
+                         aria-hidden="true"></div>
 
                 </article>
 
 
-                <!-- 07 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -414,12 +503,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-red" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-red"
+                         aria-hidden="true"></div>
 
                 </article>
 
 
-                <!-- 08 -->
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -441,7 +530,8 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-teal" aria-hidden="true"></div>
+                    <div class="ecosystem-dot dot-teal"
+                         aria-hidden="true"></div>
 
                 </article>
 
@@ -454,7 +544,8 @@
              FEATURED PROGRAMME
         ================================================== -->
 
-        <section class="opportunities" id="programmes">
+        <section class="opportunities"
+                 id="programmes">
 
             <div class="container">
 
@@ -472,7 +563,8 @@
 
                     </div>
 
-                    <a href="programmes.html" class="all-opportunities">
+                    <a href="programmes.html"
+                       class="all-opportunities">
                         ALL OPPORTUNITIES
                     </a>
 
@@ -481,19 +573,20 @@
 
                 <div class="content-grid">
 
-                    <!-- Image -->
                     <div class="image-wrapper">
 
-                        <img src="books.jpg" alt="Books and research materials" loading="lazy">
+                        <img src="books.jpg"
+                             alt="Books and research materials"
+                             loading="lazy">
 
                     </div>
 
 
-                    <!-- Details -->
                     <div class="details-wrapper">
 
                         <div class="badge">
-                            <span class="dot" aria-hidden="true">•</span>
+                            <span class="dot"
+                                  aria-hidden="true">•</span>
                             APPLICATIONS OPENING SOON
                         </div>
 
@@ -552,7 +645,8 @@
                         </div>
 
 
-                        <a href="departments.html" class="btn">
+                        <a href="departments.html"
+                           class="btn">
                             EXPLORE THE INSTITUTE
                         </a>
 
@@ -569,7 +663,8 @@
              EVENTS
         ================================================== -->
 
-        <section class="events-section" id="events">
+        <section class="events-section"
+                 id="events">
 
             <div class="events-inner">
 
@@ -587,7 +682,8 @@
 
                     </div>
 
-                    <a href="events.html" class="all-events">
+                    <a href="events.html"
+                       class="all-events">
                         ALL EVENTS
                     </a>
 
@@ -674,7 +770,8 @@
              RESEARCH & PUBLICATIONS
         ================================================== -->
 
-        <section class="research-section" id="insights">
+        <section class="research-section"
+                 id="insights">
 
             <div class="research-inner">
 
@@ -692,7 +789,8 @@
 
                     </div>
 
-                    <a href="insights.html" class="all-insights">
+                    <a href="insights.html"
+                       class="all-insights">
                         ALL INSIGHTS
                     </a>
 
@@ -780,7 +878,8 @@
              PARTNERSHIP
         ================================================== -->
 
-        <section class="partnership-section" id="partnership">
+        <section class="partnership-section"
+                 id="partnership">
 
             <div class="partnership-inner">
 
@@ -803,7 +902,8 @@
                         the private sector.
                     </p>
 
-                    <a href="partners.html" class="partnership-btn">
+                    <a href="partners.html"
+                       class="partnership-btn">
                         PARTNER WITH ENGF
                     </a>
 
@@ -812,7 +912,9 @@
 
                 <div class="partnership-image-wrap">
 
-                    <img src="room.jpg" alt="Conference hall interior" loading="lazy">
+                    <img src="room.jpg"
+                         alt="Conference hall interior"
+                         loading="lazy">
 
                 </div>
 
@@ -844,7 +946,9 @@
                 </div>
 
 
-                <form class="newsletter__form" action="#" method="post">
+                <form class="newsletter__form"
+                      action="#"
+                      method="post">
 
                     <div class="newsletter__field">
 
@@ -852,8 +956,13 @@
                             EMAIL ADDRESS
                         </label>
 
-                        <input id="email" name="email" type="email" placeholder=" " autocomplete="email" required
-                            aria-required="true">
+                        <input id="email"
+                               name="email"
+                               type="email"
+                               placeholder=" "
+                               autocomplete="email"
+                               required
+                               aria-required="true">
 
                     </div>
 
@@ -882,7 +991,8 @@
             <div class="footer-brand">
 
                 <a>
-                    <img src="logo.jpg" alt="ENGF Logo">
+                    <img src="logo.jpg"
+                         alt="ENGF Logo">
 
                     <span>ENGF</span>
                 </a>
@@ -898,7 +1008,8 @@
 
 
             <!-- Navigation -->
-            <nav class="footer-column" aria-label="Footer navigation">
+            <nav class="footer-column"
+                 aria-label="Footer navigation">
 
                 <div class="footer-heading">
                     NAVIGATION
@@ -909,7 +1020,7 @@
                 <a href="departments.html">Departments</a>
                 <a href="programmes.html">Programmes</a>
                 <a href="events.html">Events</a>
-                <a href="insights.html">Insights</a> 
+                <a href="insights.html">Insights</a>
                 <a href="get-involved.html">Get Involved</a>
                 <a href="contact.html">Contact</a>
 
@@ -917,7 +1028,8 @@
 
 
             <!-- Ecosystem -->
-            <nav class="footer-column" aria-label="ENGF ecosystem">
+            <nav class="footer-column"
+                 aria-label="ENGF ecosystem">
 
                 <div class="footer-heading">
                     ECOSYSTEM
@@ -929,9 +1041,11 @@
                 <a href="departments.html">Agora ENGF</a>
                 <a href="departments.html">ENGF Forum</a>
                 <a href="departments.html">ENGF Community</a>
+
                 <a href="departments.html">
                     European NextGen Creative Youth Platform
                 </a>
+
                 <a href="departments.html">
                     ENGF Digital Education Initiative
                 </a>
@@ -993,51 +1107,100 @@
     ====================================================== -->
 
     <script>
-        const hamburgerButton = document.getElementById("hamburgerBtn");
-        const mobileNav = document.getElementById("mobileNav");
+
+        const hamburgerButton =
+            document.getElementById("hamburgerBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
 
         const closeMenu = () => {
-            mobileNav.classList.remove("active");
+
+            mobileMenu.classList.remove("active");
+
             document.body.classList.remove("menu-open");
             document.documentElement.classList.remove("menu-open");
 
             hamburgerButton.classList.remove("active");
-            hamburgerButton.setAttribute("aria-expanded", "false");
+
+            hamburgerButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
         };
 
+
         const toggleMenu = () => {
-            const isOpen = mobileNav.classList.toggle("active");
 
-            document.body.classList.toggle("menu-open", isOpen);
-            document.documentElement.classList.toggle("menu-open", isOpen);
+            const isOpen =
+                mobileMenu.classList.toggle("active");
 
-            hamburgerButton.classList.toggle("active", isOpen);
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+            document.documentElement.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+            hamburgerButton.classList.toggle(
+                "active",
+                isOpen
+            );
+
             hamburgerButton.setAttribute(
                 "aria-expanded",
                 String(isOpen)
             );
         };
 
-        hamburgerButton.addEventListener("click", (event) => {
-            event.stopPropagation();
-            toggleMenu();
-        });
 
-        mobileNav.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", closeMenu);
-        });
+        hamburgerButton.addEventListener(
+            "click",
+            (event) => {
 
-        document.addEventListener("click", (event) => {
-            if (!event.target.closest(".topbar")) {
-                closeMenu();
+                event.stopPropagation();
+
+                toggleMenu();
             }
-        });
+        );
 
-        document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape") {
-                closeMenu();
+
+        mobileMenu.querySelectorAll("a").forEach(
+            (link) => {
+
+                link.addEventListener(
+                    "click",
+                    closeMenu
+                );
             }
-        });
+        );
+
+
+        document.addEventListener(
+            "click",
+            (event) => {
+
+                if (!event.target.closest(".topbar")) {
+                    closeMenu();
+                }
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (event.key === "Escape") {
+                    closeMenu();
+                }
+            }
+        );
+
     </script>
 
 </body>

@@ -1,3 +1,4 @@
+
 /* =========================================================
    FONTS
 ========================================================= */
@@ -11,11 +12,11 @@
 
 :root {
     --color-bg: #f4ede2;
-    --color-bg-soft: #f1e9dc;
-    --color-bg-mobile: #ece9e4;
+    --color-bg-mobile: #ede7dd;
 
-    --color-burgundy: #4c0d17;
+    --color-burgundy: #3e0a13;
     --color-burgundy-dark: #2a070d;
+
     --color-text: #393333;
     --color-muted: #746d68;
 
@@ -31,6 +32,7 @@
     --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
 
     --header-height: 76px;
+
     --content-width: 1600px;
 
     --transition-fast: 0.2s ease;
@@ -102,8 +104,8 @@ body.menu-open {
 
     display: flex;
     align-items: center;
-    gap: 32px;
 
+    gap: 32px;
     padding: 14px 32px;
 
     background: var(--color-bg);
@@ -111,32 +113,40 @@ body.menu-open {
 }
 
 
-/* ---------------------------------------------------------
-   Logo
---------------------------------------------------------- */
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
     width: 36px;
     height: 36px;
-    margin-left: 110px;
+
+    margin-left: 10px;
+    margin-right: 10px;
 
     object-fit: cover;
     flex-shrink: 0;
 }
 
 
-/* ---------------------------------------------------------
-   Brand
---------------------------------------------------------- */
+/* =========================================================
+   BRAND
+========================================================= */
 
 .brand-group {
     flex: 0 0 210px;
 
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
 
     text-decoration: none;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .brand-mark {
@@ -144,21 +154,22 @@ body.menu-open {
 
     font-family: var(--font-display);
     font-size: 1.3rem;
-    line-height: 1.6;
-    font-weight: 500;
+    line-height: 1.2;
+    font-weight: 550;
     letter-spacing: 0.01em;
 
     color: var(--color-burgundy);
 }
 
 .brand-name {
-    margin-top: 5px;
+    margin-top: 3px;
 
     font-family: var(--font-sans);
     font-size: 0.58rem;
     line-height: 1;
     font-weight: 600;
     letter-spacing: 0.13em;
+
     white-space: nowrap;
 
     color: var(--color-muted);
@@ -166,7 +177,7 @@ body.menu-open {
 
 
 /* =========================================================
-   NAVIGATION
+   DESKTOP NAVIGATION
 ========================================================= */
 
 .nav {
@@ -176,6 +187,7 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 26px;
 }
 
@@ -191,6 +203,7 @@ body.menu-open {
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.1em;
+
     white-space: nowrap;
 
     transition: color var(--transition-fast);
@@ -233,7 +246,7 @@ body.menu-open {
     width: 32px;
     height: 32px;
 
-    margin-left: auto;
+    margin: 0;
     padding: 0;
 
     flex-direction: column;
@@ -252,12 +265,14 @@ body.menu-open {
 
     width: 24px;
     height: 2px;
+
     margin: 4px 0;
 
     background: var(--color-burgundy);
 
-    transition: transform var(--transition-normal),
-                opacity var(--transition-normal);
+    transition:
+        transform var(--transition-normal),
+        opacity var(--transition-normal);
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(1) {
@@ -270,6 +285,10 @@ body.menu-open {
 
 .hamburger-menu.active .hamburger-line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+    display: none;
 }
 
 
@@ -363,9 +382,11 @@ body.menu-open {
 
     font-family: var(--font-sans);
     font-size: 0.65rem;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 0.13em;
+
     white-space: nowrap;
+    text-decoration: none;
 
     cursor: pointer;
 
@@ -377,6 +398,293 @@ body.menu-open {
 .get-involved-btn:hover {
     background: #000;
     color: var(--color-bg);
+}
+
+
+/* =========================================================
+   TABLET — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .topbar {
+        padding: 14px 24px;
+        gap: 20px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .brand-group {
+        flex-basis: 180px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 0.6rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    .topbar {
+        min-height: 56px;
+
+        padding: 4px 8px;
+
+        gap: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       BRAND
+    ----------------------------------------------------- */
+
+    .brand-group {
+        order: 1;
+
+        flex: 0 0 auto;
+        width: auto;
+    }
+
+    .logo {
+        width: 26px;
+        height: 26px;
+
+        margin: 0;
+    }
+
+    .brand-mark {
+        font-size: 1.3rem;
+    }
+
+    .brand-name {
+        margin-top: 2px;
+        font-size: 0.4rem;
+    }
+
+
+    /* -----------------------------------------------------
+       DESKTOP NAVIGATION
+    ----------------------------------------------------- */
+
+    .nav {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       LANGUAGE SWITCHER
+    ----------------------------------------------------- */
+
+    .lang-switcher {
+        order: 3;
+
+        height: 28px;
+        padding: 0 6px;
+
+        margin-left: auto;
+    }
+
+    .lang-switcher label:not(:last-child)::after {
+        margin: 0 4px;
+    }
+
+    .lang-switcher span {
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGER
+    ----------------------------------------------------- */
+
+    .hamburger-menu {
+        order: 4;
+
+        display: flex;
+
+        flex: 0 0 32px;
+
+        width: 32px;
+        height: 32px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-menu {
+        position: fixed;
+
+        top: 56px;
+        left: 0;
+
+        width: 100%;
+        height: calc(100vh - 56px);
+
+        display: flex;
+        flex-direction: column;
+
+        background: var(--color-bg-mobile);
+
+        transform: translateX(100%);
+
+        transition: transform var(--transition-normal);
+
+        z-index: 998;
+
+        overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+
+    .mobile-menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 22px 24px;
+
+        background: var(--color-bg-mobile);
+        color: var(--color-text);
+
+        border-bottom: 1px solid var(--color-burgundy);
+
+        text-decoration: none;
+
+        font-family: var(--font-sans);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+
+        transition:
+            background var(--transition-fast),
+            color var(--transition-fast);
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:focus,
+    .mobile-menu a:active {
+        background: var(--color-bg-mobile);
+        color: var(--color-burgundy);
+    }
+
+
+    /* -----------------------------------------------------
+       DESKTOP CTA HIDDEN
+    ----------------------------------------------------- */
+
+    .get-involved-btn {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .logo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .brand-mark {
+        font-size: 1.4rem;
+    }
+
+    .brand-name {
+        display: none;
+    }
+
+    .lang-switcher {
+        height: 28px;
+        padding: 0 7px;
+    }
+
+    .lang-switcher label:not(:last-child)::after {
+        margin: 0 6px;
+    }
+
+    .lang-switcher span {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .topbar {
+        min-height: 48px;
+
+        padding: 8px 6px 8px 8px;
+    }
+
+    .logo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .brand-mark {
+        font-size: 1.4rem;
+    }
+
+    .lang-switcher {
+        height: 26px;
+        padding: 0 5px;
+    }
+
+    .lang-switcher label:not(:last-child)::after {
+        margin: 0 3px;
+        font-size: 9px;
+    }
+
+    .lang-switcher span {
+        font-size: 8px;
+    }
+
+    .hamburger-menu {
+        width: 26px;
+        height: 26px;
+
+        flex-basis: 26px;
+    }
+
+    .hamburger-line {
+        width: 18px;
+        margin: 3px 0;
+    }
+
+    .mobile-menu {
+        top: 48px;
+        height: calc(100vh - 48px);
+    }
+
+    .mobile-menu a {
+        padding: 12px 16px;
+        font-size: 0.65rem;
+    }
 }
 
 
@@ -403,9 +711,11 @@ body.menu-open {
     max-width: var(--content-width);
 
     margin: 0 auto;
+
     padding: 74px 7.4% 70px;
 
     display: grid;
+
     grid-template-columns:
         1.25fr
         1fr
@@ -427,11 +737,13 @@ body.menu-open {
 .footer-logo {
     display: inline-flex;
     align-items: center;
+
     gap: 16px;
 
     margin-bottom: 30px;
 
     color: var(--color-bg);
+
     text-decoration: none;
 }
 
@@ -446,6 +758,7 @@ body.menu-open {
 
 .footer-logo span {
     font-family: var(--font-display);
+
     font-size: 2rem;
     line-height: 1;
     font-weight: 500;
@@ -455,6 +768,7 @@ body.menu-open {
 
 .footer-brand p {
     max-width: 350px;
+
     margin: 0;
 
     font-family: var(--font-sans);
@@ -484,6 +798,7 @@ body.menu-open {
     line-height: 1;
     font-weight: 600;
     letter-spacing: 0.32em;
+
     text-transform: uppercase;
 
     color: #8d8984;
@@ -503,6 +818,7 @@ body.menu-open {
     font-weight: 500;
 
     color: var(--color-footer-text);
+
     text-decoration: none;
 
     transition:
@@ -534,11 +850,15 @@ body.menu-open {
     width: calc(100% - 14.8%);
 
     margin: 0 auto;
+
     padding: 42px 0 52px;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 80px;
+
     align-items: start;
 
     border-top: 1px solid var(--color-footer-border);
@@ -546,9 +866,11 @@ body.menu-open {
 
 .footer-copyright {
     font-family: var(--font-sans);
+
     font-size: 0.6rem;
     line-height: 1.4;
     font-weight: 600;
+
     letter-spacing: 0.24em;
 
     color: var(--color-footer-muted);
@@ -556,9 +878,11 @@ body.menu-open {
 
 .footer-legal {
     max-width: 720px;
+
     justify-self: end;
 
     font-family: var(--font-sans);
+
     font-size: 0.62rem;
     line-height: 1.55;
     font-weight: 500;
@@ -568,34 +892,15 @@ body.menu-open {
 
 
 /* =========================================================
-   TABLET — 1100px
+   FOOTER — TABLET 1100px
 ========================================================= */
 
 @media (max-width: 1100px) {
 
-    .topbar {
-        padding: 14px 24px;
-        gap: 20px;
-    }
-
-    .logo {
-        margin-left: 0;
-    }
-
-    .brand-group {
-        flex-basis: 180px;
-    }
-
-    .nav {
-        gap: 15px;
-    }
-
-    .nav a {
-        font-size: 0.6rem;
-    }
-
     .footer-inner {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr
+            1fr;
 
         gap: 55px 60px;
 
@@ -610,6 +915,7 @@ body.menu-open {
         width: 88%;
 
         grid-template-columns: 1fr;
+
         gap: 30px;
     }
 
@@ -621,183 +927,7 @@ body.menu-open {
 
 
 /* =========================================================
-   TABLET — 900px
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .ecosystem-item {
-        grid-template-columns: 90px minmax(0, 1fr) 50px;
-
-        min-height: 180px;
-        padding: 38px 28px;
-    }
-
-    .ecosystem-content h2 {
-        font-size: 2.2rem;
-    }
-
-    .ecosystem-content p {
-        font-size: 0.9rem;
-    }
-}
-
-
-/* =========================================================
-   MOBILE — 800px
-========================================================= */
-
-@media (max-width: 800px) {
-
-    /* Header */
-
-    .topbar {
-        min-height: 56px;
-        padding: 4px 8px;
-        gap: 8px;
-    }
-
-    .logo {
-        width: 26px;
-        height: 26px;
-        margin: 0;
-    }
-
-    .brand-group {
-        flex: 0 0 auto;
-        width: auto;
-    }
-
-    .brand-mark {
-        font-size: 1.3rem;
-    }
-
-    .brand-name {
-        margin-top: 2px;
-        font-size: 0.4rem;
-    }
-
-    .lang-switcher {
-        height: 28px;
-        padding: 0 6px;
-        margin-left: auto;
-    }
-
-    .lang-switcher label:not(:last-child)::after {
-        margin: 0 4px;
-    }
-
-    .lang-switcher span {
-        font-size: 9px;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .get-involved-btn {
-        display: none;
-    }
-
-
-    /* Navigation */
-
-    .nav {
-        position: fixed;
-        top: 56px;
-        left: -100%;
-
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 0;
-        padding: 0;
-
-        background: var(--color-bg-mobile);
-
-        transition: left var(--transition-normal);
-
-        z-index: 999;
-    }
-
-    .nav.active {
-        left: 0;
-    }
-
-    .nav a {
-        width: 100%;
-        padding: 34px 24px;
-
-        background: var(--color-bg-mobile);
-        border-bottom: 1px solid var(--color-border-light);
-
-        font-size: 0.75rem;
-    }
-
-    .nav a::after {
-        display: none;
-    }
-
-    .nav a:hover {
-        background: var(--color-border-light);
-        color: var(--color-burgundy);
-    }
-
-
-    /* Hero */
-
-    .hero {
-        min-height: calc(100vh - 68px);
-    }
-
-    .hero-inner {
-        min-height: calc(100vh - 56px);
-
-        padding: 2px 16px 50px;
-
-        align-items: center;
-    }
-
-    .hero-copy {
-        width: 100%;
-    }
-
-    .hero-title {
-        font-size: clamp(1.8rem, 10vw, 5.5rem);
-        line-height: 0.9;
-    }
-
-    .hero-subtitle {
-        margin-top: 30px;
-
-        font-size: clamp(0.85rem, 2.5vw, 1.2rem);
-        line-height: 1.45;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 10px;
-        margin-top: 25px;
-    }
-
-    .hero-button {
-        width: 100%;
-        min-height: 42px;
-
-        padding: 10px 16px;
-
-        font-size: 0.58rem;
-    }
-}
-
-
-/* =========================================================
-   MOBILE — 650px
+   FOOTER — TABLET / MOBILE 650px
 ========================================================= */
 
 @media (max-width: 650px) {
@@ -838,204 +968,5 @@ body.menu-open {
 
     .footer-legal {
         font-size: 0.58rem;
-    }
-}
-
-
-/* =========================================================
-   MOBILE — 600px
-========================================================= */
-
-@media (max-width: 600px) {
-
-    /* Header */
-
-    .logo {
-        width: 22px;
-        height: 22px;
-    }
-
-    .brand-mark {
-        font-size: 1.1rem;
-    }
-
-    .brand-name {
-        display: none;
-    }
-
-    .lang-switcher {
-        height: 28px;
-        padding: 0 7px;
-    }
-
-    .lang-switcher label:not(:last-child)::after {
-        margin: 0 6px;
-    }
-
-    .lang-switcher span {
-        font-size: 10px;
-    }
-
-
-    /* Hero */
-
-    .hero-inner {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .hero-title {
-        font-size: clamp(3.2rem, 15vw, 4.5rem);
-    }
-
-
-    /* Introduction */
-
-    .intro-left {
-        padding: 32px 20px 40px;
-    }
-
-    .intro-right {
-        padding: 32px 20px;
-    }
-
-    .ecosystem-bar {
-        padding: 0 16px;
-    }
-
-
-    /* Ecosystem */
-
-    .ecosystem-item {
-        grid-template-columns: 45px minmax(0, 1fr) 25px;
-
-        min-height: 190px;
-
-        padding: 32px 20px;
-    }
-
-    .ecosystem-item:hover {
-        padding-left: 20px;
-    }
-
-    .ecosystem-number {
-        font-size: 0.9rem;
-    }
-
-    .ecosystem-content h2 {
-        margin-bottom: 12px;
-
-        font-size: 1.8rem;
-        line-height: 1;
-    }
-
-    .ecosystem-content p {
-        font-size: 0.8rem;
-        line-height: 1.45;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE — 400px
-========================================================= */
-
-@media (max-width: 400px) {
-
-    /* Header */
-
-    .topbar {
-        min-height: 48px;
-        padding: 8px 6px 8px 8px;
-    }
-
-    .logo {
-        width: 22px;
-        height: 22px;
-    }
-
-    .brand-mark {
-        font-size: 1.1rem;
-    }
-
-    .lang-switcher {
-        height: 26px;
-        padding: 0 5px;
-    }
-
-    .lang-switcher label:not(:last-child)::after {
-        margin: 0 3px;
-        font-size: 9px;
-    }
-
-    .lang-switcher span {
-        font-size: 8px;
-    }
-
-    .hamburger-menu {
-        width: 26px;
-        height: 26px;
-    }
-
-    .hamburger-line {
-        width: 18px;
-        margin: 3px 0;
-    }
-
-
-    /* Navigation */
-
-    .nav {
-        top: 48px;
-        height: calc(100vh - 48px);
-
-        background: #fff;
-    }
-
-    .nav a {
-        padding: 12px 16px;
-
-        background: #fff;
-
-        font-size: 0.65rem;
-    }
-
-
-    /* Footer */
-
-    .footer-inner {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .footer-bottom {
-        width: calc(100% - 36px);
-    }
-
-    .footer-logo img {
-        width: 44px;
-        height: 44px;
-    }
-
-    .footer-logo span {
-        font-size: 1.8rem;
-    }
-
-
-    /* Ecosystem */
-
-    .ecosystem-item {
-        grid-template-columns: 35px minmax(0, 1fr) 20px;
-
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .ecosystem-content h2 {
-        font-size: 1.55rem;
-    }
-
-    .ecosystem-content p {
-        font-size: 0.75rem;
     }
 }
