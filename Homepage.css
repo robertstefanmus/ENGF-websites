@@ -729,8 +729,12 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   border-bottom: 1px solid rgba(88, 29, 34, 0.15);
-  padding-bottom: 20px;
-  margin-bottom: 40px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 60px 10px;
+  margin-bottom: 30px;
 }
 
 .title-group {
@@ -859,7 +863,298 @@ body {
   color: #f7f3eb;
 }
 
+/* Research & Publications section */
+.research-section {
+  background: #f4ede2;
+  padding: 0 0 80px;
+}
+
+.research-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.research-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(88, 29, 34, 0.2);
+  padding: 0 0 18px;
+  margin-bottom: 0;
+}
+
+.research-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.insights-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a3138;
+  font-weight: 600;
+}
+
+.research-header h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.2rem, 3vw, 4rem);
+  line-height: 0.96;
+  font-weight: 400;
+  color: #581d22;
+  margin: 0;
+}
+
+.all-insights {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #581d22;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: transparent;
+}
+
+.research-item {
+  padding: 36px 42px 0 0;
+  min-height: 420px;
+  border-right: 1px solid rgba(88, 29, 34, 0.18);
+}
+
+.research-item-last {
+  border-right: none;
+  padding-right: 0;
+}
+
+.research-meta {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a3138;
+  margin-bottom: 26px;
+  font-weight: 600;
+}
+
+.research-item h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 2.5vw, 3.15rem);
+  line-height: 0.95;
+  color: #581d22;
+  font-weight: 400;
+  margin: 0 0 22px;
+  max-width: 420px;
+}
+
+.research-item p {
+  max-width: 420px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: rgba(88, 29, 34, 0.9);
+  margin: 0;
+}
+
+.research-status {
+  margin-top: 52px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #7a3138;
+  font-weight: 600;
+}
+
+/* Partnership section */
+.partnership-section {
+  background: #f4ede2;
+  padding: 80px 0 20px;
+}
+
+.partnership-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.partnership-copy {
+  padding-left: 0;
+}
+
+.partnership-kicker {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a3138;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.partnership-copy h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.6rem, 4vw, 5.2rem);
+  line-height: 0.9;
+  color: #581d22;
+  font-weight: 400;
+  margin: 0 0 26px;
+}
+
+.partnership-copy p {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: rgba(88, 29, 34, 0.9);
+  margin: 0 0 34px;
+}
+
+.partnership-btn {
+  display: inline-block;
+  border: 1px solid rgba(88, 29, 34, 0.7);
+  padding: 15px 22px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #581d22;
+  text-decoration: none;
+  background: transparent;
+  font-weight: 600;
+}
+
+.partnership-image-wrap {
+  width: 100%;
+  max-width: 760px;
+  justify-self: end;
+}
+
+.partnership-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.05);
+}
+
+/* Events list section */
+.events-section {
+  background: #f4ede2;
+  padding: 20px 0 0;
+}
+
+.events-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(88, 29, 34, 0.2);
+  padding: 0 0 20px;
+}
+
+.events-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.events-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a3138;
+  font-weight: 600;
+}
+
+.events-header h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.2rem, 3vw, 4rem);
+  line-height: 0.96;
+  font-weight: 400;
+  color: #581d22;
+  margin: 0;
+}
+
+.all-events {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #581d22;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.1fr) minmax(300px, 2.5fr) minmax(200px, 1.1fr);
+  align-items: center;
+  min-height: 110px;
+  border-bottom: 1px solid rgba(88, 29, 34, 0.18);
+  column-gap: 24px;
+}
+
+.event-row-last {
+  border-bottom: none;
+}
+
+.event-date,
+.event-category {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a3138;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.event-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 2.5vw, 3.2rem);
+  line-height: 0.95;
+  color: #581d22;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.event-category {
+  justify-self: end;
+  text-align: right;
+}
+
 /* Responsive adjustments */
+@media (max-width: 1100px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(88, 29, 34, 0.18);
+    padding-right: 0;
+    min-height: auto;
+    padding-bottom: 30px;
+  }
+
+  .research-item-last {
+    border-bottom: none;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     padding: 20px;
@@ -874,5 +1169,274 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+  }
+
+  .research-inner {
+    padding: 0 20px;
+  }
+
+  .research-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .research-title-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ------------------------------
+   Main section
+------------------------------ */
+
+.newsletter {
+  min-height: 489px;
+  border-top: 1px solid rgba(112, 78, 49, 0.12);
+  border-left: 6px solid #666;
+  background: #f4ede2;
+  display: flex;
+  align-items: flex-start;
+}
+
+.newsletter__content {
+  width: 100%;
+  max-width: 1430px;
+  margin: 0 auto;
+  padding: 91px 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 110px;
+}
+
+
+/* ------------------------------
+   Left side
+------------------------------ */
+
+.newsletter__intro {
+  padding-top: 1px;
+}
+
+.newsletter__eyebrow {
+  display: block;
+  margin-bottom: 25px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #6b0010;
+}
+
+.newsletter h1 {
+  margin: 0;
+
+  max-width: 650px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  line-height: 1.27;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+
+  color: #59000c;
+}
+
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+.newsletter__form {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 59px;
+}
+
+.newsletter__field {
+  flex: 1;
+  position: relative;
+}
+
+.newsletter__field label {
+  display: block;
+  margin-bottom: 17px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+
+  color: #52000b;
+}
+
+.newsletter__field input {
+  display: block;
+  width: 100%;
+  height: 42px;
+
+  padding: 0 0 13px;
+
+  border: 0;
+  border-bottom: 1px solid #cbbfb2;
+  border-radius: 0;
+  outline: none;
+
+  background: transparent;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1;
+  color: #161616;
+
+  transition: border-color 0.2s ease;
+}
+
+.newsletter__field input:focus {
+  border-bottom-color: #59000c;
+}
+
+
+/* ------------------------------
+   Validation
+------------------------------ */
+
+/*
+  The browser's native validation popup is intentionally
+  used here. With type="email" + required, entering:
+
+      dsadasd
+
+  and pressing SUBSCRIBE produces the browser message:
+
+      Please include an '@' in the email address.
+      'dsadasd' is missing an '@'.
+
+  The exact popup styling/text is controlled by the browser,
+  which is why it closely matches the screenshot.
+*/
+
+.newsletter__field input:user-invalid {
+  border-bottom-color: #9b0013;
+}
+
+
+/* ------------------------------
+   Subscribe button
+------------------------------ */
+
+.newsletter__form button {
+  flex: 0 0 auto;
+
+  margin-left: 45px;
+  margin-bottom: 14px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 2.8px;
+
+  color: #59000c;
+
+  cursor: pointer;
+}
+
+.newsletter__form button:hover {
+  opacity: 0.65;
+}
+
+.newsletter__form button:focus-visible {
+  outline: 1px solid #59000c;
+  outline-offset: 6px;
+}
+
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 1100px) {
+  .newsletter__content {
+    padding-left: 60px;
+    padding-right: 60px;
+    column-gap: 60px;
+  }
+
+  .newsletter h1 {
+    font-size: 32px;
+  }
+
+  .newsletter__form button {
+    margin-left: 30px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .newsletter {
+    min-height: auto;
+    border-left-width: 4px;
+  }
+
+  .newsletter__content {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+
+    padding: 65px 30px 70px;
+  }
+
+  .newsletter__intro {
+    padding-top: 0;
+  }
+
+  .newsletter__eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .newsletter h1 {
+    max-width: none;
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .newsletter__form {
+    padding-top: 0;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .newsletter__content {
+    padding: 50px 24px 60px;
+  }
+
+  .newsletter h1 {
+    font-size: 27px;
+  }
+
+  .newsletter__form {
+    display: block;
+  }
+
+  .newsletter__form button {
+    display: block;
+    margin: 28px 0 0;
   }
 }
