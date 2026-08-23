@@ -1,67 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap');
+/* =========================================================
+   FONTS
+========================================================= */
 
-/* ========================================
-  RESET
-======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   DESIGN TOKENS
+========================================================= */
+
+:root {
+    --color-bg: #f4ede2;
+    --color-bg-soft: #f1e9dc;
+    --color-bg-mobile: #ece9e4;
+
+    --color-burgundy: #4c0d17;
+    --color-burgundy-dark: #2a070d;
+    --color-text: #393333;
+    --color-muted: #746d68;
+
+    --color-border: #e5dccb;
+    --color-border-light: #e9dec6;
+
+    --color-footer: #292624;
+    --color-footer-border: #403c38;
+    --color-footer-text: #bdb8b1;
+    --color-footer-muted: #85807a;
+
+    --font-display: "Cormorant Garamond", Georgia, serif;
+    --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
+
+    --header-height: 76px;
+    --content-width: 1600px;
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 html,
 body {
+    width: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
-html.menu-open,
-body.menu-open {
-    overflow: hidden !important;
-    height: 100vh;
-    position: fixed;
-    width: 100%;
+html {
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
-/* ========================================
-  TOP BAR
-======================================== */
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+html.menu-open,
+body.menu-open {
+    height: 100vh;
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   HEADER / TOP BAR
+========================================================= */
 
 .topbar {
     position: sticky;
     top: 0;
-
     z-index: 1000;
 
     width: 100%;
-
-    min-height: 76px;
+    min-height: var(--header-height);
 
     display: flex;
     align-items: center;
+    gap: 32px;
 
     padding: 14px 32px;
 
-    background: #f4ede2;
-
-    border-bottom: 1px solid #e9dec6;
-
-    gap: 32px;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border-light);
 }
 
+
+/* ---------------------------------------------------------
+   Logo
+--------------------------------------------------------- */
+
+.logo {
+    width: 36px;
+    height: 36px;
+    margin-left: 110px;
+
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Brand
+--------------------------------------------------------- */
+
 .brand-group {
-    flex: 0 0 auto;
+    flex: 0 0 210px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    width: 210px;
 
     text-decoration: none;
 }
@@ -69,94 +142,122 @@ body.menu-open {
 .brand-mark {
     margin: 0;
 
-    font-family: 'Cormorant Garamond', serif;
-
+    font-family: var(--font-display);
     font-size: 1.3rem;
-
     line-height: 1.6;
-
-    font-weight: 570;
-
+    font-weight: 500;
     letter-spacing: 0.01em;
 
-    color: #4c0d17;
+    color: var(--color-burgundy);
 }
 
 .brand-name {
     margin-top: 5px;
 
-    font-family: 'DM Sans', sans-serif;
-
+    font-family: var(--font-sans);
     font-size: 0.58rem;
-
     line-height: 1;
-
     font-weight: 600;
-
     letter-spacing: 0.13em;
-
     white-space: nowrap;
 
-    color: #746d68;
+    color: var(--color-muted);
 }
 
-.logo {
-    width: 36px;
-    height: 36px;
-    font-size: 0.8rem;
-    margin-left: 110px;
-}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 .nav {
     flex: 1;
+    min-width: 0;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 26px;
-
-    min-width: 0;
 }
 
-/* ========================================
-  HAMBURGER MENU
-======================================== */
+.nav a {
+    position: relative;
+
+    display: block;
+
+    color: var(--color-text);
+    text-decoration: none;
+
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+
+    transition: color var(--transition-fast);
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 1px;
+
+    background: var(--color-burgundy);
+
+    transform: scaleX(0);
+    transform-origin: left center;
+
+    transition: transform var(--transition-fast);
+}
+
+.nav a:hover {
+    color: var(--color-burgundy);
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
 
 .hamburger-menu {
     display: none;
+
+    width: 32px;
+    height: 32px;
+
+    margin-left: auto;
+    padding: 0;
 
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    width: 32px;
-    height: 32px;
-
     background: transparent;
-    border: none;
+    border: 0;
 
     cursor: pointer;
-
-    padding: 0;
-
     z-index: 1001;
-
-    margin-left: auto;
 }
 
 .hamburger-line {
+    display: block;
+
     width: 24px;
     height: 2px;
-
-    background: #4c0d17;
-
     margin: 4px 0;
 
-    transition: all 0.3s ease;
+    background: var(--color-burgundy);
 
-    display: block;
+    transition: transform var(--transition-normal),
+                opacity var(--transition-normal);
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(1) {
@@ -171,57 +272,10 @@ body.menu-open {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.nav a {
-    position: relative;
 
-    display: block;
-
-    color: #393333;
-
-    text-decoration: none;
-
-    font-family: 'DM Sans', sans-serif;
-
-    font-size: 0.8rem;
-
-    font-weight: 500;
-
-    letter-spacing: 0.1em;
-
-    white-space: nowrap;
-
-    transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
-}
-
-.nav a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -4px;
-
-    width: 100%;
-    height: 1px;
-
-    background: #4c0d17;
-
-    transform: scaleX(0);
-
-    transform-origin: left center;
-
-    transition: transform 0.2s ease;
-}
-
-.nav a:hover {
-    color: #4c0d17;
-}
-
-.nav a:hover::after {
-    transform: scaleX(1);
-}
+/* =========================================================
+   LANGUAGE SWITCHER
+========================================================= */
 
 .lang-switcher {
     flex: 0 0 auto;
@@ -231,12 +285,10 @@ body.menu-open {
     justify-content: center;
 
     height: 30px;
-
     padding: 0 10px;
 
-    border: 1px solid #e5dccb;
-
-    background: #f4ede2;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
 }
 
 .lang-switcher label {
@@ -246,14 +298,7 @@ body.menu-open {
     align-items: center;
     justify-content: center;
 
-    width: auto;
-    height: auto;
-
-    border: none;
-
     cursor: pointer;
-
-    background: transparent;
 }
 
 .lang-switcher label:not(:last-child)::after {
@@ -262,136 +307,118 @@ body.menu-open {
     margin: 0 9px;
 
     color: #b8b1a5;
-
     font-size: 12px;
-
-    font-weight: 400;
 }
 
 .lang-switcher input {
     position: absolute;
 
-    opacity: 0;
+    width: 1px;
+    height: 1px;
 
+    opacity: 0;
     pointer-events: none;
 }
 
 .lang-switcher span {
     display: inline-block;
 
-    width: auto;
-    height: auto;
-
     font-size: 11px;
-
     line-height: 1;
-
     font-weight: 400;
-
     letter-spacing: 0.08em;
+    text-transform: uppercase;
 
     color: #b8b1a5;
 
-    text-transform: uppercase;
-
-    background: transparent;
-
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
-.lang-switcher input:checked+span {
-    color: #4c0d17;
-}
-
+.lang-switcher input:checked + span,
 .lang-switcher label:hover span {
-    color: #4c0d17;
+    color: var(--color-burgundy);
 }
 
-.lang-switcher input:focus-visible+span {
-    outline: 1px solid #4c0d17;
-
+.lang-switcher input:focus-visible + span {
+    outline: 1px solid var(--color-burgundy);
     outline-offset: 3px;
 }
+
+
+/* =========================================================
+   GET INVOLVED BUTTON
+========================================================= */
 
 .get-involved-btn {
     flex: 0 0 auto;
 
     margin: 0;
-
     padding: 13px 20px;
 
-    background: #4c0d17;
+    background: var(--color-burgundy);
+    color: var(--color-bg);
 
-    color: #f4ede2;
-
-    border: 1px solid #4c0d17;
-
+    border: 1px solid var(--color-burgundy);
     border-radius: 0;
 
-    font-family: 'DM Sans', sans-serif;
-
+    font-family: var(--font-sans);
     font-size: 0.65rem;
-
     font-weight: 600;
-
     letter-spacing: 0.13em;
-
     white-space: nowrap;
 
     cursor: pointer;
 
     transition:
-        background 0.2s ease,
-        color 0.2s ease;
+        background var(--transition-fast),
+        color var(--transition-fast);
 }
 
 .get-involved-btn:hover {
-    background: #000000;
-
-    color: #f4ede2;
+    background: #000;
+    color: var(--color-bg);
 }
 
-/* ========================================
-  BOTTOM BAR
-======================================== */
-/* ========================================
+
+/* =========================================================
    FOOTER
-======================================== */
+========================================================= */
 
 .site-footer {
     width: 100%;
 
-    background: #292624;
+    background: var(--color-footer);
     color: #d8d1c8;
 
-    border-top: 1px solid #e5dccb;
+    border-top: 1px solid var(--color-border);
 }
 
 
-/* ========================================
-   FOOTER INNER
-======================================== */
+/* ---------------------------------------------------------
+   Footer Inner
+--------------------------------------------------------- */
 
 .footer-inner {
     width: 100%;
-    max-width: 1600px;
+    max-width: var(--content-width);
 
     margin: 0 auto;
-
     padding: 74px 7.4% 70px;
 
     display: grid;
-
     grid-template-columns:
-        1.25fr 1fr 1.25fr 1fr;
+        1.25fr
+        1fr
+        1.25fr
+        1fr;
 
-    column-gap: 70px;
+    gap: 70px;
 }
 
 
-/* ========================================
-   FOOTER BRAND
-======================================== */
+/* ---------------------------------------------------------
+   Footer Brand
+--------------------------------------------------------- */
 
 .footer-brand {
     max-width: 350px;
@@ -399,205 +426,150 @@ body.menu-open {
 
 .footer-logo {
     display: inline-flex;
-
     align-items: center;
-
     gap: 16px;
 
     margin-bottom: 30px;
 
-    color: #f4ede2;
-
+    color: var(--color-bg);
     text-decoration: none;
 }
 
 .footer-logo img {
+    display: block;
+
     width: 50px;
     height: 50px;
 
     object-fit: cover;
-
-    display: block;
 }
 
 .footer-logo span {
-    font-family: 'Cormorant Garamond', serif;
-
+    font-family: var(--font-display);
     font-size: 2rem;
-
     line-height: 1;
-
     font-weight: 500;
 
-    color: #f4ede2;
+    color: var(--color-bg);
 }
 
 .footer-brand p {
+    max-width: 350px;
     margin: 0;
 
-    max-width: 350px;
-
-    font-family: 'DM Sans', sans-serif;
-
+    font-family: var(--font-sans);
     font-size: 0.95rem;
-
     line-height: 1.55;
-
     font-weight: 500;
 
-    color: #bdb7b0;
+    color: var(--color-footer-text);
 }
 
 
-/* ========================================
-   FOOTER COLUMNS
-======================================== */
+/* ---------------------------------------------------------
+   Footer Columns
+--------------------------------------------------------- */
 
 .footer-column {
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
 }
-
-
-/* ========================================
-   FOOTER HEADINGS
-======================================== */
 
 .footer-heading {
     margin-bottom: 30px;
 
-    font-family: 'DM Sans', sans-serif;
-
+    font-family: var(--font-sans);
     font-size: 0.6rem;
-
     line-height: 1;
-
     font-weight: 600;
-
     letter-spacing: 0.32em;
-
     text-transform: uppercase;
 
     color: #8d8984;
 }
 
-
-/* ========================================
-   FOOTER LINKS
-======================================== */
-
 .footer-column a {
     position: relative;
 
     display: block;
-
     width: fit-content;
 
     margin-bottom: 17px;
 
-    font-family: 'DM Sans', sans-serif;
-
+    font-family: var(--font-sans);
     font-size: 0.95rem;
-
     line-height: 1.35;
-
     font-weight: 500;
 
-    color: #bdb8b1;
-
+    color: var(--color-footer-text);
     text-decoration: none;
 
     transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+        color var(--transition-fast),
+        transform var(--transition-fast);
 }
 
 .footer-column a:hover {
-    color: #f4ede2;
-
+    color: var(--color-bg);
     transform: translateX(3px);
 }
 
 
-/* ========================================
-   SOCIAL HEADING
-======================================== */
+/* ---------------------------------------------------------
+   Social
+--------------------------------------------------------- */
 
 .footer-social-heading {
     margin-top: 28px;
-
     margin-bottom: 25px;
 }
 
 
-/* ========================================
-   FOOTER BOTTOM
-======================================== */
+/* ---------------------------------------------------------
+   Footer Bottom
+--------------------------------------------------------- */
 
 .footer-bottom {
     width: calc(100% - 14.8%);
 
     margin: 0 auto;
-
     padding: 42px 0 52px;
 
-    border-top: 1px solid #403c38;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
-    column-gap: 80px;
-
+    gap: 80px;
     align-items: start;
+
+    border-top: 1px solid var(--color-footer-border);
 }
-
-
-/* ========================================
-   COPYRIGHT
-======================================== */
 
 .footer-copyright {
-    font-family: 'DM Sans', sans-serif;
-
+    font-family: var(--font-sans);
     font-size: 0.6rem;
-
     line-height: 1.4;
-
     font-weight: 600;
-
     letter-spacing: 0.24em;
 
-    color: #85807a;
+    color: var(--color-footer-muted);
 }
-
-
-/* ========================================
-   LEGAL
-======================================== */
 
 .footer-legal {
     max-width: 720px;
-
     justify-self: end;
 
-    font-family: 'DM Sans', sans-serif;
-
+    font-family: var(--font-sans);
     font-size: 0.62rem;
-
     line-height: 1.55;
-
     font-weight: 500;
 
-    color: #85807a;
+    color: var(--color-footer-muted);
 }
 
-/* ========================================
-   MEDIA QUERIES - TABLET (1100px)
-======================================== */
+
+/* =========================================================
+   TABLET — 1100px
+========================================================= */
 
 @media (max-width: 1100px) {
 
@@ -606,8 +578,12 @@ body.menu-open {
         gap: 20px;
     }
 
+    .logo {
+        margin-left: 0;
+    }
+
     .brand-group {
-        width: 180px;
+        flex-basis: 180px;
     }
 
     .nav {
@@ -618,51 +594,11 @@ body.menu-open {
         font-size: 0.6rem;
     }
 
-    .hero-inner {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .hero-copy {
-        width: 75%;
-    }
-
-    .hero-emblem {
-        width: 350px;
-        height: 350px;
-        right: -50px;
-    }
-
-    .intro-content {
-        grid-template-columns:
-            minmax(0, 1.7fr) minmax(280px, 1fr);
-    }
-
-    .intro-left {
-        padding: 42px 40px 48px;
-    }
-
-    .intro-right {
-        padding: 44px 35px;
-    }
-
-    .intro-text {
-        font-size: clamp(1.2rem, 2.3vw, 2.1rem);
-    }
-
-}
-
-
-/* ========================================
-   MEDIA QUERIES - TABLET (1000px)
-======================================== */
-
-@media (max-width: 1000px) {
-
     .footer-inner {
         grid-template-columns: 1fr 1fr;
-        row-gap: 55px;
-        column-gap: 60px;
+
+        gap: 55px 60px;
+
         padding: 65px 6%;
     }
 
@@ -672,27 +608,27 @@ body.menu-open {
 
     .footer-bottom {
         width: 88%;
+
         grid-template-columns: 1fr;
-        row-gap: 30px;
+        gap: 30px;
     }
 
     .footer-legal {
         justify-self: start;
         max-width: 650px;
     }
-
 }
 
 
-/* ========================================
-   MEDIA QUERIES - TABLET (900px)
-======================================== */
+/* =========================================================
+   TABLET — 900px
+========================================================= */
 
 @media (max-width: 900px) {
 
     .ecosystem-item {
-        grid-template-columns:
-            90px minmax(0, 1fr) 50px;
+        grid-template-columns: 90px minmax(0, 1fr) 50px;
+
         min-height: 180px;
         padding: 38px 28px;
     }
@@ -704,36 +640,32 @@ body.menu-open {
     .ecosystem-content p {
         font-size: 0.9rem;
     }
-
 }
 
 
-/* ========================================
-   MEDIA QUERIES - MOBILE (800px)
-======================================== */
+/* =========================================================
+   MOBILE — 800px
+========================================================= */
 
 @media (max-width: 800px) {
 
+    /* Header */
+
     .topbar {
         min-height: 56px;
-        padding: 2px 6px 3px 8px;
-        gap: 2px;
+        padding: 4px 8px;
+        gap: 8px;
     }
 
     .logo {
         width: 26px;
         height: 26px;
-        font-size: 0.6rem;
-        flex-shrink: 0;
-        margin-left: 0;
-        order: 1;
+        margin: 0;
     }
 
     .brand-group {
-        width: auto;
         flex: 0 0 auto;
-        order: 1;
-        margin: 0;
+        width: auto;
     }
 
     .brand-mark {
@@ -741,16 +673,14 @@ body.menu-open {
     }
 
     .brand-name {
-        font-size: 0.4rem;
         margin-top: 2px;
+        font-size: 0.4rem;
     }
 
     .lang-switcher {
         height: 28px;
         padding: 0 6px;
-        order: 2;
-        margin-left: 215px;
-        /* margin-right: 8px; */
+        margin-left: auto;
     }
 
     .lang-switcher label:not(:last-child)::after {
@@ -763,40 +693,34 @@ body.menu-open {
 
     .hamburger-menu {
         display: flex;
-        margin-left: auto;
-        order: 3;
     }
+
+    .get-involved-btn {
+        display: none;
+    }
+
+
+    /* Navigation */
 
     .nav {
         position: fixed;
-
-        left: -100%;
-
         top: 56px;
-
-        flex-direction: column;
+        left: -100%;
 
         width: 100%;
 
-        text-align: left;
-
-        transition: left 0.3s ease;
-
-        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
         gap: 0;
-
         padding: 0;
 
-        margin: 0;
+        background: var(--color-bg-mobile);
+
+        transition: left var(--transition-normal);
 
         z-index: 999;
-
-        min-width: auto;
-
-        border: none;
-
-        align-items: flex-start;
     }
 
     .nav.active {
@@ -804,23 +728,13 @@ body.menu-open {
     }
 
     .nav a {
+        width: 100%;
         padding: 34px 24px;
 
-        display: block;
+        background: var(--color-bg-mobile);
+        border-bottom: 1px solid var(--color-border-light);
 
         font-size: 0.75rem;
-
-        border-bottom: 1px solid #e9dec6;
-
-        position: relative;
-
-        width: 100%;
-
-        background: #ece9e4;
-
-        color: #393333;
-
-        margin: 0;
     }
 
     .nav a::after {
@@ -828,14 +742,12 @@ body.menu-open {
     }
 
     .nav a:hover {
-        background: #e9dec6;
-
-        color: #4c0d17;
+        background: var(--color-border-light);
+        color: var(--color-burgundy);
     }
 
-    .get-involved-btn {
-        display: none;
-    }
+
+    /* Hero */
 
     .hero {
         min-height: calc(100vh - 68px);
@@ -843,7 +755,9 @@ body.menu-open {
 
     .hero-inner {
         min-height: calc(100vh - 56px);
+
         padding: 2px 16px 50px;
+
         align-items: center;
     }
 
@@ -858,6 +772,7 @@ body.menu-open {
 
     .hero-subtitle {
         margin-top: 30px;
+
         font-size: clamp(0.85rem, 2.5vw, 1.2rem);
         line-height: 1.45;
     }
@@ -865,6 +780,7 @@ body.menu-open {
     .hero-actions {
         flex-direction: column;
         align-items: stretch;
+
         gap: 10px;
         margin-top: 25px;
     }
@@ -872,30 +788,25 @@ body.menu-open {
     .hero-button {
         width: 100%;
         min-height: 42px;
+
         padding: 10px 16px;
+
         font-size: 0.58rem;
     }
-
-    .hero-emblem {
-        width: 300px;
-        height: 300px;
-        right: -130px;
-        top: 25%;
-        opacity: 0.1;
-    }
-
 }
 
 
-/* ========================================
-   MEDIA QUERIES - MOBILE (650px)
-======================================== */
+/* =========================================================
+   MOBILE — 650px
+========================================================= */
 
 @media (max-width: 650px) {
 
     .footer-inner {
         grid-template-columns: 1fr;
-        row-gap: 45px;
+
+        gap: 45px;
+
         padding: 55px 24px 50px;
     }
 
@@ -908,14 +819,16 @@ body.menu-open {
     }
 
     .footer-column a {
-        font-size: 0.9rem;
         margin-bottom: 15px;
+        font-size: 0.9rem;
     }
 
     .footer-bottom {
         width: calc(100% - 48px);
+
         padding: 32px 0 40px;
-        row-gap: 25px;
+
+        gap: 25px;
     }
 
     .footer-copyright {
@@ -926,20 +839,78 @@ body.menu-open {
     .footer-legal {
         font-size: 0.58rem;
     }
-
 }
 
 
-/* ========================================
-   MEDIA QUERIES - MOBILE (600px)
-======================================== */
+/* =========================================================
+   MOBILE — 600px
+========================================================= */
 
 @media (max-width: 600px) {
 
+    /* Header */
+
+    .logo {
+        width: 22px;
+        height: 22px;
+    }
+
+    .brand-mark {
+        font-size: 1.1rem;
+    }
+
+    .brand-name {
+        display: none;
+    }
+
+    .lang-switcher {
+        height: 28px;
+        padding: 0 7px;
+    }
+
+    .lang-switcher label:not(:last-child)::after {
+        margin: 0 6px;
+    }
+
+    .lang-switcher span {
+        font-size: 10px;
+    }
+
+
+    /* Hero */
+
+    .hero-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-title {
+        font-size: clamp(3.2rem, 15vw, 4.5rem);
+    }
+
+
+    /* Introduction */
+
+    .intro-left {
+        padding: 32px 20px 40px;
+    }
+
+    .intro-right {
+        padding: 32px 20px;
+    }
+
+    .ecosystem-bar {
+        padding: 0 16px;
+    }
+
+
+    /* Ecosystem */
+
     .ecosystem-item {
-        grid-template-columns:
-            45px minmax(0, 1fr) 25px;
+        grid-template-columns: 45px minmax(0, 1fr) 25px;
+
         min-height: 190px;
+
         padding: 32px 20px;
     }
 
@@ -953,6 +924,7 @@ body.menu-open {
 
     .ecosystem-content h2 {
         margin-bottom: 12px;
+
         font-size: 1.8rem;
         line-height: 1;
     }
@@ -960,21 +932,30 @@ body.menu-open {
     .ecosystem-content p {
         font-size: 0.8rem;
         line-height: 1.45;
-        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    /* Header */
+
+    .topbar {
+        min-height: 48px;
+        padding: 8px 6px 8px 8px;
     }
 
     .logo {
         width: 22px;
         height: 22px;
-        font-size: 0.5rem;
     }
 
     .brand-mark {
         font-size: 1.1rem;
-    }
-
-    .brand-name {
-        display: none;
     }
 
     .lang-switcher {
@@ -991,59 +972,36 @@ body.menu-open {
         font-size: 8px;
     }
 
-    .get-involved-btn {
-        padding: 7px 9px;
-        font-size: 0.48rem;
-        white-space: nowrap
+    .hamburger-menu {
+        width: 26px;
+        height: 26px;
     }
 
-    .lang-switcher {
-        height: 28px;
-        padding: 0 7px;
+    .hamburger-line {
+        width: 18px;
+        margin: 3px 0;
     }
 
-    .lang-switcher label:not(:last-child)::after {
-        margin: 0 6px;
+
+    /* Navigation */
+
+    .nav {
+        top: 48px;
+        height: calc(100vh - 48px);
+
+        background: #fff;
     }
 
-    .lang-switcher span {
-        font-size: 10px;
+    .nav a {
+        padding: 12px 16px;
+
+        background: #fff;
+
+        font-size: 0.65rem;
     }
 
-    .get-involved-btn {
-        padding: 10px 12px;
-        font-size: 0.5rem;
-    }
 
-    .hero-inner {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .hero-title {
-        font-size: clamp(3.2rem, 15vw, 4.5rem);
-    }
-
-    .intro-left {
-        padding: 32px 20px 40px;
-    }
-
-    .intro-right {
-        padding: 32px 20px;
-    }
-
-    .ecosystem-bar {
-        padding: 0 16px;
-    }
-
-}
-
-
-/* ========================================
-   MEDIA QUERIES - SMALL MOBILE (400px)
-======================================== */
-
-@media (max-width: 400px) {
+    /* Footer */
 
     .footer-inner {
         padding-left: 18px;
@@ -1063,9 +1021,12 @@ body.menu-open {
         font-size: 1.8rem;
     }
 
+
+    /* Ecosystem */
+
     .ecosystem-item {
-        grid-template-columns:
-            35px minmax(0, 1fr) 20px;
+        grid-template-columns: 35px minmax(0, 1fr) 20px;
+
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -1076,87 +1037,5 @@ body.menu-open {
 
     .ecosystem-content p {
         font-size: 0.75rem;
-    }
-
-    .topbar {
-        min-height: 48px;
-        padding: 8px 6px 8px 8px;
-        gap: 2px;
-    }
-
-    .logo {
-        width: 22px;
-        height: 22px;
-        font-size: 0.5rem;
-        flex-shrink: 0;
-        margin-left: 0;
-        order: 1;
-    }
-
-    .brand-group {
-        width: auto;
-        order: 1;
-        margin: 0;
-    }
-
-    .brand-mark {
-        font-size: 1.1rem;
-    }
-
-    .brand-name {
-        display: none;
-    }
-
-    .lang-switcher {
-        height: 26px;
-        padding: 0 5px;
-        order: 2;
-        margin-left: auto;
-        margin-right: 6px;
-    }
-
-    .lang-switcher label:not(:last-child)::after {
-        margin: 0 3px;
-        font-size: 9px;
-    }
-
-    .lang-switcher span {
-        font-size: 8px;
-    }
-
-    .hamburger-menu {
-        width: 26px;
-        height: 26px;
-        order: 3;
-    }
-
-    .hamburger-line {
-        width: 18px;
-        height: 2px;
-        margin: 3px 0;
-    }
-
-    .nav {
-        top: 48px;
-        width: 100%;
-        height: calc(100vh - 48px);
-        max-width: none;
-        padding: 0;
-        margin: 0;
-        align-items: flex-start;
-        background: white;
-    }
-
-    .nav a {
-        padding: 12px 16px;
-        font-size: 0.65rem;
-        width: 100%;
-        background: white;
-        color: #393333;
-        margin: 0;
-    }
-
-    .get-involved-btn {
-        display: none;
     }
 }

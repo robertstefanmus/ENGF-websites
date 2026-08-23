@@ -2,61 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="logo.jpg" />
-    <link rel="stylesheet" href="Homepage.css">
-    <link rel="stylesheet" href="General.css">
     <title>ENGF - European NextGen Forum</title>
+
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="Homepage.css">
 </head>
 
 <body>
 
-    <!-- ========================================
+    <!-- =====================================================
          HEADER
-    ======================================== -->
+    ====================================================== -->
 
     <header class="topbar">
-        <img src="logo.jpg" alt="ENGF Logo" class="logo">
 
-        <a href="Homepage.html" class="brand-group" aria-label="Go to homepage">
+        <!-- Logo -->
+        <a href="index.html" class="brand-group" aria-label="Go to ENGF homepage">
+            <img src="logo.jpg" alt="ENGF Logo" class="logo">
 
+            <span class="brand-mark">ENGF</span>
 
-            <div class="brand-mark">
-                ENGF
-            </div>
-
-            <div class="brand-name">
+            <span class="brand-name">
                 EUROPEAN NEXTGEN FORUM
-            </div>
-
+            </span>
         </a>
 
-        <!-- Hamburger Menu Button -->
-        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <!-- Mobile Navigation Toggle -->
+        <button type="button" class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu"
+            aria-controls="mobileNav" aria-expanded="false">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
 
-        <nav class="nav" aria-label="Main navigation" id="mobileNav">
-
-            <a href="#">ABOUT</a>
-            <a href="#">OUR WORK</a>
-            <a href="#">DEPARTMENTS</a>
-            <a href="#">ECOSYSTEM</a>
-            <a href="#">PROGRAMMES</a>
-            <a href="#">EVENTS</a>
-            <a href="#">INSIGHTS</a>
-
+        <!-- Main Navigation -->
+        <nav class="nav" id="mobileNav" aria-label="Main navigation">
+            <a href="about.html" class="brand-group" aria-label="Go to about page">ABOUT</a>
+            <a href="our-work.html" aria-label="Go to our work page">OUR WORK</a>
+            <a href="departments.html" aria-label="Go to departments page">DEPARTMENTS</a>
+            <a href="index.html" aria-label="Go to ecosystem page">ECOSYSTEM</a>
+            <a href="programmes.html" aria-label="Go to programmes page">PROGRAMMES</a>
+            <a href="events.html" aria-label="Go to events page">EVENTS</a>
+            <a href="insights.html" class="brand-group" aria-label="Go to insights page">INSIGHTS</a>
         </nav>
 
-
-        <!-- LANGUAGE SWITCHER -->
-
-        <div class="lang-switcher" aria-label="Language selector">
-
+        <!-- Language Switcher -->
+        <fieldset class="lang-switcher">
             <label>
                 <input type="radio" name="language" value="EN" checked>
                 <span>EN</span>
@@ -71,30 +66,25 @@
                 <input type="radio" name="language" value="IT">
                 <span>IT</span>
             </label>
+        </fieldset>
 
-        </div>
-
-
-        <!-- GET INVOLVED -->
-
-        <button class="get-involved-btn">
+        <!-- CTA -->
+        <a href="get-involved.html" class="brand-group" aria-label="Go to get involved page" class="get-involved-btn">
             GET INVOLVED
-        </button>
+        </a>
 
     </header>
 
 
-
-    <!-- ========================================
-         MAIN
-    ======================================== -->
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
 
     <main>
 
-
-        <!-- ========================================
-             HERO SECTION
-        ======================================== -->
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
         <section class="hero">
 
@@ -107,24 +97,24 @@
                         The Next Generation.
                     </h1>
 
-                    <img src="logo.jpg" alt="ENGF Logo" class="hero-logo">
+                    <img src="logo.jpg" alt="" class="hero-logo" aria-hidden="true">
 
                     <p class="hero-subtitle">
-                        A platform for the people and ideas shaping Europe's next
-                        chapter — through education, research, dialogue and
-                        participation.
+                        A platform for the people and ideas shaping Europe's
+                        next chapter — through education, research, dialogue
+                        and participation.
                     </p>
-
 
                     <div class="hero-actions">
 
-                        <a href="about.html" class="hero-button primary" style="text-decoration: none;">
+                        <a href="about.html" class="brand-group" aria-label="Go to about page"
+                            class="hero-button primary">
                             EXPLORE ENGF
                         </a>
 
-                        <button class="hero-button secondary">
+                        <a href="programmes.html" aria-label="Go to programmes page" class="hero-button secondary">
                             DISCOVER OUR PROGRAMMES
-                        </button>
+                        </a>
 
                     </div>
 
@@ -135,24 +125,20 @@
         </section>
 
 
-
-        <!-- ========================================
-             INTRODUCTION / ECOSYSTEM SECTION
-        ======================================== -->
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
 
         <section class="intro-section">
 
             <div class="intro-content">
 
-
-                <!-- LEFT SIDE -->
-
+                <!-- Left -->
                 <div class="intro-left">
 
                     <div class="section-label">
                         INTRODUCTION
                     </div>
-
 
                     <p class="intro-text">
                         ENGF exists to give young people a permanent, serious
@@ -165,16 +151,15 @@
                         private sector.
                     </p>
 
-
                     <div class="intro-links">
 
-                        <a href="#">
+                        <a href="about.html">
                             WHO WE ARE
                         </a>
 
-                        <span></span>
+                        <span aria-hidden="true"></span>
 
-                        <a href="#">
+                        <a href="our-work.html">
                             WHAT WE DO
                         </a>
 
@@ -183,11 +168,8 @@
                 </div>
 
 
-
-                <!-- RIGHT SIDE -->
-
+                <!-- Right -->
                 <aside class="intro-right">
-
 
                     <div class="intro-stat">
 
@@ -201,7 +183,6 @@
 
                     </div>
 
-
                     <div class="intro-stat">
 
                         <div class="stat-line"></div>
@@ -211,7 +192,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="intro-stat">
 
@@ -223,7 +203,6 @@
 
                     </div>
 
-
                     <div class="intro-note">
                         FIGURES PUBLISHED ONCE VERIFIED
                     </div>
@@ -233,8 +212,7 @@
             </div>
 
 
-            <!-- BOTTOM BAR -->
-
+            <!-- Ecosystem Bar -->
             <div class="ecosystem-bar">
 
                 <span>
@@ -248,19 +226,17 @@
             </div>
 
         </section>
-        <!-- ========================================
-     ENGF ECOSYSTEM
-======================================== -->
 
-        <section class="ecosystem-section">
 
-            <!-- ECOSYSTEM LIST -->
+        <!-- =================================================
+             ENGF ECOSYSTEM
+        ================================================== -->
+
+        <section class="ecosystem-section" id="ecosystem">
 
             <div class="ecosystem-list">
 
-
                 <!-- 01 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -281,13 +257,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-burgundy"></div>
+                    <div class="ecosystem-dot dot-burgundy" aria-hidden="true"></div>
 
                 </article>
 
 
                 <!-- 02 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -301,20 +276,20 @@
                         </h2>
 
                         <p>
-                            Department for Education &amp; Professional Development —
-                            Courses, masterclasses and simulations in European affairs,
-                            diplomacy and professional practice.
+                            Department for Education &amp; Professional
+                            Development — Courses, masterclasses and simulations
+                            in European affairs, diplomacy and professional
+                            practice.
                         </p>
 
                     </div>
 
-                    <div class="ecosystem-dot dot-gold"></div>
+                    <div class="ecosystem-dot dot-gold" aria-hidden="true"></div>
 
                 </article>
 
 
                 <!-- 03 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -335,13 +310,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-blue"></div>
+                    <div class="ecosystem-dot dot-blue" aria-hidden="true"></div>
 
                 </article>
 
 
                 <!-- 04 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -362,13 +336,12 @@
 
                     </div>
 
-                    <div class="ecosystem-dot dot-green"></div>
+                    <div class="ecosystem-dot dot-green" aria-hidden="true"></div>
 
                 </article>
 
 
                 <!-- 05 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -382,19 +355,19 @@
                         </h2>
 
                         <p>
-                            Department for Conferences & Strategic Dialogue - Conferences, roundtables and strategic
-                            dialogue with institutions and international organisations.
+                            Department for Conferences &amp; Strategic Dialogue —
+                            Conferences, roundtables and strategic dialogue with
+                            institutions and international organisations.
                         </p>
 
                     </div>
 
-                    <div class="ecosystem-dot dot-orange"></div>
+                    <div class="ecosystem-dot dot-orange" aria-hidden="true"></div>
 
                 </article>
 
 
                 <!-- 06 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -408,19 +381,19 @@
                         </h2>
 
                         <p>
-                            Department for Volunteering & Community Engagement - Volunteering, community service and
-                            social campaigns carried out with local partners.
+                            Department for Volunteering &amp; Community Engagement —
+                            Volunteering, community service and social campaigns
+                            carried out with local partners.
                         </p>
 
                     </div>
 
-                    <div class="ecosystem-dot dot-purple"></div>
+                    <div class="ecosystem-dot dot-purple" aria-hidden="true"></div>
 
                 </article>
 
 
                 <!-- 07 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -434,19 +407,19 @@
                         </h2>
 
                         <p>
-                            Department for Culture & Creative Industries - Exhibitions, screenings and open calls
-                            supporting emerging artists across disciplines.
+                            Department for Culture &amp; Creative Industries —
+                            Exhibitions, screenings and open calls supporting
+                            emerging artists across disciplines.
                         </p>
 
                     </div>
 
-                    <div class="ecosystem-dot dot-red"></div>
+                    <div class="ecosystem-dot dot-red" aria-hidden="true"></div>
 
                 </article>
 
 
                 <!-- 08 -->
-
                 <article class="ecosystem-item">
 
                     <div class="ecosystem-number">
@@ -460,13 +433,15 @@
                         </h2>
 
                         <p>
-                            Department for Digital Transformation & Innovation in Education - Information, research and
-                            facilitation supporting the digital transformation of schools.
+                            Department for Digital Transformation &amp;
+                            Innovation in Education — Information, research and
+                            facilitation supporting the digital transformation
+                            of schools.
                         </p>
 
                     </div>
 
-                    <div class="ecosystem-dot dot-teal"></div>
+                    <div class="ecosystem-dot dot-teal" aria-hidden="true"></div>
 
                 </article>
 
@@ -474,363 +449,593 @@
 
         </section>
 
-<section class="ecosystem-section">        <div class="container">
-    <!-- Header / Top Bar -->
-    <header class="top-bar">
-      <div class="title-group">
-        <span class="sub-heading">FEATURED PROGRAMME</span>
-        <h1 class="main-title">ENGF Fellowship</h1>
-      </div>
-      <a href="#" class="all-opportunities">ALL OPPORTUNITIES</a>
-    </header>
 
-    <!-- Main Content Area -->
-    <main class="content-grid">
-      <!-- Left Column: Image -->
-      <div class="image-wrapper">
-        <img src="books.jpg">
-      </div>
+        <!-- =================================================
+             FEATURED PROGRAMME
+        ================================================== -->
 
-      <!-- Right Column: Details -->
-      <div class="details-wrapper">
-        <!-- Badge -->
-        <div class="badge">
-          <span class="dot">•</span> APPLICATIONS OPENING SOON
-        </div>
+        <section class="opportunities" id="programmes">
 
-        <!-- Description -->
-        <p class="description">
-          A research cycle with mentorship, working-group participation and a published policy paper as its outcome.
-        </p>
+            <div class="container">
 
-        <!-- Divider Line -->
-        <hr class="divider">
+                <header class="top-bar">
 
-        <!-- Info Grid -->
-        <div class="info-grid">
-          <div class="info-item">
-            <span class="label">DEPARTMENT</span>
-            <span class="value">ENGF Institute</span>
-          </div>
+                    <div class="title-group">
 
-          <div class="info-item">
-            <span class="label">ELIGIBILITY</span>
-            <span class="value">Students, graduates and early-career researchers</span>
-          </div>
+                        <span class="sub-heading">
+                            FEATURED PROGRAMME
+                        </span>
 
-          <div class="info-item">
-            <span class="label">LOCATION</span>
-            <span class="value">Hybrid — Romania & online</span>
-          </div>
+                        <h2 class="main-title">
+                            ENGF Fellowship
+                        </h2>
 
-          <div class="info-item">
-            <span class="label">DEADLINE</span>
-            <span class="value">To be announced</span>
-          </div>
-        </div>
+                    </div>
 
-        <!-- CTA Button -->
-        <a href="#" class="btn">EXPLORE THE INSTITUTE</a>
-      </div>
-    </main>
-  </div>
+                    <a href="programmes.html" class="all-opportunities">
+                        ALL OPPORTUNITIES
+                    </a>
+
+                </header>
+
+
+                <div class="content-grid">
+
+                    <!-- Image -->
+                    <div class="image-wrapper">
+
+                        <img src="books.jpg" alt="Books and research materials" loading="lazy">
+
+                    </div>
+
+
+                    <!-- Details -->
+                    <div class="details-wrapper">
+
+                        <div class="badge">
+                            <span class="dot" aria-hidden="true">•</span>
+                            APPLICATIONS OPENING SOON
+                        </div>
+
+                        <p class="description">
+                            A research cycle with mentorship, working-group
+                            participation and a published policy paper as
+                            its outcome.
+                        </p>
+
+                        <hr class="divider">
+
+
+                        <div class="info-grid">
+
+                            <div class="info-item">
+                                <span class="label">
+                                    DEPARTMENT
+                                </span>
+
+                                <span class="value">
+                                    ENGF Institute
+                                </span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="label">
+                                    ELIGIBILITY
+                                </span>
+
+                                <span class="value">
+                                    Students, graduates and early-career
+                                    researchers
+                                </span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="label">
+                                    LOCATION
+                                </span>
+
+                                <span class="value">
+                                    Hybrid — Romania &amp; online
+                                </span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="label">
+                                    DEADLINE
+                                </span>
+
+                                <span class="value">
+                                    To be announced
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <a href="departments.html" class="btn">
+                            EXPLORE THE INSTITUTE
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section class="events-section">
+
+        <!-- =================================================
+             EVENTS
+        ================================================== -->
+
+        <section class="events-section" id="events">
+
             <div class="events-inner">
-                <div class="events-header">
+
+                <header class="events-header">
+
                     <div class="events-title-wrap">
-                        <span class="events-tag">FORTHCOMING</span>
-                        <h2>Conferences &amp; Strategic Dialogue</h2>
+
+                        <span class="events-tag">
+                            FORTHCOMING
+                        </span>
+
+                        <h2>
+                            Conferences &amp; Strategic Dialogue
+                        </h2>
+
                     </div>
-                    <a href="#" class="all-events">ALL EVENTS</a>
-                </div>
+
+                    <a href="events.html" class="all-events">
+                        ALL EVENTS
+                    </a>
+
+                </header>
+
 
                 <div class="events-list">
-                    <article class="event-row">
-                        <div class="event-date">DATE TO BE ANNOUNCED</div>
-                        <div class="event-title">AI in Education: Responsibility, Method, Evidence</div>
-                        <div class="event-category">EDUCATION &amp; TECHNOLOGY</div>
-                    </article>
 
                     <article class="event-row">
-                        <div class="event-date">DATE TO BE ANNOUNCED</div>
-                        <div class="event-title">European Careers: EU, NATO &amp; Diplomacy</div>
-                        <div class="event-category">CAREERS &amp; INSTITUTIONS</div>
+
+                        <div class="event-date">
+                            DATE TO BE ANNOUNCED
+                        </div>
+
+                        <div class="event-title">
+                            AI in Education: Responsibility, Method, Evidence
+                        </div>
+
+                        <div class="event-category">
+                            EDUCATION &amp; TECHNOLOGY
+                        </div>
+
                     </article>
+
 
                     <article class="event-row">
-                        <div class="event-date">DATE TO BE ANNOUNCED</div>
-                        <div class="event-title">Drones, Security and European Adaptation</div>
-                        <div class="event-category">SECURITY</div>
+
+                        <div class="event-date">
+                            DATE TO BE ANNOUNCED
+                        </div>
+
+                        <div class="event-title">
+                            European Careers: EU, NATO &amp; Diplomacy
+                        </div>
+
+                        <div class="event-category">
+                            CAREERS &amp; INSTITUTIONS
+                        </div>
+
                     </article>
 
-                    <article class="event-row event-row-last">
-                        <div class="event-date">DATE TO BE ANNOUNCED</div>
-                        <div class="event-title">Young Leadership Forum</div>
-                        <div class="event-category">LEADERSHIP</div>
+
+                    <article class="event-row">
+
+                        <div class="event-date">
+                            DATE TO BE ANNOUNCED
+                        </div>
+
+                        <div class="event-title">
+                            Drones, Security and European Adaptation
+                        </div>
+
+                        <div class="event-category">
+                            SECURITY
+                        </div>
+
                     </article>
+
+
+                    <article class="event-row">
+
+                        <div class="event-date">
+                            DATE TO BE ANNOUNCED
+                        </div>
+
+                        <div class="event-title">
+                            Young Leadership Forum
+                        </div>
+
+                        <div class="event-category">
+                            LEADERSHIP
+                        </div>
+
+                    </article>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section class="research-section">
+
+        <!-- =================================================
+             RESEARCH & PUBLICATIONS
+        ================================================== -->
+
+        <section class="research-section" id="insights">
+
             <div class="research-inner">
-                <div class="research-header">
+
+                <header class="research-header">
+
                     <div class="research-title-wrap">
-                        <span class="insights-tag">INSIGHTS</span>
-                        <h2>Research &amp; Publications</h2>
+
+                        <span class="insights-tag">
+                            INSIGHTS
+                        </span>
+
+                        <h2>
+                            Research &amp; Publications
+                        </h2>
+
                     </div>
-                    <a href="#" class="all-insights">ALL INSIGHTS</a>
-                </div>
+
+                    <a href="insights.html" class="all-insights">
+                        ALL INSIGHTS
+                    </a>
+
+                </header>
+
 
                 <div class="research-grid">
-                    <article class="research-item">
-                        <div class="research-meta">RESEARCH PAPERS • ENGF INSTITUTE</div>
-                        <h3>European NextGen Review</h3>
-                        <p>
-                            The Review presents selected research from ENGF fellows and invited contributors.
-                            The inaugural issue is in preparation.
-                        </p>
-                        <div class="research-status">FORTHCOMING</div>
-                    </article>
 
                     <article class="research-item">
-                        <div class="research-meta">POLICY BRIEFS • ENGF INSTITUTE</div>
-                        <h3>ENGF Fellowship Policy Papers</h3>
+
+                        <div class="research-meta">
+                            RESEARCH PAPERS • ENGF INSTITUTE
+                        </div>
+
+                        <h3>
+                            European NextGen Review
+                        </h3>
+
                         <p>
-                            Concise, evidence-based papers produced at the conclusion of each fellowship cycle and
-                            addressed to institutional readers.
+                            The Review presents selected research from ENGF
+                            fellows and invited contributors. The inaugural
+                            issue is in preparation.
                         </p>
-                        <div class="research-status">FORTHCOMING</div>
+
+                        <div class="research-status">
+                            FORTHCOMING
+                        </div>
+
                     </article>
 
-                    <article class="research-item research-item-last">
-                        <div class="research-meta">EXPLAINERS • AGORA ENGF</div>
-                        <h3>Understanding the European Institutional Order</h3>
+
+                    <article class="research-item">
+
+                        <div class="research-meta">
+                            POLICY BRIEFS • ENGF INSTITUTE
+                        </div>
+
+                        <h3>
+                            ENGF Fellowship Policy Papers
+                        </h3>
+
                         <p>
-                            A plain account of how European institutions are composed, what they decide, and where
-                            citizens enter the process.
+                            Concise, evidence-based papers produced at the
+                            conclusion of each fellowship cycle and addressed
+                            to institutional readers.
                         </p>
-                        <div class="research-status">FORTHCOMING</div>
+
+                        <div class="research-status">
+                            FORTHCOMING
+                        </div>
+
                     </article>
+
+
+                    <article class="research-item">
+
+                        <div class="research-meta">
+                            EXPLAINERS • AGORA ENGF
+                        </div>
+
+                        <h3>
+                            Understanding the European Institutional Order
+                        </h3>
+
+                        <p>
+                            A plain account of how European institutions are
+                            composed, what they decide, and where citizens
+                            enter the process.
+                        </p>
+
+                        <div class="research-status">
+                            FORTHCOMING
+                        </div>
+
+                    </article>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section class="partnership-section">
+
+        <!-- =================================================
+             PARTNERSHIP
+        ================================================== -->
+
+        <section class="partnership-section" id="partnership">
+
             <div class="partnership-inner">
+
                 <div class="partnership-copy">
-                    <div class="partnership-kicker">PARTNERSHIP</div>
-                    <h2>Working across institutions,<br>disciplines and borders.</h2>
+
+                    <div class="partnership-kicker">
+                        PARTNERSHIP
+                    </div>
+
+                    <h2>
+                        Working across institutions,
+                        <br>
+                        disciplines and borders.
+                    </h2>
+
                     <p>
-                        ENGF cooperates with universities, public institutions, embassies, European and international
-                        organisations, non-governmental bodies, cultural organisations and the private sector.
+                        ENGF cooperates with universities, public institutions,
+                        embassies, European and international organisations,
+                        non-governmental bodies, cultural organisations and
+                        the private sector.
                     </p>
-                    <a href="#" class="partnership-btn">PARTNER WITH ENGF</a>
+
+                    <a href="partners.html" class="partnership-btn">
+                        PARTNER WITH ENGF
+                    </a>
+
                 </div>
+
 
                 <div class="partnership-image-wrap">
-                    <img src="room.jpg" alt="Conference hall interior">
+
+                    <img src="room.jpg" alt="Conference hall interior" loading="lazy">
+
                 </div>
+
             </div>
+
         </section>
-    <section class="newsletter__content">
-      <div class="newsletter__intro">
-        <span class="newsletter__eyebrow">STAY CONNECTED</span>
 
-        <h1>
-          Periodic briefings on research,<br class="desktop-break" />
-          programmes and forthcoming events.
-        </h1>
-      </div>
 
-      <form
-        class="newsletter__form"
-        action="#"
-        method="post"
-      >
-        <div class="newsletter__field">
-          <label for="email">EMAIL ADDRESS</label>
+        <!-- =================================================
+             NEWSLETTER
+        ================================================== -->
 
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder=" "
-            autocomplete="email"
-            required
-            aria-required="true"
-          />
-        </div>
+        <section class="newsletter">
 
-        <button type="submit">
-          SUBSCRIBE
-        </button>
-      </form>
-    </section>
-        <!-- ========================================
-     FOOTER
-======================================== -->
+            <div class="newsletter__content">
 
-        <footer class="site-footer">
+                <div class="newsletter__intro">
 
-            <div class="footer-inner">
+                    <span class="newsletter__eyebrow">
+                        STAY CONNECTED
+                    </span>
 
-                <!-- BRAND / DESCRIPTION -->
-
-                <div class="footer-brand">
-
-                    <a href="Homepage.html" class="footer-logo">
-
-                        <img src="logo.jpg" alt="ENGF Logo">
-
-                        <span>ENGF</span>
-
-                    </a>
-
-                    <p>
-                        European NextGen Forum is an independent,
-                        non-governmental association for education,
-                        research, dialogue and civic participation,
-                        operating in Romania and across Europe.
-                    </p>
+                    <h2>
+                        Periodic briefings on research,
+                        <br class="desktop-break">
+                        programmes and forthcoming events.
+                    </h2>
 
                 </div>
 
 
-                <!-- NAVIGATION -->
+                <form class="newsletter__form" action="#" method="post">
 
-                <div class="footer-column">
+                    <div class="newsletter__field">
 
-                    <div class="footer-heading">
-                        NAVIGATION
+                        <label for="email">
+                            EMAIL ADDRESS
+                        </label>
+
+                        <input id="email" name="email" type="email" placeholder=" " autocomplete="email" required
+                            aria-required="true">
+
                     </div>
 
-                    <a href="#">About</a>
-                    <a href="#">Our Work</a>
-                    <a href="#">Departments</a>
-                    <a href="#">Programmes</a>
-                    <a href="#">Events</a>
-                    <a href="#">Insights</a>
-                    <a href="#">Get Involved</a>
-                    <a href="#">Contact</a>
+                    <button type="submit">
+                        SUBSCRIBE
+                    </button>
 
-                </div>
-
-
-                <!-- ECOSYSTEM -->
-
-                <div class="footer-column">
-
-                    <div class="footer-heading">
-                        ECOSYSTEM
-                    </div>
-
-                    <a href="#">ENGF Institute</a>
-                    <a href="#">ENGF Academy</a>
-                    <a href="#">Forumul Tinerilor Buzău</a>
-                    <a href="#">Agora ENGF</a>
-                    <a href="#">ENGF Forum</a>
-                    <a href="#">ENGF Community</a>
-                    <a href="#">
-                        European NextGen Creative Youth Platform
-                    </a>
-                    <a href="#">
-                        ENGF Digital Education Initiative
-                    </a>
-
-                </div>
-
-
-                <!-- INSTITUTIONAL + SOCIAL -->
-
-                <div class="footer-column footer-column-right">
-
-                    <div class="footer-heading">
-                        INSTITUTIONAL
-                    </div>
-
-                    <a href="#">Governance</a>
-                    <a href="#">Transparency</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Safeguarding</a>
-
-
-                    <div class="footer-heading footer-social-heading">
-                        SOCIAL
-                    </div>
-
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">YouTube</a>
-
-                </div>
+                </form>
 
             </div>
 
-
-            <!-- FOOTER BOTTOM -->
-
-            <div class="footer-bottom">
-
-                <div class="footer-copyright">
-                    © 2026 ENGF — EUROPEAN NEXTGEN FORUM
-                </div>
-
-                <div class="footer-legal">
-                    ENGF Institute, ENGF Academy, Forumul Tinerilor Buzău,
-                    Agora ENGF, ENGF Forum, ENGF Community, European NextGen
-                    Creative Youth Platform and the ENGF Digital Education
-                    Initiative are internal specialised departments and
-                    programme names of ENGF — European NextGen Forum.
-                    They are not separate legal entities and hold no public authority.
-                </div>
-
-            </div>
-
-        </footer>
+        </section>
 
     </main>
 
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a>
+                    <img src="logo.jpg" alt="ENGF Logo">
+
+                    <span>ENGF</span>
+                </a>
+
+                <p>
+                    European NextGen Forum is an independent,
+                    non-governmental association for education,
+                    research, dialogue and civic participation,
+                    operating in Romania and across Europe.
+                </p>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="footer-column" aria-label="Footer navigation">
+
+                <div class="footer-heading">
+                    NAVIGATION
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="our-work.html">Our Work</a>
+                <a href="departments.html">Departments</a>
+                <a href="programmes.html">Programmes</a>
+                <a href="events.html">Events</a>
+                <a href="insights.html">Insights</a> 
+                <a href="get-involved.html">Get Involved</a>
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+
+            <!-- Ecosystem -->
+            <nav class="footer-column" aria-label="ENGF ecosystem">
+
+                <div class="footer-heading">
+                    ECOSYSTEM
+                </div>
+
+                <a href="departments.html">ENGF Institute</a>
+                <a href="departments.html">ENGF Academy</a>
+                <a href="departments.html">Forumul Tinerilor Buzău</a>
+                <a href="departments.html">Agora ENGF</a>
+                <a href="departments.html">ENGF Forum</a>
+                <a href="departments.html">ENGF Community</a>
+                <a href="departments.html">
+                    European NextGen Creative Youth Platform
+                </a>
+                <a href="departments.html">
+                    ENGF Digital Education Initiative
+                </a>
+
+            </nav>
+
+
+            <!-- Institutional -->
+            <div class="footer-column footer-column-right">
+
+                <div class="footer-heading">
+                    INSTITUTIONAL
+                </div>
+
+                <a href="about.html">Governance</a>
+                <a href="about.html">Transparency</a>
+                <a href="contact.html">Privacy</a>
+                <a href="contact.html">Terms</a>
+                <a href="contact.html">Safeguarding</a>
+
+
+                <div class="footer-heading footer-social-heading">
+                    SOCIAL
+                </div>
+
+                <a href="index.html">LinkedIn</a>
+                <a href="index.html">Instagram</a>
+                <a href="index.html">Facebook</a>
+                <a href="index.html">YouTube</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <div class="footer-copyright">
+                © 2026 ENGF — EUROPEAN NEXTGEN FORUM
+            </div>
+
+            <div class="footer-legal">
+                ENGF Institute, ENGF Academy, Forumul Tinerilor Buzău,
+                Agora ENGF, ENGF Forum, ENGF Community, European NextGen
+                Creative Youth Platform and the ENGF Digital Education
+                Initiative are internal specialised departments and
+                programme names of ENGF — European NextGen Forum.
+                They are not separate legal entities and hold no public authority.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION SCRIPT
+    ====================================================== -->
+
     <script>
-        // Hamburger Menu Toggle
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const body = document.body;
-        const html = document.documentElement;
+        const hamburgerButton = document.getElementById("hamburgerBtn");
+        const mobileNav = document.getElementById("mobileNav");
 
-        hamburgerBtn.addEventListener('click', function() {
-            mobileNav.classList.toggle('active');
-            body.classList.toggle('menu-open');
-            html.classList.toggle('menu-open');
-            hamburgerBtn.setAttribute('aria-expanded', 
-                hamburgerBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-            hamburgerBtn.classList.toggle('active');
+        const closeMenu = () => {
+            mobileNav.classList.remove("active");
+            document.body.classList.remove("menu-open");
+            document.documentElement.classList.remove("menu-open");
+
+            hamburgerButton.classList.remove("active");
+            hamburgerButton.setAttribute("aria-expanded", "false");
+        };
+
+        const toggleMenu = () => {
+            const isOpen = mobileNav.classList.toggle("active");
+
+            document.body.classList.toggle("menu-open", isOpen);
+            document.documentElement.classList.toggle("menu-open", isOpen);
+
+            hamburgerButton.classList.toggle("active", isOpen);
+            hamburgerButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        };
+
+        hamburgerButton.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleMenu();
         });
 
-        // Close menu when a link is clicked
-        const navLinks = mobileNav.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileNav.classList.remove('active');
-                body.classList.remove('menu-open');
-                html.classList.remove('menu-open');
-                hamburgerBtn.classList.remove('active');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
-            });
+        mobileNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.topbar')) {
-                mobileNav.classList.remove('active');
-                body.classList.remove('menu-open');
-                html.classList.remove('menu-open');
-                hamburgerBtn.classList.remove('active');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".topbar")) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
             }
         });
     </script>
