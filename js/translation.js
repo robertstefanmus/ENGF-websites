@@ -3,19 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const translations = {
         en: {
-            "about-title": "ABOUT",
-            "about-subtitle1": "An institution built for <br> the next generation.",
-            "about-subtitle2": "ENGF — European NextGen Forum is an independent, non-governmental <br> association established to advance formal and non-formal education, research, <br> leadership, civic and institutional dialogue, culture and European cooperation <br> among young people."
+            "about_title": "ABOUT",
+            "about_sub1": "An institution built for <br> the next generation.",
+            "about_sub2": "ENGF — European NextGen Forum is an independent, non-governmental <br> association established to advance formal and non-formal education, research, <br> leadership, civic and institutional dialogue, culture and European cooperation <br> among young people."
         },
         ro: {
-            "about-title": "DESPRE",
-            "about-subtitle1": "O instituție construită pentru noua generație.",
-            "about-subtitle2": "ENGF — European NextGen Forum este o asociație independentă, neguvernamentală, înființată pentru a promova educația formală și non-formală, cercetarea, leadershipul, dialogul civic și instituțional, cultura și cooperarea europeană între tineri."
+            "about_title": "DESPRE",
+            "about_sub1": "O instituție construită pentru noua generație.",
+            "about_sub2": "ENGF — European NextGen Forum este o asociație independentă, neguvernamentală, înființată pentru a promova educația formală și non-formală, cercetarea, leadershipul, dialogul civic și instituțional, cultura și cooperarea europeană între tineri."
         },
         it: {
-            "about-title": "CHI SIAMO",
-            "about-subtitle1": "Un'istituzione costruita per la prossima generazione.",
-            "about-subtitle2": "ENGF — European NextGen Forum è un'associazione indipendente e non governativa, costituita per promuovere l'educazione formale e non formale, la ricerca, la leadership, il dialogo civico e istituzionale, la cultura e la cooperazione europea tra i giovani."
+            "about_title": "CHI SIAMO",
+            "about_sub1": "Un'istituzione costruita per la prossima generazione.",
+            "about_sub2": "ENGF — European NextGen Forum è un'associazione indipendente e non governativa, costituita per promuovere l'educazione formale e non formale, la ricerca, la leadership, il dialogo civico e istituzionale, la cultura e la cooperazione europea tra i giovani."
         }
     };
 
