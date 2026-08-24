@@ -1112,3 +1112,431 @@ font-size: 7.9rem;
         display: none;
     }
 }
+
+/* =========================================================
+   MOBILE MENU — REFINED DESIGN
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    .topbar {
+        min-height: 56px;
+        height: 56px;
+
+        padding: 0 15px;
+
+        display: flex;
+        align-items: center;
+
+        background: #f7f1e7;
+        border-bottom: 1px solid #ebe2d5;
+    }
+
+
+    /* -----------------------------------------------------
+       BRAND / LOGO
+    ----------------------------------------------------- */
+
+    .brand-group {
+        order: 1;
+
+        display: flex;
+        align-items: center;
+
+        width: auto;
+        margin: 0;
+
+        flex: 0 0 auto;
+    }
+
+    .logo {
+        width: 27px;
+        height: 27px;
+
+        margin-right: 9px;
+
+        object-fit: cover;
+    }
+
+    .brand-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .brand-mark {
+        font-family: var(--font-display);
+
+        font-size: 1.15rem;
+        font-weight: 500;
+        line-height: 1;
+
+        color: var(--color-burgundy);
+    }
+
+    .brand-name {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       HIDE DESKTOP NAV
+    ----------------------------------------------------- */
+
+    .nav {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       LANGUAGE SWITCHER
+    ----------------------------------------------------- */
+
+    .lang-switcher {
+        order: 3;
+
+        height: 24px;
+
+        margin-left: auto;
+        margin-right: 10px;
+
+        padding: 0 6px;
+
+        display: inline-flex;
+        align-items: center;
+
+        background: transparent;
+        border: 1px solid #e7ded0;
+    }
+
+    .lang-switcher span {
+        font-family: var(--font-sans);
+
+        font-size: 7px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+
+        color: #bbb2a7;
+    }
+
+    .lang-switcher label:not(:last-child)::after {
+        margin: 0 4px;
+
+        font-size: 7px;
+
+        color: #d0c8be;
+    }
+
+    .lang-switcher input:checked + span {
+        color: var(--color-burgundy);
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGER
+    ----------------------------------------------------- */
+
+    .hamburger-menu {
+        order: 4;
+
+        display: flex;
+
+        width: 28px;
+        height: 28px;
+
+        flex: 0 0 28px;
+
+        margin: 0;
+        padding: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        background: transparent;
+        border: 0;
+    }
+
+    .hamburger-line {
+        width: 17px;
+        height: 1px;
+
+        margin: 2.5px 0;
+
+        background: #81535a;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU CONTAINER
+    ----------------------------------------------------- */
+
+    .mobile-menu {
+        position: fixed;
+
+        top: 56px;
+        left: 0;
+
+        width: 100%;
+        height: calc(100dvh - 56px);
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 0;
+
+        background: #faf6ef;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        z-index: 998;
+
+        scrollbar-width: thin;
+        scrollbar-color: #aaa transparent;
+    }
+
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN MOBILE NAVIGATION LINKS
+    ----------------------------------------------------- */
+
+    .mobile-menu > a:not(.mob-view) {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        min-height: 41px;
+
+        margin: 0;
+        padding: 10px 15px;
+
+        background: #faf6ef;
+
+        border: 0;
+        border-bottom: 1px solid #eee7dc;
+
+        color: #714149;
+
+        font-family: var(--font-display);
+        font-size: 1.02rem;
+        line-height: 1.15;
+        font-weight: 400;
+        letter-spacing: 0;
+
+        text-transform: none;
+        text-decoration: none;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease;
+    }
+
+    .mobile-menu > a:not(.mob-view):hover,
+    .mobile-menu > a:not(.mob-view):focus {
+        background: #f4eee4;
+        color: var(--color-burgundy);
+    }
+
+
+    /* -----------------------------------------------------
+       ECOSYSTEM LINKS
+    ----------------------------------------------------- */
+
+    .mobile-menu .mob-view {
+        position: relative;
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        min-height: 34px;
+
+        margin: 0;
+        padding: 8px 15px 8px 27px;
+
+        background: #f7f1e7;
+
+        border: 0;
+        border-bottom: 1px solid #ebe3d7;
+
+        color: #49433f;
+
+        font-family: var(--font-sans);
+        font-size: 0.58rem;
+        line-height: 1.25;
+        font-weight: 400;
+        letter-spacing: 0;
+
+        text-transform: none;
+        text-decoration: none;
+    }
+
+
+    /* Dot */
+    .mobile-menu .mob-view::before {
+        content: "";
+
+        position: absolute;
+
+        left: 14px;
+        top: 50%;
+
+        width: 5px;
+        height: 5px;
+
+        border-radius: 50%;
+
+        background: var(--color-burgundy);
+
+        transform: translateY(-50%);
+    }
+
+
+    /* -----------------------------------------------------
+       DIFFERENT DOT COLORS
+    ----------------------------------------------------- */
+
+    .mobile-menu .mob-view:nth-of-type(10)::before {
+        background: #7c1731;
+    }
+
+    .mobile-menu .mob-view:nth-of-type(11)::before {
+        background: #c69b3c;
+    }
+
+    .mobile-menu .mob-view:nth-of-type(12)::before {
+        background: #65879b;
+    }
+
+    .mobile-menu .mob-view:nth-of-type(13)::before {
+        background: #39342f;
+    }
+
+    .mobile-menu .mob-view:nth-of-type(14)::before {
+        background: #344760;
+    }
+
+    .mobile-menu .mob-view:nth-of-type(15)::before {
+        background: #708a64;
+    }
+
+    .mobile-menu .mob-view:nth-of-type(16)::before {
+        background: #b9644c;
+    }
+
+    .mobile-menu .mob-view:nth-of-type(17)::before {
+        background: #8c6b8e;
+    }
+
+
+    /* Ecosystem hover */
+    .mobile-menu .mob-view:hover,
+    .mobile-menu .mob-view:focus {
+        background: #f1e9dc;
+        color: var(--color-burgundy);
+    }
+
+
+    /* -----------------------------------------------------
+       GET INVOLVED DESKTOP BUTTON
+    ----------------------------------------------------- */
+
+    .get-involved-btn {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    body {
+        padding-top: 52px;
+    }
+
+    .topbar {
+        min-height: 52px;
+        height: 52px;
+
+        padding: 0 13px;
+    }
+
+    .logo {
+        width: 25px;
+        height: 25px;
+
+        margin-right: 8px;
+    }
+
+    .brand-mark {
+        font-size: 1.08rem;
+    }
+
+    .lang-switcher {
+        height: 22px;
+
+        margin-right: 8px;
+
+        padding: 0 5px;
+    }
+
+    .lang-switcher span {
+        font-size: 6.5px;
+    }
+
+    .hamburger-menu {
+        width: 26px;
+        height: 26px;
+
+        flex-basis: 26px;
+    }
+
+    .hamburger-line {
+        width: 16px;
+    }
+
+    .mobile-menu {
+        top: 52px;
+
+        height: calc(100dvh - 52px);
+    }
+
+    .mobile-menu > a:not(.mob-view) {
+        min-height: 40px;
+
+        padding: 9px 14px;
+
+        font-size: 0.96rem;
+    }
+
+    .mobile-menu .mob-view {
+        min-height: 32px;
+
+        padding: 7px 14px 7px 27px;
+
+        font-size: 0.55rem;
+    }
+
+    .mobile-menu .mob-view::before {
+        left: 14px;
+
+        width: 5px;
+        height: 5px;
+    }
+}
