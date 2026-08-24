@@ -971,6 +971,7 @@ font-size: 7.9rem;
     .footer-legal {
         font-size: 0.58rem;
     }
+}
 
     .white-panel {
   position: absolute;
@@ -1048,4 +1049,12 @@ font-size: 7.9rem;
 .box:nth-child(n + 3) {
   border-top: 1px solid #ddd;
 }
+
+.ecosystem-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.ecosystem-menu > a {
+  display: inline-block;
 }
