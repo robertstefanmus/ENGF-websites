@@ -1,3 +1,4 @@
+// 1. Define your translations
 const translations = {
     EN: {
         about_title: "ABOUT",
@@ -12,44 +13,40 @@ const translations = {
     IT: {
         about_title: "CHI SIAMO",
         about_subtitle1: "Un'istituzione costruita per <br> la prossima generazione.",
-        about_subtitle2: "ENGF — European NextGen Forum è un'associazione indipendente, non governativa, istituita per promuovere l'istruzione formale e non formale...",
+        about_subtitle2: "ENGF — European NextGen Forum è un'associazione indipendente, non governativa, istituita per promuovere l'educazione formale e non formale...",
     }
 };
 
-function updateLanguage(lang) {
-    // Find all elements with the data-i18n attribute
-    const elements = document.querySelectorAll('[data-i18n]');
+// 2. Function to change the language
+function changeLanguage(lang) {
+    // Find all elements with the 'data-key' attribute
+    const elements = document.querySelectorAll('[data-key]');
     
-    elements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-key');
         if (translations[lang] && translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
+            element.innerHTML = translations[lang][key];
         }
     });
 
-    // Save preference to local storage so it persists across pages
+    // Optional: Save preference to local storage so it persists on page refresh
     localStorage.setItem('preferredLang', lang);
-    
-    // Update the HTML lang attribute for accessibility/SEO
-    document.documentElement.lang = lang.toLowerCase();
 }
 
-// Initialize language switcher listeners
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Restore saved language from localStorage or default to EN
+// 3. Listen for radio button changes
+document.querySelectorAll('input[name="language"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        changeLanguage(e.target.value);
+    });
+});
+
+// 4. Load saved language on page load
+window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'EN';
     
-    // 2. Set the radio button in the header to match savedLang
-    const radio = document.querySelector(`input[name="language"][value="${savedLang}"]`);
-    if (radio) radio.checked = true;
-
-    // 3. Apply the translation immediately
-    updateLanguage(savedLang);
-
-    // 4. Listen for changes on the radio buttons
-    document.querySelectorAll('input[name="language"]').forEach(input => {
-        input.addEventListener('change', (e) => {
-            updateLanguage(e.target.value);
-        });
-    });
+    // Check the correct radio button in the UI
+    const radioToCheck = document.querySelector(`input[value="${savedLang}"]`);
+    if (radioToCheck) radioToCheck.checked = true;
+    
+    changeLanguage(savedLang);
 });
