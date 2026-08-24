@@ -1,73 +1,70 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Define the translations
-    const translations = {
-        EN: {
-            "about-title": "ABOUT",
-            "about-subtitle1": "An institution built for <br> the next generation.",
-            "about-subtitle2": "ENGF — European NextGen Forum is an independent, non-governmental <br> association established to advance formal and non-formal education, research, <br> leadership, civic and institutional dialogue, culture and European cooperation <br> among young people.",
-            "nav-about": "ABOUT",
-            "nav-work": "OUR WORK",
-            "nav-dept": "DEPARTMENTS"
-        },
-        RO: {
-            "about-title": "DESRE NOI",
-            "about-subtitle1": "O instituție construită pentru <br> generația viitoare.",
-            "about-subtitle2": "ENGF — European NextGen Forum este o asociație independentă, non-guvernamentală <br> înființată pentru a promova educația formală și non-formală, cercetarea, <br> leadership-ul, dialogul civic și instituțional, cultura și cooperarea europeană <br> între tineri.",
-            "nav-about": "DESRE NOI",
-            "nav-work": "ACTIVITATEA NOASTRĂ",
-            "nav-dept": "DEPARTAMENTE"
-        },
-        IT: {
-            "about-title": "CHI SIAMO",
-            "about-subtitle1": "Un'istituzione costruita per <br> la prossima generazione.",
-            "about-subtitle2": "L'ENGF — European NextGen Forum è un'associazione indipendente e non governativa <br> istituita per promuovere l'educazione formale e non formale, la ricerca, <br> la leadership, il dialogo civico e istituzionale, la cultura e la cooperazione europea <br> tra i giovani.",
-            "nav-about": "CHI SIAMO",
-            "nav-work": "IL NOSTRO LAVORO",
-            "nav-dept": "DIPARTIMENTI"
-        }
-    };
+const translations = {
+    EN: {
+        about_title: "ABOUT",
+        about_sub1: "An institution built for <br> the next generation.",
+        about_sub2: "ENGF — European NextGen Forum is an independent, non-governmental association established to advance formal and non-formal education...",
+        // Add header translations here
+        nav_about: "ABOUT",
+        nav_work: "OUR WORK"
+    },
+    RO: {
+        about_title: "DESRE NOI",
+        about_sub1: "O instituție construită pentru <br> generația viitoare.",
+        about_sub2: "ENGF — European NextGen Forum este o asociație independentă, non-guvernamentală...",
+        nav_about: "DESRE NOI",
+        nav_work: "ACTIVITATEA NOASTRĂ"
+    },
+    IT: {
+        about_title: "CHI SIAMO",
+        about_sub1: "Un'istituzione costruita per <br> la prossima generazione.",
+        about_sub2: "ENGF — European NextGen Forum è un'associazione indipendente, non governativa...",
+        nav_about: "CHI SIAMO",
+        nav_work: "IL NOSTRO LAVORO"
+    }
+};
 
-    // 2. Select all radio buttons with name="language"
-    const langRadios = document.querySelectorAll('input[name="language"]');
+function updateLanguage(lang) {
+    console.log("Attempting to switch language to:", lang);
+    
+    const elements = document.querySelectorAll('[data-i18n]');
+    console.log(`Found ${elements.length} elements to translate.`);
 
-    // 3. Function to update the text on the page
-    function updateLanguage(lang) {
-        console.log(`Switching language to: ${lang}`); // DEBUG LOG
-
-        const selectedTranslations = translations[lang];
-
-        // We look for elements that have a specific class or ID matching our translation keys
-        // For the About page:
-        const elementsToTranslate = [
-            { selector: '.about-title', key: 'about-title' },
-            { selector: '.about-subtitle1', key: 'about-subtitle1' },
-            { selector: '.about-subtitle2', key: 'about-subtitle2' },
-            // For the Header:
-            { selector: 'a[href="about.html"]', key: 'nav-about' },
-            { selector: 'a[href="our-work.html"]', key: 'nav-work' },
-            { selector: 'a[href="departments.html"]', key: 'nav-dept' },
-        ];
-
-        elementsToTranslate.forEach(item => {
-            const element = document.querySelector(item.selector);
-            if (element && selectedTranslations[item.key]) {
-                console.log(`Updating ${item.selector} to ${selectedTranslations[item.key]}`); // DEBUG LOG
-                element.innerHTML = selectedTranslations[item.key];
-            }
-        });
+    if (elements.length === 0) {
+        console.warn("No elements with [data-i18n] attribute found on this page!");
     }
 
-    // 4. Add the event listener to each radio button
-    langRadios.forEach(radio => {
-        radio.addEventListener('change', (event) => {
-            const selectedLang = event.target.value;
-            console.log(`Radio button clicked! Value: ${selectedLang}`); // DEBUG LOG
-            updateLanguage(selectedLang);
-        });
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        } else {
+            console.error(`Translation missing for key: ${key} in language: ${lang}`);
+        }
     });
+}
 
-    // 5. Set initial language based on the checked radio button on load
-    const initialLang = document.querySelector('input[name="language"]:checked')?.value || 'EN';
-    console.log(`Initial load language: ${initialLang}`); // DEBUG LOG
-    updateLanguage(initialLang);
+// Use Event Delegation to ensure it works even if the header is loaded dynamically
+document.addEventListener('change', (event) => {
+    if (event.target && event.target.name === 'language') {
+        const selectedLang = event.target.value;
+        console.log("Language radio button clicked. Selected:", selectedLang);
+        updateLanguage(selectedLang);
+        
+        // Optional: Save preference to localStorage
+        localStorage.setItem('preferredLang', selectedLang);
+    }
+});
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', () => {
+    console.log("Page DOM loaded. Checking for saved language...");
+    const savedLang = localStorage.getItem('preferredLang') || 'EN';
+    
+    // Set the radio button to match the saved language
+    const radio = document.querySelector(`input[name="language"][value="${savedLang}"]`);
+    if (radio) {
+        radio.checked = true;
+    }
+    
+    updateLanguage(savedLang);
 });
