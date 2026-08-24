@@ -1,8 +1,5 @@
 document.addEventListener("componentsLoaded", () => {
 
-    console.log("[i18n] componentsLoaded event received");
-    console.log("[i18n] Initializing translation system...");
-
     const translations = {
 
         en: {
@@ -285,30 +282,11 @@ document.addEventListener("componentsLoaded", () => {
     };
 
 
-    /*
-     * =========================================================
-     * FIND LANGUAGE INPUTS
-     * =========================================================
-     */
-
     const languageInputs =
         document.querySelectorAll('input[name="language"]');
 
-    console.log(
-        "[i18n] Language inputs found:",
-        languageInputs.length
-    );
-
-
-    /*
-     * =========================================================
-     * UPDATE CONTENT
-     * =========================================================
-     */
 
     function updateContent(lang) {
-
-        console.log("[i18n] Updating language:", lang);
 
         if (!translations[lang]) {
             console.error(
@@ -318,34 +296,25 @@ document.addEventListener("componentsLoaded", () => {
             return;
         }
 
+
         const elements =
             document.querySelectorAll("[data-i18n]");
 
-        console.log(
-            "[i18n] Translatable elements:",
-            elements.length
-        );
 
         elements.forEach(element => {
 
             const key =
                 element.getAttribute("data-i18n");
 
-            if (
-                translations[lang][key] !== undefined
-            ) {
+            if (translations[lang][key] !== undefined) {
 
                 element.innerHTML =
                     translations[lang][key];
 
-                console.log(
-                    `[i18n] ✓ ${key}`
-                );
-
             } else {
 
                 console.warn(
-                    `[i18n] ✗ Missing translation: ${key}`
+                    `[i18n] Missing translation: ${key}`
                 );
             }
         });
@@ -353,74 +322,37 @@ document.addEventListener("componentsLoaded", () => {
 
         document.documentElement.lang = lang;
 
-        /*
-         * Update the actual <title> as well.
-         */
+
         const pageTitle =
             translations[lang]["page_title"];
 
         if (pageTitle) {
             document.title = pageTitle;
         }
-
-        console.log(
-            "[i18n] Translation complete:",
-            lang
-        );
     }
 
 
-    /*
-     * =========================================================
-     * LANGUAGE SWITCHER
-     * =========================================================
-     */
-
     languageInputs.forEach(input => {
-
-        console.log(
-            "[i18n] Adding listener:",
-            input.value
-        );
 
         input.addEventListener("change", event => {
 
             const selectedLang =
                 event.target.value.toLowerCase();
 
-            console.log(
-                "[i18n] User selected:",
-                selectedLang
-            );
-
             updateContent(selectedLang);
         });
     });
 
-
-    /*
-     * =========================================================
-     * INITIAL LANGUAGE
-     * =========================================================
-     */
 
     const checkedLanguage =
         document.querySelector(
             'input[name="language"]:checked'
         );
 
-    console.log(
-        "[i18n] Checked language:",
-        checkedLanguage
-    );
 
     const initialLang =
         checkedLanguage?.value.toLowerCase() || "en";
 
-    console.log(
-        "[i18n] Initial language:",
-        initialLang
-    );
 
     updateContent(initialLang);
 
