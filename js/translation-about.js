@@ -281,79 +281,108 @@ document.addEventListener("componentsLoaded", () => {
         }
     };
 
-
-    const languageInputs =
-        document.querySelectorAll('input[name="language"]');
-
-
     function updateContent(lang) {
 
-        if (!translations[lang]) {
-            console.error(
-                "[i18n] Unknown language:",
-                lang
-            );
-            return;
-        }
+    if (!translations[lang]) {
 
+        console.error(
+            "[About i18n] Unknown language:",
+            lang
+        );
 
-        const elements =
-            document.querySelectorAll("[data-i18n]");
-
-
-        elements.forEach(element => {
-
-            const key =
-                element.getAttribute("data-i18n");
-
-            if (translations[lang][key] !== undefined) {
-
-                element.innerHTML =
-                    translations[lang][key];
-
-            } else {
-
-                console.warn(
-                    `[i18n] Missing translation: ${key}`
-                );
-            }
-        });
-
-
-        document.documentElement.lang = lang;
-
-
-        const pageTitle =
-            translations[lang]["page_title"];
-
-        if (pageTitle) {
-            document.title = pageTitle;
-        }
+        return;
     }
 
 
-    languageInputs.forEach(input => {
+    /*
+     * IMPORTANT:
+     * Do NOT use:
+     *
+     * document.querySelectorAll("[data-i18n]")
+     *
+     * because that also selects header and footer.
+     */
 
-        input.addEventListener("change", event => {
+    const page = document.querySelector("main");
 
-            const selectedLang =
-                event.target.value.toLowerCase();
+    if (!page) {
+        console.error(
+            "[About i18n] <main> element not found."
+        );
+        return;
+    }
 
-            updateContent(selectedLang);
-        });
+
+    const elements =
+        page.querySelectorAll("[data-i18n]");
+
+
+    elements.forEach(element => {
+
+        const key =
+            element.getAttribute("data-i18n");
+
+
+        if (translations[lang][key] !== undefined) {
+
+            element.innerHTML =
+                translations[lang][key];
+
+        } else {
+
+            console.warn(
+                `[About i18n] Missing translation: ${key}`
+            );
+
+        }
+
     });
 
 
-    const checkedLanguage =
-        document.querySelector(
-            'input[name="language"]:checked'
-        );
+    /* Page title */
+
+    const pageTitle =
+        translations[lang]["page_title"];
 
 
-    const initialLang =
-        checkedLanguage?.value.toLowerCase() || "en";
+    if (pageTitle) {
+        document.title = pageTitle;
+    }
+
+}
 
 
-    updateContent(initialLang);
+/* =====================================================
+   LISTEN TO GLOBAL LANGUAGE CHANGE
+===================================================== */
 
+document.addEventListener(
+    "engfLanguageChanged",
+    event => {
+
+        const lang =
+            event.detail.language;
+
+        updateContent(lang);
+
+    }
+);
+
+
+/* =====================================================
+   INITIAL PAGE TRANSLATION
+===================================================== */
+
+/*
+ * This is important.
+ *
+ * Even if the event happened before this script loaded,
+ * the page will still get the correct language.
+ */
+
+const savedLanguage =
+    localStorage.getItem("engfLanguage") || "en";
+
+
+updateContent(savedLanguage);
 });

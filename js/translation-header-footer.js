@@ -2,8 +2,14 @@ document.addEventListener("componentsLoaded", () => {
 
     const translations = {
 
+        /* =====================================================
+           ENGLISH
+        ===================================================== */
+
         en: {
+
             /* HEADER */
+
             "header_brand_name": "EUROPEAN NEXTGEN FORUM",
 
             "nav_about": "ABOUT",
@@ -18,30 +24,42 @@ document.addEventListener("componentsLoaded", () => {
             "nav_contact": "CONTACT",
 
             "ecosystem_institute": "ENGF Institute",
-            "ecosystem_institute_desc": "Department for Academic Programmes & Research",
+            "ecosystem_institute_desc":
+                "Department for Academic Programmes & Research",
 
             "ecosystem_academy": "ENGF Academy",
-            "ecosystem_academy_desc": "Department for Education & Professional Development",
+            "ecosystem_academy_desc":
+                "Department for Education & Professional Development",
 
             "ecosystem_ftb": "Forumul Tinerilor Buzău",
-            "ecosystem_ftb_desc": "Department for Civic Participation & Institutional Dialogue",
+            "ecosystem_ftb_desc":
+                "Department for Civic Participation & Institutional Dialogue",
 
             "ecosystem_agora": "Agora ENGF",
-            "ecosystem_agora_desc": "Department for Public Dialogue & Participation",
+            "ecosystem_agora_desc":
+                "Department for Public Dialogue & Participation",
 
             "ecosystem_forum": "ENGF Forum",
-            "ecosystem_forum_desc": "Department for Conferences & Strategic Dialogue",
+            "ecosystem_forum_desc":
+                "Department for Conferences & Strategic Dialogue",
 
             "ecosystem_community": "ENGF Community",
-            "ecosystem_community_desc": "Department for Volunteering & Community Engagement",
+            "ecosystem_community_desc":
+                "Department for Volunteering & Community Engagement",
 
-            "ecosystem_creative": "European NextGen Creative Youth Platform",
-            "ecosystem_creative_desc": "Department for Culture & Creative Industries",
+            "ecosystem_creative":
+                "European NextGen Creative Youth Platform",
+            "ecosystem_creative_desc":
+                "Department for Culture & Creative Industries",
 
-            "ecosystem_digital": "ENGF Digital Education Initiative",
-            "ecosystem_digital_desc": "Department for Digital Transformation & Innovation in Education",
+            "ecosystem_digital":
+                "ENGF Digital Education Initiative",
+            "ecosystem_digital_desc":
+                "Department for Digital Transformation & Innovation in Education",
+
 
             /* FOOTER */
+
             "footer_description":
                 "European NextGen Forum is an independent, non-governmental association for education, research, dialogue and civic participation, operating in Romania and across Europe.",
 
@@ -64,10 +82,13 @@ document.addEventListener("componentsLoaded", () => {
             "footer_agora": "Agora ENGF",
             "footer_forum": "ENGF Forum",
             "footer_community": "ENGF Community",
-            "footer_creative": "European NextGen Creative Youth Platform",
-            "footer_digital": "ENGF Digital Education Initiative",
+            "footer_creative":
+                "European NextGen Creative Youth Platform",
+            "footer_digital":
+                "ENGF Digital Education Initiative",
 
             "footer_institutional": "INSTITUTIONAL",
+
             "footer_governance": "Governance",
             "footer_transparency": "Transparency",
             "footer_privacy": "Privacy",
@@ -84,8 +105,14 @@ document.addEventListener("componentsLoaded", () => {
         },
 
 
+        /* =====================================================
+           ROMANIAN
+        ===================================================== */
+
         ro: {
+
             /* HEADER */
+
             "header_brand_name": "EUROPEAN NEXTGEN FORUM",
 
             "nav_about": "DESPRE",
@@ -100,30 +127,42 @@ document.addEventListener("componentsLoaded", () => {
             "nav_contact": "CONTACT",
 
             "ecosystem_institute": "ENGF Institute",
-            "ecosystem_institute_desc": "Departamentul pentru Programe Academice și Cercetare",
+            "ecosystem_institute_desc":
+                "Departamentul pentru Programe Academice și Cercetare",
 
             "ecosystem_academy": "ENGF Academy",
-            "ecosystem_academy_desc": "Departamentul pentru Educație și Dezvoltare Profesională",
+            "ecosystem_academy_desc":
+                "Departamentul pentru Educație și Dezvoltare Profesională",
 
             "ecosystem_ftb": "Forumul Tinerilor Buzău",
-            "ecosystem_ftb_desc": "Departamentul pentru Participare Civică și Dialog Instituțional",
+            "ecosystem_ftb_desc":
+                "Departamentul pentru Participare Civică și Dialog Instituțional",
 
             "ecosystem_agora": "Agora ENGF",
-            "ecosystem_agora_desc": "Departamentul pentru Dialog Public și Participare",
+            "ecosystem_agora_desc":
+                "Departamentul pentru Dialog Public și Participare",
 
             "ecosystem_forum": "ENGF Forum",
-            "ecosystem_forum_desc": "Departamentul pentru Conferințe și Dialog Strategic",
+            "ecosystem_forum_desc":
+                "Departamentul pentru Conferințe și Dialog Strategic",
 
             "ecosystem_community": "ENGF Community",
-            "ecosystem_community_desc": "Departamentul pentru Voluntariat și Implicare Comunitară",
+            "ecosystem_community_desc":
+                "Departamentul pentru Voluntariat și Implicare Comunitară",
 
-            "ecosystem_creative": "European NextGen Creative Youth Platform",
-            "ecosystem_creative_desc": "Departamentul pentru Cultură și Industrii Creative",
+            "ecosystem_creative":
+                "European NextGen Creative Youth Platform",
+            "ecosystem_creative_desc":
+                "Departamentul pentru Cultură și Industrii Creative",
 
-            "ecosystem_digital": "ENGF Digital Education Initiative",
-            "ecosystem_digital_desc": "Departamentul pentru Transformare Digitală și Inovație în Educație",
+            "ecosystem_digital":
+                "ENGF Digital Education Initiative",
+            "ecosystem_digital_desc":
+                "Departamentul pentru Transformare Digitală și Inovație în Educație",
+
 
             /* FOOTER */
+
             "footer_description":
                 "European NextGen Forum este o asociație independentă, neguvernamentală, dedicată educației, cercetării, dialogului și participării civice, care își desfășoară activitatea în România și în Europa.",
 
@@ -146,10 +185,13 @@ document.addEventListener("componentsLoaded", () => {
             "footer_agora": "Agora ENGF",
             "footer_forum": "ENGF Forum",
             "footer_community": "ENGF Community",
-            "footer_creative": "European NextGen Creative Youth Platform",
-            "footer_digital": "ENGF Digital Education Initiative",
+            "footer_creative":
+                "European NextGen Creative Youth Platform",
+            "footer_digital":
+                "ENGF Digital Education Initiative",
 
             "footer_institutional": "INSTITUȚIONAL",
+
             "footer_governance": "Guvernanță",
             "footer_transparency": "Transparență",
             "footer_privacy": "Confidențialitate",
@@ -166,8 +208,14 @@ document.addEventListener("componentsLoaded", () => {
         },
 
 
+        /* =====================================================
+           ITALIAN
+        ===================================================== */
+
         it: {
+
             /* HEADER */
+
             "header_brand_name": "EUROPEAN NEXTGEN FORUM",
 
             "nav_about": "CHI SIAMO",
@@ -182,30 +230,42 @@ document.addEventListener("componentsLoaded", () => {
             "nav_contact": "CONTATTI",
 
             "ecosystem_institute": "ENGF Institute",
-            "ecosystem_institute_desc": "Dipartimento per i Programmi Accademici e la Ricerca",
+            "ecosystem_institute_desc":
+                "Dipartimento per i Programmi Accademici e la Ricerca",
 
             "ecosystem_academy": "ENGF Academy",
-            "ecosystem_academy_desc": "Dipartimento per l'Istruzione e lo Sviluppo Professionale",
+            "ecosystem_academy_desc":
+                "Dipartimento per l'Istruzione e lo Sviluppo Professionale",
 
             "ecosystem_ftb": "Forumul Tinerilor Buzău",
-            "ecosystem_ftb_desc": "Dipartimento per la Partecipazione Civica e il Dialogo Istituzionale",
+            "ecosystem_ftb_desc":
+                "Dipartimento per la Partecipazione Civica e il Dialogo Istituzionale",
 
             "ecosystem_agora": "Agora ENGF",
-            "ecosystem_agora_desc": "Dipartimento per il Dialogo Pubblico e la Partecipazione",
+            "ecosystem_agora_desc":
+                "Dipartimento per il Dialogo Pubblico e la Partecipazione",
 
             "ecosystem_forum": "ENGF Forum",
-            "ecosystem_forum_desc": "Dipartimento per le Conferenze e il Dialogo Strategico",
+            "ecosystem_forum_desc":
+                "Dipartimento per le Conferenze e il Dialogo Strategico",
 
             "ecosystem_community": "ENGF Community",
-            "ecosystem_community_desc": "Dipartimento per il Volontariato e il Coinvolgimento della Comunità",
+            "ecosystem_community_desc":
+                "Dipartimento per il Volontariato e il Coinvolgimento della Comunità",
 
-            "ecosystem_creative": "European NextGen Creative Youth Platform",
-            "ecosystem_creative_desc": "Dipartimento per la Cultura e le Industrie Creative",
+            "ecosystem_creative":
+                "European NextGen Creative Youth Platform",
+            "ecosystem_creative_desc":
+                "Dipartimento per la Cultura e le Industrie Creative",
 
-            "ecosystem_digital": "ENGF Digital Education Initiative",
-            "ecosystem_digital_desc": "Dipartimento per la Trasformazione Digitale e l'Innovazione nell'Istruzione",
+            "ecosystem_digital":
+                "ENGF Digital Education Initiative",
+            "ecosystem_digital_desc":
+                "Dipartimento per la Trasformazione Digitale e l'Innovazione nell'Istruzione",
+
 
             /* FOOTER */
+
             "footer_description":
                 "European NextGen Forum è un'associazione indipendente e non governativa dedicata all'istruzione, alla ricerca, al dialogo e alla partecipazione civica, attiva in Romania e in tutta Europa.",
 
@@ -228,10 +288,13 @@ document.addEventListener("componentsLoaded", () => {
             "footer_agora": "Agora ENGF",
             "footer_forum": "ENGF Forum",
             "footer_community": "ENGF Community",
-            "footer_creative": "European NextGen Creative Youth Platform",
-            "footer_digital": "ENGF Digital Education Initiative",
+            "footer_creative":
+                "European NextGen Creative Youth Platform",
+            "footer_digital":
+                "ENGF Digital Education Initiative",
 
             "footer_institutional": "ISTITUZIONALE",
+
             "footer_governance": "Governance",
             "footer_transparency": "Trasparenza",
             "footer_privacy": "Privacy",
@@ -249,45 +312,60 @@ document.addEventListener("componentsLoaded", () => {
     };
 
 
-    function updateComponentsLanguage(lang) {
+    /* =====================================================
+       TRANSLATE HEADER + FOOTER
+    ===================================================== */
+
+    function translateComponents(lang) {
 
         if (!translations[lang]) {
-            console.error("[Components i18n] Unknown language:", lang);
+            console.error(
+                "[Components i18n] Unknown language:",
+                lang
+            );
             return;
         }
 
-        const components =
-            document.querySelectorAll(".topbar, .site-footer");
 
-        components.forEach(component => {
+        /*
+         * IMPORTANT:
+         * We ONLY search inside .topbar and .site-footer.
+         *
+         * This prevents this file from touching
+         * About-page translations.
+         */
 
-            const elements =
-                component.querySelectorAll("[data-i18n]");
+        const elements = document.querySelectorAll(
+            ".topbar [data-i18n], .site-footer [data-i18n]"
+        );
 
-            elements.forEach(element => {
 
-                const key =
-                    element.getAttribute("data-i18n");
+        elements.forEach(element => {
 
-                if (translations[lang][key] !== undefined) {
+            const key =
+                element.getAttribute("data-i18n");
 
-                    element.innerHTML =
-                        translations[lang][key];
 
-                } else {
+            if (translations[lang][key] !== undefined) {
 
-                    console.warn(
-                        `[Components i18n] Missing translation: ${key}`
-                    );
-                }
+                element.innerHTML =
+                    translations[lang][key];
 
-            });
+            } else {
+
+                console.warn(
+                    `[Components i18n] Missing translation: ${key}`
+                );
+            }
 
         });
 
-        document.documentElement.lang = lang;
     }
 
+
+    /* =====================================================
+       LANGUAGE SWITCHER
+    ===================================================== */
 
     const languageInputs =
         document.querySelectorAll(
@@ -299,25 +377,40 @@ document.addEventListener("componentsLoaded", () => {
 
         input.addEventListener("change", event => {
 
-            const selectedLang =
+            const lang =
                 event.target.value.toLowerCase();
 
-            // Save language
+
+            /* Save language */
             localStorage.setItem(
                 "engfLanguage",
-                selectedLang
+                lang
             );
 
-            // Translate header + footer
-            updateComponentsLanguage(selectedLang);
 
-            // Useful for page-specific translation scripts
+            /* Translate header/footer */
+            translateComponents(lang);
+
+
+            /* Set HTML lang */
+            document.documentElement.lang = lang;
+
+
+            /*
+             * Tell the About page or any other page
+             * that the language changed.
+             */
             document.dispatchEvent(
-                new CustomEvent("languageChanged", {
-                    detail: {
-                        language: selectedLang
+
+                new CustomEvent(
+                    "engfLanguageChanged",
+                    {
+                        detail: {
+                            language: lang
+                        }
                     }
-                })
+                )
+
             );
 
         });
@@ -325,17 +418,19 @@ document.addEventListener("componentsLoaded", () => {
     });
 
 
-    /* =========================================
+    /* =====================================================
        INITIAL LANGUAGE
-    ========================================== */
+    ===================================================== */
 
     const savedLanguage =
         localStorage.getItem("engfLanguage");
+
 
     const checkedLanguage =
         document.querySelector(
             'input[name="language"]:checked'
         );
+
 
     const initialLang =
         savedLanguage ||
@@ -343,28 +438,44 @@ document.addEventListener("componentsLoaded", () => {
         "en";
 
 
-    /* Set correct radio button */
-    const initialInput =
+    /*
+     * Synchronize radio button with saved language
+     */
+
+    const radio =
         document.querySelector(
             `input[name="language"][value="${initialLang.toUpperCase()}"]`
         );
 
-    if (initialInput) {
-        initialInput.checked = true;
+
+    if (radio) {
+        radio.checked = true;
     }
 
 
-    /* Translate both components */
-    updateComponentsLanguage(initialLang);
+    /* Initial translation */
+    translateComponents(initialLang);
+
+    document.documentElement.lang =
+        initialLang;
 
 
-    /* Tell page translation JS which language is active */
+    /*
+     * Tell page scripts which language
+     * is currently selected.
+     */
+
     document.dispatchEvent(
-        new CustomEvent("languageChanged", {
-            detail: {
-                language: initialLang
+
+        new CustomEvent(
+            "engfLanguageChanged",
+            {
+                detail: {
+                    language: initialLang
+                }
             }
-        })
+        )
+
     );
 
 });
