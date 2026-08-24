@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const footer = document.getElementById("footer");
 
 
-    /* =========================================================
-       LOAD HEADER
-    ========================================================= */
+    /* HEADER */
 
     if (header) {
 
@@ -26,7 +24,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             header.innerHTML = await response.text();
 
-            console.log("[components] Header loaded successfully");
+            console.log(
+                "[components] Header loaded successfully"
+            );
 
         } catch (error) {
 
@@ -38,9 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    /* =========================================================
-       LOAD FOOTER
-    ========================================================= */
+    /* FOOTER */
 
     if (footer) {
 
@@ -58,7 +56,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             footer.innerHTML = await response.text();
 
-            console.log("[components] Footer loaded successfully");
+            console.log(
+                "[components] Footer loaded successfully"
+            );
 
         } catch (error) {
 
@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    /* =========================================================
-       TELL OTHER SCRIPTS THAT COMPONENTS ARE READY
-    ========================================================= */
+    /* COMPONENTS ARE READY */
 
-    console.log("[components] Header and footer loading complete");
+    console.log(
+        "[components] Dispatching componentsLoaded"
+    );
 
     document.dispatchEvent(
         new Event("componentsLoaded")
