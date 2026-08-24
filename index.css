@@ -781,15 +781,6 @@ a {
   align-items: center;
 }
 
-.ecosystem-menu {
-  position: relative;
-  display: inline-block;
-}
-
-.ecosystem-menu > a {
-  display: inline-block;
-}
-
 .partnership-kicker {
   margin-bottom: 24px;
   color: #7a3138;
