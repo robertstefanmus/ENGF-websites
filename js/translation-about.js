@@ -1,3 +1,207 @@
+document.addEventListener("componentsLoaded", () => {
+
+    console.log("[i18n] componentsLoaded event received");
+    console.log("[i18n] Initializing translation system...");
+
+
+    const translations = {
+
+        en: {
+            "page_title":
+                "About ENGF - Mission, Principles & Governance",
+
+            "about_title":
+                "ABOUT",
+
+            "about_sub1":
+                "An institution built for <br> the next generation.",
+
+            "about_sub2":
+                "ENGF — European NextGen Forum is an independent, non-governmental <br> association established to advance formal and non-formal education, research, <br> leadership, civic and institutional dialogue, culture and European cooperation <br> among young people."
+
+            // ... keep the rest of your translations here
+        },
+
+        ro: {
+            "page_title":
+                "Despre ENGF - Misiune, Principii și Guvernanță",
+
+            "about_title":
+                "DESPRE",
+
+            "about_sub1":
+                "O instituție construită pentru <br> noua generație.",
+
+            "about_sub2":
+                "ENGF — European NextGen Forum este o asociație independentă, neguvernamentală, înființată pentru a promova educația formală și non-formală, cercetarea, leadershipul, dialogul civic și instituțional, cultura și cooperarea europeană între tineri."
+
+            // ... keep the rest of your translations here
+        },
+
+        it: {
+            "page_title":
+                "Chi siamo - ENGF - Missione, Principi e Governance",
+
+            "about_title":
+                "CHI SIAMO",
+
+            "about_sub1":
+                "Un'istituzione costruita per <br> la prossima generazione.",
+
+            "about_sub2":
+                "ENGF — European NextGen Forum è un'associazione indipendente e non governativa, costituita per promuovere l'educazione formale e non formale, la ricerca, la leadership, il dialogo civico e istituzionale, la cultura e la cooperazione europea tra i giovani."
+
+            // ... keep the rest of your translations here
+        }
+
+    };
+
+
+    /* =========================================================
+       FIND LANGUAGE INPUTS
+    ========================================================= */
+
+    const languageInputs =
+        document.querySelectorAll(
+            'input[name="language"]'
+        );
+
+    console.log(
+        "[i18n] Language inputs found:",
+        languageInputs.length
+    );
+
+
+    /* =========================================================
+       UPDATE CONTENT
+    ========================================================= */
+
+    function updateContent(lang) {
+
+        console.log(
+            "[i18n] Updating content to:",
+            lang
+        );
+
+        if (!translations[lang]) {
+
+            console.error(
+                "[i18n] Translation not found:",
+                lang
+            );
+
+            return;
+        }
+
+
+        const elements =
+            document.querySelectorAll(
+                "[data-i18n]"
+            );
+
+        console.log(
+            "[i18n] Translatable elements:",
+            elements.length
+        );
+
+
+        elements.forEach(element => {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+
+            if (
+                translations[lang][key] !== undefined
+            ) {
+
+                element.innerHTML =
+                    translations[lang][key];
+
+                console.log(
+                    `[i18n] ✓ ${key}`
+                );
+
+            } else {
+
+                console.warn(
+                    `[i18n] Missing key "${key}" for "${lang}"`
+                );
+            }
+
+        });
+
+
+        document.documentElement.lang = lang;
+
+        console.log(
+            "[i18n] Translation complete:",
+            lang
+        );
+    }
+
+
+    /* =========================================================
+       LANGUAGE SWITCHER
+    ========================================================= */
+
+    languageInputs.forEach(input => {
+
+        console.log(
+            "[i18n] Adding listener:",
+            input.value
+        );
+
+
+        input.addEventListener(
+            "change",
+            event => {
+
+                const selectedLang =
+                    event.target.value.toLowerCase();
+
+                console.log(
+                    "[i18n] User selected:",
+                    selectedLang
+                );
+
+                updateContent(selectedLang);
+            }
+        );
+
+    });
+
+
+    /* =========================================================
+       INITIAL LANGUAGE
+    ========================================================= */
+
+    const checkedLanguage =
+        document.querySelector(
+            'input[name="language"]:checked'
+        );
+
+
+    console.log(
+        "[i18n] Checked language:",
+        checkedLanguage
+    );
+
+
+    const initialLang =
+        checkedLanguage?.value.toLowerCase() || "en";
+
+
+    console.log(
+        "[i18n] Initial language:",
+        initialLang
+    );
+
+
+    updateContent(initialLang);
+
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
     console.log('[i18n] DOMContentLoaded fired');
