@@ -236,16 +236,6 @@ body.menu-open {
     transform: scaleX(1);
 }
 
-/* ABOUT appears selected in the supplied reference image. */
-.nav > a:first-child {
-    color: var(--color-burgundy);
-}
-
-.nav > a:first-child::after {
-    transform: scaleX(1);
-}
-
-
 /* =========================================================
    HAMBURGER
 ========================================================= */
