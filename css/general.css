@@ -59,6 +59,7 @@ body {
     color: var(--color-text);
     font-family: var(--font-sans);
     line-height: 1.5;
+    padding-top: var(--header-height);
 }
 
 img {
@@ -86,8 +87,10 @@ body.menu-open {
 ========================================================= */
 
 .topbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
 
     width: 100%;
@@ -455,6 +458,10 @@ body.menu-open {
 
 @media (max-width: 800px) {
 
+    body {
+        padding-top: 56px;
+    }
+
     /* -----------------------------------------------------
        HEADER
     ----------------------------------------------------- */
@@ -657,6 +664,10 @@ font-size: 7.9rem;
 ========================================================= */
 
 @media (max-width: 400px) {
+
+    body {
+        padding-top: 48px;
+    }
 
     .topbar {
         min-height: 48px;
