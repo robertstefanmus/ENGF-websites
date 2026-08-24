@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "about-subtitle2": "ENGF — European NextGen Forum is an independent, non-governmental <br> association established to advance formal and non-formal education, research, <br> leadership, civic and institutional dialogue, culture and European cooperation <br> among young people."
         },
         ro: {
-            "about-title": "DESPRE NOI",
-            "about-subtitle1": "O instituție construită pentru <br> generația viitoare.",
-            "about-subtitle2": "ENGF — European NextGen Forum este o asociație independentă, neguvernamentală <br> înființată pentru a promova educația formală și non-formală, cercetarea, <br> leadership-ul, dialogul civic și instituțional, cultura și cooperarea europeană <br> între tineri."
+            "about-title": "DESPRE",
+            "about-subtitle1": "O instituție construită pentru noua generație.",
+            "about-subtitle2": "ENGF — European NextGen Forum este o asociație independentă, neguvernamentală, înființată pentru a promova educația formală și non-formală, cercetarea, leadershipul, dialogul civic și instituțional, cultura și cooperarea europeană între tineri."
         },
         it: {
             "about-title": "CHI SIAMO",
-            "about-subtitle1": "Un'istituzione costruita per <br> la prossima generazione.",
-            "about-subtitle2": "ENGF — European NextGen Forum è un'associazione indipendente e non governativa <br> istituita per promuovere l'istruzione formale e non formale, la ricerca, <br> la leadership, il dialogo civico e istituzionale, la cultura e la cooperazione europea <br> tra i giovani."
+            "about-subtitle1": "Un'istituzione costruita per la prossima generazione.",
+            "about-subtitle2": "ENGF — European NextGen Forum è un'associazione indipendente e non governativa, costituita per promuovere l'educazione formale e non formale, la ricerca, la leadership, il dialogo civico e istituzionale, la cultura e la cooperazione europea tra i giovani."
         }
     };
 
