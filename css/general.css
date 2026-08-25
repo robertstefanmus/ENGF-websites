@@ -1540,3 +1540,123 @@ font-size: 7.9rem;
         height: 5px;
     }
 }
+
+/* =========================================================
+   MOBILE — ACCESSIBILITY / SPACING OVERRIDES
+   Keeps the language switcher clear of the hamburger and
+   makes mobile controls / navigation easier to tap.
+========================================================= */
+
+@media (max-width: 800px) {
+    .topbar {
+        padding-left: 16px;
+        padding-right: 18px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .brand-mark {
+        font-size: 1.3rem;
+    }
+
+    .lang-switcher {
+        height: 32px;
+        margin-left: auto;
+        margin-right: 18px;
+        padding: 0 10px;
+        flex-shrink: 0;
+    }
+
+    .lang-switcher span {
+        font-size: 9px;
+    }
+
+    .lang-switcher label:not(:last-child)::after {
+        margin: 0 6px;
+        font-size: 9px;
+    }
+
+    .hamburger-menu {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+
+    .hamburger-line {
+        width: 24px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .mobile-menu > a:not(.mob-view) {
+        min-height: 52px;
+        padding: 14px 18px;
+        font-size: 1.12rem;
+    }
+
+    .mobile-menu .mob-view {
+        min-height: 44px;
+        padding: 11px 18px 11px 32px;
+        font-size: 0.72rem;
+    }
+
+    .mobile-menu .mob-view::before {
+        left: 17px;
+        width: 7px;
+        height: 7px;
+    }
+}
+
+@media (max-width: 400px) {
+    .topbar {
+        padding-left: 12px;
+        padding-right: 14px;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .brand-mark {
+        font-size: 1.18rem;
+    }
+
+    .lang-switcher {
+        height: 30px;
+        margin-right: 14px;
+        padding: 0 8px;
+    }
+
+    .lang-switcher span {
+        font-size: 8px;
+    }
+
+    .hamburger-menu {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+    }
+
+    .hamburger-line {
+        width: 22px;
+        height: 2px;
+    }
+
+    .mobile-menu > a:not(.mob-view) {
+        min-height: 48px;
+        padding: 12px 16px;
+        font-size: 1.05rem;
+    }
+
+    .mobile-menu .mob-view {
+        min-height: 40px;
+        padding: 10px 16px 10px 30px;
+        font-size: 0.66rem;
+    }
+}

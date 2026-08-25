@@ -49,11 +49,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
+/* COMPONENTS ARE READY */
 
-    /* COMPONENTS ARE READY */
+document.documentElement.dataset.componentsLoaded = "true";
 
-    document.dispatchEvent(
-        new Event("componentsLoaded")
-    );
+document.dispatchEvent(
+    new Event("componentsLoaded")
+);
 
 });

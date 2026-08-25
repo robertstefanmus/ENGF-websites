@@ -1,4 +1,4 @@
-document.addEventListener("componentsLoaded", () => {
+function initTranslations() {
 
     const translations = {
 
@@ -385,4 +385,17 @@ const savedLanguage =
 
 
 updateContent(savedLanguage);
-});
+}
+
+
+/* Initialize translations */
+
+if (document.documentElement.dataset.componentsLoaded === "true") {
+    initTranslations();
+} else {
+    document.addEventListener(
+        "componentsLoaded",
+        initTranslations,
+        { once: true }
+    );
+}
