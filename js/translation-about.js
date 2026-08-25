@@ -1,6 +1,8 @@
+
 function initTranslations() {
 
     const translations = {
+
 
         en: {
             "page_title": "About ENGF - Mission, Principles & Governance",
@@ -281,47 +283,26 @@ function initTranslations() {
         }
     };
 
-    function updateContent(lang) {
+};
+
+
+function updateContent(lang) {
 
     if (!translations[lang]) {
-
         console.error(
             "[About i18n] Unknown language:",
             lang
         );
-
         return;
     }
-
-
-    /*
-     * IMPORTANT:
-     * Do NOT use:
-     *
-     * document.querySelectorAll("[data-i18n]")
-     *
-     * because that also selects header and footer.
-     */
-
-    const page = document.querySelector("main");
-
-    if (!page) {
-        console.error(
-            "[About i18n] <main> element not found."
-        );
-        return;
-    }
-
 
     const elements =
-        page.querySelectorAll("[data-i18n]");
-
+        document.querySelectorAll("[data-i18n]");
 
     elements.forEach(element => {
 
         const key =
             element.getAttribute("data-i18n");
-
 
         if (translations[lang][key] !== undefined) {
 
@@ -333,66 +314,97 @@ function initTranslations() {
             console.warn(
                 `[About i18n] Missing translation: ${key}`
             );
-
         }
-
     });
 
 
-    /* Page title */
+    document.documentElement.lang = lang;
+
 
     const pageTitle =
         translations[lang]["page_title"];
 
-
     if (pageTitle) {
         document.title = pageTitle;
     }
-
 }
 
 
 /* =====================================================
-   LISTEN TO GLOBAL LANGUAGE CHANGE
+   LANGUAGE SWITCHER
 ===================================================== */
 
-document.addEventListener(
-    "engfLanguageChanged",
-    event => {
+const languageInputs =
+    document.querySelectorAll(
+        'input[name="language"]'
+    );
 
-        const lang =
-            event.detail.language;
+languageInputs.forEach(input => {
 
-        updateContent(lang);
+    input.addEventListener(
+        "change",
+        event => {
 
-    }
-);
+            const lang =
+                event.target.value.toLowerCase();
+
+            localStorage.setItem(
+                "engfLanguage",
+                lang
+            );
+
+            updateContent(lang);
+        }
+    );
+});
 
 
 /* =====================================================
-   INITIAL PAGE TRANSLATION
+   INITIAL LANGUAGE
 ===================================================== */
 
-/*
- * This is important.
- *
- * Even if the event happened before this script loaded,
- * the page will still get the correct language.
- */
+const checkedLanguage =
+    document.querySelector(
+        'input[name="language"]:checked'
+    );
 
 const savedLanguage =
-    localStorage.getItem("engfLanguage") || "en";
+    localStorage.getItem("engfLanguage");
+
+const initialLanguage =
+    savedLanguage ||
+    checkedLanguage?.value.toLowerCase() ||
+    "en";
 
 
-updateContent(savedLanguage);
+/* Make radio button match saved language */
+
+const selectedInput =
+    document.querySelector(
+        `input[name="language"][value="${initialLanguage}"]`
+    );
+
+if (selectedInput) {
+    selectedInput.checked = true;
 }
 
 
-/* Initialize translations */
+updateContent(initialLanguage);
+}
 
-if (document.documentElement.dataset.componentsLoaded === "true") {
+
+/* =====================================================
+   INITIALIZE AFTER HEADER / FOOTER
+===================================================== */
+
+if (
+    document.documentElement.dataset.componentsLoaded === "true"
+) {
+
     initTranslations();
+
 } else {
+
     document.addEventListener(
         "componentsLoaded",
         initTranslations,
