@@ -1076,6 +1076,8 @@ font-size: 7.9rem;
     text-align: left;
 
     transition: background-color 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .box:hover {
