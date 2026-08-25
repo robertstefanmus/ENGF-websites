@@ -1,15 +1,56 @@
 :root {
+  --color-bg: #f4ede2;
+  --color-bg-soft: #f2efea;
+  --color-bg-hover: #f1e9dc;
+
+  --color-primary: #4c0d17;
+  --color-primary-dark: #2a070d;
+  --color-burgundy: #581d22;
+
+  --color-text: #393333;
+  --color-text-soft: #4d4a47;
+
+  --color-muted: #746d68;
+  --color-muted-light: #aaa39b;
+
+  --color-border: #e5dccb;
+  --color-border-dark: #e9dec6;
+
+  --color-gold: #b58c3c;
+
   --cream: #f4eee4;
   --burgundy: #681018;
   --body: #65574d;
   --muted: #aaa095;
   --line: #ded2bf;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
+
+  --container: 1600px;
+  --container-wide: 1500px;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.25s ease;
+}
+
+
+/* =================================
+   GLOBAL
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   background: var(--cream);
-  color: var(--burgundy);
+  color: var(--color-burgundy);
 }
 
 
@@ -19,9 +60,11 @@ body {
 
 .department-hero {
   position: relative;
+
   min-height: 500px;
 
   background: var(--cream);
+
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 
@@ -31,19 +74,44 @@ body {
 .department-hero-inner {
   width: min(1200px, calc(100% - 80px));
   margin: 0 auto;
+
   padding: 62px 0 55px;
 }
 
+
+/* breadcrumb */
+
 .department-breadcrumb {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
 
-  font-family: Arial, sans-serif;
-  font-size: 8px;
-  letter-spacing: 4px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 3px;
+
   color: #4f3531;
 }
+
+.department-breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+
+  opacity: 0.8;
+
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid #4f3531;
+
+  transition: opacity var(--transition-fast);
+}
+
+.department-breadcrumb a:hover {
+  opacity: 0.5;
+}
+
+
+/* department label */
 
 .department-type {
   display: flex;
@@ -52,7 +120,7 @@ body {
 
   margin-top: 28px;
 
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 2.6px;
@@ -63,34 +131,46 @@ body {
 .department-dot {
   width: 11px;
   height: 11px;
+
+  flex-shrink: 0;
+
   border-radius: 50%;
 
   background: var(--burgundy);
 }
 
+
+/* department title */
+
 .department-hero h1 {
   margin: 25px 0 0;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-display);
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
 
-  color: var(--burgundy);
+  color: var(--color-primary);
 }
+
+
+/* department description */
 
 .department-intro {
   max-width: 650px;
 
   margin: 36px 0 0;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-display);
   font-size: 21px;
   font-style: italic;
-  line-height: 1.75;
+  line-height: 1.55;
 
   color: #786d63;
 }
+
+
+/* tags */
 
 .department-tags {
   display: flex;
@@ -105,7 +185,7 @@ body {
 
   border: 1px solid var(--line);
 
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 7px;
   letter-spacing: 2px;
 
@@ -113,7 +193,9 @@ body {
 }
 
 
-/* decorative faded circle */
+/* =================================
+   DECORATIVE MARK
+================================= */
 
 .department-mark {
   position: absolute;
@@ -128,6 +210,8 @@ body {
   border-radius: 50%;
 
   opacity: 0.4;
+
+  pointer-events: none;
 }
 
 .department-mark::before,
@@ -135,6 +219,7 @@ body {
   content: "";
 
   position: absolute;
+
   border: 1px solid rgba(113, 64, 47, 0.06);
   border-radius: 50%;
 }
@@ -161,6 +246,9 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
+
+/* image */
+
 .programme-image {
   overflow: hidden;
 }
@@ -170,40 +258,49 @@ body {
   height: 100%;
 
   display: block;
+
   object-fit: cover;
+  object-position: center;
 }
+
+
+/* content */
 
 .programme-content {
   background: var(--cream);
 }
 
 .programme-heading {
-  padding: 28px 50px;
+  padding: 26px 50px;
 
   border-bottom: 1px solid var(--line);
 
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  letter-spacing: 5px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 4px;
 
-  color: var(--burgundy);
+  color: var(--color-burgundy);
 }
+
+
+/* individual programme rows */
 
 .programme-item {
   display: grid;
-  grid-template-columns: 135px 1fr;
+  grid-template-columns: 120px 1fr;
 
-  min-height: 168px;
+  min-height: 145px;
 
-  padding: 34px 50px;
+  padding: 28px 50px;
 
   border-bottom: 1px solid var(--line);
 }
 
 .programme-number {
   font-family: "Courier New", monospace;
-  font-size: 10px;
-  letter-spacing: 4px;
+  font-size: 9px;
+  letter-spacing: 3px;
 
   color: var(--muted);
 }
@@ -211,43 +308,46 @@ body {
 .programme-item h2 {
   margin: 0;
 
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 400;
+  line-height: 1.15;
 
   color: var(--burgundy);
 }
 
 .programme-item p {
-  max-width: 800px;
+  max-width: 760px;
 
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.55;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
 
   color: var(--body);
 }
 
 
 /* =================================
-   RELATED
+   RELATED OPPORTUNITIES
 ================================= */
 
 .related-section {
   width: min(1220px, calc(100% - 80px));
 
   margin: 0 auto;
-  padding: 75px 0 40px;
+
+  padding: 70px 0 40px;
 }
 
 .related-section > h2 {
-  margin: 0 0 26px;
+  margin: 0 0 22px;
 
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 34px;
+  font-family: var(--font-display);
+  font-size: 29px;
   font-weight: 400;
+  line-height: 1.15;
 
   color: var(--burgundy);
 }
@@ -261,7 +361,7 @@ body {
   grid-template-columns: 50% 25% 25%;
   align-items: center;
 
-  min-height: 80px;
+  min-height: 70px;
 
   border-bottom: 1px solid var(--line);
 }
@@ -269,9 +369,10 @@ body {
 .related-row h3 {
   margin: 0;
 
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
+  font-family: var(--font-display);
+  font-size: 20px;
   font-weight: 400;
+  line-height: 1.2;
 
   color: var(--burgundy);
 }
@@ -279,8 +380,9 @@ body {
 .related-row p {
   margin: 0;
 
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.4;
 
   color: var(--body);
 }
@@ -288,26 +390,36 @@ body {
 .related-row span {
   text-align: right;
 
-  font-family: Arial, sans-serif;
-  font-size: 8px;
+  font-family: var(--font-sans);
+  font-size: 7px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
 
   color: #573636;
 }
 
+
+/* all programmes link */
+
 .all-programmes {
   display: inline-block;
 
-  margin-top: 30px;
+  margin-top: 28px;
 
-  font-family: Arial, sans-serif;
-  font-size: 8px;
+  font-family: var(--font-sans);
+  font-size: 7px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 2.3px;
 
   text-decoration: none;
+
   color: var(--burgundy);
+
+  transition: opacity var(--transition-fast);
+}
+
+.all-programmes:hover {
+  opacity: 0.55;
 }
 
 
@@ -320,8 +432,9 @@ body {
   align-items: center;
   gap: 28px;
 
-  margin-top: 65px;
-  padding: 40px 0;
+  margin-top: 55px;
+
+  padding: 34px 0;
 
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -330,9 +443,10 @@ body {
 .institute-cta h3 {
   margin: 0;
 
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 400;
+  line-height: 1.2;
 
   color: var(--burgundy);
 }
@@ -345,19 +459,23 @@ body {
   min-width: 180px;
   height: 52px;
 
+  padding: 0 24px;
+
   border: 1px solid var(--burgundy);
 
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 3px;
 
   text-decoration: none;
+
   color: var(--burgundy);
+  background: transparent;
 
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .outline-button:hover {
@@ -367,11 +485,11 @@ body {
 
 
 /* =================================
-   ELSEWHERE
+   ELSEWHERE IN ECOSYSTEM
 ================================= */
 
 .ecosystem-other {
-  padding: 65px 0 20px;
+  padding: 60px 0 20px;
 }
 
 .ecosystem-label {
@@ -379,9 +497,10 @@ body {
 
   margin-bottom: 27px;
 
-  font-family: Arial, sans-serif;
-  font-size: 8px;
-  letter-spacing: 4px;
+  font-family: var(--font-sans);
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
 
   color: var(--burgundy);
 }
@@ -394,17 +513,23 @@ body {
 .ecosystem-card {
   position: relative;
 
-  min-height: 150px;
+  min-height: 145px;
 
   padding: 24px;
 
   border-right: 1px solid var(--line);
 
   text-decoration: none;
+
+  transition: background var(--transition-fast);
 }
 
 .ecosystem-card:last-child {
   border-right: none;
+}
+
+.ecosystem-card:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .ecosystem-dot {
@@ -433,21 +558,22 @@ body {
 .ecosystem-card h3 {
   margin: 0;
 
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
+  font-family: var(--font-display);
+  font-size: 20px;
   font-weight: 400;
+  line-height: 1.2;
 
   color: var(--burgundy);
 }
 
 .ecosystem-card p {
-  max-width: 330px;
+  max-width: 300px;
 
-  margin: 12px 0 0;
+  margin: 9px 0 0;
 
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.45;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.4;
 
   color: var(--body);
 }
@@ -463,21 +589,49 @@ body {
     width: calc(100% - 50px);
   }
 
+  .department-hero h1 {
+    font-size: 56px;
+  }
+
+  .department-intro {
+    max-width: 600px;
+    font-size: 19px;
+  }
+
+
   .programme-section {
     grid-template-columns: 40% 60%;
   }
 
-  .programme-item {
-    grid-template-columns: 90px 1fr;
-    padding: 30px;
+  .programme-heading {
+    padding: 24px 30px;
   }
 
-  .programme-heading {
-    padding: 25px 30px;
+  .programme-item {
+    grid-template-columns: 80px 1fr;
+
+    padding: 26px 30px;
   }
+
+  .programme-item h2 {
+    font-size: 22px;
+  }
+
+  .programme-item p {
+    font-size: 13px;
+  }
+
 
   .related-section {
     width: calc(100% - 50px);
+  }
+
+  .related-row {
+    grid-template-columns: 48% 27% 25%;
+  }
+
+  .ecosystem-card {
+    padding: 22px 18px;
   }
 }
 
@@ -494,22 +648,54 @@ body {
 
   .department-hero-inner {
     width: 100%;
+
     padding: 55px 24px;
   }
 
+  .department-breadcrumb {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .department-type {
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  }
+
+  .department-dot {
+    width: 9px;
+    height: 9px;
+  }
+
   .department-hero h1 {
-    font-size: 48px;
+    font-size: 42px;
   }
 
   .department-intro {
-    font-size: 18px;
-    line-height: 1.65;
+    margin-top: 28px;
+
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .department-tags {
+    margin-top: 28px;
+  }
+
+  .department-tags span {
+    padding: 8px 10px;
+
+    font-size: 6px;
+    letter-spacing: 1.7px;
   }
 
   .department-mark {
     display: none;
   }
 
+
+  /* programme */
 
   .programme-section {
     display: block;
@@ -520,7 +706,10 @@ body {
   }
 
   .programme-heading {
-    padding: 24px;
+    padding: 22px 24px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
   }
 
   .programme-item {
@@ -528,67 +717,123 @@ body {
 
     min-height: auto;
 
-    padding: 30px 24px;
+    padding: 27px 24px;
   }
 
   .programme-number {
     display: block;
-    margin-bottom: 20px;
+
+    margin-bottom: 16px;
+
+    font-size: 8px;
   }
 
   .programme-item h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .programme-item p {
-    font-size: 15px;
+    max-width: 100%;
+
+    margin-top: 10px;
+
+    font-size: 12px;
+    line-height: 1.5;
   }
 
+
+  /* related */
 
   .related-section {
     width: 100%;
 
-    padding: 55px 24px;
+    padding: 50px 24px 35px;
+  }
+
+  .related-section > h2 {
+    font-size: 25px;
   }
 
   .related-row {
     display: block;
 
-    padding: 24px 0;
+    min-height: auto;
+
+    padding: 22px 0;
   }
 
   .related-row h3 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+
+    font-size: 19px;
   }
 
   .related-row p {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+
+    font-size: 12px;
   }
 
   .related-row span {
     display: block;
+
     text-align: left;
   }
 
 
+  /* CTA */
+
   .institute-cta {
     align-items: flex-start;
     flex-direction: column;
+
+    gap: 22px;
+
+    margin-top: 45px;
+
+    padding: 30px 0;
   }
 
   .institute-cta h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
+  .outline-button {
+    min-width: 160px;
+    height: 48px;
+
+    font-size: 8px;
+  }
+
+
+  /* ecosystem */
+
+  .ecosystem-other {
+    padding-top: 50px;
+  }
 
   .ecosystem-cards {
     grid-template-columns: 1fr;
   }
 
   .ecosystem-card {
+    min-height: auto;
+
     padding: 24px 0;
 
     border-right: none;
     border-bottom: 1px solid var(--line);
+  }
+
+  .ecosystem-card:last-child {
+    border-bottom: none;
+  }
+
+  .ecosystem-card h3 {
+    font-size: 19px;
+  }
+
+  .ecosystem-card p {
+    font-size: 12px;
   }
 }

@@ -550,19 +550,34 @@ a {
 }
 
 .badge {
-  display: inline-block;
-  margin-bottom: 24px;
-  padding: 4px 10px;
-  border: 1px dashed rgba(88, 29, 34, 0.3);
-  background: rgba(255, 255, 255, 0.2);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: #7a3138;
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 24px;
+    padding: 5px 11px;
+
+    background: transparent;
+    border: 1px solid #dfd2b8;
+
+    font-family: var(--font-sans);
+    font-size: 8px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+
+    color: #74575a;
+    text-transform: uppercase;
 }
 
 .badge .dot {
-  margin-right: 4px;
-  color: var(--color-gold);
+    display: inline-block;
+
+    margin-right: 8px;
+
+    font-size: 13px;
+    line-height: 0;
+
+    color: #d4b95f;
 }
 
 .description {
