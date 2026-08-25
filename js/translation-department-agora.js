@@ -1,375 +1,287 @@
-function initInstituteTranslations() {
+function initAgoraTranslations() {
 
     const translations = {
-
-        /* =====================================================
-           ENGLISH
-        ===================================================== */
 
         en: {
 
             "page_title":
-                "ENGF Institute - ENGF",
+                "ENGF Agora - ENGF",
 
             "breadcrumb_departments":
                 "DEPARTMENTS",
 
             "department_type":
-                "DEPARTMENT FOR ACADEMIC PROGRAMMES & RESEARCH",
+                "DEPARTMENT FOR PUBLIC COMMUNICATION & CIVIC EDUCATION",
 
-            "department_intro":
-                "The Institute is the research arm of ENGF. It convenes fellows, researchers and mentors around thematic working groups, and translates their work into policy briefs, papers and strategic analysis addressed to institutions and the wider public.",
+            "agora_intro":
+                "Agora is the editorial platform of ENGF. It publishes accessible, factual writing on domestic and international affairs, law, economics, sociology, public policy and political science — in text, audio and video — for readers who want to understand rather than to be persuaded.",
 
+            "tag_europe":
+                "EUROPE",
 
-            /* TAGS */
+            "tag_world":
+                "WORLD",
 
-            "tag_fellowship":
-                "FELLOWSHIP",
+            "tag_policy":
+                "POLICY",
 
-            "tag_policy_papers":
-                "POLICY PAPERS",
+            "tag_explainers":
+                "EXPLAINERS",
 
-            "tag_university_partnerships":
-                "UNIVERSITY PARTNERSHIPS",
+            "tag_interviews":
+                "INTERVIEWS",
 
-            "tag_strategic_analysis":
-                "STRATEGIC ANALYSIS",
-
-
-            /* PROGRAMME */
+            "tag_podcasts":
+                "PODCASTS",
 
             "programme_image_alt":
-                "Library interior",
+                "Agora editorial materials",
 
-            "programme_heading":
+            "programme_title":
                 "PROGRAMME OF WORK",
 
+            "programme_01_title":
+                "Analysis & Editorials",
+
             "programme_01_text":
-                "A structured research cycle pairing emerging scholars with experienced mentors, concluding in a published policy paper.",
+                "Considered pieces on developments in Europe and beyond.",
 
             "programme_02_title":
-                "Thematic Working Groups",
+                "Explainers",
 
             "programme_02_text":
-                "Standing groups that examine defined questions in European affairs, education, governance and technology.",
+                "Clear accounts of institutions, procedures and legal or economic concepts.",
 
             "programme_03_title":
-                "Policy Briefs & Research Papers",
+                "Interviews",
 
             "programme_03_text":
-                "Concise, evidence-based analysis written for institutional and academic readers.",
+                "Conversations with academics, practitioners and public figures.",
+
+            "programme_04_title":
+                "Podcasts & Video",
 
             "programme_04_text":
-                "A periodical presenting selected research from the ENGF community and invited contributors.",
+                "Long-form discussion in audio and visual formats.",
 
             "programme_05_title":
-                "Academic Conferences",
+                "Newsletters & Infographics",
 
             "programme_05_text":
-                "Scholarly sessions organised with universities and research centres.",
+                "Periodic briefings and visual explanation of data.",
 
-            "programme_06_title":
-                "Alumni Network",
-
-            "programme_06_text":
-                "A continuing community of former fellows, researchers and contributors.",
-
-
-            /* RELATED */
-
-            "related_title":
-                "Related opportunities",
-
-            "related_01_type":
-                "Fellowships",
-
-            "related_02_title":
-                "Thematic Working Groups — Call for Members",
-
-            "related_02_type":
-                "Research",
-
-            "to_be_announced":
-                "TO BE ANNOUNCED",
-
-            "all_programmes":
-                "ALL PROGRAMMES & OPPORTUNITIES",
-
-
-            /* CTA */
+            "agora_note":
+                "Agora maintains a factual, balanced and pluralistic editorial character and is politically neutral.",
 
             "cta_title":
-                "Interested in taking part in the work of ENGF Institute?",
+                "Interested in taking part in the work of Agora ENGF?",
 
             "get_involved":
                 "GET INVOLVED",
 
-
-            /* ECOSYSTEM */
-
             "ecosystem_elsewhere":
                 "ELSEWHERE IN THE ECOSYSTEM",
+
+            "ecosystem_institute_text":
+                "Department for Academic Programmes & Research",
 
             "ecosystem_academy_text":
                 "Department for Education & Professional Development",
 
-            "ecosystem_forum_text":
-                "Department for Civic Participation & Institutional Dialogue",
-
-            "ecosystem_agora_text":
-                "Department for Public Communication & Civic Education"
+            "ecosystem_ftb_text":
+                "Department for Civic Participation & Institutional Dialogue"
         },
 
-
-        /* =====================================================
-           ROMANIAN
-        ===================================================== */
 
         ro: {
 
             "page_title":
-                "ENGF Institute - ENGF",
+                "Agora ENGF - ENGF",
 
             "breadcrumb_departments":
                 "DEPARTAMENTE",
 
             "department_type":
-                "DEPARTAMENTUL PENTRU PROGRAME ACADEMICE ȘI CERCETARE",
+                "DEPARTAMENTUL PENTRU COMUNICARE PUBLICĂ ȘI EDUCAȚIE CIVICĂ",
 
-            "department_intro":
-                "Institutul reprezintă componenta de cercetare a ENGF. Acesta reunește bursieri, cercetători și mentori în cadrul unor grupuri tematice de lucru și transformă rezultatele activității lor în policy brief-uri, lucrări de cercetare și analize strategice adresate instituțiilor și publicului larg.",
+            "agora_intro":
+                "Agora este platforma editorială a ENGF. Publică materiale accesibile și factuale despre afaceri interne și internaționale, drept, economie, sociologie, politici publice și științe politice — în format text, audio și video — pentru cititorii care vor să înțeleagă, nu să fie convinși.",
 
+            "tag_europe":
+                "EUROPA",
 
-            /* TAGS */
+            "tag_world":
+                "LUME",
 
-            "tag_fellowship":
-                "BURSE",
+            "tag_policy":
+                "POLITICI PUBLICE",
 
-            "tag_policy_papers":
-                "LUCRĂRI DE POLITICI PUBLICE",
+            "tag_explainers":
+                "EXPLICAȚII",
 
-            "tag_university_partnerships":
-                "PARTENERIATE UNIVERSITARE",
+            "tag_interviews":
+                "INTERVIURI",
 
-            "tag_strategic_analysis":
-                "ANALIZĂ STRATEGICĂ",
-
-
-            /* PROGRAMME */
+            "tag_podcasts":
+                "PODCASTURI",
 
             "programme_image_alt":
-                "Interior de bibliotecă",
+                "Materiale editoriale Agora",
 
-            "programme_heading":
+            "programme_title":
                 "PROGRAM DE ACTIVITATE",
 
+            "programme_01_title":
+                "Analize și Editoriale",
+
             "programme_01_text":
-                "Un ciclu structurat de cercetare care pune în legătură cercetători emergenți cu mentori experimentați și se încheie cu publicarea unei lucrări de politici publice.",
+                "Materiale aprofundate despre evoluții din Europa și dincolo de aceasta.",
 
             "programme_02_title":
-                "Grupuri Tematice de Lucru",
+                "Materiale Explicative",
 
             "programme_02_text":
-                "Grupuri permanente care analizează teme clar definite din domeniul afacerilor europene, educației, guvernanței și tehnologiei.",
+                "Explicații clare despre instituții, proceduri și concepte juridice sau economice.",
 
             "programme_03_title":
-                "Policy Brief-uri și Lucrări de Cercetare",
+                "Interviuri",
 
             "programme_03_text":
-                "Analize concise, bazate pe dovezi, redactate pentru cititori din mediul instituțional și academic.",
+                "Conversații cu cadre universitare, practicieni și personalități publice.",
+
+            "programme_04_title":
+                "Podcasturi și Video",
 
             "programme_04_text":
-                "O publicație periodică ce prezintă cercetări selectate din comunitatea ENGF și contribuții ale unor autori invitați.",
+                "Discuții aprofundate în format audio și video.",
 
             "programme_05_title":
-                "Conferințe Academice",
+                "Newslettere și Infografice",
 
             "programme_05_text":
-                "Sesiuni academice organizate împreună cu universități și centre de cercetare.",
+                "Informări periodice și explicații vizuale ale datelor.",
 
-            "programme_06_title":
-                "Rețeaua Alumni",
-
-            "programme_06_text":
-                "O comunitate permanentă formată din foști bursieri, cercetători și colaboratori.",
-
-
-            /* RELATED */
-
-            "related_title":
-                "Oportunități asociate",
-
-            "related_01_type":
-                "Burse",
-
-            "related_02_title":
-                "Grupuri Tematice de Lucru — Apel pentru Membri",
-
-            "related_02_type":
-                "Cercetare",
-
-            "to_be_announced":
-                "VA FI ANUNȚAT",
-
-            "all_programmes":
-                "TOATE PROGRAMELE ȘI OPORTUNITĂȚILE",
-
-
-            /* CTA */
+            "agora_note":
+                "Agora păstrează un caracter editorial factual, echilibrat și pluralist și este neutră din punct de vedere politic.",
 
             "cta_title":
-                "Ești interesat să participi la activitatea ENGF Institute?",
+                "Ești interesat să participi la activitatea Agora ENGF?",
 
             "get_involved":
                 "IMPLICĂ-TE",
 
-
-            /* ECOSYSTEM */
-
             "ecosystem_elsewhere":
                 "ÎN ALTE ZONE ALE ECOSISTEMULUI",
+
+            "ecosystem_institute_text":
+                "Departamentul pentru Programe Academice și Cercetare",
 
             "ecosystem_academy_text":
                 "Departamentul pentru Educație și Dezvoltare Profesională",
 
-            "ecosystem_forum_text":
-                "Departamentul pentru Participare Civică și Dialog Instituțional",
-
-            "ecosystem_agora_text":
-                "Departamentul pentru Comunicare Publică și Educație Civică"
+            "ecosystem_ftb_text":
+                "Departamentul pentru Participare Civică și Dialog Instituțional"
         },
 
-
-        /* =====================================================
-           ITALIAN
-        ===================================================== */
 
         it: {
 
             "page_title":
-                "ENGF Institute - ENGF",
+                "Agora ENGF - ENGF",
 
             "breadcrumb_departments":
                 "DIPARTIMENTI",
 
             "department_type":
-                "DIPARTIMENTO PER I PROGRAMMI ACCADEMICI E LA RICERCA",
+                "DIPARTIMENTO PER LA COMUNICAZIONE PUBBLICA E L'EDUCAZIONE CIVICA",
 
-            "department_intro":
-                "L'Istituto è il braccio di ricerca di ENGF. Riunisce fellow, ricercatori e mentori in gruppi di lavoro tematici e trasforma il loro lavoro in policy brief, articoli e analisi strategiche rivolte alle istituzioni e al pubblico più ampio.",
+            "agora_intro":
+                "Agora è la piattaforma editoriale di ENGF. Pubblica contenuti accessibili e basati sui fatti su affari nazionali e internazionali, diritto, economia, sociologia, politiche pubbliche e scienze politiche — in formato testuale, audio e video — per lettori che vogliono capire anziché essere persuasi.",
 
+            "tag_europe":
+                "EUROPA",
 
-            /* TAGS */
+            "tag_world":
+                "MONDO",
 
-            "tag_fellowship":
-                "FELLOWSHIP",
+            "tag_policy":
+                "POLITICHE PUBBLICHE",
 
-            "tag_policy_papers":
-                "POLICY PAPER",
+            "tag_explainers":
+                "SPIEGAZIONI",
 
-            "tag_university_partnerships":
-                "PARTNERSHIP UNIVERSITARIE",
+            "tag_interviews":
+                "INTERVISTE",
 
-            "tag_strategic_analysis":
-                "ANALISI STRATEGICA",
-
-
-            /* PROGRAMME */
+            "tag_podcasts":
+                "PODCAST",
 
             "programme_image_alt":
-                "Interno di una biblioteca",
+                "Materiali editoriali Agora",
 
-            "programme_heading":
+            "programme_title":
                 "PROGRAMMA DI LAVORO",
 
+            "programme_01_title":
+                "Analisi ed Editoriali",
+
             "programme_01_text":
-                "Un ciclo strutturato di ricerca che mette in contatto studiosi emergenti con mentori esperti e si conclude con la pubblicazione di un policy paper.",
+                "Approfondimenti sugli sviluppi in Europa e nel resto del mondo.",
 
             "programme_02_title":
-                "Gruppi di Lavoro Tematici",
+                "Spiegazioni",
 
             "programme_02_text":
-                "Gruppi permanenti che esaminano questioni definite negli affari europei, nell'istruzione, nella governance e nella tecnologia.",
+                "Spiegazioni chiare di istituzioni, procedure e concetti giuridici o economici.",
 
             "programme_03_title":
-                "Policy Brief e Articoli di Ricerca",
+                "Interviste",
 
             "programme_03_text":
-                "Analisi concise e basate su evidenze, scritte per lettori istituzionali e accademici.",
+                "Conversazioni con accademici, professionisti e personalità pubbliche.",
+
+            "programme_04_title":
+                "Podcast e Video",
 
             "programme_04_text":
-                "Una pubblicazione periodica che presenta una selezione di ricerche della comunità ENGF e contributi di autori invitati.",
+                "Discussioni approfondite in formato audio e video.",
 
             "programme_05_title":
-                "Conferenze Accademiche",
+                "Newsletter e Infografiche",
 
             "programme_05_text":
-                "Sessioni accademiche organizzate con università e centri di ricerca.",
+                "Aggiornamenti periodici e spiegazioni visive dei dati.",
 
-            "programme_06_title":
-                "Rete Alumni",
-
-            "programme_06_text":
-                "Una comunità permanente di ex fellow, ricercatori e collaboratori.",
-
-
-            /* RELATED */
-
-            "related_title":
-                "Opportunità correlate",
-
-            "related_01_type":
-                "Fellowship",
-
-            "related_02_title":
-                "Gruppi di Lavoro Tematici — Call per Membri",
-
-            "related_02_type":
-                "Ricerca",
-
-            "to_be_announced":
-                "DA ANNUNCIARE",
-
-            "all_programmes":
-                "TUTTI I PROGRAMMI E LE OPPORTUNITÀ",
-
-
-            /* CTA */
+            "agora_note":
+                "Agora mantiene un carattere editoriale fattuale, equilibrato e pluralista ed è politicamente neutrale.",
 
             "cta_title":
-                "Ti interessa partecipare al lavoro di ENGF Institute?",
+                "Ti interessa partecipare al lavoro di Agora ENGF?",
 
             "get_involved":
                 "PARTECIPA",
 
-
-            /* ECOSYSTEM */
-
             "ecosystem_elsewhere":
                 "ALTRO NELL'ECOSISTEMA",
+
+            "ecosystem_institute_text":
+                "Dipartimento per i Programmi Accademici e la Ricerca",
 
             "ecosystem_academy_text":
                 "Dipartimento per l'Istruzione e lo Sviluppo Professionale",
 
-            "ecosystem_forum_text":
-                "Dipartimento per la Partecipazione Civica e il Dialogo Istituzionale",
-
-            "ecosystem_agora_text":
-                "Dipartimento per la Comunicazione Pubblica e l'Educazione Civica"
+            "ecosystem_ftb_text":
+                "Dipartimento per la Partecipazione Civica e il Dialogo Istituzionale"
         }
     };
 
-
-    /* =====================================================
-       UPDATE PAGE
-    ===================================================== */
 
     function updateContent(lang) {
 
         if (!translations[lang]) {
 
             console.error(
-                "[Institute i18n] Unknown language:",
+                "[Agora i18n] Unknown language:",
                 lang
             );
 
@@ -378,19 +290,17 @@ function initInstituteTranslations() {
 
 
         const page =
-            document.querySelector(".institute-page");
+            document.querySelector(".agora-page");
 
         if (!page) {
 
             console.error(
-                "[Institute i18n] .institute-page not found."
+                "[Agora i18n] .agora-page not found."
             );
 
             return;
         }
 
-
-        /* TEXT */
 
         const elements =
             page.querySelectorAll("[data-i18n]");
@@ -409,13 +319,11 @@ function initInstituteTranslations() {
             } else {
 
                 console.warn(
-                    `[Institute i18n] Missing translation: ${key}`
+                    `[Agora i18n] Missing translation: ${key}`
                 );
             }
         });
 
-
-        /* ALT ATTRIBUTES */
 
         const altElements =
             page.querySelectorAll("[data-i18n-alt]");
@@ -439,8 +347,6 @@ function initInstituteTranslations() {
         document.documentElement.lang = lang;
 
 
-        /* PAGE TITLE */
-
         const pageTitle =
             translations[lang]["page_title"];
 
@@ -449,10 +355,6 @@ function initInstituteTranslations() {
         }
     }
 
-
-    /* =====================================================
-       LANGUAGE SWITCHER
-    ===================================================== */
 
     const languageInputs =
         document.querySelectorAll(
@@ -479,10 +381,6 @@ function initInstituteTranslations() {
         );
     });
 
-
-    /* =====================================================
-       INITIAL LANGUAGE
-    ===================================================== */
 
     const checkedLanguage =
         document.querySelector(
@@ -515,21 +413,17 @@ function initInstituteTranslations() {
 }
 
 
-/* =====================================================
-   INITIALIZE AFTER COMPONENTS
-===================================================== */
-
 if (
     document.documentElement.dataset.componentsLoaded === "true"
 ) {
 
-    initInstituteTranslations();
+    initAgoraTranslations();
 
 } else {
 
     document.addEventListener(
         "componentsLoaded",
-        initInstituteTranslations,
+        initAgoraTranslations,
         { once: true }
     );
 }

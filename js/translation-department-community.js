@@ -1,4 +1,4 @@
-function initFTBTranslations() {
+function initCommunityTranslations() {
 
     const translations = {
 
@@ -9,73 +9,67 @@ function initFTBTranslations() {
         en: {
 
             "page_title":
-                "ENGF Forumul Tinerilor Buzău - ENGF",
+                "ENGF Community - ENGF",
 
             "breadcrumb_departments":
                 "DEPARTMENTS",
 
             "department_type":
-                "DEPARTMENT FOR CIVIC PARTICIPATION & INSTITUTIONAL DIALOGUE",
+                "DEPARTMENT FOR VOLUNTEERING & COMMUNITY ENGAGEMENT",
 
-            "ftb_intro":
-                "This department gives young people a documented route into public decision-making: consultations and surveys establish priorities, debate clubs and workshops build civic literacy, and working groups convert findings into recommendations, reports and memoranda addressed to relevant institutions.",
+            "community_intro":
+                "Community is where ENGF's work leaves the seminar room. Through Community Service Days, campaigns and continuing projects, volunteers support social centres, children's organisations, elderly care, animal shelters and veterinary partners.",
 
 
             /* TAGS */
 
-            "tag_consultations":
-                "CONSULTATIONS",
+            "tag_service_days":
+                "SERVICE DAYS",
 
-            "tag_debate_clubs":
-                "DEBATE CLUBS",
+            "tag_campaigns":
+                "CAMPAIGNS",
 
-            "tag_institutional_dialogue":
-                "INSTITUTIONAL DIALOGUE",
+            "tag_volunteer_roles":
+                "VOLUNTEER ROLES",
 
 
             /* PROGRAMME */
 
             "programme_image_alt":
-                "Institutional documents and materials",
+                "Community programme materials",
 
             "programme_title":
                 "PROGRAMME OF WORK",
 
             "programme_01_title":
-                "Consultations & Surveys",
+                "Community Service Days",
 
             "programme_01_text":
-                "County-level research identifying the priorities and concerns of young people.",
+                "Coordinated volunteering days with partner organisations.",
 
             "programme_02_title":
-                "Debate Clubs & Civic Education",
+                "Social & Humanitarian Campaigns",
 
             "programme_02_text":
-                "Regular sessions on argumentation, public affairs and democratic institutions.",
+                "Collections, awareness work and direct assistance.",
 
             "programme_03_title":
-                "Local Forums & Working Groups",
+                "Continuing Projects",
 
             "programme_03_text":
-                "Open meetings that bring young participants together with schools, universities and public authorities.",
+                "Longer engagements with social centres and care organisations.",
 
             "programme_04_title":
-                "Recommendations & Reports",
+                "Animal Welfare",
 
             "programme_04_text":
-                "Policy recommendations, reports, memoranda and petitions submitted through proper institutional channels.",
-
-
-            /* NOTE */
-
-            "ftb_note":
-                "Forumul Tinerilor Buzău is an internal department of ENGF. It is not a public authority and is not part of any county council or other public institution.",
+                "Support for shelters in cooperation with veterinary partners.",
 
 
             /* CTA */
 
             "cta_title":
-                "Interested in taking part in the work of Forumul Tinerilor Buzău?",
+                "Interested in taking part in the work of ENGF Community?",
 
             "get_involved":
                 "GET INVOLVED",
@@ -92,8 +86,8 @@ function initFTBTranslations() {
             "ecosystem_academy_text":
                 "Department for Education & Professional Development",
 
-            "ecosystem_agora_text":
-                "Department for Public Communication & Civic Education"
+            "ecosystem_ftb_text":
+                "Department for Civic Participation & Institutional Dialogue"
         },
 
 
@@ -104,73 +98,67 @@ function initFTBTranslations() {
         ro: {
 
             "page_title":
-                "Forumul Tinerilor Buzău - ENGF",
+                "ENGF Community - ENGF",
 
             "breadcrumb_departments":
                 "DEPARTAMENTE",
 
             "department_type":
-                "DEPARTAMENTUL PENTRU PARTICIPARE CIVICĂ ȘI DIALOG INSTITUȚIONAL",
+                "DEPARTAMENTUL PENTRU VOLUNTARIAT ȘI IMPLICARE COMUNITARĂ",
 
-            "ftb_intro":
-                "Acest departament le oferă tinerilor o cale documentată de participare la procesul decizional public: consultările și sondajele stabilesc prioritățile, cluburile de dezbateri și atelierele dezvoltă cultura civică, iar grupurile de lucru transformă concluziile în recomandări, rapoarte și memorandumuri adresate instituțiilor relevante.",
+            "community_intro":
+                "ENGF Community este locul în care activitatea ENGF depășește spațiul seminarului. Prin zile de voluntariat, campanii și proiecte continue, voluntarii sprijină centre sociale, organizații pentru copii, servicii dedicate persoanelor vârstnice, adăposturi pentru animale și parteneri veterinari.",
 
 
             /* TAGS */
 
-            "tag_consultations":
-                "CONSULTĂRI",
+            "tag_service_days":
+                "ZILE DE VOLUNTARIAT",
 
-            "tag_debate_clubs":
-                "CLUBURI DE DEZBATERI",
+            "tag_campaigns":
+                "CAMPANII",
 
-            "tag_institutional_dialogue":
-                "DIALOG INSTITUȚIONAL",
+            "tag_volunteer_roles":
+                "ROLURI DE VOLUNTARIAT",
 
 
             /* PROGRAMME */
 
             "programme_image_alt":
-                "Documente și materiale instituționale",
+                "Materiale pentru programele comunitare",
 
             "programme_title":
                 "PROGRAM DE ACTIVITATE",
 
             "programme_01_title":
-                "Consultări și Sondaje",
+                "Zile de Serviciu Comunitar",
 
             "programme_01_text":
-                "Cercetare la nivel județean pentru identificarea priorităților și preocupărilor tinerilor.",
+                "Zile coordonate de voluntariat desfășurate împreună cu organizații partenere.",
 
             "programme_02_title":
-                "Cluburi de Dezbateri și Educație Civică",
+                "Campanii Sociale și Umanitare",
 
             "programme_02_text":
-                "Sesiuni regulate despre argumentare, afaceri publice și instituții democratice.",
+                "Colecte, activități de conștientizare și sprijin direct.",
 
             "programme_03_title":
-                "Forumuri Locale și Grupuri de Lucru",
+                "Proiecte Continue",
 
             "programme_03_text":
-                "Întâlniri deschise care aduc tinerii împreună cu școli, universități și autorități publice.",
+                "Implicare pe termen mai lung alături de centre sociale și organizații de îngrijire.",
 
             "programme_04_title":
-                "Recomandări și Rapoarte",
+                "Protecția Animalelor",
 
             "programme_04_text":
-                "Recomandări de politici publice, rapoarte, memorandumuri și petiții transmise prin canalele instituționale corespunzătoare.",
-
-
-            /* NOTE */
-
-            "ftb_note":
-                "Forumul Tinerilor Buzău este un departament intern al ENGF. Nu este o autoritate publică și nu face parte din niciun consiliu județean sau dintr-o altă instituție publică.",
+                "Sprijin pentru adăposturi, în cooperare cu parteneri veterinari.",
 
 
             /* CTA */
 
             "cta_title":
-                "Ești interesat să participi la activitatea Forumului Tinerilor Buzău?",
+                "Ești interesat să participi la activitatea ENGF Community?",
 
             "get_involved":
                 "IMPLICĂ-TE",
@@ -187,8 +175,8 @@ function initFTBTranslations() {
             "ecosystem_academy_text":
                 "Departamentul pentru Educație și Dezvoltare Profesională",
 
-            "ecosystem_agora_text":
-                "Departamentul pentru Comunicare Publică și Educație Civică"
+            "ecosystem_ftb_text":
+                "Departamentul pentru Participare Civică și Dialog Instituțional"
         },
 
 
@@ -199,73 +187,67 @@ function initFTBTranslations() {
         it: {
 
             "page_title":
-                "Forumul Tinerilor Buzău - ENGF",
+                "ENGF Community - ENGF",
 
             "breadcrumb_departments":
                 "DIPARTIMENTI",
 
             "department_type":
-                "DIPARTIMENTO PER LA PARTECIPAZIONE CIVICA E IL DIALOGO ISTITUZIONALE",
+                "DIPARTIMENTO PER IL VOLONTARIATO E IL COINVOLGIMENTO DELLA COMUNITÀ",
 
-            "ftb_intro":
-                "Questo dipartimento offre ai giovani un percorso documentato verso il processo decisionale pubblico: consultazioni e sondaggi definiscono le priorità, club di dibattito e workshop sviluppano la cultura civica e i gruppi di lavoro trasformano i risultati in raccomandazioni, relazioni e memorandum rivolti alle istituzioni competenti.",
+            "community_intro":
+                "ENGF Community è il luogo in cui il lavoro di ENGF esce dall'aula del seminario. Attraverso giornate di servizio alla comunità, campagne e progetti continuativi, i volontari sostengono centri sociali, organizzazioni per bambini, servizi per anziani, rifugi per animali e partner veterinari.",
 
 
             /* TAGS */
 
-            "tag_consultations":
-                "CONSULTAZIONI",
+            "tag_service_days":
+                "GIORNATE DI SERVIZIO",
 
-            "tag_debate_clubs":
-                "CLUB DI DIBATTITO",
+            "tag_campaigns":
+                "CAMPAGNE",
 
-            "tag_institutional_dialogue":
-                "DIALOGO ISTITUZIONALE",
+            "tag_volunteer_roles":
+                "RUOLI DI VOLONTARIATO",
 
 
             /* PROGRAMME */
 
             "programme_image_alt":
-                "Documenti e materiali istituzionali",
+                "Materiali per i programmi della comunità",
 
             "programme_title":
                 "PROGRAMMA DI LAVORO",
 
             "programme_01_title":
-                "Consultazioni e Sondaggi",
+                "Giornate di Servizio alla Comunità",
 
             "programme_01_text":
-                "Ricerca a livello territoriale per identificare le priorità e le preoccupazioni dei giovani.",
+                "Giornate coordinate di volontariato con organizzazioni partner.",
 
             "programme_02_title":
-                "Club di Dibattito ed Educazione Civica",
+                "Campagne Sociali e Umanitarie",
 
             "programme_02_text":
-                "Sessioni regolari su argomentazione, affari pubblici e istituzioni democratiche.",
+                "Raccolte, attività di sensibilizzazione e assistenza diretta.",
 
             "programme_03_title":
-                "Forum Locali e Gruppi di Lavoro",
+                "Progetti Continuativi",
 
             "programme_03_text":
-                "Incontri aperti che riuniscono giovani partecipanti, scuole, università e autorità pubbliche.",
+                "Collaborazioni di più lunga durata con centri sociali e organizzazioni di assistenza.",
 
             "programme_04_title":
-                "Raccomandazioni e Relazioni",
+                "Benessere Animale",
 
             "programme_04_text":
-                "Raccomandazioni di policy, relazioni, memorandum e petizioni presentati attraverso i corretti canali istituzionali.",
-
-
-            /* NOTE */
-
-            "ftb_note":
-                "Forumul Tinerilor Buzău è un dipartimento interno di ENGF. Non è un'autorità pubblica e non fa parte di alcun consiglio territoriale o altra istituzione pubblica.",
+                "Supporto ai rifugi in collaborazione con partner veterinari.",
 
 
             /* CTA */
 
             "cta_title":
-                "Ti interessa partecipare al lavoro di Forumul Tinerilor Buzău?",
+                "Ti interessa partecipare al lavoro di ENGF Community?",
 
             "get_involved":
                 "PARTECIPA",
@@ -282,8 +264,8 @@ function initFTBTranslations() {
             "ecosystem_academy_text":
                 "Dipartimento per l'Istruzione e lo Sviluppo Professionale",
 
-            "ecosystem_agora_text":
-                "Dipartimento per la Comunicazione Pubblica e l'Educazione Civica"
+            "ecosystem_ftb_text":
+                "Dipartimento per la Partecipazione Civica e il Dialogo Istituzionale"
         }
     };
 
@@ -297,7 +279,7 @@ function initFTBTranslations() {
         if (!translations[lang]) {
 
             console.error(
-                "[FTB i18n] Unknown language:",
+                "[Community i18n] Unknown language:",
                 lang
             );
 
@@ -306,17 +288,19 @@ function initFTBTranslations() {
 
 
         const page =
-            document.querySelector(".ftb-page");
+            document.querySelector(".community-page");
 
         if (!page) {
 
             console.error(
-                "[FTB i18n] .ftb-page not found."
+                "[Community i18n] .community-page not found."
             );
 
             return;
         }
 
+
+        /* TEXT */
 
         const elements =
             page.querySelectorAll("[data-i18n]");
@@ -335,7 +319,7 @@ function initFTBTranslations() {
             } else {
 
                 console.warn(
-                    `[FTB i18n] Missing translation: ${key}`
+                    `[Community i18n] Missing translation: ${key}`
                 );
             }
         });
@@ -449,13 +433,13 @@ if (
     document.documentElement.dataset.componentsLoaded === "true"
 ) {
 
-    initFTBTranslations();
+    initCommunityTranslations();
 
 } else {
 
     document.addEventListener(
         "componentsLoaded",
-        initFTBTranslations,
+        initCommunityTranslations,
         { once: true }
     );
 }

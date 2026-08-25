@@ -1,4 +1,4 @@
-function initFTBTranslations() {
+function initCreativeYouthTranslations() {
 
     const translations = {
 
@@ -9,73 +9,91 @@ function initFTBTranslations() {
         en: {
 
             "page_title":
-                "ENGF Forumul Tinerilor Buzău - ENGF",
+                "ENGF Creative Youth Platform - ENGF",
 
             "breadcrumb_departments":
                 "DEPARTMENTS",
 
             "department_type":
-                "DEPARTMENT FOR CIVIC PARTICIPATION & INSTITUTIONAL DIALOGUE",
+                "DEPARTMENT FOR CULTURE & CREATIVE INDUSTRIES",
 
-            "ftb_intro":
-                "This department gives young people a documented route into public decision-making: consultations and surveys establish priorities, debate clubs and workshops build civic literacy, and working groups convert findings into recommendations, reports and memoranda addressed to relevant institutions.",
+            "creative_title":
+                "European NextGen<br>Creative Youth Platform",
+
+            "creative_intro":
+                "The Creative Youth Platform gives emerging artists a public stage: exhibitions, screenings, readings, performances and installations, presented in galleries and historical venues, supported by open calls, portfolio review, mentorship and artistic networking.",
 
 
             /* TAGS */
 
-            "tag_consultations":
-                "CONSULTATIONS",
+            "tag_open_calls":
+                "OPEN CALLS",
 
-            "tag_debate_clubs":
-                "DEBATE CLUBS",
+            "tag_artists":
+                "ARTISTS",
 
-            "tag_institutional_dialogue":
-                "INSTITUTIONAL DIALOGUE",
+            "tag_exhibitions":
+                "EXHIBITIONS",
+
+            "tag_projects":
+                "PROJECTS",
 
 
             /* PROGRAMME */
 
             "programme_image_alt":
-                "Institutional documents and materials",
+                "Creative platform materials",
 
             "programme_title":
                 "PROGRAMME OF WORK",
 
             "programme_01_title":
-                "Consultations & Surveys",
+                "Open Calls",
 
             "programme_01_text":
-                "County-level research identifying the priorities and concerns of young people.",
+                "Periodic calls for work across visual art, photography, film and performance.",
 
             "programme_02_title":
-                "Debate Clubs & Civic Education",
+                "Exhibitions & Screenings",
 
             "programme_02_text":
-                "Regular sessions on argumentation, public affairs and democratic institutions.",
+                "Curated presentations in galleries and historical venues.",
 
             "programme_03_title":
-                "Local Forums & Working Groups",
+                "Artists & Portfolios",
 
             "programme_03_text":
-                "Open meetings that bring young participants together with schools, universities and public authorities.",
+                "A presented selection of participating creators and their work.",
 
             "programme_04_title":
-                "Recommendations & Reports",
+                "Mentorship & Networking",
 
             "programme_04_text":
-                "Policy recommendations, reports, memoranda and petitions submitted through proper institutional channels.",
+                "Guidance from established practitioners and introductions across disciplines.",
 
 
-            /* NOTE */
+            /* RELATED */
 
-            "ftb_note":
-                "Forumul Tinerilor Buzău is an internal department of ENGF. It is not a public authority and is not part of any county council or other public institution.",
+            "related_title":
+                "Related opportunities",
+
+            "related_01_title":
+                "Creative Youth Platform — Open Call",
+
+            "related_01_type":
+                "Open Calls",
+
+            "to_be_announced":
+                "TO BE ANNOUNCED",
+
+            "all_programmes":
+                "ALL PROGRAMMES & OPPORTUNITIES",
 
 
             /* CTA */
 
             "cta_title":
-                "Interested in taking part in the work of Forumul Tinerilor Buzău?",
+                "Interested in taking part in the work of European NextGen Creative Youth Platform?",
 
             "get_involved":
                 "GET INVOLVED",
@@ -92,8 +110,8 @@ function initFTBTranslations() {
             "ecosystem_academy_text":
                 "Department for Education & Professional Development",
 
-            "ecosystem_agora_text":
-                "Department for Public Communication & Civic Education"
+            "ecosystem_ftb_text":
+                "Department for Civic Participation & Institutional Dialogue"
         },
 
 
@@ -104,73 +122,91 @@ function initFTBTranslations() {
         ro: {
 
             "page_title":
-                "Forumul Tinerilor Buzău - ENGF",
+                "ENGF Creative Youth Platform - ENGF",
 
             "breadcrumb_departments":
                 "DEPARTAMENTE",
 
             "department_type":
-                "DEPARTAMENTUL PENTRU PARTICIPARE CIVICĂ ȘI DIALOG INSTITUȚIONAL",
+                "DEPARTAMENTUL PENTRU CULTURĂ ȘI INDUSTRII CREATIVE",
 
-            "ftb_intro":
-                "Acest departament le oferă tinerilor o cale documentată de participare la procesul decizional public: consultările și sondajele stabilesc prioritățile, cluburile de dezbateri și atelierele dezvoltă cultura civică, iar grupurile de lucru transformă concluziile în recomandări, rapoarte și memorandumuri adresate instituțiilor relevante.",
+            "creative_title":
+                "European NextGen<br>Creative Youth Platform",
+
+            "creative_intro":
+                "Creative Youth Platform oferă artiștilor emergenți o scenă publică: expoziții, proiecții, lecturi, spectacole și instalații prezentate în galerii și spații istorice, susținute prin apeluri deschise, evaluarea portofoliilor, mentorat și networking artistic.",
 
 
             /* TAGS */
 
-            "tag_consultations":
-                "CONSULTĂRI",
+            "tag_open_calls":
+                "APELURI DESCHISE",
 
-            "tag_debate_clubs":
-                "CLUBURI DE DEZBATERI",
+            "tag_artists":
+                "ARTIȘTI",
 
-            "tag_institutional_dialogue":
-                "DIALOG INSTITUȚIONAL",
+            "tag_exhibitions":
+                "EXPOZIȚII",
+
+            "tag_projects":
+                "PROIECTE",
 
 
             /* PROGRAMME */
 
             "programme_image_alt":
-                "Documente și materiale instituționale",
+                "Materiale ale platformei creative",
 
             "programme_title":
                 "PROGRAM DE ACTIVITATE",
 
             "programme_01_title":
-                "Consultări și Sondaje",
+                "Apeluri Deschise",
 
             "programme_01_text":
-                "Cercetare la nivel județean pentru identificarea priorităților și preocupărilor tinerilor.",
+                "Apeluri periodice pentru lucrări din domeniul artelor vizuale, fotografiei, filmului și performance-ului.",
 
             "programme_02_title":
-                "Cluburi de Dezbateri și Educație Civică",
+                "Expoziții și Proiecții",
 
             "programme_02_text":
-                "Sesiuni regulate despre argumentare, afaceri publice și instituții democratice.",
+                "Prezentări curatoriate în galerii și spații istorice.",
 
             "programme_03_title":
-                "Forumuri Locale și Grupuri de Lucru",
+                "Artiști și Portofolii",
 
             "programme_03_text":
-                "Întâlniri deschise care aduc tinerii împreună cu școli, universități și autorități publice.",
+                "O selecție prezentată a creatorilor participanți și a lucrărilor acestora.",
 
             "programme_04_title":
-                "Recomandări și Rapoarte",
+                "Mentorat și Networking",
 
             "programme_04_text":
-                "Recomandări de politici publice, rapoarte, memorandumuri și petiții transmise prin canalele instituționale corespunzătoare.",
+                "Îndrumare din partea unor practicieni consacrați și conexiuni între discipline.",
 
 
-            /* NOTE */
+            /* RELATED */
 
-            "ftb_note":
-                "Forumul Tinerilor Buzău este un departament intern al ENGF. Nu este o autoritate publică și nu face parte din niciun consiliu județean sau dintr-o altă instituție publică.",
+            "related_title":
+                "Oportunități asociate",
+
+            "related_01_title":
+                "Creative Youth Platform — Apel Deschis",
+
+            "related_01_type":
+                "Apeluri Deschise",
+
+            "to_be_announced":
+                "VA FI ANUNȚAT",
+
+            "all_programmes":
+                "TOATE PROGRAMELE ȘI OPORTUNITĂȚILE",
 
 
             /* CTA */
 
             "cta_title":
-                "Ești interesat să participi la activitatea Forumului Tinerilor Buzău?",
+                "Ești interesat să participi la activitatea European NextGen Creative Youth Platform?",
 
             "get_involved":
                 "IMPLICĂ-TE",
@@ -187,8 +223,8 @@ function initFTBTranslations() {
             "ecosystem_academy_text":
                 "Departamentul pentru Educație și Dezvoltare Profesională",
 
-            "ecosystem_agora_text":
-                "Departamentul pentru Comunicare Publică și Educație Civică"
+            "ecosystem_ftb_text":
+                "Departamentul pentru Participare Civică și Dialog Instituțional"
         },
 
 
@@ -199,73 +235,91 @@ function initFTBTranslations() {
         it: {
 
             "page_title":
-                "Forumul Tinerilor Buzău - ENGF",
+                "ENGF Creative Youth Platform - ENGF",
 
             "breadcrumb_departments":
                 "DIPARTIMENTI",
 
             "department_type":
-                "DIPARTIMENTO PER LA PARTECIPAZIONE CIVICA E IL DIALOGO ISTITUZIONALE",
+                "DIPARTIMENTO PER LA CULTURA E LE INDUSTRIE CREATIVE",
 
-            "ftb_intro":
-                "Questo dipartimento offre ai giovani un percorso documentato verso il processo decisionale pubblico: consultazioni e sondaggi definiscono le priorità, club di dibattito e workshop sviluppano la cultura civica e i gruppi di lavoro trasformano i risultati in raccomandazioni, relazioni e memorandum rivolti alle istituzioni competenti.",
+            "creative_title":
+                "European NextGen<br>Creative Youth Platform",
+
+            "creative_intro":
+                "La Creative Youth Platform offre agli artisti emergenti uno spazio pubblico: mostre, proiezioni, letture, performance e installazioni presentate in gallerie e luoghi storici, sostenute da bandi aperti, revisione dei portfolio, mentoring e networking artistico.",
 
 
             /* TAGS */
 
-            "tag_consultations":
-                "CONSULTAZIONI",
+            "tag_open_calls":
+                "BANDI APERTI",
 
-            "tag_debate_clubs":
-                "CLUB DI DIBATTITO",
+            "tag_artists":
+                "ARTISTI",
 
-            "tag_institutional_dialogue":
-                "DIALOGO ISTITUZIONALE",
+            "tag_exhibitions":
+                "MOSTRE",
+
+            "tag_projects":
+                "PROGETTI",
 
 
             /* PROGRAMME */
 
             "programme_image_alt":
-                "Documenti e materiali istituzionali",
+                "Materiali della piattaforma creativa",
 
             "programme_title":
                 "PROGRAMMA DI LAVORO",
 
             "programme_01_title":
-                "Consultazioni e Sondaggi",
+                "Bandi Aperti",
 
             "programme_01_text":
-                "Ricerca a livello territoriale per identificare le priorità e le preoccupazioni dei giovani.",
+                "Bandi periodici per opere di arte visiva, fotografia, cinema e performance.",
 
             "programme_02_title":
-                "Club di Dibattito ed Educazione Civica",
+                "Mostre e Proiezioni",
 
             "programme_02_text":
-                "Sessioni regolari su argomentazione, affari pubblici e istituzioni democratiche.",
+                "Presentazioni curate in gallerie e luoghi storici.",
 
             "programme_03_title":
-                "Forum Locali e Gruppi di Lavoro",
+                "Artisti e Portfolio",
 
             "programme_03_text":
-                "Incontri aperti che riuniscono giovani partecipanti, scuole, università e autorità pubbliche.",
+                "Una selezione presentata dei creatori partecipanti e delle loro opere.",
 
             "programme_04_title":
-                "Raccomandazioni e Relazioni",
+                "Mentoring e Networking",
 
             "programme_04_text":
-                "Raccomandazioni di policy, relazioni, memorandum e petizioni presentati attraverso i corretti canali istituzionali.",
+                "Orientamento da parte di professionisti affermati e connessioni tra diverse discipline.",
 
 
-            /* NOTE */
+            /* RELATED */
 
-            "ftb_note":
-                "Forumul Tinerilor Buzău è un dipartimento interno di ENGF. Non è un'autorità pubblica e non fa parte di alcun consiglio territoriale o altra istituzione pubblica.",
+            "related_title":
+                "Opportunità correlate",
+
+            "related_01_title":
+                "Creative Youth Platform — Bando Aperto",
+
+            "related_01_type":
+                "Bandi Aperti",
+
+            "to_be_announced":
+                "DA ANNUNCIARE",
+
+            "all_programmes":
+                "TUTTI I PROGRAMMI E LE OPPORTUNITÀ",
 
 
             /* CTA */
 
             "cta_title":
-                "Ti interessa partecipare al lavoro di Forumul Tinerilor Buzău?",
+                "Ti interessa partecipare al lavoro della European NextGen Creative Youth Platform?",
 
             "get_involved":
                 "PARTECIPA",
@@ -282,8 +336,8 @@ function initFTBTranslations() {
             "ecosystem_academy_text":
                 "Dipartimento per l'Istruzione e lo Sviluppo Professionale",
 
-            "ecosystem_agora_text":
-                "Dipartimento per la Comunicazione Pubblica e l'Educazione Civica"
+            "ecosystem_ftb_text":
+                "Dipartimento per la Partecipazione Civica e il Dialogo Istituzionale"
         }
     };
 
@@ -297,7 +351,7 @@ function initFTBTranslations() {
         if (!translations[lang]) {
 
             console.error(
-                "[FTB i18n] Unknown language:",
+                "[Creative Youth i18n] Unknown language:",
                 lang
             );
 
@@ -306,17 +360,19 @@ function initFTBTranslations() {
 
 
         const page =
-            document.querySelector(".ftb-page");
+            document.querySelector(".creative-page");
 
         if (!page) {
 
             console.error(
-                "[FTB i18n] .ftb-page not found."
+                "[Creative Youth i18n] .creative-page not found."
             );
 
             return;
         }
 
+
+        /* TEXT */
 
         const elements =
             page.querySelectorAll("[data-i18n]");
@@ -335,7 +391,7 @@ function initFTBTranslations() {
             } else {
 
                 console.warn(
-                    `[FTB i18n] Missing translation: ${key}`
+                    `[Creative Youth i18n] Missing translation: ${key}`
                 );
             }
         });
@@ -449,13 +505,13 @@ if (
     document.documentElement.dataset.componentsLoaded === "true"
 ) {
 
-    initFTBTranslations();
+    initCreativeYouthTranslations();
 
 } else {
 
     document.addEventListener(
         "componentsLoaded",
-        initFTBTranslations,
+        initCreativeYouthTranslations,
         { once: true }
     );
 }
