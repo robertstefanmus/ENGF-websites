@@ -1660,3 +1660,26 @@ font-size: 7.9rem;
         font-size: 0.66rem;
     }
 }
+
+/* =========================================================
+   MOBILE — HAMBURGER X ALIGNMENT FIX
+   Keeps the open-menu X centered and fully visible.
+========================================================= */
+
+@media (max-width: 800px) {
+    .hamburger-menu {
+        overflow: visible;
+    }
+
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
