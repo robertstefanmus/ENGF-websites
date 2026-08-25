@@ -1,10 +1,8 @@
-
 function initTranslations() {
 
     const translations = {
 
-
-        en: {
+               en: {
             "page_title": "About ENGF - Mission, Principles & Governance",
 
             "about_title": "ABOUT",
@@ -281,121 +279,119 @@ function initTranslations() {
             "our_work_button": "IL NOSTRO LAVORO",
             "ecosystem_button": "L'ECOSISTEMA ENGF"
         }
+
     };
 
-};
+
+    function updateContent(lang) {
+
+        if (!translations[lang]) {
+            console.error(
+                "[About i18n] Unknown language:",
+                lang
+            );
+            return;
+        }
+
+        const elements =
+            document.querySelectorAll("[data-i18n]");
+
+        elements.forEach(element => {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+            if (translations[lang][key] !== undefined) {
+
+                element.innerHTML =
+                    translations[lang][key];
+
+            } else {
+
+                console.warn(
+                    `[About i18n] Missing translation: ${key}`
+                );
+            }
+        });
 
 
-function updateContent(lang) {
+        document.documentElement.lang = lang;
 
-    if (!translations[lang]) {
-        console.error(
-            "[About i18n] Unknown language:",
-            lang
-        );
-        return;
+
+        const pageTitle =
+            translations[lang]["page_title"];
+
+        if (pageTitle) {
+            document.title = pageTitle;
+        }
     }
 
-    const elements =
-        document.querySelectorAll("[data-i18n]");
 
-    elements.forEach(element => {
+    /* =========================================
+       LANGUAGE SWITCHER
+    ========================================= */
 
-        const key =
-            element.getAttribute("data-i18n");
+    const languageInputs =
+        document.querySelectorAll(
+            'input[name="language"]'
+        );
 
-        if (translations[lang][key] !== undefined) {
 
-            element.innerHTML =
-                translations[lang][key];
+    languageInputs.forEach(input => {
 
-        } else {
+        input.addEventListener(
+            "change",
+            event => {
 
-            console.warn(
-                `[About i18n] Missing translation: ${key}`
-            );
-        }
+                const lang =
+                    event.target.value.toLowerCase();
+
+                localStorage.setItem(
+                    "engfLanguage",
+                    lang
+                );
+
+                updateContent(lang);
+            }
+        );
     });
 
 
-    document.documentElement.lang = lang;
+    /* =========================================
+       INITIAL LANGUAGE
+    ========================================= */
+
+    const checkedLanguage =
+        document.querySelector(
+            'input[name="language"]:checked'
+        );
+
+    const savedLanguage =
+        localStorage.getItem("engfLanguage");
+
+    const initialLanguage =
+        savedLanguage ||
+        checkedLanguage?.value.toLowerCase() ||
+        "en";
 
 
-    const pageTitle =
-        translations[lang]["page_title"];
+    const selectedInput =
+        document.querySelector(
+            `input[name="language"][value="${initialLanguage}"]`
+        );
 
-    if (pageTitle) {
-        document.title = pageTitle;
+    if (selectedInput) {
+        selectedInput.checked = true;
     }
+
+
+    updateContent(initialLanguage);
 }
 
 
-/* =====================================================
-   LANGUAGE SWITCHER
-===================================================== */
-
-const languageInputs =
-    document.querySelectorAll(
-        'input[name="language"]'
-    );
-
-languageInputs.forEach(input => {
-
-    input.addEventListener(
-        "change",
-        event => {
-
-            const lang =
-                event.target.value.toLowerCase();
-
-            localStorage.setItem(
-                "engfLanguage",
-                lang
-            );
-
-            updateContent(lang);
-        }
-    );
-});
-
-
-/* =====================================================
-   INITIAL LANGUAGE
-===================================================== */
-
-const checkedLanguage =
-    document.querySelector(
-        'input[name="language"]:checked'
-    );
-
-const savedLanguage =
-    localStorage.getItem("engfLanguage");
-
-const initialLanguage =
-    savedLanguage ||
-    checkedLanguage?.value.toLowerCase() ||
-    "en";
-
-
-/* Make radio button match saved language */
-
-const selectedInput =
-    document.querySelector(
-        `input[name="language"][value="${initialLanguage}"]`
-    );
-
-if (selectedInput) {
-    selectedInput.checked = true;
-}
-
-
-updateContent(initialLanguage);
-}
-
-
-/* =====================================================
-   INITIALIZE AFTER HEADER / FOOTER
-===================================================== */
+/* =========================================
+   INITIALIZE AFTER COMPONENTS
+========================================= */
 
 if (
     document.documentElement.dataset.componentsLoaded === "true"
