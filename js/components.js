@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
 
             const response =
-                await fetch("header.html");
+                await fetch("header");
 
             if (!response.ok) {
                 throw new Error(
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
 
             const response =
-                await fetch("footer.html");
+                await fetch("footer");
 
             if (!response.ok) {
                 throw new Error(

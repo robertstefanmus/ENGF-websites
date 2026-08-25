@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Updates the URL without refreshing the page.
       // Example:
-      // programmes.html?filter=research
+      // programmes?filter=research
       const url = new URL(window.location.href);
 
       if (category === "all") {
@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Allows direct links such as:
-  // programmes.html?filter=fellowships
-  // programmes.html?filter=academy
-  // programmes.html?filter=research
+  // programmes?filter=fellowships
+  // programmes?filter=academy
+  // programmes?filter=research
   const requestedFilter =
     new URLSearchParams(window.location.search).get("filter");
 
