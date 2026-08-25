@@ -20,7 +20,9 @@
 
 body {
   margin: 0;
+
   background: var(--contact-bg);
+
   color: var(--contact-text);
 }
 
@@ -92,7 +94,7 @@ body {
 
 
 /* =========================================
-   MAIN LAYOUT
+   MAIN
 ========================================= */
 
 .contact-main {
@@ -109,7 +111,7 @@ body {
 
 
 /* =========================================
-   LEFT SIDE
+   DESKS
 ========================================= */
 
 .contact-desks {
@@ -138,15 +140,11 @@ body {
 }
 
 .desk-item {
-  padding: 0 0 22px;
+  padding-bottom: 22px;
 
   margin-bottom: 22px;
 
   border-bottom: 1px solid var(--contact-line);
-}
-
-.desk-item:last-child {
-  margin-bottom: 0;
 }
 
 .desk-item h2 {
@@ -175,7 +173,9 @@ body {
 }
 
 
-/* office info */
+/* =========================================
+   OFFICE
+========================================= */
 
 .contact-office {
   margin-top: 56px;
@@ -212,7 +212,7 @@ body {
 
 
 /* =========================================
-   RIGHT SIDE / FORM
+   FORM
 ========================================= */
 
 .contact-form-wrap {
@@ -225,9 +225,6 @@ body {
   width: 100%;
 }
 
-
-/* 2 column fields */
-
 .form-grid {
   display: grid;
 
@@ -238,7 +235,6 @@ body {
 
 .form-group {
   display: flex;
-
   flex-direction: column;
 }
 
@@ -256,7 +252,9 @@ body {
 }
 
 
-/* inputs */
+/* =========================================
+   INPUTS
+========================================= */
 
 .form-group input,
 .form-group select,
@@ -264,7 +262,6 @@ body {
   width: 100%;
 
   border: 0;
-
   border-bottom: 1px solid #cfc3b3;
 
   border-radius: 0;
@@ -284,21 +281,13 @@ body {
   height: 34px;
 }
 
-
-/* select */
-
 .form-group select {
   height: 34px;
 
   padding: 0 2px;
 
-  appearance: auto;
-
   cursor: pointer;
 }
-
-
-/* message */
 
 .message-group {
   margin-top: 38px;
@@ -307,9 +296,9 @@ body {
 .message-group textarea {
   min-height: 145px;
 
-  resize: vertical;
-
   padding: 8px 0;
+
+  resize: vertical;
 }
 
 
@@ -319,6 +308,76 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
   border-bottom-color: var(--contact-burgundy);
+}
+
+
+/* Formspree invalid state */
+
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-bottom-color: var(--contact-burgundy);
+}
+
+
+/* =========================================
+   FIELD ERROR
+========================================= */
+
+.field-error {
+  min-height: 15px;
+
+  margin-top: 7px;
+
+  font-family: var(--font-sans);
+
+  font-size: 10px;
+
+  line-height: 1.3;
+
+  color: var(--contact-burgundy);
+}
+
+
+/* =========================================
+   SUCCESS / ERROR
+========================================= */
+
+.form-success,
+.form-error {
+  display: none;
+
+  margin: 0 0 30px;
+
+  padding: 16px 18px;
+
+  border-left: 2px solid var(--contact-burgundy);
+
+  font-family: var(--font-sans);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.form-success {
+  background: rgba(255, 255, 255, 0.28);
+
+  color: var(--contact-text);
+}
+
+.form-error {
+  background: rgba(104, 16, 24, 0.05);
+
+  color: var(--contact-burgundy);
+}
+
+
+/* Formspree reveals these elements */
+
+.form-success:not(:empty),
+.form-error:not(:empty) {
+  display: block;
 }
 
 
@@ -349,13 +408,20 @@ body {
 
   transition:
     background 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .contact-submit:hover {
   background: var(--contact-burgundy);
 
   color: var(--contact-bg);
+}
+
+.contact-submit:disabled {
+  cursor: wait;
+
+  opacity: 0.55;
 }
 
 
@@ -385,6 +451,29 @@ body {
 
 
 /* =========================================
+   HONEYPOT
+========================================= */
+
+.form-honeypot {
+  position: absolute !important;
+
+  width: 1px !important;
+  height: 1px !important;
+
+  overflow: hidden !important;
+
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+
+  white-space: nowrap !important;
+
+  opacity: 0 !important;
+
+  pointer-events: none !important;
+}
+
+
+/* =========================================
    TABLET
 ========================================= */
 
@@ -403,7 +492,6 @@ body {
 
     font-size: 19px;
   }
-
 
   .contact-main {
     grid-template-columns: 40% 60%;
@@ -463,7 +551,7 @@ body {
   }
 
 
-  /* left */
+  /* desks */
 
   .contact-desks {
     padding: 45px 24px;
@@ -479,10 +567,6 @@ body {
 
   .desk-item h2 {
     font-size: 20px;
-  }
-
-  .desk-item p {
-    font-size: 12px;
   }
 
   .contact-office {

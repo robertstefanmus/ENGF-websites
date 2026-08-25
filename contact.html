@@ -87,53 +87,188 @@
 
     <span class="contact-section-label">SEND A MESSAGE</span>
 
-    <form class="contact-form">
+
+    <!-- Global success / error messages -->
+    <div class="form-success" data-fs-success>
+      Thank you. Your message has been sent successfully.
+    </div>
+
+    <div class="form-error" data-fs-error>
+      We could not send your message. Please check the form and try again.
+    </div>
+
+
+    <form
+      id="contact-form"
+      class="contact-form"
+    >
+
+      <!-- Spam honeypot -->
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="website">Website</label>
+
+        <input
+          type="text"
+          id="website"
+          name="_gotcha"
+          tabindex="-1"
+          autocomplete="off"
+        >
+      </div>
+
 
       <div class="form-grid">
 
+        <!-- FULL NAME -->
         <div class="form-group">
-          <label for="fullname">FULL NAME</label>
-          <input type="text" id="fullname" name="fullname">
+
+          <label for="fullname">
+            FULL NAME
+          </label>
+
+          <input
+            type="text"
+            id="fullname"
+            name="full_name"
+            autocomplete="name"
+            required
+            data-fs-field
+          >
+
+          <span
+            class="field-error"
+            data-fs-error="full_name"
+          ></span>
+
         </div>
 
+
+        <!-- ORGANISATION -->
         <div class="form-group">
-          <label for="organisation">ORGANISATION (OPTIONAL)</label>
-          <input type="text" id="organisation" name="organisation">
+
+          <label for="organisation">
+            ORGANISATION (OPTIONAL)
+          </label>
+
+          <input
+            type="text"
+            id="organisation"
+            name="organisation"
+            autocomplete="organization"
+            data-fs-field
+          >
+
+          <span
+            class="field-error"
+            data-fs-error="organisation"
+          ></span>
+
         </div>
 
+
+        <!-- EMAIL -->
         <div class="form-group">
-          <label for="email">EMAIL ADDRESS</label>
-          <input type="email" id="email" name="email">
+
+          <label for="email">
+            EMAIL ADDRESS
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+            data-fs-field
+          >
+
+          <span
+            class="field-error"
+            data-fs-error="email"
+          ></span>
+
         </div>
 
-        <div class="form-group">
-          <label for="subject">SUBJECT</label>
 
-          <select id="subject" name="subject">
-            <option>General enquiries</option>
-            <option>Programmes &amp; applications</option>
-            <option>Media &amp; press</option>
-            <option>Partnership</option>
+        <!-- SUBJECT -->
+        <div class="form-group">
+
+          <label for="subject">
+            SUBJECT
+          </label>
+
+          <select
+            id="subject"
+            name="subject"
+            required
+            data-fs-field
+          >
+
+            <option value="General enquiries">
+              General enquiries
+            </option>
+
+            <option value="Programmes & applications">
+              Programmes &amp; applications
+            </option>
+
+            <option value="Media & press">
+              Media &amp; press
+            </option>
+
+            <option value="Partnership">
+              Partnership
+            </option>
+
           </select>
+
+          <span
+            class="field-error"
+            data-fs-error="subject"
+          ></span>
+
         </div>
 
       </div>
 
 
+      <!-- MESSAGE -->
       <div class="form-group message-group">
-        <label for="message">MESSAGE</label>
-        <textarea id="message" name="message"></textarea>
+
+        <label for="message">
+          MESSAGE
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          required
+          minlength="10"
+          data-fs-field
+        ></textarea>
+
+        <span
+          class="field-error"
+          data-fs-error="message"
+        ></span>
+
       </div>
 
 
-      <button type="submit" class="contact-submit">
+      <!-- SUBMIT -->
+      <button
+        type="submit"
+        class="contact-submit"
+        data-fs-submit-btn
+      >
         SEND MESSAGE
       </button>
 
 
+      <!-- PRIVACY -->
       <div class="contact-privacy">
-        ENGF processes personal data only for the purpose of responding to correspondence,
-        in accordance with applicable data protection law.
+        ENGF processes personal data only for the purpose of responding
+        to correspondence, in accordance with applicable data protection law.
       </div>
 
     </form>
@@ -141,6 +276,13 @@
   </div>
 
 </section>
+
+
+<!-- Your normal site JS -->
+<script src="js/contact.js"></script>
+
+<!-- Formspree AJAX library -->
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
     <!-- FOOTER -->
     <div id="footer"></div>
