@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const footer = document.getElementById("footer");
 
 
-    /* HEADER */
-
     if (header) {
         try {
-            const response = await fetch("header.html");
+
+            const response =
+                await fetch("header.html");
 
             if (!response.ok) {
                 throw new Error(
@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 );
             }
 
-            header.innerHTML = await response.text();
+            header.innerHTML =
+                await response.text();
 
         } catch (error) {
+
             console.error(
                 "[components] Error loading header:",
                 error
@@ -27,11 +29,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    /* FOOTER */
-
     if (footer) {
         try {
-            const response = await fetch("footer.html");
+
+            const response =
+                await fetch("footer.html");
 
             if (!response.ok) {
                 throw new Error(
@@ -39,9 +41,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 );
             }
 
-            footer.innerHTML = await response.text();
+            footer.innerHTML =
+                await response.text();
 
         } catch (error) {
+
             console.error(
                 "[components] Error loading footer:",
                 error
@@ -49,12 +53,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-/* COMPONENTS ARE READY */
 
-document.documentElement.dataset.componentsLoaded = "true";
+    document.documentElement.dataset.componentsLoaded =
+        "true";
 
-document.dispatchEvent(
-    new Event("componentsLoaded")
-);
+    document.dispatchEvent(
+        new Event("componentsLoaded")
+    );
 
 });
