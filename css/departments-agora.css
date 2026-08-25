@@ -1,0 +1,806 @@
+:root {
+  --agora-bg: #f4eee4;
+  --agora-burgundy: #681018;
+  --agora-text: #65574d;
+  --agora-muted: #aaa095;
+  --agora-line: #ded2bf;
+  --agora-dark-dot: #2c2926;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.agora-hero {
+  position: relative;
+
+  min-height: 595px;
+
+  background: var(--agora-bg);
+
+  border-top: 1px solid var(--agora-line);
+  border-bottom: 1px solid var(--agora-line);
+
+  overflow: hidden;
+}
+
+
+.agora-hero-inner {
+  width: min(1440px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 70px 0 65px;
+}
+
+
+/* breadcrumb */
+
+.department-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  font-family: var(--font-sans);
+
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: #4f3531;
+}
+
+
+.department-breadcrumb a {
+  color: inherit;
+
+  text-decoration: none;
+
+  padding-bottom: 3px;
+
+  border-bottom: 1px solid #4f3531;
+}
+
+
+/* department type */
+
+.department-type {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 34px;
+
+  font-family: var(--font-sans);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2.7px;
+
+  color: #5e3533;
+}
+
+
+.agora-dot {
+  width: 13px;
+  height: 13px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--agora-dark-dot);
+}
+
+
+/* title */
+
+.agora-hero h1 {
+  margin: 30px 0 0;
+
+  font-family: var(--font-display);
+
+  font-size: 76px;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -1px;
+
+  color: var(--agora-burgundy);
+}
+
+
+/* intro */
+
+.agora-intro {
+  max-width: 760px;
+
+  margin: 42px 0 0;
+
+  font-family: var(--font-display);
+
+  font-size: 22px;
+  font-style: italic;
+
+  line-height: 1.7;
+
+  color: #786d63;
+}
+
+
+/* tags */
+
+.agora-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 44px;
+}
+
+
+.agora-tags span {
+  padding: 9px 15px;
+
+  border: 1px solid var(--agora-line);
+
+  font-family: var(--font-sans);
+
+  font-size: 7px;
+
+  letter-spacing: 2.4px;
+
+  color: #795c51;
+}
+
+
+/* decorative circle */
+
+.agora-mark {
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  top: -20px;
+  right: -65px;
+
+  border: 1px solid rgba(113, 64, 47, 0.06);
+
+  border-radius: 50%;
+
+  opacity: 0.45;
+}
+
+
+.agora-mark::before,
+.agora-mark::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(113, 64, 47, 0.06);
+
+  border-radius: 50%;
+}
+
+
+.agora-mark::before {
+  inset: 48px;
+}
+
+
+.agora-mark::after {
+  inset: 95px;
+}
+
+
+/* =========================================
+   PROGRAMME OF WORK
+========================================= */
+
+.agora-programme {
+  display: grid;
+
+  grid-template-columns: 42% 58%;
+
+  background: var(--agora-bg);
+
+  border-bottom: 1px solid var(--agora-line);
+}
+
+
+/* image */
+
+.agora-programme-image {
+  min-height: 690px;
+
+  overflow: hidden;
+}
+
+
+.agora-programme-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* right */
+
+.agora-programme-content {
+  background: var(--agora-bg);
+}
+
+
+.agora-programme-title {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 44px;
+
+  border-bottom: 1px solid var(--agora-line);
+
+  font-family: var(--font-sans);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 5px;
+
+  color: var(--agora-burgundy);
+}
+
+
+/* programme rows */
+
+.agora-programme-item {
+  display: grid;
+
+  grid-template-columns: 130px minmax(0, 1fr);
+
+  min-height: 126px;
+
+  padding: 30px 44px;
+
+  border-bottom: 1px solid var(--agora-line);
+}
+
+
+.agora-programme-item:last-child {
+  border-bottom: 0;
+}
+
+
+.agora-programme-number {
+  padding-top: 2px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: var(--agora-muted);
+}
+
+
+.agora-programme-item h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 25px;
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: var(--agora-burgundy);
+}
+
+
+.agora-programme-item p {
+  max-width: 760px;
+
+  margin: 13px 0 0;
+
+  font-family: var(--font-sans);
+
+  font-size: 14px;
+
+  line-height: 1.45;
+
+  color: var(--agora-text);
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.agora-bottom {
+  width: min(1385px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 65px 0 55px;
+}
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.agora-note {
+  max-width: 865px;
+
+  padding: 20px 22px;
+
+  border-left: 2px solid #c9ab60;
+
+  background: rgba(255, 255, 255, 0.3);
+
+  font-family: var(--font-sans);
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: var(--agora-text);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.agora-cta {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 55px;
+
+  padding: 43px 0;
+
+  border-top: 1px solid var(--agora-line);
+  border-bottom: 1px solid var(--agora-line);
+}
+
+
+.agora-cta h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 28px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: var(--agora-burgundy);
+}
+
+
+.agora-cta-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 205px;
+  height: 58px;
+
+  padding: 0 28px;
+
+  border: 1px solid var(--agora-burgundy);
+
+  background: transparent;
+
+  font-family: var(--font-sans);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-decoration: none;
+
+  color: var(--agora-burgundy);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.agora-cta-button:hover {
+  background: var(--agora-burgundy);
+
+  color: var(--agora-bg);
+}
+
+
+/* =========================================
+   ELSEWHERE IN ECOSYSTEM
+========================================= */
+
+.agora-ecosystem {
+  padding: 70px 0 30px;
+}
+
+
+.agora-ecosystem-label {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  color: var(--agora-burgundy);
+}
+
+
+.agora-ecosystem-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.agora-ecosystem-card {
+  position: relative;
+
+  min-height: 170px;
+
+  padding: 27px;
+
+  border-right: 1px solid var(--agora-line);
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+
+.agora-ecosystem-card:last-child {
+  border-right: 0;
+}
+
+
+.agora-ecosystem-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+.agora-card-dot {
+  display: block;
+
+  width: 9px;
+  height: 9px;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+}
+
+
+.institute-color {
+  background: #7c1731;
+}
+
+
+.academy-color {
+  background: #b58c3c;
+}
+
+
+.ftb-color {
+  background: #607587;
+}
+
+
+.agora-ecosystem-card h3 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 22px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: var(--agora-burgundy);
+}
+
+
+.agora-ecosystem-card p {
+  max-width: 350px;
+
+  margin: 11px 0 0;
+
+  font-family: var(--font-sans);
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  color: var(--agora-text);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .agora-hero-inner {
+    width: calc(100% - 50px);
+  }
+
+  .agora-hero h1 {
+    font-size: 60px;
+  }
+
+  .agora-intro {
+    max-width: 650px;
+
+    font-size: 19px;
+  }
+
+
+  .agora-programme {
+    grid-template-columns: 40% 60%;
+  }
+
+
+  .agora-programme-title {
+    padding-inline: 30px;
+  }
+
+
+  .agora-programme-item {
+    grid-template-columns: 85px 1fr;
+
+    padding: 27px 30px;
+  }
+
+
+  .agora-programme-item h2 {
+    font-size: 22px;
+  }
+
+
+  .agora-programme-item p {
+    font-size: 13px;
+  }
+
+
+  .agora-bottom {
+    width: calc(100% - 50px);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .agora-hero {
+    min-height: auto;
+  }
+
+
+  .agora-hero-inner {
+    width: 100%;
+
+    padding: 55px 24px;
+  }
+
+
+  .department-breadcrumb {
+    font-size: 8px;
+
+    letter-spacing: 2.4px;
+  }
+
+
+  .department-type {
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    letter-spacing: 2px;
+  }
+
+
+  .agora-dot {
+    width: 9px;
+    height: 9px;
+  }
+
+
+  .agora-hero h1 {
+    font-size: 48px;
+  }
+
+
+  .agora-intro {
+    margin-top: 28px;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+  }
+
+
+  .agora-tags {
+    margin-top: 30px;
+  }
+
+
+  .agora-mark {
+    display: none;
+  }
+
+
+  /* programme */
+
+  .agora-programme {
+    display: block;
+  }
+
+
+  .agora-programme-image {
+    min-height: 0;
+
+    height: 430px;
+  }
+
+
+  .agora-programme-title {
+    height: auto;
+
+    padding: 22px 24px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .agora-programme-item {
+    display: block;
+
+    min-height: auto;
+
+    padding: 28px 24px;
+  }
+
+
+  .agora-programme-number {
+    display: block;
+
+    margin-bottom: 16px;
+  }
+
+
+  .agora-programme-item h2 {
+    font-size: 21px;
+  }
+
+
+  .agora-programme-item p {
+    margin-top: 10px;
+
+    font-size: 12px;
+  }
+
+
+  /* bottom */
+
+  .agora-bottom {
+    width: 100%;
+
+    padding: 45px 24px;
+  }
+
+
+  .agora-note {
+    font-size: 12px;
+  }
+
+
+  /* CTA */
+
+  .agora-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 24px;
+
+    margin-top: 50px;
+
+    padding: 34px 0;
+  }
+
+
+  .agora-cta h2 {
+    font-size: 23px;
+  }
+
+
+  .agora-cta-button {
+    min-width: 170px;
+
+    height: 49px;
+
+    font-size: 8px;
+  }
+
+
+  /* ecosystem */
+
+  .agora-ecosystem {
+    padding-top: 50px;
+  }
+
+
+  .agora-ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .agora-ecosystem-card {
+    min-height: auto;
+
+    padding: 25px 0;
+
+    border-right: 0;
+
+    border-bottom: 1px solid var(--agora-line);
+  }
+
+
+  .agora-ecosystem-card:last-child {
+    border-bottom: 0;
+  }
+
+
+  .agora-ecosystem-card h3 {
+    font-size: 20px;
+  }
+
+
+  .agora-ecosystem-card p {
+    font-size: 12px;
+  }
+
+}
