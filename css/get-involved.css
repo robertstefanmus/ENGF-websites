@@ -1,0 +1,583 @@
+:root {
+  --involved-bg: #f4eee4;
+  --involved-burgundy: #681018;
+  --involved-text: #65574d;
+  --involved-muted: #8f857a;
+  --involved-line: #ded2bf;
+  --involved-gold: #c9a45a;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background: var(--involved-bg);
+
+  color: var(--involved-text);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.involved-container {
+  width: min(1080px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.involved-hero {
+  min-height: 310px;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--involved-bg);
+
+  border-top: 1px solid var(--involved-line);
+  border-bottom: 1px solid var(--involved-line);
+}
+
+.involved-hero-inner {
+  padding: 58px 0 52px;
+}
+
+.involved-kicker {
+  display: block;
+
+  margin-bottom: 26px;
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: var(--involved-burgundy);
+}
+
+.involved-hero h1 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 56px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--involved-burgundy);
+}
+
+.involved-hero p {
+  max-width: 600px;
+
+  margin: 28px 0 0;
+
+  font-family: var(--font-display);
+
+  font-size: 18px;
+  font-style: italic;
+
+  line-height: 1.65;
+
+  color: #786d63;
+}
+
+
+/* =========================================
+   ROUTES GRID
+========================================= */
+
+.involved-routes {
+  background: var(--involved-bg);
+}
+
+.involved-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  background: var(--involved-bg);
+
+  border-bottom: 1px solid var(--involved-line);
+}
+
+
+/*
+  IMPORTANT:
+  No generated ::after block.
+  No fake eighth cell.
+  No different beige/pink background.
+*/
+
+.involved-grid::after {
+  content: none;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.involved-card {
+  min-height: 190px;
+
+  padding: 27px 25px 25px;
+
+  background: var(--involved-bg);
+
+  border-right: 1px solid var(--involved-line);
+  border-bottom: 1px solid var(--involved-line);
+}
+
+.involved-card:nth-child(3n) {
+  border-right: 0;
+}
+
+.involved-card h2 {
+  margin: 23px 0 0;
+
+  font-family: var(--font-display);
+
+  font-size: 22px;
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: var(--involved-burgundy);
+}
+
+.involved-card > p {
+  margin: 14px 0 0;
+
+  font-family: var(--font-sans);
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  color: var(--involved-text);
+}
+
+.involved-link {
+  display: inline-block;
+
+  margin-top: 24px;
+
+  font-family: var(--font-sans);
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  color: var(--involved-burgundy);
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.involved-status {
+  width: 100%;
+
+  min-height: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 9px;
+
+  border: 1px solid #e2d3b4;
+
+  font-family: var(--font-sans);
+
+  font-size: 6px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: #89735f;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+}
+
+.status-soon {
+  background: var(--involved-gold);
+}
+
+.status-open {
+  background: var(--involved-burgundy);
+}
+
+
+/* =========================================
+   REGISTER INTEREST
+========================================= */
+
+.interest-section {
+  padding: 65px 0 75px;
+
+  background: var(--involved-bg);
+}
+
+.interest-inner {
+  width: min(600px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+.interest-inner h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 30px;
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: var(--involved-burgundy);
+}
+
+.interest-intro {
+  margin: 12px 0 0;
+
+  font-family: var(--font-sans);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  color: var(--involved-text);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.interest-form {
+  margin-top: 38px;
+}
+
+.interest-field {
+  margin-bottom: 29px;
+}
+
+.interest-field label {
+  display: block;
+
+  margin-bottom: 13px;
+
+  font-family: var(--font-sans);
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 2.4px;
+
+  color: #6c5049;
+}
+
+.interest-field input,
+.interest-field select,
+.interest-field textarea {
+  width: 100%;
+
+  border: 0;
+
+  border-bottom: 1px solid #ccbfb0;
+
+  border-radius: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  font-family: var(--font-sans);
+
+  font-size: 13px;
+
+  color: #2d2926;
+}
+
+.interest-field input {
+  height: 35px;
+}
+
+.interest-field select {
+  height: 38px;
+
+  padding: 0 3px;
+
+  cursor: pointer;
+}
+
+.interest-field textarea {
+  min-height: 105px;
+
+  padding: 8px 0;
+
+  resize: vertical;
+}
+
+.interest-field input:focus,
+.interest-field select:focus,
+.interest-field textarea:focus {
+  border-bottom-color: var(--involved-burgundy);
+}
+
+
+/* =========================================
+   REQUIRED MESSAGE
+========================================= */
+
+.interest-message-field textarea:invalid:not(:placeholder-shown) {
+  border-bottom-color: var(--involved-burgundy);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.interest-submit {
+  width: 100%;
+
+  height: 46px;
+
+  margin-top: 4px;
+
+  border: 1px solid var(--involved-burgundy);
+
+  background: transparent;
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  color: var(--involved-burgundy);
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    opacity .2s ease;
+}
+
+.interest-submit:hover {
+  background: var(--involved-burgundy);
+
+  color: var(--involved-bg);
+}
+
+.interest-submit:disabled {
+  opacity: .5;
+
+  cursor: wait;
+}
+
+
+/* =========================================
+   FORM MESSAGES
+========================================= */
+
+.interest-form-message {
+  margin-bottom: 25px;
+
+  padding: 15px 17px;
+
+  border-left: 2px solid var(--involved-burgundy);
+
+  font-family: var(--font-sans);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.interest-form-message[hidden] {
+  display: none !important;
+}
+
+.interest-success {
+  background: #d8f1dd;
+  border: 1px solid #b8dfbf;
+  color: #0d6b2d;
+
+  padding: 18px 20px;
+  border-radius: 10px;
+
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.interest-form-message[hidden] {
+  display: none !important;
+}
+
+.interest-error {
+  background: rgba(104, 16, 24, .05);
+
+  color: var(--involved-burgundy);
+}
+
+
+/* =========================================
+   PRIVACY
+========================================= */
+
+.interest-privacy {
+  margin-top: 30px;
+
+  padding: 16px 18px;
+
+  border-left: 1px solid #c5a154;
+
+  background: rgba(255, 255, 255, .34);
+
+  font-family: var(--font-sans);
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  color: var(--involved-text);
+}
+
+
+/* =========================================
+   HONEYPOT
+========================================= */
+
+.interest-honeypot {
+  position: absolute !important;
+
+  width: 1px !important;
+  height: 1px !important;
+
+  overflow: hidden !important;
+
+  clip: rect(0, 0, 0, 0) !important;
+
+  white-space: nowrap !important;
+
+  opacity: 0 !important;
+
+  pointer-events: none !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .involved-container {
+    width: calc(100% - 50px);
+  }
+
+  .involved-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .involved-card:nth-child(3n) {
+    border-right: 1px solid var(--involved-line);
+  }
+
+  .involved-card:nth-child(2n) {
+    border-right: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .involved-hero {
+    min-height: auto;
+  }
+
+  .involved-container {
+    width: 100%;
+
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .involved-hero-inner {
+    padding-top: 50px;
+    padding-bottom: 45px;
+  }
+
+  .involved-hero h1 {
+    font-size: 44px;
+  }
+
+  .involved-hero p {
+    font-size: 16px;
+  }
+
+  .involved-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .involved-card,
+  .involved-card:nth-child(2n),
+  .involved-card:nth-child(3n) {
+    min-height: auto;
+
+    border-right: 0;
+  }
+
+  .interest-section {
+    padding: 50px 0 60px;
+  }
+
+  .interest-inner {
+    width: calc(100% - 48px);
+  }
+
+}

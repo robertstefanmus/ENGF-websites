@@ -7,6 +7,7 @@
 
     <link rel="icon" type="image/png" href="images/logo.jpg" />
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/get-involved.css">
     <title>Get Involved - ENGF</title>
 </head>
 
@@ -15,6 +16,414 @@
     <!-- HEADER -->
     <div id="header"></div>
 
+    <main>
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <section class="involved-hero">
+
+    <div class="involved-container involved-hero-inner">
+
+      <span class="involved-kicker">
+        GET INVOLVED
+      </span>
+
+      <h1>Seven ways in.</h1>
+
+      <p>
+        Each route has a stated status. Where something is not yet open,
+        it is marked as such — ENGF does not announce deadlines before
+        they exist.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       ROUTES
+  ========================================== -->
+
+  <section class="involved-routes">
+
+    <div class="involved-grid">
+
+
+      <!-- 01 -->
+
+      <article class="involved-card">
+
+        <div class="involved-status">
+          <span class="status-dot status-soon"></span>
+          COMING SOON
+        </div>
+
+        <h2>Join a programme</h2>
+
+        <p>
+          Courses, masterclasses, simulations and summer schools
+          delivered by ENGF Academy.
+        </p>
+
+        <a href="programmes.html" class="involved-link">
+          SEE PROGRAMMES
+        </a>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article class="involved-card">
+
+        <div class="involved-status">
+          <span class="status-dot status-soon"></span>
+          APPLICATIONS OPENING SOON
+        </div>
+
+        <h2>Become a fellow</h2>
+
+        <p>
+          Conduct supervised research with the ENGF Institute
+          and publish a policy paper.
+        </p>
+
+        <a
+          href="departments-pages/institute.html"
+          class="involved-link"
+        >
+          THE INSTITUTE
+        </a>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article class="involved-card">
+
+        <div class="involved-status">
+          <span class="status-dot status-soon"></span>
+          APPLICATIONS OPENING SOON
+        </div>
+
+        <h2>Attend an event</h2>
+
+        <p>
+          Conferences, roundtables and strategic dialogue
+          convened by ENGF Forum.
+        </p>
+
+        <a href="events.html" class="involved-link">
+          FORTHCOMING EVENTS
+        </a>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article class="involved-card">
+
+        <div class="involved-status">
+          <span class="status-dot status-soon"></span>
+          APPLICATIONS OPENING SOON
+        </div>
+
+        <h2>Volunteer</h2>
+
+        <p>
+          Community Service Days, campaigns and continuing
+          projects with local partners.
+        </p>
+
+        <a
+          href="community.html"
+          class="involved-link"
+        >
+          ENGF COMMUNITY
+        </a>
+
+      </article>
+
+
+      <!-- 05 -->
+
+      <article class="involved-card">
+
+        <div class="involved-status">
+          <span class="status-dot status-soon"></span>
+          COMING SOON
+        </div>
+
+        <h2>Submit creative work</h2>
+
+        <p>
+          Open calls for emerging artists across visual art,
+          film, photography and performance.
+        </p>
+
+        <a
+          href="creative-youth-platform.html"
+          class="involved-link"
+        >
+          CREATIVE YOUTH PLATFORM
+        </a>
+
+      </article>
+
+
+      <!-- 06 -->
+
+      <article class="involved-card">
+
+        <div class="involved-status">
+          <span class="status-dot status-open"></span>
+          OPEN
+        </div>
+
+        <h2>Contribute to Agora</h2>
+
+        <p>
+          Pitch an explainer, analysis or interview to the
+          Agora editorial desk.
+        </p>
+
+        <a
+          href="agora.html"
+          class="involved-link"
+        >
+          AGORA ENGF
+        </a>
+
+      </article>
+
+
+      <!-- 07 -->
+
+      <article class="involved-card">
+
+        <div class="involved-status">
+          <span class="status-dot status-open"></span>
+          OPEN
+        </div>
+
+        <h2>Partner with ENGF</h2>
+
+        <p>
+          Cooperation for universities, institutions,
+          organisations and private-sector partners.
+        </p>
+
+        <a href="partners.html" class="involved-link">
+          PARTNERSHIP
+        </a>
+
+      </article>
+
+      <!-- No decorative empty square here -->
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       REGISTER INTEREST
+  ========================================== -->
+
+  <section class="interest-section" id="register-interest">
+
+    <div class="interest-inner">
+
+      <h2>Register your interest</h2>
+
+      <p class="interest-intro">
+        Tell us which route interests you and we will write
+        when applications open.
+      </p>
+
+
+      <form
+        id="interest-form"
+        class="interest-form"
+        action="https://formspree.io/f/myegrjpj"
+        method="POST"
+      >
+
+        <!-- Formspree success/error messages -->
+
+        <div
+          class="interest-form-message interest-success"
+          id="interest-success"
+          hidden
+        >
+          Thank you. Your interest has been registered successfully.
+        </div>
+
+        <div
+          class="interest-form-message interest-error"
+          id="interest-error"
+          hidden
+        >
+          We could not send your message. Please check the form and try again.
+        </div>
+
+
+        <!-- FULL NAME -->
+
+        <div class="interest-field">
+
+          <label for="interest-name">
+            FULL NAME
+          </label>
+
+          <input
+            id="interest-name"
+            name="name"
+            type="text"
+            required
+            autocomplete="name"
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="interest-field">
+
+          <label for="interest-email">
+            EMAIL ADDRESS
+          </label>
+
+          <input
+            id="interest-email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+          >
+
+        </div>
+
+
+        <!-- AREA -->
+
+        <div class="interest-field">
+
+          <label for="interest-area">
+            AREA OF INTEREST
+          </label>
+
+          <select
+            id="interest-area"
+            name="area_of_interest"
+            required
+          >
+
+            <option value="Join a programme">
+              Join a programme
+            </option>
+
+            <option value="Become a fellow">
+              Become a fellow
+            </option>
+
+            <option value="Attend an event">
+              Attend an event
+            </option>
+
+            <option value="Volunteer">
+              Volunteer
+            </option>
+
+            <option value="Submit creative work">
+              Submit creative work
+            </option>
+
+            <option value="Contribute to Agora">
+              Contribute to Agora
+            </option>
+
+            <option value="Partner with ENGF">
+              Partner with ENGF
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="interest-field interest-message-field">
+
+          <label for="interest-message">
+            MESSAGE
+          </label>
+
+          <textarea
+            id="interest-message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <!-- Formspree reply-to -->
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="ENGF — Get Involved enquiry"
+        >
+
+
+        <!-- simple honeypot -->
+
+        <div class="interest-honeypot" aria-hidden="true">
+
+          <label>
+            Leave this field empty
+            <input
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+            >
+          </label>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="interest-submit"
+          id="interest-submit"
+        >
+          REGISTER INTEREST
+        </button>
+
+
+        <div class="interest-privacy">
+          Personal data submitted here is used only to respond
+          to your enquiry, in accordance with applicable data
+          protection law.
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
 
     <!-- FOOTER -->
     <div id="footer"></div>
@@ -24,6 +433,7 @@
     <script src="js/translation-header-footer.js"></script>
     <script src="js/mobile-view.js"></script>
     <script src="js/components.js"></script>
+    <script src="js/get-involved.js"></script>
 
 </body>
 
