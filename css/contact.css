@@ -20,9 +20,7 @@
 
 body {
   margin: 0;
-
   background: var(--contact-bg);
-
   color: var(--contact-text);
 }
 
@@ -45,7 +43,6 @@ body {
 
 .contact-hero-inner {
   width: min(1440px, calc(100% - 80px));
-
   margin: 0 auto;
 }
 
@@ -55,10 +52,8 @@ body {
   margin-bottom: 28px;
 
   font-family: var(--font-sans);
-
   font-size: 9px;
   font-weight: 500;
-
   letter-spacing: 4px;
 
   color: var(--contact-burgundy);
@@ -68,7 +63,6 @@ body {
   margin: 0;
 
   font-family: var(--font-display);
-
   font-size: 76px;
   font-weight: 400;
 
@@ -83,7 +77,6 @@ body {
   margin: 40px 0 0;
 
   font-family: var(--font-display);
-
   font-size: 22px;
   font-style: italic;
 
@@ -126,7 +119,6 @@ body {
   margin-bottom: 42px;
 
   font-family: var(--font-sans);
-
   font-size: 8px;
   font-weight: 600;
 
@@ -141,7 +133,6 @@ body {
 
 .desk-item {
   padding-bottom: 22px;
-
   margin-bottom: 22px;
 
   border-bottom: 1px solid var(--contact-line);
@@ -151,7 +142,6 @@ body {
   margin: 0 0 8px;
 
   font-family: var(--font-display);
-
   font-size: 21px;
   font-weight: 400;
 
@@ -164,7 +154,6 @@ body {
   margin: 0;
 
   font-family: var(--font-sans);
-
   font-size: 12px;
 
   line-height: 1.45;
@@ -191,7 +180,6 @@ body {
   margin-bottom: 6px;
 
   font-family: var(--font-sans);
-
   font-size: 8px;
   font-weight: 600;
 
@@ -204,7 +192,6 @@ body {
   margin: 0;
 
   font-family: var(--font-sans);
-
   font-size: 12px;
 
   color: var(--contact-text);
@@ -242,7 +229,6 @@ body {
   margin-bottom: 14px;
 
   font-family: var(--font-sans);
-
   font-size: 8px;
   font-weight: 600;
 
@@ -273,7 +259,6 @@ body {
   color: #393333;
 
   font-family: var(--font-sans);
-
   font-size: 14px;
 }
 
@@ -302,7 +287,9 @@ body {
 }
 
 
-/* focus */
+/* =========================================
+   INPUT FOCUS
+========================================= */
 
 .form-group input:focus,
 .form-group select:focus,
@@ -311,7 +298,9 @@ body {
 }
 
 
-/* Formspree invalid state */
+/* =========================================
+   INVALID FORM FIELDS
+========================================= */
 
 .form-group input[aria-invalid="true"],
 .form-group select[aria-invalid="true"],
@@ -321,16 +310,17 @@ body {
 
 
 /* =========================================
-   FIELD ERROR
+   FIELD ERRORS
 ========================================= */
 
 .field-error {
+  display: none;
+
   min-height: 15px;
 
   margin-top: 7px;
 
   font-family: var(--font-sans);
-
   font-size: 10px;
 
   line-height: 1.3;
@@ -339,9 +329,28 @@ body {
 }
 
 
+/*
+   Formspree adds data-fs-active only when
+   this particular field has an error.
+*/
+
+.field-error[data-fs-active] {
+  display: block;
+}
+
+
 /* =========================================
-   SUCCESS / ERROR
+   FORM SUCCESS / ERROR MESSAGES
 ========================================= */
+
+/*
+   IMPORTANT:
+
+   Both messages MUST be hidden initially.
+
+   Formspree adds data-fs-active when the
+   appropriate message needs to be shown.
+*/
 
 .form-success,
 .form-error {
@@ -354,17 +363,22 @@ body {
   border-left: 2px solid var(--contact-burgundy);
 
   font-family: var(--font-sans);
-
   font-size: 12px;
 
   line-height: 1.5;
 }
+
+
+/* success */
 
 .form-success {
   background: rgba(255, 255, 255, 0.28);
 
   color: var(--contact-text);
 }
+
+
+/* error */
 
 .form-error {
   background: rgba(104, 16, 24, 0.05);
@@ -373,16 +387,42 @@ body {
 }
 
 
-/* Formspree reveals these elements */
+/*
+   Formspree active state
 
-.form-success:not(:empty),
-.form-error:not(:empty) {
+   These are intentionally more specific
+   than the generic rules above.
+*/
+
+.form-success[data-fs-success][data-fs-active] {
+  display: block;
+}
+
+.form-error[data-fs-error][data-fs-active] {
   display: block;
 }
 
 
 /* =========================================
-   BUTTON
+   FORMSPREE FALLBACK SELECTORS
+========================================= */
+
+/*
+   These ensure all Formspree message elements
+   remain hidden until Formspree activates them.
+*/
+
+[data-fs-success]:not([data-fs-active]) {
+  display: none !important;
+}
+
+[data-fs-error]:not([data-fs-active]) {
+  display: none !important;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
 ========================================= */
 
 .contact-submit {
@@ -396,7 +436,6 @@ body {
   background: transparent;
 
   font-family: var(--font-sans);
-
   font-size: 9px;
   font-weight: 600;
 
@@ -441,7 +480,6 @@ body {
   background: rgba(255, 255, 255, 0.32);
 
   font-family: var(--font-sans);
-
   font-size: 12px;
 
   line-height: 1.55;
@@ -460,12 +498,17 @@ body {
   width: 1px !important;
   height: 1px !important;
 
+  padding: 0 !important;
+  margin: -1px !important;
+
   overflow: hidden !important;
 
   clip: rect(0 0 0 0) !important;
   clip-path: inset(50%) !important;
 
   white-space: nowrap !important;
+
+  border: 0 !important;
 
   opacity: 0 !important;
 
@@ -513,6 +556,8 @@ body {
 
 @media (max-width: 750px) {
 
+  /* HERO */
+
   .contact-hero {
     min-height: auto;
 
@@ -544,14 +589,16 @@ body {
   }
 
 
-  /* layout */
+  /* MAIN */
 
   .contact-main {
     display: block;
+
+    min-height: 0;
   }
 
 
-  /* desks */
+  /* DESKS */
 
   .contact-desks {
     padding: 45px 24px;
@@ -574,7 +621,7 @@ body {
   }
 
 
-  /* form */
+  /* FORM */
 
   .contact-form-wrap {
     padding: 45px 24px;
@@ -594,9 +641,27 @@ body {
     min-height: 130px;
   }
 
+
+  /* NOTIFICATIONS */
+
+  .form-success,
+  .form-error {
+    margin-bottom: 25px;
+
+    padding: 14px 16px;
+
+    font-size: 11px;
+  }
+
+
+  /* BUTTON */
+
   .contact-submit {
     margin-top: 30px;
   }
+
+
+  /* PRIVACY */
 
   .contact-privacy {
     max-width: 100%;
