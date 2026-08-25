@@ -1924,3 +1924,94 @@ font-size: 7.9rem;
         transform: scaleX(1);
     }
 }
+/* =========================================================
+   DESKTOP ECOSYSTEM PANEL — CLICKABLE CARD FIX
+   Keeps <a class="box"> cards looking like the reference.
+========================================================= */
+@media (min-width: 801px) {
+    .white-panel .box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 0;
+        min-height: 88px;
+        padding: 14px 20px 14px 36px;
+        background: #faf6ef;
+        color: inherit;
+        text-align: left;
+        text-decoration: none;
+        white-space: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    /* Prevent the normal .nav a underline from appearing on cards. */
+    .white-panel .box::after {
+        display: none;
+    }
+
+    .white-panel .box > div {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .white-panel .box h3 {
+        margin: 0 0 5px;
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.15;
+        letter-spacing: 0;
+        white-space: normal;
+        color: #75454c;
+    }
+
+    .white-panel .box p {
+        margin: 0;
+        max-width: 205px;
+        font-family: var(--font-sans);
+        font-size: 0.68rem;
+        font-weight: 400;
+        line-height: 1.35;
+        letter-spacing: 0;
+        white-space: normal;
+        color: #6d6863;
+    }
+
+    .white-panel .box:hover,
+    .white-panel .box:focus-visible {
+        background: #f4eee4;
+        color: inherit;
+    }
+
+    .white-panel .box:nth-child(even) {
+        border-left: 1px solid #e7ddcc;
+    }
+
+    .white-panel .box:nth-child(n + 3) {
+        border-top: 1px solid #e7ddcc;
+    }
+
+    .white-panel .box::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 23px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .white-panel .box:nth-child(1)::before { background: #7c1731; }
+    .white-panel .box:nth-child(2)::before { background: #c69b3c; }
+    .white-panel .box:nth-child(3)::before { background: #65879b; }
+    .white-panel .box:nth-child(4)::before { background: #39342f; }
+    .white-panel .box:nth-child(5)::before { background: #344760; }
+    .white-panel .box:nth-child(6)::before { background: #708a64; }
+    .white-panel .box:nth-child(7)::before { background: #b9644c; }
+    .white-panel .box:nth-child(8)::before { background: #53636d; }
+}
