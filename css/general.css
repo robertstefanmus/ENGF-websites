@@ -1683,3 +1683,48 @@ font-size: 7.9rem;
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+/* =========================================================
+   MOBILE — TOUCH / TAP HIGHLIGHT FIX
+   Prevents blue selection/tap flashes on mobile controls.
+========================================================= */
+
+@media (max-width: 800px) {
+    .lang-switcher,
+    .lang-switcher label,
+    .lang-switcher span,
+    .hamburger-menu,
+    .hamburger-line,
+    .mobile-menu a,
+    .brand-group {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .lang-switcher,
+    .lang-switcher label,
+    .lang-switcher span,
+    .hamburger-menu,
+    .hamburger-line {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .lang-switcher label,
+    .hamburger-menu,
+    .mobile-menu a {
+        touch-action: manipulation;
+    }
+
+    .hamburger-menu:focus {
+        outline: none;
+    }
+
+    .hamburger-menu:focus-visible {
+        outline: 2px solid var(--color-burgundy);
+        outline-offset: 3px;
+    }
+
+    .lang-switcher input:focus:not(:focus-visible) + span {
+        outline: none;
+    }
+}
