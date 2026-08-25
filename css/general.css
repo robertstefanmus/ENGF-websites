@@ -1728,3 +1728,197 @@ font-size: 7.9rem;
         outline: none;
     }
 }
+
+/* =========================================================
+   DESKTOP — PREVENT TRANSLATED NAV LABELS FROM OVERLAPPING
+========================================================= */
+
+@media (min-width: 801px) {
+    .brand-group {
+        margin-right: clamp(18px, 2.2vw, 43px);
+    }
+
+    .nav {
+        min-width: 0;
+        gap: clamp(14px, 1.45vw, 28px);
+    }
+
+    .nav a {
+        font-size: clamp(0.58rem, 0.58vw, 0.68rem);
+        letter-spacing: clamp(0.10em, 0.13vw, 0.17em);
+    }
+
+    .lang-switcher {
+        margin-left: clamp(12px, 1.3vw, 28px);
+        margin-right: clamp(10px, 0.9vw, 16px);
+        flex-shrink: 0;
+    }
+
+    .get-involved-btn {
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 1101px) and (max-width: 1450px) {
+    .topbar {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .brand-group {
+        margin-right: 18px;
+    }
+
+    .nav {
+        gap: 13px;
+    }
+
+    .nav a {
+        font-size: 0.57rem;
+        letter-spacing: 0.10em;
+    }
+
+    .lang-switcher {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .get-involved-btn {
+        width: 128px;
+    }
+}
+
+/* =========================================================
+   DESKTOP ECOSYSTEM PANEL — REFERENCE STYLE
+   Adds the colored dots and matches the larger 2-column cards.
+========================================================= */
+
+@media (min-width: 801px) {
+    .white-panel {
+        width: 510px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(88px, auto));
+        background: #faf6ef;
+        border: 1px solid #e7ddcc;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .box {
+        position: relative;
+        min-width: 0;
+        min-height: 88px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        padding: 14px 20px 14px 34px;
+        text-align: left;
+        background: #faf6ef;
+    }
+
+    /* Colored dot */
+    .box::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 23px;
+
+        width: 8px;
+        height: 8px;
+
+        border-radius: 50%;
+        background: var(--color-burgundy);
+    }
+
+    .box h3 {
+        margin: 0 0 5px;
+
+        font-family: var(--font-display);
+        font-size: 1rem;
+        line-height: 1.25;
+        font-weight: 400;
+
+        color: #75454c;
+    }
+
+    .box p {
+        margin: 0;
+
+        font-family: var(--font-sans);
+        font-size: 0.68rem;
+        line-height: 1.35;
+        font-weight: 400;
+
+        color: #6d6863;
+    }
+
+    .box:hover {
+        background: #f4eee4;
+    }
+
+    .box:nth-child(even) {
+        border-left: 1px solid #e7ddcc;
+    }
+
+    .box:nth-child(n + 3) {
+        border-top: 1px solid #e7ddcc;
+    }
+
+    /* Dot colors — same order as the reference */
+    .box:nth-child(1)::before { background: #7c1731; }
+    .box:nth-child(2)::before { background: #c69b3c; }
+    .box:nth-child(3)::before { background: #65879b; }
+    .box:nth-child(4)::before { background: #39342f; }
+    .box:nth-child(5)::before { background: #344760; }
+    .box:nth-child(6)::before { background: #708a64; }
+    .box:nth-child(7)::before { background: #b9644c; }
+    .box:nth-child(8)::before { background: #53636d; }
+}
+
+/* =========================================================
+   DESKTOP — CURRENT / ACTIVE PAGE NAVIGATION
+   Add class="active" OR aria-current="page" to the current link.
+========================================================= */
+
+@media (min-width: 801px) {
+
+    .nav a.active,
+    .nav a[aria-current="page"] {
+        color: var(--color-burgundy);
+    }
+
+    .nav a.active::after,
+    .nav a[aria-current="page"]::after {
+        transform: scaleX(1);
+    }
+
+    /* Optional support for common CMS active-menu classes */
+    .nav .current-menu-item > a,
+    .nav .current_page_item > a {
+        color: var(--color-burgundy);
+    }
+
+    .nav .current-menu-item > a::after,
+    .nav .current_page_item > a::after {
+        transform: scaleX(1);
+    }
+
+    /* If ECOSYSTEM is the current section/page */
+    .ecosystem-menu.active > a,
+    .ecosystem-menu > a[aria-current="page"],
+    .ecosystem-menu.current-menu-item > a,
+    .ecosystem-menu.current_page_item > a {
+        color: var(--color-burgundy);
+    }
+
+    .ecosystem-menu.active > a::after,
+    .ecosystem-menu > a[aria-current="page"]::after,
+    .ecosystem-menu.current-menu-item > a::after,
+    .ecosystem-menu.current_page_item > a::after {
+        transform: scaleX(1);
+    }
+}

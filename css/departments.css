@@ -1,0 +1,292 @@
+.ecosystem-section {
+  --bg: #f4eee4;
+  --text: #5d1016;
+  --body: #5f5048;
+  --line: #dfd2bf;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.ecosystem-intro {
+  min-height: 455px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ecosystem-intro-inner {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+  padding-left: 120px;
+}
+
+.ecosystem-kicker {
+  display: block;
+  margin-bottom: 26px;
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 5px;
+
+  color: #68242a;
+}
+
+.ecosystem-intro h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 4vw, 74px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -2px;
+
+  color: #681017;
+}
+
+.ecosystem-intro p {
+  max-width: 650px;
+  margin: 34px 0 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-style: italic;
+  line-height: 1.75;
+
+  color: #7b7167;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.department-card {
+  position: relative;
+
+  min-height: 298px;
+  padding: 48px 50px 42px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.department-card:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+
+/* =========================
+   TOP ROW
+========================= */
+
+.department-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 27px;
+}
+
+.department-number {
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+
+  color: #aaa094;
+}
+
+.department-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   CARD TYPOGRAPHY
+========================= */
+
+.department-card h3 {
+  margin: 0 0 10px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  color: #72131a;
+}
+
+.department-label {
+  display: block;
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 2.4px;
+
+  color: #552529;
+}
+
+.department-card p {
+  max-width: 470px;
+
+  margin: 27px 0 30px;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+
+  color: var(--body);
+}
+
+.department-card a {
+  display: inline-block;
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+
+  text-decoration: none;
+  color: #612329;
+
+  transition: opacity 0.2s ease;
+}
+
+.department-card a:hover {
+  opacity: 0.55;
+}
+
+
+/* =========================
+   DOT COLORS
+========================= */
+
+.dot-burgundy {
+  background: #731824;
+}
+
+.dot-gold {
+  background: #b18a31;
+}
+
+.dot-blue-grey {
+  background: #64798c;
+}
+
+.dot-black {
+  background: #27231f;
+}
+
+.dot-navy {
+  background: #223a59;
+}
+
+.dot-green {
+  background: #607b68;
+}
+
+.dot-clay {
+  background: #b3664b;
+}
+
+.dot-steel {
+  background: #536678;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .ecosystem-intro-inner {
+    padding-left: 40px;
+  }
+
+  .ecosystem-intro h2 {
+    font-size: 58px;
+  }
+
+  .ecosystem-intro p {
+    font-size: 18px;
+    max-width: 580px;
+  }
+
+  .department-card {
+    padding: 42px 35px;
+  }
+
+  .department-card h3 {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .ecosystem-intro {
+    min-height: auto;
+  }
+
+  .ecosystem-intro-inner {
+    width: 100%;
+    padding: 80px 24px;
+  }
+
+  .ecosystem-kicker {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .ecosystem-intro h2 {
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .ecosystem-intro p {
+    margin-top: 28px;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+
+  .departments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .department-card {
+    min-height: auto;
+    padding: 38px 24px 42px;
+    border-right: none !important;
+  }
+
+  .department-card h3 {
+    font-size: 25px;
+  }
+
+  .department-card p {
+    margin: 22px 0 27px;
+  }
+}
