@@ -1,0 +1,891 @@
+:root {
+  --events-bg: #f4eee4;
+  --events-burgundy: #681018;
+  --events-text: #65574d;
+  --events-muted: #8f857a;
+  --events-line: #ded2bf;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background: var(--events-bg);
+
+  color: var(--events-text);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.events-hero {
+  min-height: 455px;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--events-bg);
+
+  border-top: 1px solid var(--events-line);
+  border-bottom: 1px solid var(--events-line);
+}
+
+.events-hero-inner {
+  width: min(1200px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 68px 0;
+}
+
+
+/* kicker */
+
+.events-kicker {
+  display: block;
+
+  margin-bottom: 27px;
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: var(--events-burgundy);
+}
+
+
+/* hero title */
+
+.events-hero h1 {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 64px;
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.5px;
+
+  color: var(--events-burgundy);
+}
+
+
+/* hero intro */
+
+.events-hero p {
+  max-width: 650px;
+
+  margin: 34px 0 0;
+
+  font-family: var(--font-display);
+
+  font-size: 20px;
+  font-style: italic;
+
+  line-height: 1.7;
+
+  color: #786d63;
+}
+
+
+/* =========================================
+   SHARED CONTAINER
+========================================= */
+
+.events-container {
+  width: min(1160px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   UPCOMING
+========================================= */
+
+.events-upcoming {
+  padding: 36px 0 30px;
+
+  background: var(--events-bg);
+}
+
+
+/* section title */
+
+.events-section-title {
+  margin: 0;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid var(--events-line);
+
+  font-family: var(--font-display);
+
+  font-size: 30px;
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: var(--events-burgundy);
+}
+
+
+/* =========================================
+   EVENT LIST
+========================================= */
+
+.event-list {
+  width: 100%;
+}
+
+
+/* event row */
+
+.event-row {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 320px;
+
+  gap: 42px;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid var(--events-line);
+}
+
+
+/*
+   We remove the border on the final row so
+   there isn't another horizontal "bar"
+   floating above the image section.
+*/
+
+.event-row:last-child {
+  border-bottom: 0;
+}
+
+
+/* =========================================
+   EVENT MAIN CONTENT
+========================================= */
+
+.event-main {
+  min-width: 0;
+}
+
+
+/* category */
+
+.event-category {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2.2px;
+
+  color: #5c403d;
+}
+
+
+/* event title */
+
+.event-main h3 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 25px;
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: var(--events-burgundy);
+}
+
+
+/* event description */
+
+.event-main p {
+  max-width: 700px;
+
+  margin: 10px 0 0;
+
+  font-family: var(--font-sans);
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  color: var(--events-text);
+}
+
+
+/* register link */
+
+.event-register {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2.2px;
+
+  text-decoration: none;
+
+  color: var(--events-burgundy);
+
+  transition: opacity 0.2s ease;
+}
+
+.event-register:hover {
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   EVENT META
+========================================= */
+
+.event-meta {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  align-content: start;
+
+  gap: 15px;
+}
+
+
+/* meta label */
+
+.event-meta div span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  color: #6d514b;
+}
+
+
+/* meta value */
+
+.event-meta div p {
+  margin: 0;
+
+  font-family: var(--font-sans);
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  color: #2f2b28;
+}
+
+
+/* =========================================
+   EVERY EVENT ON THE RECORD
+========================================= */
+
+.events-record {
+  padding: 28px 0 55px;
+
+  background: var(--events-bg);
+}
+
+
+/*
+   Smaller overall block than before.
+   The screenshot design uses a relatively
+   compact image rather than a huge 50/50
+   editorial block.
+*/
+
+.events-record-inner {
+  width: min(1160px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 47% minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 38px;
+}
+
+
+/* =========================================
+   RECORD IMAGE
+========================================= */
+
+.events-record-image {
+  width: 100%;
+
+  height: 335px;
+
+  overflow: hidden;
+}
+
+.events-record-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================
+   RECORD CONTENT
+========================================= */
+
+.events-record-content {
+  min-width: 0;
+
+  padding: 0;
+}
+
+
+/* record heading */
+
+.events-record-content h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 29px;
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: var(--events-burgundy);
+}
+
+
+/* record paragraph */
+
+.events-record-content > p {
+  max-width: 560px;
+
+  margin: 17px 0 0;
+
+  font-family: var(--font-sans);
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  color: var(--events-text);
+}
+
+
+/* =========================================
+   RECORD LINKS
+========================================= */
+
+.events-record-links {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 12px;
+
+  margin-top: 22px;
+
+  border-top: 1px solid var(--events-line);
+}
+
+.events-record-links a {
+  display: flex;
+  align-items: center;
+
+  min-height: 37px;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid var(--events-line);
+
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  color: #5c403d;
+
+  transition: opacity 0.2s ease;
+}
+
+/* =========================================
+   ARCHIVE
+========================================= */
+
+.events-archive {
+  padding: 35px 0 70px;
+
+  background: var(--events-bg);
+}
+
+
+/* archive box */
+
+.events-archive-placeholder {
+  min-height: 310px;
+
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #e1d8c8;
+
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.events-archive-placeholder span {
+  font-family: var(--font-sans);
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  color: #745e54;
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.events-note {
+  max-width: 720px;
+
+  margin-top: 30px;
+
+  padding: 16px 18px;
+
+  border-left: 1px solid #c5a154;
+
+  background: rgba(255, 255, 255, 0.32);
+
+  font-family: var(--font-sans);
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  color: var(--events-text);
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1500px) {
+
+  .events-hero-inner {
+    width: min(1200px, calc(100% - 100px));
+  }
+
+  .events-container,
+  .events-record-inner {
+    width: min(1160px, calc(100% - 100px));
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  /* hero */
+
+  .events-hero {
+    min-height: 420px;
+  }
+
+  .events-hero-inner {
+    width: calc(100% - 50px);
+
+    padding: 60px 0;
+  }
+
+  .events-hero h1 {
+    max-width: 680px;
+
+    font-size: 52px;
+  }
+
+  .events-hero p {
+    max-width: 600px;
+
+    font-size: 18px;
+  }
+
+
+  /* shared container */
+
+  .events-container {
+    width: calc(100% - 50px);
+  }
+
+
+  /* event rows */
+
+  .event-row {
+    grid-template-columns: minmax(0, 1fr) 250px;
+
+    gap: 30px;
+
+    padding: 23px 0;
+  }
+
+  .event-main h3 {
+    font-size: 23px;
+  }
+
+
+  /* record */
+
+  .events-record {
+    padding: 25px 0 50px;
+  }
+
+  .events-record-inner {
+    width: calc(100% - 50px);
+
+    grid-template-columns: 44% minmax(0, 1fr);
+
+    gap: 28px;
+  }
+
+  .events-record-image {
+    height: 300px;
+  }
+
+  .events-record-content h2 {
+    font-size: 26px;
+  }
+
+  .events-record-content > p {
+    font-size: 11px;
+  }
+
+
+  /* archive */
+
+  .events-archive-placeholder {
+    min-height: 280px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  /* =======================================
+     HERO
+  ======================================= */
+
+  .events-hero {
+    min-height: auto;
+  }
+
+  .events-hero-inner {
+    width: 100%;
+
+    padding: 52px 24px;
+  }
+
+  .events-kicker {
+    margin-bottom: 22px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+  }
+
+  .events-hero h1 {
+    max-width: 100%;
+
+    font-size: 43px;
+
+    line-height: 1;
+  }
+
+  .events-hero p {
+    max-width: 100%;
+
+    margin-top: 26px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =======================================
+     CONTAINER
+  ======================================= */
+
+  .events-container {
+    width: 100%;
+
+    padding: 0 24px;
+  }
+
+
+  /* =======================================
+     UPCOMING
+  ======================================= */
+
+  .events-upcoming {
+    padding: 38px 0 25px;
+  }
+
+  .events-section-title {
+    padding-bottom: 14px;
+
+    font-size: 26px;
+  }
+
+
+  /* =======================================
+     EVENT ROW
+  ======================================= */
+
+  .event-row {
+    display: block;
+
+    padding: 26px 0;
+  }
+
+  .event-category {
+    margin-bottom: 12px;
+
+    font-size: 7px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1.8px;
+  }
+
+  .event-main h3 {
+    font-size: 22px;
+
+    line-height: 1.2;
+  }
+
+  .event-main p {
+    margin-top: 10px;
+
+    font-size: 12px;
+  }
+
+  .event-register {
+    margin-top: 17px;
+
+    font-size: 7px;
+  }
+
+
+  /* meta */
+
+  .event-meta {
+    margin-top: 24px;
+
+    padding-top: 20px;
+
+    gap: 14px;
+
+    border-top: 1px solid var(--events-line);
+  }
+
+  .event-meta div span {
+    font-size: 7px;
+  }
+
+  .event-meta div p {
+    font-size: 11px;
+  }
+
+
+  /* =======================================
+     RECORD
+  ======================================= */
+
+  .events-record {
+    padding: 28px 0 45px;
+  }
+
+  .events-record-inner {
+    width: 100%;
+
+    display: block;
+  }
+
+  .events-record-image {
+    width: calc(100% - 48px);
+
+    height: 280px;
+
+    margin: 0 auto;
+  }
+
+  .events-record-content {
+    padding: 28px 24px 0;
+  }
+
+  .events-record-content h2 {
+    font-size: 26px;
+  }
+
+  .events-record-content > p {
+    max-width: 100%;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+  }
+
+
+  /* record links */
+
+  .events-record-links {
+    grid-template-columns: 1fr;
+
+    margin-top: 20px;
+  }
+
+  .events-record-links a {
+    min-height: 38px;
+
+    font-size: 7px;
+  }
+
+
+  /* =======================================
+     ARCHIVE
+  ======================================= */
+
+  .events-archive {
+    padding: 30px 0 55px;
+  }
+
+  .events-archive-placeholder {
+    min-height: 230px;
+
+    margin-top: 22px;
+
+    padding: 20px;
+
+    text-align: center;
+  }
+
+  .events-archive-placeholder span {
+    font-size: 7px;
+
+    line-height: 1.5;
+
+    letter-spacing: 2.2px;
+  }
+
+
+  /* note */
+
+  .events-note {
+    max-width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px 16px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+  .events-hero h1 {
+    font-size: 38px;
+  }
+
+  .events-hero-inner {
+    padding: 45px 20px;
+  }
+
+  .events-container {
+    padding: 0 20px;
+  }
+
+  .events-record-image {
+    width: calc(100% - 40px);
+
+    height: 240px;
+  }
+
+  .events-record-content {
+    padding: 25px 20px 0;
+  }
+
+  .events-record-content h2 {
+    font-size: 24px;
+  }
+}
