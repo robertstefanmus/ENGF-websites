@@ -15,281 +15,415 @@
 
 <body>
 
-          <!-- HEADER -->
+    <!-- HEADER -->
     <div id="header"></div>
-<section class="contact-hero">
 
-  <div class="contact-hero-inner">
 
-    <span class="contact-kicker">CONTACT</span>
+    <main class="contact-page">
 
-    <h1>Correspondence.</h1>
+        <!-- =========================================
+             HERO
+        ========================================== -->
 
-    <p>
-      Write to the relevant desk and we will reply.
-      Postal address and direct contact details are published once formally registered.
-    </p>
+        <section class="contact-hero">
 
-  </div>
+            <div class="contact-hero-inner">
 
-</section>
+                <span
+                    class="contact-kicker"
+                    data-i18n="contact_kicker"
+                >
+                    CONTACT
+                </span>
 
+                <h1 data-i18n="contact_title">
+                    Correspondence.
+                </h1>
 
-<section class="contact-main">
+                <p data-i18n="contact_intro">
+                    Write to the relevant desk and we will reply.
+                    Postal address and direct contact details are published once formally registered.
+                </p>
 
-  <!-- LEFT SIDE -->
-  <div class="contact-desks">
+            </div>
 
-    <span class="contact-section-label">DESKS</span>
+        </section>
 
-    <div class="desk-list">
 
-      <div class="desk-item">
-        <h2>General enquiries</h2>
-        <p>Questions about ENGF, its departments and its work.</p>
-      </div>
+        <!-- =========================================
+             MAIN
+        ========================================== -->
 
-      <div class="desk-item">
-        <h2>Programmes &amp; applications</h2>
-        <p>Fellowships, courses, open calls and volunteering.</p>
-      </div>
+        <section class="contact-main">
 
-      <div class="desk-item">
-        <h2>Media &amp; press</h2>
-        <p>Interviews, comment and access to published material.</p>
-      </div>
+            <!-- LEFT SIDE -->
 
-      <div class="desk-item">
-        <h2>Partnership</h2>
-        <p>Universities, institutions, organisations and private-sector partners.</p>
-      </div>
+            <div class="contact-desks">
 
-    </div>
+                <span
+                    class="contact-section-label"
+                    data-i18n="desks_label"
+                >
+                    DESKS
+                </span>
 
 
-    <div class="contact-office">
+                <div class="desk-list">
 
-      <div class="office-block">
-        <span>REGISTERED OFFICE</span>
-        <p>To be published</p>
-      </div>
 
-      <div class="office-block">
-        <span>EMAIL</span>
-        <p>To be published</p>
-      </div>
+                    <div class="desk-item">
 
-    </div>
+                        <h2 data-i18n="desk_general_title">
+                            General enquiries
+                        </h2>
 
-  </div>
+                        <p data-i18n="desk_general_text">
+                            Questions about ENGF, its departments and its work.
+                        </p>
 
+                    </div>
 
-  <!-- RIGHT SIDE -->
-  <div class="contact-form-wrap">
 
-    <span class="contact-section-label">SEND A MESSAGE</span>
+                    <div class="desk-item">
 
+                        <h2 data-i18n="desk_programmes_title">
+                            Programmes &amp; applications
+                        </h2>
 
-    <!-- Global success / error messages -->
-    <div class="form-success" data-fs-success>
-      Thank you. Your message has been sent successfully.
-    </div>
+                        <p data-i18n="desk_programmes_text">
+                            Fellowships, courses, open calls and volunteering.
+                        </p>
 
-    <div class="form-error" data-fs-error>
-      We could not send your message. Please check the form and try again.
-    </div>
+                    </div>
 
 
-    <form
-      id="contact-form"
-      class="contact-form"
-    >
+                    <div class="desk-item">
 
-      <!-- Spam honeypot -->
-      <div class="form-honeypot" aria-hidden="true">
-        <label for="website">Website</label>
+                        <h2 data-i18n="desk_media_title">
+                            Media &amp; press
+                        </h2>
 
-        <input
-          type="text"
-          id="website"
-          name="_gotcha"
-          tabindex="-1"
-          autocomplete="off"
-        >
-      </div>
+                        <p data-i18n="desk_media_text">
+                            Interviews, comment and access to published material.
+                        </p>
 
+                    </div>
 
-      <div class="form-grid">
 
-        <!-- FULL NAME -->
-        <div class="form-group">
+                    <div class="desk-item">
 
-          <label for="fullname">
-            FULL NAME
-          </label>
+                        <h2 data-i18n="desk_partnership_title">
+                            Partnership
+                        </h2>
 
-          <input
-            type="text"
-            id="fullname"
-            name="full_name"
-            autocomplete="name"
-            required
-            data-fs-field
-          >
+                        <p data-i18n="desk_partnership_text">
+                            Universities, institutions, organisations and private-sector partners.
+                        </p>
 
-          <span
-            class="field-error"
-            data-fs-error="full_name"
-          ></span>
+                    </div>
 
-        </div>
+                </div>
 
 
-        <!-- ORGANISATION -->
-        <div class="form-group">
+                <div class="contact-office">
 
-          <label for="organisation">
-            ORGANISATION (OPTIONAL)
-          </label>
+                    <div class="office-block">
 
-          <input
-            type="text"
-            id="organisation"
-            name="organisation"
-            autocomplete="organization"
-            data-fs-field
-          >
+                        <span data-i18n="registered_office_label">
+                            REGISTERED OFFICE
+                        </span>
 
-          <span
-            class="field-error"
-            data-fs-error="organisation"
-          ></span>
+                        <p data-i18n="to_be_published">
+                            To be published
+                        </p>
 
-        </div>
+                    </div>
 
 
-        <!-- EMAIL -->
-        <div class="form-group">
+                    <div class="office-block">
 
-          <label for="email">
-            EMAIL ADDRESS
-          </label>
+                        <span data-i18n="email_label">
+                            EMAIL
+                        </span>
 
-          <input
-            type="email"
-            id="email"
-            name="email"
-            autocomplete="email"
-            required
-            data-fs-field
-          >
+                        <p data-i18n="to_be_published">
+                            To be published
+                        </p>
 
-          <span
-            class="field-error"
-            data-fs-error="email"
-          ></span>
+                    </div>
 
-        </div>
+                </div>
 
+            </div>
 
-        <!-- SUBJECT -->
-        <div class="form-group">
 
-          <label for="subject">
-            SUBJECT
-          </label>
+            <!-- RIGHT SIDE -->
 
-          <select
-            id="subject"
-            name="subject"
-            required
-            data-fs-field
-          >
+            <div class="contact-form-wrap">
 
-            <option value="General enquiries">
-              General enquiries
-            </option>
+                <span
+                    class="contact-section-label"
+                    data-i18n="send_message_label"
+                >
+                    SEND A MESSAGE
+                </span>
 
-            <option value="Programmes & applications">
-              Programmes &amp; applications
-            </option>
 
-            <option value="Media & press">
-              Media &amp; press
-            </option>
+                <!-- SUCCESS / ERROR -->
 
-            <option value="Partnership">
-              Partnership
-            </option>
+                <div
+                    class="form-success"
+                    data-fs-success
+                    data-i18n="form_success"
+                >
+                    Thank you. Your message has been sent successfully.
+                </div>
 
-          </select>
+                <div
+                    class="form-error"
+                    data-fs-error
+                    data-i18n="form_error"
+                >
+                    We could not send your message. Please check the form and try again.
+                </div>
 
-          <span
-            class="field-error"
-            data-fs-error="subject"
-          ></span>
 
-        </div>
+                <form
+                    id="contact-form"
+                    class="contact-form"
+                >
 
-      </div>
+                    <!-- HONEYPOT -->
 
+                    <div
+                        class="form-honeypot"
+                        aria-hidden="true"
+                    >
 
-      <!-- MESSAGE -->
-      <div class="form-group message-group">
+                        <label for="website">
+                            <span data-i18n="website_label">
+                                Website
+                            </span>
+                        </label>
 
-        <label for="message">
-          MESSAGE
-        </label>
+                        <input
+                            type="text"
+                            id="website"
+                            name="_gotcha"
+                            tabindex="-1"
+                            autocomplete="off"
+                        >
 
-        <textarea
-          id="message"
-          name="message"
-          required
-          minlength="10"
-          data-fs-field
-        ></textarea>
+                    </div>
 
-        <span
-          class="field-error"
-          data-fs-error="message"
-        ></span>
 
-      </div>
+                    <div class="form-grid">
 
 
-      <!-- SUBMIT -->
-      <button
-        type="submit"
-        class="contact-submit"
-        data-fs-submit-btn
-      >
-        SEND MESSAGE
-      </button>
+                        <!-- FULL NAME -->
 
+                        <div class="form-group">
 
-      <!-- PRIVACY -->
-      <div class="contact-privacy">
-        ENGF processes personal data only for the purpose of responding
-        to correspondence, in accordance with applicable data protection law.
-      </div>
+                            <label
+                                for="fullname"
+                                data-i18n="full_name_label"
+                            >
+                                FULL NAME
+                            </label>
 
-    </form>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="full_name"
+                                autocomplete="name"
+                                required
+                                data-fs-field
+                            >
 
-  </div>
+                            <span
+                                class="field-error"
+                                data-fs-error="full_name"
+                            ></span>
 
-</section>
+                        </div>
 
 
-<!-- Your normal site JS -->
-<script src="js/contact.js"></script>
+                        <!-- ORGANISATION -->
 
-<!-- Formspree AJAX library -->
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+                        <div class="form-group">
+
+                            <label
+                                for="organisation"
+                                data-i18n="organisation_label"
+                            >
+                                ORGANISATION (OPTIONAL)
+                            </label>
+
+                            <input
+                                type="text"
+                                id="organisation"
+                                name="organisation"
+                                autocomplete="organization"
+                                data-fs-field
+                            >
+
+                            <span
+                                class="field-error"
+                                data-fs-error="organisation"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label
+                                for="email"
+                                data-i18n="email_address_label"
+                            >
+                                EMAIL ADDRESS
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                data-fs-field
+                            >
+
+                            <span
+                                class="field-error"
+                                data-fs-error="email"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="form-group">
+
+                            <label
+                                for="subject"
+                                data-i18n="subject_label"
+                            >
+                                SUBJECT
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                                required
+                                data-fs-field
+                            >
+
+                                <option
+                                    value="General enquiries"
+                                    data-i18n="subject_general"
+                                >
+                                    General enquiries
+                                </option>
+
+                                <option
+                                    value="Programmes & applications"
+                                    data-i18n="subject_programmes"
+                                >
+                                    Programmes &amp; applications
+                                </option>
+
+                                <option
+                                    value="Media & press"
+                                    data-i18n="subject_media"
+                                >
+                                    Media &amp; press
+                                </option>
+
+                                <option
+                                    value="Partnership"
+                                    data-i18n="subject_partnership"
+                                >
+                                    Partnership
+                                </option>
+
+                            </select>
+
+                            <span
+                                class="field-error"
+                                data-fs-error="subject"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group message-group">
+
+                        <label
+                            for="message"
+                            data-i18n="message_label"
+                        >
+                            MESSAGE
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                            minlength="10"
+                            data-fs-field
+                        ></textarea>
+
+                        <span
+                            class="field-error"
+                            data-fs-error="message"
+                        ></span>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="contact-submit"
+                        data-fs-submit-btn
+                        data-i18n="send_message_button"
+                    >
+                        SEND MESSAGE
+                    </button>
+
+
+                    <!-- PRIVACY -->
+
+                    <div
+                        class="contact-privacy"
+                        data-i18n="privacy_notice"
+                    >
+                        ENGF processes personal data only for the purpose of responding
+                        to correspondence, in accordance with applicable data protection law.
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
 
     <!-- FOOTER -->
     <div id="footer"></div>
 
-  <!-- =====================================================
+
+    <!-- =====================================================
          ACCESSIBILITY WIDGET
     ====================================================== -->
 
@@ -300,6 +434,7 @@
         aria-label="Open accessibility settings"
         aria-expanded="false"
         aria-controls="accessibility-panel"
+        data-i18n-aria-label="accessibility_open"
     >
         <img
             src="images/accessibility.png"
@@ -314,18 +449,22 @@
         class="accessibility-panel"
         role="dialog"
         aria-label="Accessibility settings"
+        data-i18n-aria-label="accessibility_settings"
         hidden
     >
 
         <div class="accessibility-header">
 
-            <h2>Accessibility</h2>
+            <h2 data-i18n="accessibility_title">
+                Accessibility
+            </h2>
 
             <button
                 id="accessibility-close"
                 class="accessibility-close"
                 type="button"
                 aria-label="Close accessibility settings"
+                data-i18n-aria-label="accessibility_close"
             >
                 ×
             </button>
@@ -337,7 +476,9 @@
 
             <div class="accessibility-option">
 
-                <span>Text size</span>
+                <span data-i18n="text_size">
+                    Text size
+                </span>
 
                 <div class="accessibility-size-controls">
 
@@ -345,6 +486,7 @@
                         type="button"
                         id="text-decrease"
                         aria-label="Decrease text size"
+                        data-i18n-aria-label="text_decrease"
                     >
                         A−
                     </button>
@@ -353,6 +495,7 @@
                         type="button"
                         id="text-increase"
                         aria-label="Increase text size"
+                        data-i18n-aria-label="text_increase"
                     >
                         A+
                     </button>
@@ -367,6 +510,7 @@
                 type="button"
                 id="toggle-contrast"
                 aria-pressed="false"
+                data-i18n="high_contrast"
             >
                 High contrast
             </button>
@@ -377,6 +521,7 @@
                 type="button"
                 id="toggle-links"
                 aria-pressed="false"
+                data-i18n="underline_links"
             >
                 Underline links
             </button>
@@ -387,6 +532,7 @@
                 type="button"
                 id="toggle-readable"
                 aria-pressed="false"
+                data-i18n="readable_font"
             >
                 Readable font
             </button>
@@ -397,6 +543,7 @@
                 type="button"
                 id="toggle-motion"
                 aria-pressed="false"
+                data-i18n="reduce_motion"
             >
                 Reduce motion
             </button>
@@ -406,6 +553,7 @@
                 class="accessibility-reset"
                 type="button"
                 id="accessibility-reset"
+                data-i18n="reset_settings"
             >
                 RESET SETTINGS
             </button>
@@ -413,11 +561,23 @@
         </div>
 
     </div>
+
+
     <!-- SCRIPTS -->
+
     <script src="js/translation-header-footer.js"></script>
     <script src="js/mobile-view.js"></script>
     <script src="js/components.js"></script>
+
+    <script src="js/contact.js"></script>
+
+    <script
+        src="https://unpkg.com/@formspree/ajax@1"
+        defer
+    ></script>
+
     <script src="js/accessibility.js"></script>
+    <script src="js/translation-contact.js"></script>
 
 </body>
 

@@ -17,157 +17,343 @@
 
     <!-- HEADER -->
     <div id="header"></div>
-    <main>
+
+
+    <main class="insights-page">
 
         <!-- =========================================
-         HERO
-    ========================================== -->
+             HERO
+        ========================================== -->
+
         <section class="insights-hero">
+
             <div class="insights-container insights-hero-inner">
 
-                <span class="insights-kicker">INSIGHTS</span>
+                <span
+                    class="insights-kicker"
+                    data-i18n="insights_kicker"
+                >
+                    INSIGHTS
+                </span>
 
-                <h1>
+                <h1 data-i18n="insights_title">
                     Research, policy and<br>
                     public argument.
                 </h1>
 
-                <p>
+                <p data-i18n="insights_intro">
                     The publications of the ENGF Institute and the editorial work of Agora ENGF,
                     gathered in one archive: papers, briefs, analysis, interviews, explainers and podcasts.
                 </p>
 
             </div>
+
         </section>
 
 
         <!-- =========================================
-         FILTERS
-    ========================================== -->
+             FILTERS
+        ========================================== -->
+
         <section class="insights-filter-section">
+
             <div class="insights-container">
 
-                <div class="insights-filters" role="group" aria-label="Filter insights">
+                <div
+                    class="insights-filters"
+                    role="group"
+                    aria-label="Filter insights"
+                    data-i18n-aria-label="filter_insights_aria"
+                >
 
-                    <button class="insights-filter is-active" type="button" data-filter="all" aria-pressed="true">
+                    <button
+                        class="insights-filter is-active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true"
+                        data-i18n="filter_all"
+                    >
                         ALL
                     </button>
 
-                    <button class="insights-filter" type="button" data-filter="research-papers" aria-pressed="false">
+                    <button
+                        class="insights-filter"
+                        type="button"
+                        data-filter="research-papers"
+                        aria-pressed="false"
+                        data-i18n="filter_research_papers"
+                    >
                         RESEARCH PAPERS
                     </button>
 
-                    <button class="insights-filter" type="button" data-filter="policy-briefs" aria-pressed="false">
+                    <button
+                        class="insights-filter"
+                        type="button"
+                        data-filter="policy-briefs"
+                        aria-pressed="false"
+                        data-i18n="filter_policy_briefs"
+                    >
                         POLICY BRIEFS
                     </button>
 
-                    <button class="insights-filter" type="button" data-filter="analysis" aria-pressed="false">
+                    <button
+                        class="insights-filter"
+                        type="button"
+                        data-filter="analysis"
+                        aria-pressed="false"
+                        data-i18n="filter_analysis"
+                    >
                         ANALYSIS
                     </button>
 
-                    <button class="insights-filter" type="button" data-filter="commentary" aria-pressed="false">
+                    <button
+                        class="insights-filter"
+                        type="button"
+                        data-filter="commentary"
+                        aria-pressed="false"
+                        data-i18n="filter_commentary"
+                    >
                         COMMENTARY
                     </button>
 
-                    <button class="insights-filter" type="button" data-filter="interviews" aria-pressed="false">
+                    <button
+                        class="insights-filter"
+                        type="button"
+                        data-filter="interviews"
+                        aria-pressed="false"
+                        data-i18n="filter_interviews"
+                    >
                         INTERVIEWS
                     </button>
 
-                    <button class="insights-filter" type="button" data-filter="explainers" aria-pressed="false">
+                    <button
+                        class="insights-filter"
+                        type="button"
+                        data-filter="explainers"
+                        aria-pressed="false"
+                        data-i18n="filter_explainers"
+                    >
                         EXPLAINERS
                     </button>
 
-                    <button class="insights-filter" type="button" data-filter="podcasts" aria-pressed="false">
+                    <button
+                        class="insights-filter"
+                        type="button"
+                        data-filter="podcasts"
+                        aria-pressed="false"
+                        data-i18n="filter_podcasts"
+                    >
                         PODCASTS
                     </button>
 
                 </div>
 
             </div>
+
         </section>
 
 
         <!-- =========================================
-         CONTENT
-    ========================================== -->
+             CONTENT
+        ========================================== -->
+
         <section class="insights-content-section">
+
             <div class="insights-container">
 
                 <div id="insights-content">
 
+
                     <!-- ALL VIEW -->
-                    <div class="insights-view" data-view="all">
+
+                    <div
+                        class="insights-view"
+                        data-view="all"
+                    >
 
                         <article class="insights-featured">
+
                             <div class="insights-featured-image">
-                                <img src="images/books.jpg" alt="ENGF publication materials">
+
+                                <img
+                                    src="images/books.jpg"
+                                    alt="ENGF publication materials"
+                                    data-i18n-alt="publication_image_alt"
+                                >
+
                             </div>
 
+
                             <div class="insights-featured-content">
-                                <span class="insights-eyebrow">RESEARCH PAPERS · ENGF INSTITUTE</span>
 
-                                <h2>European NextGen Review</h2>
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="research_papers_institute"
+                                >
+                                    RESEARCH PAPERS · ENGF INSTITUTE
+                                </span>
 
-                                <p>
+                                <h2>
+                                    European NextGen Review
+                                </h2>
+
+                                <p data-i18n="review_description">
                                     The Review presents selected research from ENGF fellows and invited contributors.
                                     The inaugural issue is in preparation.
                                 </p>
 
-                                <span class="insights-meta">ENGF INSTITUTE · FORTHCOMING</span>
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_institute_forthcoming"
+                                >
+                                    ENGF INSTITUTE · FORTHCOMING
+                                </span>
+
                             </div>
+
                         </article>
 
 
                         <div class="insights-grid">
 
+
                             <article class="insights-card">
-                                <span class="insights-eyebrow">POLICY BRIEFS · POLICY</span>
-                                <h3>ENGF Fellowship Policy Papers</h3>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="policy_briefs_policy"
+                                >
+                                    POLICY BRIEFS · POLICY
+                                </span>
+
+                                <h3>
+                                    ENGF Fellowship Policy Papers
+                                </h3>
+
+                                <p data-i18n="policy_papers_description">
                                     Concise, evidence-based papers produced at the conclusion of each fellowship
                                     cycle and addressed to institutional readers.
                                 </p>
-                                <span class="insights-meta">ENGF FELLOWS · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_fellows_forthcoming"
+                                >
+                                    ENGF FELLOWS · FORTHCOMING
+                                </span>
+
                             </article>
 
+
                             <article class="insights-card">
-                                <span class="insights-eyebrow">EXPLAINERS · EXPLAINERS</span>
-                                <h3>Understanding the European Institutional Order</h3>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="explainers_explainers"
+                                >
+                                    EXPLAINERS · EXPLAINERS
+                                </span>
+
+                                <h3 data-i18n="institutional_order_title">
+                                    Understanding the European Institutional Order
+                                </h3>
+
+                                <p data-i18n="institutional_order_description">
                                     A plain account of how European institutions are composed, what they decide,
                                     and where citizens enter the process.
                                 </p>
-                                <span class="insights-meta">AGORA EDITORIAL DESK · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_agora_forthcoming"
+                                >
+                                    AGORA EDITORIAL DESK · FORTHCOMING
+                                </span>
+
                             </article>
 
+
                             <article class="insights-card">
-                                <span class="insights-eyebrow">INTERVIEWS · INTERVIEWS</span>
-                                <h3>Conversations in European Affairs</h3>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="interviews_interviews"
+                                >
+                                    INTERVIEWS · INTERVIEWS
+                                </span>
+
+                                <h3 data-i18n="conversations_title">
+                                    Conversations in European Affairs
+                                </h3>
+
+                                <p data-i18n="conversations_description">
                                     A continuing interview series with academics, practitioners and public figures
                                     working across European policy.
                                 </p>
-                                <span class="insights-meta">AGORA EDITORIAL DESK · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_agora_forthcoming"
+                                >
+                                    AGORA EDITORIAL DESK · FORTHCOMING
+                                </span>
+
                             </article>
 
+
                             <article class="insights-card">
-                                <span class="insights-eyebrow">PODCASTS · PODCASTS</span>
-                                <h3>The Agora Podcast</h3>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="podcasts_podcasts"
+                                >
+                                    PODCASTS · PODCASTS
+                                </span>
+
+                                <h3 data-i18n="agora_podcast_title">
+                                    The Agora Podcast
+                                </h3>
+
+                                <p data-i18n="agora_podcast_description">
                                     Long-form discussion of domestic and international affairs, law, economics and
                                     public policy.
                                 </p>
-                                <span class="insights-meta">AGORA EDITORIAL DESK · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_agora_forthcoming"
+                                >
+                                    AGORA EDITORIAL DESK · FORTHCOMING
+                                </span>
+
                             </article>
 
+
                             <article class="insights-card">
-                                <span class="insights-eyebrow">ANALYSIS · EDUCATION</span>
-                                <h3>Digital Needs of Romanian Schools</h3>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="analysis_education"
+                                >
+                                    ANALYSIS · EDUCATION
+                                </span>
+
+                                <h3 data-i18n="digital_needs_title">
+                                    Digital Needs of Romanian Schools
+                                </h3>
+
+                                <p data-i18n="digital_needs_description">
                                     Research into the infrastructure, skills and support that schools identify
                                     as necessary for digital transformation.
                                 </p>
-                                <span class="insights-meta">DIGITAL EDUCATION INITIATIVE · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_digital_forthcoming"
+                                >
+                                    DIGITAL EDUCATION INITIATIVE · FORTHCOMING
+                                </span>
+
                             </article>
 
                         </div>
@@ -176,153 +362,375 @@
 
 
                     <!-- RESEARCH PAPERS -->
-                    <div class="insights-view" data-view="research-papers" hidden>
+
+                    <div
+                        class="insights-view"
+                        data-view="research-papers"
+                        hidden
+                    >
+
                         <article class="insights-featured">
+
                             <div class="insights-featured-image">
-                                <img src="images/books.jpg" alt="ENGF publication materials">
+
+                                <img
+                                    src="images/books.jpg"
+                                    alt="ENGF publication materials"
+                                    data-i18n-alt="publication_image_alt"
+                                >
+
                             </div>
+
                             <div class="insights-featured-content">
-                                <span class="insights-eyebrow">RESEARCH PAPERS · ENGF INSTITUTE</span>
-                                <h2>European NextGen Review</h2>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="research_papers_institute"
+                                >
+                                    RESEARCH PAPERS · ENGF INSTITUTE
+                                </span>
+
+                                <h2>
+                                    European NextGen Review
+                                </h2>
+
+                                <p data-i18n="review_description">
                                     The Review presents selected research from ENGF fellows and invited contributors.
                                     The inaugural issue is in preparation.
                                 </p>
-                                <span class="insights-meta">ENGF INSTITUTE · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_institute_forthcoming"
+                                >
+                                    ENGF INSTITUTE · FORTHCOMING
+                                </span>
+
                             </div>
+
                         </article>
+
                     </div>
 
 
                     <!-- POLICY BRIEFS -->
-                    <div class="insights-view" data-view="policy-briefs" hidden>
+
+                    <div
+                        class="insights-view"
+                        data-view="policy-briefs"
+                        hidden
+                    >
+
                         <article class="insights-featured">
+
                             <div class="insights-featured-image">
-                                <img src="images/books.jpg" alt="ENGF publication materials">
+
+                                <img
+                                    src="images/books.jpg"
+                                    alt="ENGF publication materials"
+                                    data-i18n-alt="publication_image_alt"
+                                >
+
                             </div>
+
                             <div class="insights-featured-content">
-                                <span class="insights-eyebrow">POLICY BRIEFS · ENGF INSTITUTE</span>
-                                <h2>ENGF Fellowship Policy Papers</h2>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="policy_briefs_institute"
+                                >
+                                    POLICY BRIEFS · ENGF INSTITUTE
+                                </span>
+
+                                <h2>
+                                    ENGF Fellowship Policy Papers
+                                </h2>
+
+                                <p data-i18n="policy_papers_description">
                                     Concise, evidence-based papers produced at the conclusion of each fellowship
                                     cycle and addressed to institutional readers.
                                 </p>
-                                <span class="insights-meta">ENGF FELLOWS · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_fellows_forthcoming"
+                                >
+                                    ENGF FELLOWS · FORTHCOMING
+                                </span>
+
                             </div>
+
                         </article>
+
                     </div>
 
 
                     <!-- ANALYSIS -->
-                    <div class="insights-view" data-view="analysis" hidden>
+
+                    <div
+                        class="insights-view"
+                        data-view="analysis"
+                        hidden
+                    >
+
                         <article class="insights-featured">
+
                             <div class="insights-featured-image">
-                                <img src="images/books.jpg" alt="ENGF publication materials">
+
+                                <img
+                                    src="images/books.jpg"
+                                    alt="ENGF publication materials"
+                                    data-i18n-alt="publication_image_alt"
+                                >
+
                             </div>
+
                             <div class="insights-featured-content">
-                                <span class="insights-eyebrow">ANALYSIS · DIGITAL EDUCATION INITIATIVE</span>
-                                <h2>Digital Needs of Romanian Schools</h2>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="analysis_digital"
+                                >
+                                    ANALYSIS · DIGITAL EDUCATION INITIATIVE
+                                </span>
+
+                                <h2 data-i18n="digital_needs_title">
+                                    Digital Needs of Romanian Schools
+                                </h2>
+
+                                <p data-i18n="digital_needs_description">
                                     Research into the infrastructure, skills and support that schools identify
                                     as necessary for digital transformation.
                                 </p>
-                                <span class="insights-meta">DIGITAL EDUCATION INITIATIVE · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_digital_forthcoming"
+                                >
+                                    DIGITAL EDUCATION INITIATIVE · FORTHCOMING
+                                </span>
+
                             </div>
+
                         </article>
+
                     </div>
 
 
                     <!-- COMMENTARY -->
-                    <div class="insights-view" data-view="commentary" hidden>
-                        <div class="insights-empty">
+
+                    <div
+                        class="insights-view"
+                        data-view="commentary"
+                        hidden
+                    >
+
+                        <div
+                            class="insights-empty"
+                            data-i18n="nothing_published"
+                        >
                             Nothing published in this category yet.
                         </div>
+
                     </div>
 
 
                     <!-- INTERVIEWS -->
-                    <div class="insights-view" data-view="interviews" hidden>
+
+                    <div
+                        class="insights-view"
+                        data-view="interviews"
+                        hidden
+                    >
+
                         <article class="insights-featured">
+
                             <div class="insights-featured-image">
-                                <img src="images/books.jpg" alt="ENGF publication materials">
+
+                                <img
+                                    src="images/books.jpg"
+                                    alt="ENGF publication materials"
+                                    data-i18n-alt="publication_image_alt"
+                                >
+
                             </div>
+
                             <div class="insights-featured-content">
-                                <span class="insights-eyebrow">INTERVIEWS · AGORA ENGF</span>
-                                <h2>Conversations in European Affairs</h2>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="interviews_agora"
+                                >
+                                    INTERVIEWS · AGORA ENGF
+                                </span>
+
+                                <h2 data-i18n="conversations_title">
+                                    Conversations in European Affairs
+                                </h2>
+
+                                <p data-i18n="conversations_description">
                                     A continuing interview series with academics, practitioners and public figures
                                     working across European policy.
                                 </p>
-                                <span class="insights-meta">AGORA EDITORIAL DESK · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_agora_forthcoming"
+                                >
+                                    AGORA EDITORIAL DESK · FORTHCOMING
+                                </span>
+
                             </div>
+
                         </article>
+
                     </div>
 
 
                     <!-- EXPLAINERS -->
-                    <div class="insights-view" data-view="explainers" hidden>
+
+                    <div
+                        class="insights-view"
+                        data-view="explainers"
+                        hidden
+                    >
+
                         <article class="insights-featured">
+
                             <div class="insights-featured-image">
-                                <img src="images/books.jpg" alt="ENGF publication materials">
+
+                                <img
+                                    src="images/books.jpg"
+                                    alt="ENGF publication materials"
+                                    data-i18n-alt="publication_image_alt"
+                                >
+
                             </div>
+
                             <div class="insights-featured-content">
-                                <span class="insights-eyebrow">EXPLAINERS · AGORA ENGF</span>
-                                <h2>Understanding the European Institutional Order</h2>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="explainers_agora"
+                                >
+                                    EXPLAINERS · AGORA ENGF
+                                </span>
+
+                                <h2 data-i18n="institutional_order_title">
+                                    Understanding the European Institutional Order
+                                </h2>
+
+                                <p data-i18n="institutional_order_description">
                                     A plain account of how European institutions are composed, what they decide,
                                     and where citizens enter the process.
                                 </p>
-                                <span class="insights-meta">AGORA EDITORIAL DESK · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_agora_forthcoming"
+                                >
+                                    AGORA EDITORIAL DESK · FORTHCOMING
+                                </span>
+
                             </div>
+
                         </article>
+
                     </div>
 
 
                     <!-- PODCASTS -->
-                    <div class="insights-view" data-view="podcasts" hidden>
+
+                    <div
+                        class="insights-view"
+                        data-view="podcasts"
+                        hidden
+                    >
+
                         <article class="insights-featured">
+
                             <div class="insights-featured-image">
-                                <img src="images/books.jpg" alt="ENGF publication materials">
+
+                                <img
+                                    src="images/books.jpg"
+                                    alt="ENGF publication materials"
+                                    data-i18n-alt="publication_image_alt"
+                                >
+
                             </div>
+
                             <div class="insights-featured-content">
-                                <span class="insights-eyebrow">PODCASTS · AGORA ENGF</span>
-                                <h2>The Agora Podcast</h2>
-                                <p>
+
+                                <span
+                                    class="insights-eyebrow"
+                                    data-i18n="podcasts_agora"
+                                >
+                                    PODCASTS · AGORA ENGF
+                                </span>
+
+                                <h2 data-i18n="agora_podcast_title">
+                                    The Agora Podcast
+                                </h2>
+
+                                <p data-i18n="agora_podcast_description">
                                     Long-form discussion of domestic and international affairs, law, economics and
                                     public policy.
                                 </p>
-                                <span class="insights-meta">AGORA EDITORIAL DESK · FORTHCOMING</span>
+
+                                <span
+                                    class="insights-meta"
+                                    data-i18n="meta_agora_forthcoming"
+                                >
+                                    AGORA EDITORIAL DESK · FORTHCOMING
+                                </span>
+
                             </div>
+
                         </article>
+
                     </div>
 
                 </div>
 
 
-                <!-- IMPORTANT:
-             No dark/pink square is rendered here.
-             The page background continues naturally instead. -->
-
-
-                <div class="insights-editorial-note">
+                <div
+                    class="insights-editorial-note"
+                    data-i18n="editorial_note"
+                >
                     Agora ENGF maintains a factual, balanced and pluralistic editorial character.
                     ENGF is politically neutral and does not support candidates or electoral competitors.
                 </div>
 
 
                 <div class="insights-links">
-                    <a href="departments-pages/institute">THE ENGF INSTITUTE</a>
-                    <a href="departments-pages/agora">AGORA ENGF</a>
+
+                    <a
+                        href="institute.html"
+                        data-i18n="institute_link"
+                    >
+                        THE ENGF INSTITUTE
+                    </a>
+
+                    <a
+                        href="agora.html"
+                    >
+                        AGORA ENGF
+                    </a>
+
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
+
     <!-- FOOTER -->
     <div id="footer"></div>
-  <!-- =====================================================
+
+
+    <!-- =====================================================
          ACCESSIBILITY WIDGET
     ====================================================== -->
 
@@ -333,6 +741,7 @@
         aria-label="Open accessibility settings"
         aria-expanded="false"
         aria-controls="accessibility-panel"
+        data-i18n-aria-label="accessibility_open"
     >
         <img
             src="images/accessibility.png"
@@ -347,18 +756,22 @@
         class="accessibility-panel"
         role="dialog"
         aria-label="Accessibility settings"
+        data-i18n-aria-label="accessibility_settings"
         hidden
     >
 
         <div class="accessibility-header">
 
-            <h2>Accessibility</h2>
+            <h2 data-i18n="accessibility_title">
+                Accessibility
+            </h2>
 
             <button
                 id="accessibility-close"
                 class="accessibility-close"
                 type="button"
                 aria-label="Close accessibility settings"
+                data-i18n-aria-label="accessibility_close"
             >
                 ×
             </button>
@@ -370,7 +783,9 @@
 
             <div class="accessibility-option">
 
-                <span>Text size</span>
+                <span data-i18n="text_size">
+                    Text size
+                </span>
 
                 <div class="accessibility-size-controls">
 
@@ -378,6 +793,7 @@
                         type="button"
                         id="text-decrease"
                         aria-label="Decrease text size"
+                        data-i18n-aria-label="text_decrease"
                     >
                         A−
                     </button>
@@ -386,6 +802,7 @@
                         type="button"
                         id="text-increase"
                         aria-label="Increase text size"
+                        data-i18n-aria-label="text_increase"
                     >
                         A+
                     </button>
@@ -400,6 +817,7 @@
                 type="button"
                 id="toggle-contrast"
                 aria-pressed="false"
+                data-i18n="high_contrast"
             >
                 High contrast
             </button>
@@ -410,6 +828,7 @@
                 type="button"
                 id="toggle-links"
                 aria-pressed="false"
+                data-i18n="underline_links"
             >
                 Underline links
             </button>
@@ -420,6 +839,7 @@
                 type="button"
                 id="toggle-readable"
                 aria-pressed="false"
+                data-i18n="readable_font"
             >
                 Readable font
             </button>
@@ -430,6 +850,7 @@
                 type="button"
                 id="toggle-motion"
                 aria-pressed="false"
+                data-i18n="reduce_motion"
             >
                 Reduce motion
             </button>
@@ -439,6 +860,7 @@
                 class="accessibility-reset"
                 type="button"
                 id="accessibility-reset"
+                data-i18n="reset_settings"
             >
                 RESET SETTINGS
             </button>
@@ -446,12 +868,15 @@
         </div>
 
     </div>
+
+
     <!-- SCRIPTS -->
     <script src="js/translation-header-footer.js"></script>
     <script src="js/mobile-view.js"></script>
     <script src="js/components.js"></script>
     <script src="js/insights-filter.js"></script>
     <script src="js/accessibility.js"></script>
+    <script src="js/translation-insights.js"></script>
 
 </body>
 
