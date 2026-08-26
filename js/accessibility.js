@@ -1,370 +1,655 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const root = document.documentElement;
+    /* =========================================================
+       ELEMENTS
+    ========================================================= */
 
-  const toggle = document.getElementById("accessibility-toggle");
-  const panel = document.getElementById("accessibility-panel");
-  const closeButton = document.getElementById("accessibility-close");
+    const root = document.documentElement;
 
-  const increaseButton = document.getElementById("text-increase");
-  const decreaseButton = document.getElementById("text-decrease");
+    const toggle = document.getElementById("accessibility-toggle");
+    const panel = document.getElementById("accessibility-panel");
+    const closeButton = document.getElementById("accessibility-close");
 
-  const contrastButton = document.getElementById("toggle-contrast");
-  const linksButton = document.getElementById("toggle-links");
-  const readableButton = document.getElementById("toggle-readable");
-  const motionButton = document.getElementById("toggle-motion");
+    const decreaseButton = document.getElementById("text-decrease");
+    const increaseButton = document.getElementById("text-increase");
 
-  const resetButton = document.getElementById("accessibility-reset");
+    const contrastButton = document.getElementById("toggle-contrast");
+    const linksButton = document.getElementById("toggle-links");
+    const readableButton = document.getElementById("toggle-readable");
+    const motionButton = document.getElementById("toggle-motion");
 
+    const resetButton = document.getElementById("accessibility-reset");
 
-  /* -----------------------------------------
-     Make sure widget exists
-  ----------------------------------------- */
 
-  if (!toggle || !panel) {
-    console.error("Accessibility widget HTML was not found.");
-    return;
-  }
-
-
-  /* -----------------------------------------
-     Default settings
-  ----------------------------------------- */
-
-  const defaults = {
-    fontSize: 0,
-    contrast: false,
-    links: false,
-    readable: false,
-    motion: false
-  };
-
-
-  let settings = loadSettings();
-
-
-  /* -----------------------------------------
-     Open / close panel
-  ----------------------------------------- */
-
-  function openPanel() {
-    panel.hidden = false;
-
-    toggle.setAttribute("aria-expanded", "true");
-  }
-
-
-  function closePanel() {
-    panel.hidden = true;
-
-    toggle.setAttribute("aria-expanded", "false");
-  }
-
-
-  toggle.addEventListener("click", function (event) {
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    if (panel.hidden) {
-      openPanel();
-    } else {
-      closePanel();
-    }
-
-  });
-
-
-  if (closeButton) {
-
-    closeButton.addEventListener("click", function () {
-      closePanel();
-      toggle.focus();
-    });
-
-  }
-
-
-  /* ESC closes panel */
-
-  document.addEventListener("keydown", function (event) {
-
-    if (event.key === "Escape" && !panel.hidden) {
-      closePanel();
-      toggle.focus();
-    }
-
-  });
-
-
-  /* -----------------------------------------
-     Increase text
-  ----------------------------------------- */
-
-  if (increaseButton) {
-
-    increaseButton.addEventListener("click", function () {
-
-      if (settings.fontSize < 2) {
-        settings.fontSize++;
-      }
-
-      applySettings();
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     Decrease text
-  ----------------------------------------- */
-
-  if (decreaseButton) {
-
-    decreaseButton.addEventListener("click", function () {
-
-      if (settings.fontSize > 0) {
-        settings.fontSize--;
-      }
-
-      applySettings();
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     High contrast
-  ----------------------------------------- */
-
-  if (contrastButton) {
-
-    contrastButton.addEventListener("click", function () {
-
-      settings.contrast = !settings.contrast;
-
-      applySettings();
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     Underline links
-  ----------------------------------------- */
-
-  if (linksButton) {
-
-    linksButton.addEventListener("click", function () {
-
-      settings.links = !settings.links;
-
-      applySettings();
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     Readable font
-  ----------------------------------------- */
-
-  if (readableButton) {
-
-    readableButton.addEventListener("click", function () {
-
-      settings.readable = !settings.readable;
-
-      applySettings();
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     Reduce motion
-  ----------------------------------------- */
-
-  if (motionButton) {
-
-    motionButton.addEventListener("click", function () {
-
-      settings.motion = !settings.motion;
-
-      applySettings();
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     Reset
-  ----------------------------------------- */
-
-  if (resetButton) {
-
-    resetButton.addEventListener("click", function () {
-
-      settings = { ...defaults };
-
-      applySettings();
-
-    });
-
-  }
-
-
-  /* -----------------------------------------
-     Apply all settings
-  ----------------------------------------- */
-
-  function applySettings() {
-
-    root.classList.remove(
-      "accessibility-font-1",
-      "accessibility-font-2"
-    );
-
-
-    if (settings.fontSize === 1) {
-      root.classList.add("accessibility-font-1");
+    if (!toggle || !panel) {
+        console.error("Accessibility widget not found.");
+        return;
     }
 
 
-    if (settings.fontSize === 2) {
-      root.classList.add("accessibility-font-2");
+    /* =========================================================
+       INJECT FUNCTIONAL CSS
+       This guarantees JS and CSS always match.
+    ========================================================= */
+
+    const style = document.createElement("style");
+
+    style.id = "engf-accessibility-runtime";
+
+    style.textContent = `
+
+        /* =====================================
+           TEXT SIZE
+        ===================================== */
+
+        html.engf-a11y-size-1 body {
+            zoom: 1.10;
+        }
+
+        html.engf-a11y-size-2 body {
+            zoom: 1.20;
+        }
+
+
+        /*
+           Keep floating accessibility UI normal size
+           when page zoom changes.
+        */
+
+        html.engf-a11y-size-1 .accessibility-toggle,
+        html.engf-a11y-size-1 .accessibility-panel {
+            zoom: 0.909;
+        }
+
+        html.engf-a11y-size-2 .accessibility-toggle,
+        html.engf-a11y-size-2 .accessibility-panel {
+            zoom: 0.8333;
+        }
+
+
+        /* =====================================
+           HIGH CONTRAST
+        ===================================== */
+
+        html.engf-a11y-contrast body {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+
+
+        html.engf-a11y-contrast
+        :is(
+            main,
+            section,
+            article,
+            aside,
+            header,
+            footer,
+            nav
+        ) {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border-color: #000000 !important;
+        }
+
+
+        html.engf-a11y-contrast
+        :is(
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span,
+            li,
+            label,
+            strong,
+            small
+        ) {
+            color: #000000 !important;
+        }
+
+
+        html.engf-a11y-contrast a {
+            color: #0000cc !important;
+        }
+
+
+        html.engf-a11y-contrast button:not(.accessibility-toggle) {
+            border-color: #000000 !important;
+        }
+
+
+        /* Keep widget readable */
+
+        html.engf-a11y-contrast .accessibility-panel,
+        html.engf-a11y-contrast .accessibility-toggle {
+            background: #ffffff !important;
+            border-color: #000000 !important;
+        }
+
+
+        html.engf-a11y-contrast .accessibility-panel * {
+            color: #000000 !important;
+            border-color: #000000 !important;
+        }
+
+
+        html.engf-a11y-contrast
+        .accessibility-action[aria-pressed="true"]::after {
+            background: #000000 !important;
+        }
+
+
+        /* =====================================
+           UNDERLINE LINKS
+        ===================================== */
+
+        html.engf-a11y-links a {
+            text-decoration: underline !important;
+            text-decoration-thickness: 2px !important;
+            text-underline-offset: 4px !important;
+        }
+
+
+        /* =====================================
+           READABLE FONT
+        ===================================== */
+
+        html.engf-a11y-readable
+        :is(
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span,
+            a,
+            button,
+            input,
+            textarea,
+            select,
+            label,
+            li
+        ) {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif !important;
+        }
+
+
+        /* =====================================
+           REDUCE MOTION
+        ===================================== */
+
+        html.engf-a11y-motion *,
+        html.engf-a11y-motion *::before,
+        html.engf-a11y-motion *::after {
+            scroll-behavior: auto !important;
+
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+
+            transition-duration: 0.001ms !important;
+            transition-delay: 0ms !important;
+        }
+
+    `;
+
+    document.head.appendChild(style);
+
+
+    /* =========================================================
+       DEFAULT SETTINGS
+    ========================================================= */
+
+    const defaults = {
+        textSize: 0,
+        contrast: false,
+        underlineLinks: false,
+        readableFont: false,
+        reduceMotion: false
+    };
+
+
+    let settings = loadSettings();
+
+
+    /* =========================================================
+       PANEL
+    ========================================================= */
+
+    function openPanel() {
+
+        panel.hidden = false;
+
+        toggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
     }
 
 
-    root.classList.toggle(
-      "accessibility-contrast",
-      settings.contrast
-    );
+    function closePanel() {
+
+        panel.hidden = true;
+
+        toggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
 
 
-    root.classList.toggle(
-      "accessibility-links",
-      settings.links
-    );
+    toggle.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (panel.hidden) {
+            openPanel();
+        } else {
+            closePanel();
+        }
+
+    });
 
 
-    root.classList.toggle(
-      "accessibility-readable",
-      settings.readable
-    );
+    if (closeButton) {
+
+        closeButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                closePanel();
+
+            }
+        );
+
+    }
 
 
-    root.classList.toggle(
-      "accessibility-reduce-motion",
-      settings.motion
-    );
+    document.addEventListener("keydown", function (event) {
+
+        if (
+            event.key === "Escape" &&
+            !panel.hidden
+        ) {
+
+            closePanel();
+
+            toggle.focus();
+
+        }
+
+    });
 
 
-    /* Update ARIA states */
+    /* =========================================================
+       INCREASE TEXT
+    ========================================================= */
+
+    if (increaseButton) {
+
+        increaseButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                if (settings.textSize < 2) {
+                    settings.textSize++;
+                }
+
+                applySettings();
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       DECREASE TEXT
+    ========================================================= */
+
+    if (decreaseButton) {
+
+        decreaseButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                if (settings.textSize > 0) {
+                    settings.textSize--;
+                }
+
+                applySettings();
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       HIGH CONTRAST
+    ========================================================= */
 
     if (contrastButton) {
-      contrastButton.setAttribute(
-        "aria-pressed",
-        String(settings.contrast)
-      );
+
+        contrastButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                settings.contrast =
+                    !settings.contrast;
+
+                applySettings();
+
+            }
+        );
+
     }
 
+
+    /* =========================================================
+       UNDERLINE LINKS
+    ========================================================= */
 
     if (linksButton) {
-      linksButton.setAttribute(
-        "aria-pressed",
-        String(settings.links)
-      );
+
+        linksButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                settings.underlineLinks =
+                    !settings.underlineLinks;
+
+                applySettings();
+
+            }
+        );
+
     }
 
+
+    /* =========================================================
+       READABLE FONT
+    ========================================================= */
 
     if (readableButton) {
-      readableButton.setAttribute(
-        "aria-pressed",
-        String(settings.readable)
-      );
+
+        readableButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                settings.readableFont =
+                    !settings.readableFont;
+
+                applySettings();
+
+            }
+        );
+
     }
 
+
+    /* =========================================================
+       REDUCE MOTION
+    ========================================================= */
 
     if (motionButton) {
-      motionButton.setAttribute(
-        "aria-pressed",
-        String(settings.motion)
-      );
-    }
 
+        motionButton.addEventListener(
+            "click",
+            function (event) {
 
-    saveSettings();
-  }
+                event.preventDefault();
 
+                settings.reduceMotion =
+                    !settings.reduceMotion;
 
-  /* -----------------------------------------
-     Save settings
-  ----------------------------------------- */
+                applySettings();
 
-  function saveSettings() {
-
-    try {
-
-      localStorage.setItem(
-        "engfAccessibility",
-        JSON.stringify(settings)
-      );
-
-    } catch (error) {
-
-      console.warn(
-        "Accessibility preferences could not be saved.",
-        error
-      );
+            }
+        );
 
     }
 
-  }
 
+    /* =========================================================
+       RESET
+    ========================================================= */
 
-  /* -----------------------------------------
-     Load settings
-  ----------------------------------------- */
+    if (resetButton) {
 
-  function loadSettings() {
+        resetButton.addEventListener(
+            "click",
+            function (event) {
 
-    try {
+                event.preventDefault();
 
-      const saved =
-        localStorage.getItem("engfAccessibility");
+                settings = {
+                    ...defaults
+                };
 
+                applySettings();
 
-      if (!saved) {
-        return { ...defaults };
-      }
-
-
-      return {
-        ...defaults,
-        ...JSON.parse(saved)
-      };
-
-
-    } catch (error) {
-
-      return { ...defaults };
+            }
+        );
 
     }
 
-  }
+
+    /* =========================================================
+       APPLY SETTINGS
+    ========================================================= */
+
+    function applySettings() {
+
+        /* -------------------------
+           TEXT SIZE
+        ------------------------- */
+
+        root.classList.remove(
+            "engf-a11y-size-1",
+            "engf-a11y-size-2"
+        );
 
 
-  /* -----------------------------------------
-     Initialise
-  ----------------------------------------- */
+        if (settings.textSize === 1) {
 
-  applySettings();
+            root.classList.add(
+                "engf-a11y-size-1"
+            );
+
+        }
+
+
+        if (settings.textSize === 2) {
+
+            root.classList.add(
+                "engf-a11y-size-2"
+            );
+
+        }
+
+
+        /* -------------------------
+           CONTRAST
+        ------------------------- */
+
+        root.classList.toggle(
+            "engf-a11y-contrast",
+            settings.contrast
+        );
+
+
+        /* -------------------------
+           LINKS
+        ------------------------- */
+
+        root.classList.toggle(
+            "engf-a11y-links",
+            settings.underlineLinks
+        );
+
+
+        /* -------------------------
+           READABLE FONT
+        ------------------------- */
+
+        root.classList.toggle(
+            "engf-a11y-readable",
+            settings.readableFont
+        );
+
+
+        /* -------------------------
+           MOTION
+        ------------------------- */
+
+        root.classList.toggle(
+            "engf-a11y-motion",
+            settings.reduceMotion
+        );
+
+
+        /* -------------------------
+           ARIA STATES
+        ------------------------- */
+
+        if (contrastButton) {
+
+            contrastButton.setAttribute(
+                "aria-pressed",
+                String(settings.contrast)
+            );
+
+        }
+
+
+        if (linksButton) {
+
+            linksButton.setAttribute(
+                "aria-pressed",
+                String(settings.underlineLinks)
+            );
+
+        }
+
+
+        if (readableButton) {
+
+            readableButton.setAttribute(
+                "aria-pressed",
+                String(settings.readableFont)
+            );
+
+        }
+
+
+        if (motionButton) {
+
+            motionButton.setAttribute(
+                "aria-pressed",
+                String(settings.reduceMotion)
+            );
+
+        }
+
+
+        saveSettings();
+
+    }
+
+
+    /* =========================================================
+       SAVE
+    ========================================================= */
+
+    function saveSettings() {
+
+        try {
+
+            localStorage.setItem(
+                "engfAccessibilitySettings",
+                JSON.stringify(settings)
+            );
+
+        } catch (error) {
+
+            console.warn(
+                "Accessibility settings could not be saved."
+            );
+
+        }
+
+    }
+
+
+    /* =========================================================
+       LOAD
+    ========================================================= */
+
+    function loadSettings() {
+
+        try {
+
+            const saved =
+                localStorage.getItem(
+                    "engfAccessibilitySettings"
+                );
+
+
+            if (!saved) {
+
+                return {
+                    ...defaults
+                };
+
+            }
+
+
+            return {
+                ...defaults,
+                ...JSON.parse(saved)
+            };
+
+
+        } catch (error) {
+
+            return {
+                ...defaults
+            };
+
+        }
+
+    }
+
+
+    /* =========================================================
+       START
+    ========================================================= */
+
+    applySettings();
 
 });
