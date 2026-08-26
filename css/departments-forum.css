@@ -5,19 +5,35 @@
   --forum-muted: #aaa095;
   --forum-line: #ded2bf;
   --forum-blue: #223a59;
+  --forum-breadcrumb: #4f3531;
+  --forum-department-text: #5e3533;
+  --forum-intro-text: #786d63;
+  --forum-tag-text: #795c51;
+  --forum-related-meta: #573636;
+  --forum-card-hover: rgba(255, 255, 255, 0.18);
+  --forum-mark-line: rgba(113, 64, 47, 0.06);
+
+  --institute-color: #7c1731;
+  --academy-color: #b58c3c;
+  --ftb-color: #607587;
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  --hero-max-width: 1440px;
+  --bottom-max-width: 1385px;
+  --hero-min-height: 555px;
+  --programme-image-min-height: 690px;
+  --intro-max-width: 760px;
+  --programme-text-max-width: 780px;
+
+  --transition-fast: 0.2s ease;
 }
-
-
-/* =========================================
-   HERO
-========================================= */
 
 .forum-hero {
   position: relative;
-  min-height: 555px;
+  min-height: var(--hero-min-height);
 
   background: var(--forum-bg);
 
@@ -28,14 +44,11 @@
 }
 
 .forum-hero-inner {
-  width: min(1440px, calc(100% - 80px));
+  width: min(var(--hero-max-width), calc(100% - 80px));
   margin: 0 auto;
 
   padding: 70px 0 65px;
 }
-
-
-/* breadcrumb */
 
 .department-breadcrumb {
   display: flex;
@@ -46,7 +59,7 @@
   font-size: 9px;
   letter-spacing: 3px;
 
-  color: #4f3531;
+  color: var(--forum-breadcrumb);
 }
 
 .department-breadcrumb a {
@@ -54,11 +67,8 @@
   text-decoration: none;
 
   padding-bottom: 3px;
-  border-bottom: 1px solid #4f3531;
+  border-bottom: 1px solid var(--forum-breadcrumb);
 }
-
-
-/* department type */
 
 .department-type {
   display: flex;
@@ -72,7 +82,7 @@
   font-weight: 600;
   letter-spacing: 2.7px;
 
-  color: #5e3533;
+  color: var(--forum-department-text);
 }
 
 .forum-dot {
@@ -85,9 +95,6 @@
 
   background: var(--forum-blue);
 }
-
-
-/* title */
 
 .forum-hero h1 {
   margin: 30px 0 0;
@@ -102,11 +109,8 @@
   color: var(--forum-burgundy);
 }
 
-
-/* intro */
-
 .forum-intro {
-  max-width: 760px;
+  max-width: var(--intro-max-width);
 
   margin: 42px 0 0;
 
@@ -116,11 +120,8 @@
 
   line-height: 1.7;
 
-  color: #786d63;
+  color: var(--forum-intro-text);
 }
-
-
-/* tags */
 
 .forum-tags {
   display: flex;
@@ -139,11 +140,8 @@
   font-size: 7px;
   letter-spacing: 2.4px;
 
-  color: #795c51;
+  color: var(--forum-tag-text);
 }
-
-
-/* decorative mark */
 
 .forum-mark {
   position: absolute;
@@ -154,7 +152,7 @@
   top: -20px;
   right: -65px;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--forum-mark-line);
   border-radius: 50%;
 
   opacity: 0.45;
@@ -168,7 +166,7 @@
 
   position: absolute;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--forum-mark-line);
   border-radius: 50%;
 }
 
@@ -180,11 +178,6 @@
   inset: 95px;
 }
 
-
-/* =========================================
-   PROGRAMME
-========================================= */
-
 .forum-programme {
   display: grid;
   grid-template-columns: 42% 58%;
@@ -194,11 +187,8 @@
   border-bottom: 1px solid var(--forum-line);
 }
 
-
-/* image */
-
 .forum-programme-image {
-  min-height: 690px;
+  min-height: var(--programme-image-min-height);
 
   overflow: hidden;
 }
@@ -212,9 +202,6 @@
   object-fit: cover;
   object-position: center;
 }
-
-
-/* programme content */
 
 .forum-programme-content {
   background: var(--forum-bg);
@@ -239,9 +226,6 @@
   color: var(--forum-burgundy);
 }
 
-
-/* rows */
-
 .forum-programme-item {
   display: grid;
   grid-template-columns: 130px minmax(0, 1fr);
@@ -260,7 +244,7 @@
 .forum-programme-number {
   padding-top: 2px;
 
-  font-family: "Courier New", monospace;
+  font-family: var(--font-mono);
 
   font-size: 9px;
   letter-spacing: 3px;
@@ -282,7 +266,7 @@
 }
 
 .forum-programme-item p {
-  max-width: 780px;
+  max-width: var(--programme-text-max-width);
 
   margin: 13px 0 0;
 
@@ -295,23 +279,13 @@
   color: var(--forum-text);
 }
 
-
-/* =========================================
-   BOTTOM
-========================================= */
-
 .forum-bottom {
-  width: min(1385px, calc(100% - 80px));
+  width: min(var(--bottom-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
   padding: 72px 0 55px;
 }
-
-
-/* =========================================
-   RELATED OPPORTUNITIES
-========================================= */
 
 .forum-related h2 {
   margin: 0 0 22px;
@@ -371,7 +345,7 @@
 
   letter-spacing: 3px;
 
-  color: #573636;
+  color: var(--forum-related-meta);
 }
 
 .forum-all-programmes {
@@ -390,11 +364,6 @@
 
   color: var(--forum-burgundy);
 }
-
-
-/* =========================================
-   CTA
-========================================= */
 
 .forum-cta {
   display: flex;
@@ -450,8 +419,8 @@
   color: var(--forum-burgundy);
 
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .forum-cta-button:hover {
@@ -459,11 +428,6 @@
 
   color: var(--forum-bg);
 }
-
-
-/* =========================================
-   ELSEWHERE IN ECOSYSTEM
-========================================= */
 
 .forum-ecosystem {
   padding: 70px 0 30px;
@@ -503,7 +467,7 @@
 
   text-decoration: none;
 
-  transition: background 0.2s ease;
+  transition: background var(--transition-fast);
 }
 
 .forum-ecosystem-card:last-child {
@@ -511,11 +475,8 @@
 }
 
 .forum-ecosystem-card:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--forum-card-hover);
 }
-
-
-/* dots */
 
 .forum-card-dot {
   display: block;
@@ -529,19 +490,16 @@
 }
 
 .institute-color {
-  background: #7c1731;
+  background: var(--institute-color);
 }
 
 .academy-color {
-  background: #b58c3c;
+  background: var(--academy-color);
 }
 
 .ftb-color {
-  background: #607587;
+  background: var(--ftb-color);
 }
-
-
-/* card typography */
 
 .forum-ecosystem-card h3 {
   margin: 0;
@@ -570,11 +528,6 @@
   color: var(--forum-text);
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 1000px) {
 
   .forum-hero-inner {
@@ -590,7 +543,6 @@
 
     font-size: 19px;
   }
-
 
   .forum-programme {
     grid-template-columns: 40% 60%;
@@ -614,17 +566,11 @@
     font-size: 13px;
   }
 
-
   .forum-bottom {
     width: calc(100% - 50px);
   }
 
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 750px) {
 
@@ -632,20 +578,17 @@
     min-height: auto;
   }
 
-
   .forum-hero-inner {
     width: 100%;
 
     padding: 55px 24px;
   }
 
-
   .department-breadcrumb {
     font-size: 8px;
 
     letter-spacing: 2.4px;
   }
-
 
   .department-type {
     font-size: 8px;
@@ -655,17 +598,14 @@
     letter-spacing: 2px;
   }
 
-
   .forum-dot {
     width: 9px;
     height: 9px;
   }
 
-
   .forum-hero h1 {
     font-size: 46px;
   }
-
 
   .forum-intro {
     margin-top: 28px;
@@ -675,30 +615,23 @@
     line-height: 1.55;
   }
 
-
   .forum-tags {
     margin-top: 30px;
   }
-
 
   .forum-mark {
     display: none;
   }
 
-
-  /* programme */
-
   .forum-programme {
     display: block;
   }
-
 
   .forum-programme-image {
     min-height: 0;
 
     height: 430px;
   }
-
 
   .forum-programme-title {
     height: auto;
@@ -710,7 +643,6 @@
     letter-spacing: 3px;
   }
 
-
   .forum-programme-item {
     display: block;
 
@@ -719,18 +651,15 @@
     padding: 28px 24px;
   }
 
-
   .forum-programme-number {
     display: block;
 
     margin-bottom: 16px;
   }
 
-
   .forum-programme-item h2 {
     font-size: 21px;
   }
-
 
   .forum-programme-item p {
     margin-top: 10px;
@@ -738,22 +667,15 @@
     font-size: 12px;
   }
 
-
-  /* bottom */
-
   .forum-bottom {
     width: 100%;
 
     padding: 45px 24px;
   }
 
-
-  /* related */
-
   .forum-related h2 {
     font-size: 26px;
   }
-
 
   .forum-related-row {
     display: block;
@@ -763,13 +685,11 @@
     padding: 23px 0;
   }
 
-
   .forum-related-row h3 {
     margin-bottom: 10px;
 
     font-size: 20px;
   }
-
 
   .forum-related-row p {
     margin-bottom: 10px;
@@ -777,15 +697,11 @@
     font-size: 12px;
   }
 
-
   .forum-related-row span {
     display: block;
 
     text-align: left;
   }
-
-
-  /* CTA */
 
   .forum-cta {
     flex-direction: column;
@@ -799,11 +715,9 @@
     padding: 34px 0;
   }
 
-
   .forum-cta h2 {
     font-size: 23px;
   }
-
 
   .forum-cta-button {
     min-width: 170px;
@@ -813,18 +727,13 @@
     font-size: 8px;
   }
 
-
-  /* ecosystem */
-
   .forum-ecosystem {
     padding-top: 50px;
   }
 
-
   .forum-ecosystem-grid {
     grid-template-columns: 1fr;
   }
-
 
   .forum-ecosystem-card {
     min-height: auto;
@@ -836,16 +745,13 @@
     border-bottom: 1px solid var(--forum-line);
   }
 
-
   .forum-ecosystem-card:last-child {
     border-bottom: 0;
   }
 
-
   .forum-ecosystem-card h3 {
     font-size: 20px;
   }
-
 
   .forum-ecosystem-card p {
     font-size: 12px;

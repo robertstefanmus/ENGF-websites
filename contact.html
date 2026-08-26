@@ -1,446 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="icon" type="image/png" href="images/logo.jpg" />
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-
-    <title>Contact ENGF</title>
-</head>
-
-<body>
-
-    <!-- HEADER -->
-    <div id="header"></div>
-
-
-    <main class="contact-page">
-
-        <!-- =========================================
-             HERO
-        ========================================== -->
-
-        <section class="contact-hero">
-
-            <div class="contact-hero-inner">
-
-                <span
-                    class="contact-kicker"
-                    data-i18n="contact_kicker"
-                >
-                    CONTACT
-                </span>
-
-                <h1 data-i18n="contact_title">
-                    Correspondence.
-                </h1>
-
-                <p data-i18n="contact_intro">
-                    Write to the relevant desk and we will reply.
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="images/logo.jpg" rel="icon" type="image/png"/>
+  <link href="css/general.css" rel="stylesheet"/>
+  <link href="css/contact.css" rel="stylesheet"/>
+  <link href="css/accessibility.css" rel="stylesheet"/>
+  <title>
+   Contact ENGF
+  </title>
+ </head>
+ <body>
+  <div id="header">
+  </div>
+  <main class="contact-page">
+   <section class="contact-hero">
+    <div class="contact-hero-inner">
+     <span class="contact-kicker" data-i18n="contact_kicker">
+      CONTACT
+     </span>
+     <h1 data-i18n="contact_title">
+      Correspondence.
+     </h1>
+     <p data-i18n="contact_intro">
+      Write to the relevant desk and we will reply.
                     Postal address and direct contact details are published once formally registered.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             MAIN
-        ========================================== -->
-
-        <section class="contact-main">
-
-            <!-- LEFT SIDE -->
-
-            <div class="contact-desks">
-
-                <span
-                    class="contact-section-label"
-                    data-i18n="desks_label"
-                >
-                    DESKS
-                </span>
-
-
-                <div class="desk-list">
-
-
-                    <div class="desk-item">
-
-                        <h2 data-i18n="desk_general_title">
-                            General enquiries
-                        </h2>
-
-                        <p data-i18n="desk_general_text">
-                            Questions about ENGF, its departments and its work.
-                        </p>
-
-                    </div>
-
-
-                    <div class="desk-item">
-
-                        <h2 data-i18n="desk_programmes_title">
-                            Programmes &amp; applications
-                        </h2>
-
-                        <p data-i18n="desk_programmes_text">
-                            Fellowships, courses, open calls and volunteering.
-                        </p>
-
-                    </div>
-
-
-                    <div class="desk-item">
-
-                        <h2 data-i18n="desk_media_title">
-                            Media &amp; press
-                        </h2>
-
-                        <p data-i18n="desk_media_text">
-                            Interviews, comment and access to published material.
-                        </p>
-
-                    </div>
-
-
-                    <div class="desk-item">
-
-                        <h2 data-i18n="desk_partnership_title">
-                            Partnership
-                        </h2>
-
-                        <p data-i18n="desk_partnership_text">
-                            Universities, institutions, organisations and private-sector partners.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="contact-office">
-
-                    <div class="office-block">
-
-                        <span data-i18n="registered_office_label">
-                            REGISTERED OFFICE
-                        </span>
-
-                        <p data-i18n="to_be_published">
-                            To be published
-                        </p>
-
-                    </div>
-
-
-                    <div class="office-block">
-
-                        <span data-i18n="email_label">
-                            EMAIL
-                        </span>
-
-                        <p data-i18n="to_be_published">
-                            To be published
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT SIDE -->
-
-            <div class="contact-form-wrap">
-
-                <span
-                    class="contact-section-label"
-                    data-i18n="send_message_label"
-                >
-                    SEND A MESSAGE
-                </span>
-
-
-                <!-- SUCCESS / ERROR -->
-
-                <div
-                    class="form-success"
-                    data-fs-success
-                    data-i18n="form_success"
-                >
-                    Thank you. Your message has been sent successfully.
-                </div>
-
-                <div
-                    class="form-error"
-                    data-fs-error
-                    data-i18n="form_error"
-                >
-                    We could not send your message. Please check the form and try again.
-                </div>
-
-
-                <form
-                    id="contact-form"
-                    class="contact-form"
-                >
-
-                    <!-- HONEYPOT -->
-
-                    <div
-                        class="form-honeypot"
-                        aria-hidden="true"
-                    >
-
-                        <label for="website">
-                            <span data-i18n="website_label">
-                                Website
-                            </span>
-                        </label>
-
-                        <input
-                            type="text"
-                            id="website"
-                            name="_gotcha"
-                            tabindex="-1"
-                            autocomplete="off"
-                        >
-
-                    </div>
-
-
-                    <div class="form-grid">
-
-
-                        <!-- FULL NAME -->
-
-                        <div class="form-group">
-
-                            <label
-                                for="fullname"
-                                data-i18n="full_name_label"
-                            >
-                                FULL NAME
-                            </label>
-
-                            <input
-                                type="text"
-                                id="fullname"
-                                name="full_name"
-                                autocomplete="name"
-                                required
-                                data-fs-field
-                            >
-
-                            <span
-                                class="field-error"
-                                data-fs-error="full_name"
-                            ></span>
-
-                        </div>
-
-
-                        <!-- ORGANISATION -->
-
-                        <div class="form-group">
-
-                            <label
-                                for="organisation"
-                                data-i18n="organisation_label"
-                            >
-                                ORGANISATION (OPTIONAL)
-                            </label>
-
-                            <input
-                                type="text"
-                                id="organisation"
-                                name="organisation"
-                                autocomplete="organization"
-                                data-fs-field
-                            >
-
-                            <span
-                                class="field-error"
-                                data-fs-error="organisation"
-                            ></span>
-
-                        </div>
-
-
-                        <!-- EMAIL -->
-
-                        <div class="form-group">
-
-                            <label
-                                for="email"
-                                data-i18n="email_address_label"
-                            >
-                                EMAIL ADDRESS
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                autocomplete="email"
-                                required
-                                data-fs-field
-                            >
-
-                            <span
-                                class="field-error"
-                                data-fs-error="email"
-                            ></span>
-
-                        </div>
-
-
-                        <!-- SUBJECT -->
-
-                        <div class="form-group">
-
-                            <label
-                                for="subject"
-                                data-i18n="subject_label"
-                            >
-                                SUBJECT
-                            </label>
-
-                            <select
-                                id="subject"
-                                name="subject"
-                                required
-                                data-fs-field
-                            >
-
-                                <option
-                                    value="General enquiries"
-                                    data-i18n="subject_general"
-                                >
-                                    General enquiries
-                                </option>
-
-                                <option
-                                    value="Programmes & applications"
-                                    data-i18n="subject_programmes"
-                                >
-                                    Programmes &amp; applications
-                                </option>
-
-                                <option
-                                    value="Media & press"
-                                    data-i18n="subject_media"
-                                >
-                                    Media &amp; press
-                                </option>
-
-                                <option
-                                    value="Partnership"
-                                    data-i18n="subject_partnership"
-                                >
-                                    Partnership
-                                </option>
-
-                            </select>
-
-                            <span
-                                class="field-error"
-                                data-fs-error="subject"
-                            ></span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- MESSAGE -->
-
-                    <div class="form-group message-group">
-
-                        <label
-                            for="message"
-                            data-i18n="message_label"
-                        >
-                            MESSAGE
-                        </label>
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            minlength="10"
-                            data-fs-field
-                        ></textarea>
-
-                        <span
-                            class="field-error"
-                            data-fs-error="message"
-                        ></span>
-
-                    </div>
-
-
-                    <!-- SUBMIT -->
-
-                    <button
-                        type="submit"
-                        class="contact-submit"
-                        data-fs-submit-btn
-                        data-i18n="send_message_button"
-                    >
-                        SEND MESSAGE
-                    </button>
-
-
-                    <!-- PRIVACY -->
-
-                    <div
-                        class="contact-privacy"
-                        data-i18n="privacy_notice"
-                    >
-                        ENGF processes personal data only for the purpose of responding
+     </p>
+    </div>
+   </section>
+   <section class="contact-main">
+    <div class="contact-desks">
+     <span class="contact-section-label" data-i18n="desks_label">
+      DESKS
+     </span>
+     <div class="desk-list">
+      <div class="desk-item">
+       <h2 data-i18n="desk_general_title">
+        General enquiries
+       </h2>
+       <p data-i18n="desk_general_text">
+        Questions about ENGF, its departments and its work.
+       </p>
+      </div>
+      <div class="desk-item">
+       <h2 data-i18n="desk_programmes_title">
+        Programmes &amp; applications
+       </h2>
+       <p data-i18n="desk_programmes_text">
+        Fellowships, courses, open calls and volunteering.
+       </p>
+      </div>
+      <div class="desk-item">
+       <h2 data-i18n="desk_media_title">
+        Media &amp; press
+       </h2>
+       <p data-i18n="desk_media_text">
+        Interviews, comment and access to published material.
+       </p>
+      </div>
+      <div class="desk-item">
+       <h2 data-i18n="desk_partnership_title">
+        Partnership
+       </h2>
+       <p data-i18n="desk_partnership_text">
+        Universities, institutions, organisations and private-sector partners.
+       </p>
+      </div>
+     </div>
+     <div class="contact-office">
+      <div class="office-block">
+       <span data-i18n="registered_office_label">
+        REGISTERED OFFICE
+       </span>
+       <p data-i18n="to_be_published">
+        To be published
+       </p>
+      </div>
+      <div class="office-block">
+       <span data-i18n="email_label">
+        EMAIL
+       </span>
+       <p data-i18n="to_be_published">
+        To be published
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="contact-form-wrap">
+     <span class="contact-section-label" data-i18n="send_message_label">
+      SEND A MESSAGE
+     </span>
+     <div class="form-success" data-fs-success="" data-i18n="form_success">
+      Thank you. Your message has been sent successfully.
+     </div>
+     <div class="form-error" data-fs-error="" data-i18n="form_error">
+      We could not send your message. Please check the form and try again.
+     </div>
+     <form class="contact-form" id="contact-form">
+      <div aria-hidden="true" class="form-honeypot">
+       <label for="website">
+        <span data-i18n="website_label">
+         Website
+        </span>
+       </label>
+       <input autocomplete="off" id="website" name="_gotcha" tabindex="-1" type="text"/>
+      </div>
+      <div class="form-grid">
+       <div class="form-group">
+        <label data-i18n="full_name_label" for="fullname">
+         FULL NAME
+        </label>
+        <input autocomplete="name" data-fs-field="" id="fullname" name="full_name" required="" type="text"/>
+        <span class="field-error" data-fs-error="full_name">
+        </span>
+       </div>
+       <div class="form-group">
+        <label data-i18n="organisation_label" for="organisation">
+         ORGANISATION (OPTIONAL)
+        </label>
+        <input autocomplete="organization" data-fs-field="" id="organisation" name="organisation" type="text"/>
+        <span class="field-error" data-fs-error="organisation">
+        </span>
+       </div>
+       <div class="form-group">
+        <label data-i18n="email_address_label" for="email">
+         EMAIL ADDRESS
+        </label>
+        <input autocomplete="email" data-fs-field="" id="email" name="email" required="" type="email"/>
+        <span class="field-error" data-fs-error="email">
+        </span>
+       </div>
+       <div class="form-group">
+        <label data-i18n="subject_label" for="subject">
+         SUBJECT
+        </label>
+        <select data-fs-field="" id="subject" name="subject" required="">
+         <option data-i18n="subject_general" value="General enquiries">
+          General enquiries
+         </option>
+         <option data-i18n="subject_programmes" value="Programmes &amp; applications">
+          Programmes &amp; applications
+         </option>
+         <option data-i18n="subject_media" value="Media &amp; press">
+          Media &amp; press
+         </option>
+         <option data-i18n="subject_partnership" value="Partnership">
+          Partnership
+         </option>
+        </select>
+        <span class="field-error" data-fs-error="subject">
+        </span>
+       </div>
+      </div>
+      <div class="form-group message-group">
+       <label data-i18n="message_label" for="message">
+        MESSAGE
+       </label>
+       <textarea data-fs-field="" id="message" minlength="10" name="message" required=""></textarea>
+       <span class="field-error" data-fs-error="message">
+       </span>
+      </div>
+      <button class="contact-submit" data-fs-submit-btn="" data-i18n="send_message_button" type="submit">
+       SEND MESSAGE
+      </button>
+      <div class="contact-privacy" data-i18n="privacy_notice">
+       ENGF processes personal data only for the purpose of responding
                         to correspondence, in accordance with applicable data protection law.
-                    </div>
-
-                </form>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <div id="footer"></div>
-
-<div id="accessibility"></div>
-
-
-    <!-- SCRIPTS -->
-
-    <script src="js/translation-header-footer.js"></script>
-    <script src="js/mobile-view.js"></script>
-    <script src="js/components.js"></script>
-
-    <script src="js/contact.js"></script>
-
-    <script
-        src="https://unpkg.com/@formspree/ajax@1"
-        defer
-    ></script>
-
-    <script src="js/accessibility.js"></script>
-    <script src="js/translation-contact.js"></script>
-
-</body>
-
+      </div>
+     </form>
+    </div>
+   </section>
+  </main>
+  <div id="footer">
+  </div>
+  <div id="accessibility">
+  </div>
+  <script src="js/translation-header-footer.js">
+  </script>
+  <script src="js/mobile-view.js">
+  </script>
+  <script src="js/components.js">
+  </script>
+  <script src="js/contact.js">
+  </script>
+  <script defer="" src="https://unpkg.com/@formspree/ajax@1">
+  </script>
+  <script src="js/accessibility.js">
+  </script>
+  <script src="js/translation-contact.js">
+  </script>
+ </body>
 </html>

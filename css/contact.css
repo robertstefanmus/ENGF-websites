@@ -4,15 +4,28 @@
   --contact-text: #65574d;
   --contact-muted: #857a70;
   --contact-line: #ded2bf;
+  --contact-intro-text: #786d63;
+  --contact-office-label: #6b554c;
+  --contact-form-label: #6d514b;
+  --contact-input-line: #cfc3b3;
+  --contact-input-text: #393333;
+  --contact-privacy-border: #c5a154;
+
+  --contact-success-bg: rgba(255, 255, 255, 0.28);
+  --contact-error-bg: rgba(104, 16, 24, 0.05);
+  --contact-privacy-bg: rgba(255, 255, 255, 0.32);
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, sans-serif;
+
+  --hero-max-width: 1440px;
+  --hero-min-height: 425px;
+  --main-min-height: 720px;
+  --message-min-height: 145px;
+  --privacy-max-width: 630px;
+
+  --transition-fast: 0.2s ease;
 }
-
-
-/* =========================================
-   GLOBAL
-========================================= */
 
 * {
   box-sizing: border-box;
@@ -24,13 +37,8 @@ body {
   color: var(--contact-text);
 }
 
-
-/* =========================================
-   HERO
-========================================= */
-
 .contact-hero {
-  min-height: 425px;
+  min-height: var(--hero-min-height);
 
   display: flex;
   align-items: center;
@@ -42,7 +50,7 @@ body {
 }
 
 .contact-hero-inner {
-  width: min(1440px, calc(100% - 80px));
+  width: min(var(--hero-max-width), calc(100% - 80px));
   margin: 0 auto;
 }
 
@@ -82,30 +90,20 @@ body {
 
   line-height: 1.7;
 
-  color: #786d63;
+  color: var(--contact-intro-text);
 }
-
-
-/* =========================================
-   MAIN
-========================================= */
 
 .contact-main {
   display: grid;
 
   grid-template-columns: 42% 58%;
 
-  min-height: 720px;
+  min-height: var(--main-min-height);
 
   background: var(--contact-bg);
 
   border-bottom: 1px solid var(--contact-line);
 }
-
-
-/* =========================================
-   DESKS
-========================================= */
 
 .contact-desks {
   padding: 50px 42px;
@@ -161,11 +159,6 @@ body {
   color: var(--contact-text);
 }
 
-
-/* =========================================
-   OFFICE
-========================================= */
-
 .contact-office {
   margin-top: 56px;
 }
@@ -185,7 +178,7 @@ body {
 
   letter-spacing: 2.5px;
 
-  color: #6b554c;
+  color: var(--contact-office-label);
 }
 
 .office-block p {
@@ -196,11 +189,6 @@ body {
 
   color: var(--contact-text);
 }
-
-
-/* =========================================
-   FORM
-========================================= */
 
 .contact-form-wrap {
   padding: 50px 44px;
@@ -234,13 +222,8 @@ body {
 
   letter-spacing: 2.5px;
 
-  color: #6d514b;
+  color: var(--contact-form-label);
 }
-
-
-/* =========================================
-   INPUTS
-========================================= */
 
 .form-group input,
 .form-group select,
@@ -248,7 +231,7 @@ body {
   width: 100%;
 
   border: 0;
-  border-bottom: 1px solid #cfc3b3;
+  border-bottom: 1px solid var(--contact-input-line);
 
   border-radius: 0;
 
@@ -256,7 +239,7 @@ body {
 
   background: transparent;
 
-  color: #393333;
+  color: var(--contact-input-text);
 
   font-family: var(--font-sans);
   font-size: 14px;
@@ -279,17 +262,12 @@ body {
 }
 
 .message-group textarea {
-  min-height: 145px;
+  min-height: var(--message-min-height);
 
   padding: 8px 0;
 
   resize: vertical;
 }
-
-
-/* =========================================
-   INPUT FOCUS
-========================================= */
 
 .form-group input:focus,
 .form-group select:focus,
@@ -297,21 +275,11 @@ body {
   border-bottom-color: var(--contact-burgundy);
 }
 
-
-/* =========================================
-   INVALID FORM FIELDS
-========================================= */
-
 .form-group input[aria-invalid="true"],
 .form-group select[aria-invalid="true"],
 .form-group textarea[aria-invalid="true"] {
   border-bottom-color: var(--contact-burgundy);
 }
-
-
-/* =========================================
-   FIELD ERRORS
-========================================= */
 
 .field-error {
   display: none;
@@ -328,29 +296,9 @@ body {
   color: var(--contact-burgundy);
 }
 
-
-/*
-   Formspree adds data-fs-active only when
-   this particular field has an error.
-*/
-
 .field-error[data-fs-active] {
   display: block;
 }
-
-
-/* =========================================
-   FORM SUCCESS / ERROR MESSAGES
-========================================= */
-
-/*
-   IMPORTANT:
-
-   Both messages MUST be hidden initially.
-
-   Formspree adds data-fs-active when the
-   appropriate message needs to be shown.
-*/
 
 .form-success,
 .form-error {
@@ -368,31 +316,17 @@ body {
   line-height: 1.5;
 }
 
-
-/* success */
-
 .form-success {
-  background: rgba(255, 255, 255, 0.28);
+  background: var(--contact-success-bg);
 
   color: var(--contact-text);
 }
 
-
-/* error */
-
 .form-error {
-  background: rgba(104, 16, 24, 0.05);
+  background: var(--contact-error-bg);
 
   color: var(--contact-burgundy);
 }
-
-
-/*
-   Formspree active state
-
-   These are intentionally more specific
-   than the generic rules above.
-*/
 
 .form-success[data-fs-success][data-fs-active] {
   display: block;
@@ -402,16 +336,6 @@ body {
   display: block;
 }
 
-
-/* =========================================
-   FORMSPREE FALLBACK SELECTORS
-========================================= */
-
-/*
-   These ensure all Formspree message elements
-   remain hidden until Formspree activates them.
-*/
-
 [data-fs-success]:not([data-fs-active]) {
   display: none !important;
 }
@@ -419,11 +343,6 @@ body {
 [data-fs-error]:not([data-fs-active]) {
   display: none !important;
 }
-
-
-/* =========================================
-   SUBMIT BUTTON
-========================================= */
 
 .contact-submit {
   width: 100%;
@@ -446,9 +365,9 @@ body {
   cursor: pointer;
 
   transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    opacity 0.2s ease;
+    background var(--transition-fast),
+    color var(--transition-fast),
+    opacity var(--transition-fast);
 }
 
 .contact-submit:hover {
@@ -463,21 +382,16 @@ body {
   opacity: 0.55;
 }
 
-
-/* =========================================
-   PRIVACY NOTE
-========================================= */
-
 .contact-privacy {
-  max-width: 630px;
+  max-width: var(--privacy-max-width);
 
   margin-top: 36px;
 
   padding: 18px 20px;
 
-  border-left: 1px solid #c5a154;
+  border-left: 1px solid var(--contact-privacy-border);
 
-  background: rgba(255, 255, 255, 0.32);
+  background: var(--contact-privacy-bg);
 
   font-family: var(--font-sans);
   font-size: 12px;
@@ -486,11 +400,6 @@ body {
 
   color: var(--contact-text);
 }
-
-
-/* =========================================
-   HONEYPOT
-========================================= */
 
 .form-honeypot {
   position: absolute !important;
@@ -514,11 +423,6 @@ body {
 
   pointer-events: none !important;
 }
-
-
-/* =========================================
-   TABLET
-========================================= */
 
 @media (max-width: 1000px) {
 
@@ -549,14 +453,7 @@ body {
   }
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 750px) {
-
-  /* HERO */
 
   .contact-hero {
     min-height: auto;
@@ -588,17 +485,11 @@ body {
     line-height: 1.6;
   }
 
-
-  /* MAIN */
-
   .contact-main {
     display: block;
 
     min-height: 0;
   }
-
-
-  /* DESKS */
 
   .contact-desks {
     padding: 45px 24px;
@@ -620,9 +511,6 @@ body {
     margin-top: 45px;
   }
 
-
-  /* FORM */
-
   .contact-form-wrap {
     padding: 45px 24px;
   }
@@ -641,9 +529,6 @@ body {
     min-height: 130px;
   }
 
-
-  /* NOTIFICATIONS */
-
   .form-success,
   .form-error {
     margin-bottom: 25px;
@@ -653,15 +538,9 @@ body {
     font-size: 11px;
   }
 
-
-  /* BUTTON */
-
   .contact-submit {
     margin-top: 30px;
   }
-
-
-  /* PRIVACY */
 
   .contact-privacy {
     max-width: 100%;

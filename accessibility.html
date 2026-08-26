@@ -1,4 +1,3 @@
-<!-- ACCESSIBILITY BUTTON -->
 <button
     id="accessibility-toggle"
     class="accessibility-toggle"
@@ -14,8 +13,6 @@
     >
 </button>
 
-
-<!-- ACCESSIBILITY PANEL -->
 <div
     id="accessibility-panel"
     class="accessibility-panel"
@@ -23,9 +20,7 @@
     aria-label="Accessibility settings"
     hidden
 >
-
     <div class="accessibility-header">
-
         <h2>Accessibility</h2>
 
         <button
@@ -36,76 +31,64 @@
         >
             ×
         </button>
-
     </div>
 
-
     <div class="accessibility-options">
-
         <div class="accessibility-option">
-
             <span>Text size</span>
 
             <div class="accessibility-size-controls">
-
                 <button
-                    type="button"
                     id="text-decrease"
+                    type="button"
                     aria-label="Decrease text size"
                 >
                     A−
                 </button>
 
                 <button
-                    type="button"
                     id="text-increase"
+                    type="button"
                     aria-label="Increase text size"
                 >
                     A+
                 </button>
-
             </div>
-
         </div>
 
-
         <button
+            id="toggle-contrast"
             class="accessibility-action"
             type="button"
-            id="toggle-contrast"
             aria-pressed="false"
         >
             High contrast
         </button>
 
-
         <button
+            id="toggle-links"
             class="accessibility-action"
             type="button"
-            id="toggle-links"
             aria-pressed="false"
         >
             Underline links
         </button>
 
-
         <button
+            id="toggle-readable"
             class="accessibility-action"
             type="button"
-            id="toggle-readable"
             aria-pressed="false"
         >
             Readable font
         </button>
 
         <button
+            id="accessibility-reset"
             class="accessibility-reset"
             type="button"
-            id="accessibility-reset"
         >
             RESET SETTINGS
         </button>
-
     </div>
-
 </div>

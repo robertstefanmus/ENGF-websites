@@ -2,20 +2,15 @@
   --color-bg: #f4ede2;
   --color-bg-soft: #f2efea;
   --color-bg-hover: #f1e9dc;
-
   --color-primary: #4c0d17;
   --color-primary-dark: #2a070d;
   --color-burgundy: #581d22;
-
   --color-text: #393333;
   --color-text-soft: #4d4a47;
-
   --color-muted: #746d68;
   --color-muted-light: #aaa39b;
-
   --color-border: #e5dccb;
   --color-border-dark: #e9dec6;
-
   --color-gold: #b58c3c;
 
   --cream: #f4eee4;
@@ -24,20 +19,40 @@
   --muted: #aaa095;
   --line: #ded2bf;
 
+  --breadcrumb-color: #4f3531;
+  --department-type-color: #5e3533;
+  --intro-color: #786d63;
+  --tag-color: #795c51;
+  --related-meta-color: #573636;
+  --mark-line: rgba(113, 64, 47, 0.06);
+  --ecosystem-hover: rgba(255, 255, 255, 0.12);
+
+  --academy-dot: #b58a2e;
+  --forum-dot: #63798c;
+  --agora-dot: #26231f;
+
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, sans-serif;
+  --font-mono: "Courier New", monospace;
 
   --container: 1600px;
   --container-wide: 1500px;
+  --hero-max-width: 1200px;
+  --related-max-width: 1220px;
+  --intro-max-width: 650px;
+  --programme-text-max-width: 760px;
+  --ecosystem-text-max-width: 300px;
+
+  --hero-min-height: 500px;
+  --programme-min-height: 670px;
+  --programme-row-min-height: 145px;
+  --related-row-min-height: 70px;
+  --ecosystem-card-min-height: 145px;
+  --mobile-programme-image-height: 420px;
 
   --transition-fast: 0.2s ease;
   --transition-base: 0.25s ease;
 }
-
-
-/* =================================
-   GLOBAL
-================================= */
 
 * {
   box-sizing: border-box;
@@ -53,15 +68,10 @@ body {
   color: var(--color-burgundy);
 }
 
-
-/* =================================
-   DEPARTMENT HERO
-================================= */
-
 .department-hero {
   position: relative;
 
-  min-height: 500px;
+  min-height: var(--hero-min-height);
 
   background: var(--cream);
 
@@ -72,14 +82,11 @@ body {
 }
 
 .department-hero-inner {
-  width: min(1200px, calc(100% - 80px));
+  width: min(var(--hero-max-width), calc(100% - 80px));
   margin: 0 auto;
 
   padding: 62px 0 55px;
 }
-
-
-/* breadcrumb */
 
 .department-breadcrumb {
   display: flex;
@@ -90,7 +97,7 @@ body {
   font-size: 9px;
   letter-spacing: 3px;
 
-  color: #4f3531;
+  color: var(--breadcrumb-color);
 }
 
 .department-breadcrumb a {
@@ -101,7 +108,7 @@ body {
 
   padding-bottom: 2px;
 
-  border-bottom: 1px solid #4f3531;
+  border-bottom: 1px solid var(--breadcrumb-color);
 
   transition: opacity var(--transition-fast);
 }
@@ -109,9 +116,6 @@ body {
 .department-breadcrumb a:hover {
   opacity: 0.5;
 }
-
-
-/* department label */
 
 .department-type {
   display: flex;
@@ -125,7 +129,7 @@ body {
   font-weight: 600;
   letter-spacing: 2.6px;
 
-  color: #5e3533;
+  color: var(--department-type-color);
 }
 
 .department-dot {
@@ -139,9 +143,6 @@ body {
   background: var(--burgundy);
 }
 
-
-/* department title */
-
 .department-hero h1 {
   margin: 25px 0 0;
 
@@ -153,11 +154,8 @@ body {
   color: var(--color-primary);
 }
 
-
-/* department description */
-
 .department-intro {
-  max-width: 650px;
+  max-width: var(--intro-max-width);
 
   margin: 36px 0 0;
 
@@ -166,11 +164,8 @@ body {
   font-style: italic;
   line-height: 1.55;
 
-  color: #786d63;
+  color: var(--intro-color);
 }
-
-
-/* tags */
 
 .department-tags {
   display: flex;
@@ -189,13 +184,8 @@ body {
   font-size: 7px;
   letter-spacing: 2px;
 
-  color: #795c51;
+  color: var(--tag-color);
 }
-
-
-/* =================================
-   DECORATIVE MARK
-================================= */
 
 .department-mark {
   position: absolute;
@@ -206,7 +196,7 @@ body {
   right: -70px;
   top: -20px;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--mark-line);
   border-radius: 50%;
 
   opacity: 0.4;
@@ -220,7 +210,7 @@ body {
 
   position: absolute;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--mark-line);
   border-radius: 50%;
 }
 
@@ -232,22 +222,14 @@ body {
   inset: 90px;
 }
 
-
-/* =================================
-   PROGRAMME OF WORK
-================================= */
-
 .programme-section {
   display: grid;
   grid-template-columns: 42% 58%;
 
-  min-height: 670px;
+  min-height: var(--programme-min-height);
 
   border-bottom: 1px solid var(--line);
 }
-
-
-/* image */
 
 .programme-image {
   overflow: hidden;
@@ -262,9 +244,6 @@ body {
   object-fit: cover;
   object-position: center;
 }
-
-
-/* content */
 
 .programme-content {
   background: var(--cream);
@@ -283,14 +262,11 @@ body {
   color: var(--color-burgundy);
 }
 
-
-/* individual programme rows */
-
 .programme-item {
   display: grid;
   grid-template-columns: 120px 1fr;
 
-  min-height: 145px;
+  min-height: var(--programme-row-min-height);
 
   padding: 28px 50px;
 
@@ -298,7 +274,7 @@ body {
 }
 
 .programme-number {
-  font-family: "Courier New", monospace;
+  font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 3px;
 
@@ -317,7 +293,7 @@ body {
 }
 
 .programme-item p {
-  max-width: 760px;
+  max-width: var(--programme-text-max-width);
 
   margin: 12px 0 0;
 
@@ -328,13 +304,8 @@ body {
   color: var(--body);
 }
 
-
-/* =================================
-   RELATED OPPORTUNITIES
-================================= */
-
 .related-section {
-  width: min(1220px, calc(100% - 80px));
+  width: min(var(--related-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
@@ -361,7 +332,7 @@ body {
   grid-template-columns: 50% 25% 25%;
   align-items: center;
 
-  min-height: 70px;
+  min-height: var(--related-row-min-height);
 
   border-bottom: 1px solid var(--line);
 }
@@ -395,11 +366,8 @@ body {
   font-weight: 600;
   letter-spacing: 2.5px;
 
-  color: #573636;
+  color: var(--related-meta-color);
 }
-
-
-/* all programmes link */
 
 .all-programmes {
   display: inline-block;
@@ -421,11 +389,6 @@ body {
 .all-programmes:hover {
   opacity: 0.55;
 }
-
-
-/* =================================
-   CTA
-================================= */
 
 .institute-cta {
   display: flex;
@@ -483,11 +446,6 @@ body {
   color: var(--cream);
 }
 
-
-/* =================================
-   ELSEWHERE IN ECOSYSTEM
-================================= */
-
 .ecosystem-other {
   padding: 60px 0 20px;
 }
@@ -513,7 +471,7 @@ body {
 .ecosystem-card {
   position: relative;
 
-  min-height: 145px;
+  min-height: var(--ecosystem-card-min-height);
 
   padding: 24px;
 
@@ -529,7 +487,7 @@ body {
 }
 
 .ecosystem-card:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--ecosystem-hover);
 }
 
 .ecosystem-dot {
@@ -544,15 +502,15 @@ body {
 }
 
 .academy-dot {
-  background: #b58a2e;
+  background: var(--academy-dot);
 }
 
 .forum-dot {
-  background: #63798c;
+  background: var(--forum-dot);
 }
 
 .agora-dot {
-  background: #26231f;
+  background: var(--agora-dot);
 }
 
 .ecosystem-card h3 {
@@ -567,7 +525,7 @@ body {
 }
 
 .ecosystem-card p {
-  max-width: 300px;
+  max-width: var(--ecosystem-text-max-width);
 
   margin: 9px 0 0;
 
@@ -577,11 +535,6 @@ body {
 
   color: var(--body);
 }
-
-
-/* =================================
-   TABLET
-================================= */
 
 @media (max-width: 1000px) {
 
@@ -597,7 +550,6 @@ body {
     max-width: 600px;
     font-size: 19px;
   }
-
 
   .programme-section {
     grid-template-columns: 40% 60%;
@@ -621,7 +573,6 @@ body {
     font-size: 13px;
   }
 
-
   .related-section {
     width: calc(100% - 50px);
   }
@@ -634,11 +585,6 @@ body {
     padding: 22px 18px;
   }
 }
-
-
-/* =================================
-   MOBILE
-================================= */
 
 @media (max-width: 750px) {
 
@@ -694,15 +640,12 @@ body {
     display: none;
   }
 
-
-  /* programme */
-
   .programme-section {
     display: block;
   }
 
   .programme-image {
-    height: 420px;
+    height: var(--mobile-programme-image-height);
   }
 
   .programme-heading {
@@ -741,9 +684,6 @@ body {
     line-height: 1.5;
   }
 
-
-  /* related */
-
   .related-section {
     width: 100%;
 
@@ -780,9 +720,6 @@ body {
     text-align: left;
   }
 
-
-  /* CTA */
-
   .institute-cta {
     align-items: flex-start;
     flex-direction: column;
@@ -804,9 +741,6 @@ body {
 
     font-size: 8px;
   }
-
-
-  /* ecosystem */
 
   .ecosystem-other {
     padding-top: 50px;

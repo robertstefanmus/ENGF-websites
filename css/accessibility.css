@@ -1,57 +1,57 @@
-/* =========================================================
-   ENGF ACCESSIBILITY
-   accessibility.css
-   ========================================================= */
-
-
-/* =========================================================
-   VARIABLES
-   ========================================================= */
-
 :root {
     --accessibility-bg: #f4ede2;
     --accessibility-bg-hover: #eee4d6;
-
     --accessibility-primary: #4c0d17;
     --accessibility-text: #393333;
     --accessibility-muted: #746d68;
-
     --accessibility-border: #ded2bf;
 
-    --accessibility-display:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
+    --accessibility-hover-soft: rgba(76, 13, 23, 0.05);
+    --accessibility-hover-subtle: rgba(76, 13, 23, 0.035);
+    --accessibility-hover-faint: rgba(76, 13, 23, 0.025);
+    --accessibility-shadow: rgba(42, 7, 13, 0.14);
+    --accessibility-shadow-hover: rgba(42, 7, 13, 0.2);
+    --accessibility-panel-shadow: rgba(42, 7, 13, 0.16);
 
-    --accessibility-sans:
-        "DM Sans",
-        Arial,
-        Helvetica,
-        sans-serif;
+    --accessibility-display: "Cormorant Garamond", Georgia, serif;
+    --accessibility-sans: "DM Sans", Arial, Helvetica, sans-serif;
+    --accessibility-readable: Arial, Helvetica, sans-serif;
+
+    --accessibility-toggle-size: 58px;
+    --accessibility-toggle-offset: 22px;
+    --accessibility-panel-width: 310px;
+    --accessibility-panel-offset: 94px;
+    --accessibility-close-size: 34px;
+
+    --accessibility-transition: 0.2s ease;
+
+    --contrast-bg: #ffffff;
+    --contrast-bg-hover: #eeeeee;
+    --contrast-primary: #000000;
+    --contrast-muted: #222222;
+    --contrast-muted-light: #333333;
+
+    --text-large: 112.5%;
+    --text-larger: 125%;
 }
-
-
-/* =========================================================
-   ACCESSIBILITY FLOATING BUTTON
-   ========================================================= */
 
 .accessibility-toggle {
     position: fixed !important;
 
-    right: 22px !important;
-    bottom: 22px !important;
+    right: var(--accessibility-toggle-offset) !important;
+    bottom: var(--accessibility-toggle-offset) !important;
 
     left: auto !important;
     top: auto !important;
 
-    width: 58px !important;
-    height: 58px !important;
+    width: var(--accessibility-toggle-size) !important;
+    height: var(--accessibility-toggle-size) !important;
 
-    min-width: 58px !important;
-    min-height: 58px !important;
+    min-width: var(--accessibility-toggle-size) !important;
+    min-height: var(--accessibility-toggle-size) !important;
 
-    max-width: 58px !important;
-    max-height: 58px !important;
+    max-width: var(--accessibility-toggle-size) !important;
+    max-height: var(--accessibility-toggle-size) !important;
 
     display: flex !important;
     align-items: center !important;
@@ -69,7 +69,7 @@
     background: var(--accessibility-bg) !important;
 
     box-shadow:
-        0 5px 20px rgba(42, 7, 13, 0.14) !important;
+        0 5px 20px var(--accessibility-shadow) !important;
 
     cursor: pointer !important;
 
@@ -83,13 +83,10 @@
     transform: translateZ(0);
 
     transition:
-        background-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+        background-color var(--accessibility-transition),
+        box-shadow var(--accessibility-transition),
+        transform var(--accessibility-transition);
 }
-
-
-/* accessibility icon */
 
 .accessibility-toggle img {
     display: block !important;
@@ -114,46 +111,32 @@
     pointer-events: none !important;
 }
 
-
-/* hover */
-
 .accessibility-toggle:hover {
     background: var(--accessibility-bg-hover) !important;
 
     box-shadow:
-        0 7px 24px rgba(42, 7, 13, 0.2) !important;
+        0 7px 24px var(--accessibility-shadow-hover) !important;
 }
-
-
-/* active */
 
 .accessibility-toggle:active {
     transform: scale(0.96) translateZ(0);
 }
-
-
-/* keyboard focus */
 
 .accessibility-toggle:focus-visible {
     outline: 3px solid var(--accessibility-primary) !important;
     outline-offset: 4px !important;
 }
 
-
-/* =========================================================
-   ACCESSIBILITY PANEL
-   ========================================================= */
-
 .accessibility-panel {
     position: fixed !important;
 
-    right: 22px !important;
-    bottom: 94px !important;
+    right: var(--accessibility-toggle-offset) !important;
+    bottom: var(--accessibility-panel-offset) !important;
 
     left: auto !important;
     top: auto !important;
 
-    width: 310px !important;
+    width: var(--accessibility-panel-width) !important;
     max-width: calc(100vw - 44px) !important;
 
     margin: 0 !important;
@@ -168,27 +151,16 @@
     border-radius: 0 !important;
 
     box-shadow:
-        0 14px 40px rgba(42, 7, 13, 0.16) !important;
+        0 14px 40px var(--accessibility-panel-shadow) !important;
 
     color: var(--accessibility-text);
 
     z-index: 2147483647 !important;
 }
 
-
-/*
-   IMPORTANT:
-   HTML's hidden attribute should actually hide the panel.
-*/
-
 .accessibility-panel[hidden] {
     display: none !important;
 }
-
-
-/* =========================================================
-   PANEL HEADER
-   ========================================================= */
 
 .accessibility-header {
     width: 100%;
@@ -208,7 +180,6 @@
     background: transparent;
 }
 
-
 .accessibility-header h2 {
     margin: 0 !important;
     padding: 0 !important;
@@ -225,23 +196,18 @@
     color: var(--accessibility-primary) !important;
 }
 
-
-/* =========================================================
-   CLOSE BUTTON
-   ========================================================= */
-
 .accessibility-close {
-    width: 34px !important;
-    height: 34px !important;
+    width: var(--accessibility-close-size) !important;
+    height: var(--accessibility-close-size) !important;
 
-    min-width: 34px !important;
-    min-height: 34px !important;
+    min-width: var(--accessibility-close-size) !important;
+    min-height: var(--accessibility-close-size) !important;
 
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
 
-    flex: 0 0 34px;
+    flex: 0 0 var(--accessibility-close-size);
 
     margin: 0 !important;
     padding: 0 !important;
@@ -252,7 +218,7 @@
 
     color: var(--accessibility-primary) !important;
 
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: var(--accessibility-readable) !important;
 
     font-size: 27px !important;
     font-weight: 300 !important;
@@ -265,21 +231,14 @@
     -webkit-appearance: none !important;
 }
 
-
 .accessibility-close:hover {
-    background: rgba(76, 13, 23, 0.05) !important;
+    background: var(--accessibility-hover-soft) !important;
 }
-
 
 .accessibility-close:focus-visible {
     outline: 2px solid var(--accessibility-primary);
     outline-offset: 2px;
 }
-
-
-/* =========================================================
-   PANEL OPTIONS
-   ========================================================= */
 
 .accessibility-options {
     width: 100%;
@@ -287,11 +246,6 @@
     margin: 0;
     padding: 12px 20px 20px;
 }
-
-
-/* =========================================================
-   TEXT SIZE ROW
-   ========================================================= */
 
 .accessibility-option {
     width: 100%;
@@ -315,15 +269,9 @@
     color: var(--accessibility-text);
 }
 
-
 .accessibility-option > span {
     display: block;
 }
-
-
-/* =========================================================
-   TEXT SIZE CONTROLS
-   ========================================================= */
 
 .accessibility-size-controls {
     display: flex;
@@ -331,7 +279,6 @@
 
     gap: 5px;
 }
-
 
 .accessibility-size-controls button {
     min-width: 42px !important;
@@ -364,28 +311,21 @@
     -webkit-appearance: none !important;
 
     transition:
-        border-color 0.2s ease,
-        background-color 0.2s ease;
+        border-color var(--accessibility-transition),
+        background-color var(--accessibility-transition);
 }
-
 
 .accessibility-size-controls button:hover {
     border-color: var(--accessibility-primary) !important;
 
     background:
-        rgba(76, 13, 23, 0.035) !important;
+        var(--accessibility-hover-subtle) !important;
 }
-
 
 .accessibility-size-controls button:focus-visible {
     outline: 2px solid var(--accessibility-primary);
     outline-offset: 2px;
 }
-
-
-/* =========================================================
-   ACTION BUTTONS
-   ========================================================= */
 
 .accessibility-action {
     position: relative;
@@ -423,26 +363,21 @@
     -webkit-appearance: none !important;
 
     transition:
-        color 0.2s ease,
-        background-color 0.2s ease;
+        color var(--accessibility-transition),
+        background-color var(--accessibility-transition);
 }
-
 
 .accessibility-action:hover {
     color: var(--accessibility-primary) !important;
 
     background:
-        rgba(76, 13, 23, 0.025) !important;
+        var(--accessibility-hover-faint) !important;
 }
-
 
 .accessibility-action:focus-visible {
     outline: 2px solid var(--accessibility-primary);
     outline-offset: -2px;
 }
-
-
-/* toggle circle */
 
 .accessibility-action::after {
     content: "";
@@ -461,21 +396,13 @@
     background: transparent;
 
     transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
+        background-color var(--accessibility-transition),
+        transform var(--accessibility-transition);
 }
-
-
-/* active toggle */
 
 .accessibility-action[aria-pressed="true"]::after {
     background: var(--accessibility-primary);
 }
-
-
-/* =========================================================
-   RESET BUTTON
-   ========================================================= */
 
 .accessibility-reset {
     width: 100% !important;
@@ -514,10 +441,9 @@
     -webkit-appearance: none !important;
 
     transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+        background-color var(--accessibility-transition),
+        color var(--accessibility-transition);
 }
-
 
 .accessibility-reset:hover {
     background: var(--accessibility-primary) !important;
@@ -525,81 +451,58 @@
     color: var(--accessibility-bg) !important;
 }
 
-
 .accessibility-reset:focus-visible {
     outline: 2px solid var(--accessibility-primary);
     outline-offset: 3px;
 }
 
-
-/* =========================================================
-   ACCESSIBILITY MODE:
-   TEXT SIZE
-   ========================================================= */
-
-/*
-   These classes should be added by accessibility.js
-   to the <html> element.
-*/
-
 html.accessibility-text-large {
-    font-size: 112.5%;
+    font-size: var(--text-large);
 }
-
 
 html.accessibility-text-larger {
-    font-size: 125%;
+    font-size: var(--text-larger);
 }
-
-
-/* =========================================================
-   ACCESSIBILITY MODE:
-   HIGH CONTRAST
-   ========================================================= */
 
 html.accessibility-high-contrast {
-    --color-bg: #ffffff;
-    --color-bg-soft: #ffffff;
-    --color-bg-hover: #eeeeee;
+    --color-bg: var(--contrast-bg);
+    --color-bg-soft: var(--contrast-bg);
+    --color-bg-hover: var(--contrast-bg-hover);
 
-    --color-primary: #000000;
-    --color-primary-dark: #000000;
-    --color-burgundy: #000000;
+    --color-primary: var(--contrast-primary);
+    --color-primary-dark: var(--contrast-primary);
+    --color-burgundy: var(--contrast-primary);
 
-    --color-text: #000000;
-    --color-text-soft: #000000;
-    --color-muted: #222222;
-    --color-muted-light: #333333;
+    --color-text: var(--contrast-primary);
+    --color-text-soft: var(--contrast-primary);
+    --color-muted: var(--contrast-muted);
+    --color-muted-light: var(--contrast-muted-light);
 
-    --color-border: #000000;
-    --color-border-dark: #000000;
+    --color-border: var(--contrast-primary);
+    --color-border-dark: var(--contrast-primary);
 }
-
 
 html.accessibility-high-contrast body {
-    background: #ffffff !important;
+    background: var(--contrast-bg) !important;
 
-    color: #000000 !important;
+    color: var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-panel {
-    background: #ffffff !important;
+    background: var(--contrast-bg) !important;
 
-    color: #000000 !important;
+    color: var(--contrast-primary) !important;
 
-    border-color: #000000 !important;
+    border-color: var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-toggle {
-    background: #ffffff !important;
+    background: var(--contrast-bg) !important;
 
-    border: 2px solid #000000 !important;
+    border: 2px solid var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-header,
@@ -607,9 +510,8 @@ html.accessibility-high-contrast
 .accessibility-option,
 html.accessibility-high-contrast
 .accessibility-action {
-    border-color: #000000 !important;
+    border-color: var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-header h2,
@@ -623,42 +525,32 @@ html.accessibility-high-contrast
 .accessibility-size-controls button,
 html.accessibility-high-contrast
 .accessibility-reset {
-    color: #000000 !important;
+    color: var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-size-controls button,
 html.accessibility-high-contrast
 .accessibility-reset {
-    border-color: #000000 !important;
+    border-color: var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-action::after {
-    border-color: #000000 !important;
+    border-color: var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-action[aria-pressed="true"]::after {
-    background: #000000 !important;
+    background: var(--contrast-primary) !important;
 }
-
 
 html.accessibility-high-contrast
 .accessibility-reset:hover {
-    background: #000000 !important;
+    background: var(--contrast-primary) !important;
 
-    color: #ffffff !important;
+    color: var(--contrast-bg) !important;
 }
-
-
-/* =========================================================
-   ACCESSIBILITY MODE:
-   UNDERLINE LINKS
-   ========================================================= */
 
 html.accessibility-underline-links
 a {
@@ -669,23 +561,12 @@ a {
     text-underline-offset: 3px !important;
 }
 
-
-/*
-   Don't unnecessarily underline icon/button content.
-*/
-
 html.accessibility-underline-links
 .accessibility-toggle,
 html.accessibility-underline-links
 .accessibility-toggle * {
     text-decoration: none !important;
 }
-
-
-/* =========================================================
-   ACCESSIBILITY MODE:
-   READABLE FONT
-   ========================================================= */
 
 html.accessibility-readable-font body,
 html.accessibility-readable-font h1,
@@ -708,12 +589,6 @@ html.accessibility-readable-font label {
         sans-serif !important;
 }
 
-
-/* =========================================================
-   ACCESSIBILITY MODE:
-   REDUCED MOTION
-   ========================================================= */
-
 html.accessibility-reduced-motion *,
 html.accessibility-reduced-motion *::before,
 html.accessibility-reduced-motion *::after {
@@ -727,9 +602,6 @@ html.accessibility-reduced-motion *::after {
 
     transition-delay: 0ms !important;
 }
-
-
-/* respect operating-system preference too */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -749,18 +621,12 @@ html.accessibility-reduced-motion *::after {
 
 }
 
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
 @media screen and (max-width: 900px) {
 
     .accessibility-toggle {
         right: 18px !important;
         bottom: 18px !important;
     }
-
 
     .accessibility-panel {
         right: 18px !important;
@@ -769,22 +635,7 @@ html.accessibility-reduced-motion *::after {
 
 }
 
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media screen and (max-width: 768px) {
-
-    /*
-       The widget must be placed directly under BODY.
-
-       body
-       ├── main
-       ├── footer
-       ├── accessibility-toggle
-       └── accessibility-panel
-    */
 
     body > .accessibility-toggle {
         position: fixed !important;
@@ -826,7 +677,6 @@ html.accessibility-reduced-motion *::after {
         transform: translateZ(0) !important;
     }
 
-
     body > .accessibility-toggle img {
         display: block !important;
 
@@ -839,7 +689,6 @@ html.accessibility-reduced-motion *::after {
 
         object-fit: contain !important;
     }
-
 
     body > .accessibility-panel {
         position: fixed !important;
@@ -873,11 +722,9 @@ html.accessibility-reduced-motion *::after {
         z-index: 2147483647 !important;
     }
 
-
     body > .accessibility-panel[hidden] {
         display: none !important;
     }
-
 
     .accessibility-header {
         min-height: 58px;
@@ -885,11 +732,9 @@ html.accessibility-reduced-motion *::after {
         padding-inline: 18px;
     }
 
-
     .accessibility-header h2 {
         font-size: 23px !important;
     }
-
 
     .accessibility-options {
         padding:
@@ -898,22 +743,15 @@ html.accessibility-reduced-motion *::after {
             18px;
     }
 
-
     .accessibility-option {
         min-height: 54px;
     }
-
 
     .accessibility-action {
         min-height: 49px !important;
     }
 
 }
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
 
 @media screen and (max-width: 480px) {
 
@@ -938,7 +776,6 @@ html.accessibility-reduced-motion *::after {
         padding: 7px !important;
     }
 
-
     body > .accessibility-panel {
         right: 12px !important;
         left: 12px !important;
@@ -957,18 +794,15 @@ html.accessibility-reduced-motion *::after {
             );
     }
 
-
     .accessibility-header {
         min-height: 54px;
 
         padding-inline: 16px;
     }
 
-
     .accessibility-header h2 {
         font-size: 22px !important;
     }
-
 
     .accessibility-options {
         padding:
@@ -977,12 +811,10 @@ html.accessibility-reduced-motion *::after {
             16px;
     }
 
-
     .accessibility-option,
     .accessibility-action {
         font-size: 12px !important;
     }
-
 
     .accessibility-size-controls button {
         min-width: 40px !important;
@@ -990,11 +822,6 @@ html.accessibility-reduced-motion *::after {
     }
 
 }
-
-
-/* =========================================================
-   VERY SMALL SCREENS
-   ========================================================= */
 
 @media screen and (max-width: 360px) {
 
@@ -1017,7 +844,6 @@ html.accessibility-reduced-motion *::after {
         max-height: 48px !important;
     }
 
-
     body > .accessibility-panel {
         right: 8px !important;
         left: 8px !important;
@@ -1030,11 +856,6 @@ html.accessibility-reduced-motion *::after {
     }
 
 }
-
-
-/* =========================================================
-   PRINT
-   ========================================================= */
 
 @media print {
 

@@ -4,15 +4,33 @@
   --events-text: #65574d;
   --events-muted: #8f857a;
   --events-line: #ded2bf;
+  --events-intro-text: #786d63;
+  --events-category: #5c403d;
+  --events-meta-label: #6d514b;
+  --events-meta-text: #2f2b28;
+  --events-archive-border: #e1d8c8;
+  --events-archive-text: #745e54;
+  --events-note-border: #c5a154;
+  --events-archive-bg: rgba(255, 255, 255, 0.22);
+  --events-note-bg: rgba(255, 255, 255, 0.32);
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, sans-serif;
+
+  --hero-max-width: 1200px;
+  --container-max-width: 1160px;
+  --hero-title-max-width: 760px;
+  --hero-intro-max-width: 650px;
+  --event-description-max-width: 700px;
+  --record-text-max-width: 560px;
+  --note-max-width: 720px;
+
+  --hero-min-height: 455px;
+  --record-image-height: 335px;
+  --archive-min-height: 310px;
+
+  --transition-fast: 0.2s ease;
 }
-
-
-/* =========================================
-   RESET
-========================================= */
 
 * {
   box-sizing: border-box;
@@ -26,13 +44,8 @@ body {
   color: var(--events-text);
 }
 
-
-/* =========================================
-   HERO
-========================================= */
-
 .events-hero {
-  min-height: 455px;
+  min-height: var(--hero-min-height);
 
   display: flex;
   align-items: center;
@@ -44,15 +57,12 @@ body {
 }
 
 .events-hero-inner {
-  width: min(1200px, calc(100% - 80px));
+  width: min(var(--hero-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
   padding: 68px 0;
 }
-
-
-/* kicker */
 
 .events-kicker {
   display: block;
@@ -69,11 +79,8 @@ body {
   color: var(--events-burgundy);
 }
 
-
-/* hero title */
-
 .events-hero h1 {
-  max-width: 760px;
+  max-width: var(--hero-title-max-width);
 
   margin: 0;
 
@@ -89,11 +96,8 @@ body {
   color: var(--events-burgundy);
 }
 
-
-/* hero intro */
-
 .events-hero p {
-  max-width: 650px;
+  max-width: var(--hero-intro-max-width);
 
   margin: 34px 0 0;
 
@@ -104,33 +108,20 @@ body {
 
   line-height: 1.7;
 
-  color: #786d63;
+  color: var(--events-intro-text);
 }
 
-
-/* =========================================
-   SHARED CONTAINER
-========================================= */
-
 .events-container {
-  width: min(1160px, calc(100% - 80px));
+  width: min(var(--container-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 }
-
-
-/* =========================================
-   UPCOMING
-========================================= */
 
 .events-upcoming {
   padding: 36px 0 30px;
 
   background: var(--events-bg);
 }
-
-
-/* section title */
 
 .events-section-title {
   margin: 0;
@@ -149,17 +140,9 @@ body {
   color: var(--events-burgundy);
 }
 
-
-/* =========================================
-   EVENT LIST
-========================================= */
-
 .event-list {
   width: 100%;
 }
-
-
-/* event row */
 
 .event-row {
   display: grid;
@@ -173,28 +156,13 @@ body {
   border-bottom: 1px solid var(--events-line);
 }
 
-
-/*
-   We remove the border on the final row so
-   there isn't another horizontal "bar"
-   floating above the image section.
-*/
-
 .event-row:last-child {
   border-bottom: 0;
 }
 
-
-/* =========================================
-   EVENT MAIN CONTENT
-========================================= */
-
 .event-main {
   min-width: 0;
 }
-
-
-/* category */
 
 .event-category {
   display: block;
@@ -208,11 +176,8 @@ body {
 
   letter-spacing: 2.2px;
 
-  color: #5c403d;
+  color: var(--events-category);
 }
-
-
-/* event title */
 
 .event-main h3 {
   margin: 0;
@@ -227,11 +192,8 @@ body {
   color: var(--events-burgundy);
 }
 
-
-/* event description */
-
 .event-main p {
-  max-width: 700px;
+  max-width: var(--event-description-max-width);
 
   margin: 10px 0 0;
 
@@ -243,9 +205,6 @@ body {
 
   color: var(--events-text);
 }
-
-
-/* register link */
 
 .event-register {
   display: inline-block;
@@ -263,17 +222,12 @@ body {
 
   color: var(--events-burgundy);
 
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-fast);
 }
 
 .event-register:hover {
   opacity: 0.6;
 }
-
-
-/* =========================================
-   EVENT META
-========================================= */
 
 .event-meta {
   display: grid;
@@ -284,9 +238,6 @@ body {
 
   gap: 15px;
 }
-
-
-/* meta label */
 
 .event-meta div span {
   display: block;
@@ -300,11 +251,8 @@ body {
 
   letter-spacing: 2.5px;
 
-  color: #6d514b;
+  color: var(--events-meta-label);
 }
-
-
-/* meta value */
 
 .event-meta div p {
   margin: 0;
@@ -315,13 +263,8 @@ body {
 
   line-height: 1.4;
 
-  color: #2f2b28;
+  color: var(--events-meta-text);
 }
-
-
-/* =========================================
-   EVERY EVENT ON THE RECORD
-========================================= */
 
 .events-record {
   padding: 28px 0 55px;
@@ -329,16 +272,8 @@ body {
   background: var(--events-bg);
 }
 
-
-/*
-   Smaller overall block than before.
-   The screenshot design uses a relatively
-   compact image rather than a huge 50/50
-   editorial block.
-*/
-
 .events-record-inner {
-  width: min(1160px, calc(100% - 80px));
+  width: min(var(--container-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
@@ -351,15 +286,10 @@ body {
   gap: 38px;
 }
 
-
-/* =========================================
-   RECORD IMAGE
-========================================= */
-
 .events-record-image {
   width: 100%;
 
-  height: 335px;
+  height: var(--record-image-height);
 
   overflow: hidden;
 }
@@ -375,19 +305,11 @@ body {
   object-position: center;
 }
 
-
-/* =========================================
-   RECORD CONTENT
-========================================= */
-
 .events-record-content {
   min-width: 0;
 
   padding: 0;
 }
-
-
-/* record heading */
 
 .events-record-content h2 {
   margin: 0;
@@ -402,11 +324,8 @@ body {
   color: var(--events-burgundy);
 }
 
-
-/* record paragraph */
-
 .events-record-content > p {
-  max-width: 560px;
+  max-width: var(--record-text-max-width);
 
   margin: 17px 0 0;
 
@@ -418,11 +337,6 @@ body {
 
   color: var(--events-text);
 }
-
-
-/* =========================================
-   RECORD LINKS
-========================================= */
 
 .events-record-links {
   display: grid;
@@ -455,14 +369,10 @@ body {
 
   text-decoration: none;
 
-  color: #5c403d;
+  color: var(--events-category);
 
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-fast);
 }
-
-/* =========================================
-   ARCHIVE
-========================================= */
 
 .events-archive {
   padding: 35px 0 70px;
@@ -470,11 +380,8 @@ body {
   background: var(--events-bg);
 }
 
-
-/* archive box */
-
 .events-archive-placeholder {
-  min-height: 310px;
+  min-height: var(--archive-min-height);
 
   margin-top: 25px;
 
@@ -482,9 +389,9 @@ body {
   align-items: center;
   justify-content: center;
 
-  border: 1px dashed #e1d8c8;
+  border: 1px dashed var(--events-archive-border);
 
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--events-archive-bg);
 }
 
 .events-archive-placeholder span {
@@ -495,24 +402,19 @@ body {
 
   letter-spacing: 3px;
 
-  color: #745e54;
+  color: var(--events-archive-text);
 }
 
-
-/* =========================================
-   NOTE
-========================================= */
-
 .events-note {
-  max-width: 720px;
+  max-width: var(--note-max-width);
 
   margin-top: 30px;
 
   padding: 16px 18px;
 
-  border-left: 1px solid #c5a154;
+  border-left: 1px solid var(--events-note-border);
 
-  background: rgba(255, 255, 255, 0.32);
+  background: var(--events-note-bg);
 
   font-family: var(--font-sans);
 
@@ -523,31 +425,19 @@ body {
   color: var(--events-text);
 }
 
-
-/* =========================================
-   LARGE DESKTOP
-========================================= */
-
 @media (min-width: 1500px) {
 
   .events-hero-inner {
-    width: min(1200px, calc(100% - 100px));
+    width: min(var(--hero-max-width), calc(100% - 100px));
   }
 
   .events-container,
   .events-record-inner {
-    width: min(1160px, calc(100% - 100px));
+    width: min(var(--container-max-width), calc(100% - 100px));
   }
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 1000px) {
-
-  /* hero */
 
   .events-hero {
     min-height: 420px;
@@ -571,15 +461,9 @@ body {
     font-size: 18px;
   }
 
-
-  /* shared container */
-
   .events-container {
     width: calc(100% - 50px);
   }
-
-
-  /* event rows */
 
   .event-row {
     grid-template-columns: minmax(0, 1fr) 250px;
@@ -592,9 +476,6 @@ body {
   .event-main h3 {
     font-size: 23px;
   }
-
-
-  /* record */
 
   .events-record {
     padding: 25px 0 50px;
@@ -620,24 +501,12 @@ body {
     font-size: 11px;
   }
 
-
-  /* archive */
-
   .events-archive-placeholder {
     min-height: 280px;
   }
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 750px) {
-
-  /* =======================================
-     HERO
-  ======================================= */
 
   .events-hero {
     min-height: auto;
@@ -675,21 +544,11 @@ body {
     line-height: 1.6;
   }
 
-
-  /* =======================================
-     CONTAINER
-  ======================================= */
-
   .events-container {
     width: 100%;
 
     padding: 0 24px;
   }
-
-
-  /* =======================================
-     UPCOMING
-  ======================================= */
 
   .events-upcoming {
     padding: 38px 0 25px;
@@ -700,11 +559,6 @@ body {
 
     font-size: 26px;
   }
-
-
-  /* =======================================
-     EVENT ROW
-  ======================================= */
 
   .event-row {
     display: block;
@@ -740,9 +594,6 @@ body {
     font-size: 7px;
   }
 
-
-  /* meta */
-
   .event-meta {
     margin-top: 24px;
 
@@ -760,11 +611,6 @@ body {
   .event-meta div p {
     font-size: 11px;
   }
-
-
-  /* =======================================
-     RECORD
-  ======================================= */
 
   .events-record {
     padding: 28px 0 45px;
@@ -800,9 +646,6 @@ body {
     font-size: 12px;
   }
 
-
-  /* record links */
-
   .events-record-links {
     grid-template-columns: 1fr;
 
@@ -814,11 +657,6 @@ body {
 
     font-size: 7px;
   }
-
-
-  /* =======================================
-     ARCHIVE
-  ======================================= */
 
   .events-archive {
     padding: 30px 0 55px;
@@ -842,9 +680,6 @@ body {
     letter-spacing: 2.2px;
   }
 
-
-  /* note */
-
   .events-note {
     max-width: 100%;
 
@@ -855,11 +690,6 @@ body {
     font-size: 11px;
   }
 }
-
-
-/* =========================================
-   VERY SMALL MOBILE
-========================================= */
 
 @media (max-width: 430px) {
 

@@ -5,20 +5,34 @@
   --creative-muted: #aaa095;
   --creative-line: #ded2bf;
   --creative-orange: #b3664b;
+  --creative-breadcrumb: #4f3531;
+  --creative-department-text: #5e3533;
+  --creative-intro-text: #786d63;
+  --creative-tag-text: #795c51;
+  --creative-related-meta: #573636;
+  --creative-card-hover: rgba(255, 255, 255, 0.18);
+  --creative-mark-line: rgba(113, 64, 47, 0.06);
+
+  --institute-color: #7c1731;
+  --academy-color: #b58c3c;
+  --ftb-color: #607587;
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  --hero-max-width: 1440px;
+  --bottom-max-width: 1385px;
+  --hero-min-height: 670px;
+  --programme-image-min-height: 660px;
+
+  --transition-fast: 0.2s ease;
 }
-
-
-/* =========================================
-   HERO
-========================================= */
 
 .creative-hero {
   position: relative;
 
-  min-height: 670px;
+  min-height: var(--hero-min-height);
 
   background: var(--creative-bg);
 
@@ -29,15 +43,12 @@
 }
 
 .creative-hero-inner {
-  width: min(1440px, calc(100% - 80px));
+  width: min(var(--hero-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
   padding: 70px 0 65px;
 }
-
-
-/* breadcrumb */
 
 .department-breadcrumb {
   display: flex;
@@ -49,7 +60,7 @@
   font-size: 9px;
   letter-spacing: 3px;
 
-  color: #4f3531;
+  color: var(--creative-breadcrumb);
 }
 
 .department-breadcrumb a {
@@ -58,11 +69,8 @@
 
   padding-bottom: 3px;
 
-  border-bottom: 1px solid #4f3531;
+  border-bottom: 1px solid var(--creative-breadcrumb);
 }
-
-
-/* department label */
 
 .department-type {
   display: flex;
@@ -78,7 +86,7 @@
 
   letter-spacing: 2.7px;
 
-  color: #5e3533;
+  color: var(--creative-department-text);
 }
 
 .creative-dot {
@@ -91,9 +99,6 @@
 
   background: var(--creative-orange);
 }
-
-
-/* title */
 
 .creative-hero h1 {
   max-width: 900px;
@@ -112,9 +117,6 @@
   color: var(--creative-burgundy);
 }
 
-
-/* intro */
-
 .creative-intro {
   max-width: 760px;
 
@@ -127,11 +129,8 @@
 
   line-height: 1.7;
 
-  color: #786d63;
+  color: var(--creative-intro-text);
 }
-
-
-/* tags */
 
 .creative-tags {
   display: flex;
@@ -153,11 +152,8 @@
 
   letter-spacing: 2.4px;
 
-  color: #795c51;
+  color: var(--creative-tag-text);
 }
-
-
-/* decorative mark */
 
 .creative-mark {
   position: absolute;
@@ -168,7 +164,7 @@
   top: -20px;
   right: -65px;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--creative-mark-line);
   border-radius: 50%;
 
   opacity: 0.45;
@@ -182,7 +178,7 @@
 
   position: absolute;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--creative-mark-line);
   border-radius: 50%;
 }
 
@@ -194,11 +190,6 @@
   inset: 95px;
 }
 
-
-/* =========================================
-   PROGRAMME
-========================================= */
-
 .creative-programme {
   display: grid;
 
@@ -209,11 +200,8 @@
   border-bottom: 1px solid var(--creative-line);
 }
 
-
-/* image */
-
 .creative-programme-image {
-  min-height: 660px;
+  min-height: var(--programme-image-min-height);
 
   overflow: hidden;
 }
@@ -227,9 +215,6 @@
   object-fit: cover;
   object-position: center;
 }
-
-
-/* programme content */
 
 .creative-programme-content {
   background: var(--creative-bg);
@@ -255,9 +240,6 @@
   color: var(--creative-burgundy);
 }
 
-
-/* rows */
-
 .creative-programme-item {
   display: grid;
 
@@ -277,7 +259,7 @@
 .creative-programme-number {
   padding-top: 2px;
 
-  font-family: "Courier New", monospace;
+  font-family: var(--font-mono);
 
   font-size: 9px;
 
@@ -313,23 +295,13 @@
   color: var(--creative-text);
 }
 
-
-/* =========================================
-   BOTTOM
-========================================= */
-
 .creative-bottom {
-  width: min(1385px, calc(100% - 80px));
+  width: min(var(--bottom-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
   padding: 72px 0 55px;
 }
-
-
-/* =========================================
-   RELATED OPPORTUNITIES
-========================================= */
 
 .creative-related h2 {
   margin: 0 0 22px;
@@ -391,7 +363,7 @@
 
   letter-spacing: 3px;
 
-  color: #573636;
+  color: var(--creative-related-meta);
 }
 
 .creative-all-programmes {
@@ -410,11 +382,6 @@
 
   color: var(--creative-burgundy);
 }
-
-
-/* =========================================
-   CTA
-========================================= */
 
 .creative-cta {
   display: flex;
@@ -470,8 +437,8 @@
   color: var(--creative-burgundy);
 
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .creative-cta-button:hover {
@@ -479,11 +446,6 @@
 
   color: var(--creative-bg);
 }
-
-
-/* =========================================
-   ECOSYSTEM
-========================================= */
 
 .creative-ecosystem {
   padding: 70px 0 30px;
@@ -523,7 +485,7 @@
 
   text-decoration: none;
 
-  transition: background 0.2s ease;
+  transition: background var(--transition-fast);
 }
 
 .creative-ecosystem-card:last-child {
@@ -531,11 +493,8 @@
 }
 
 .creative-ecosystem-card:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--creative-card-hover);
 }
-
-
-/* dots */
 
 .creative-card-dot {
   display: block;
@@ -549,19 +508,16 @@
 }
 
 .institute-color {
-  background: #7c1731;
+  background: var(--institute-color);
 }
 
 .academy-color {
-  background: #b58c3c;
+  background: var(--academy-color);
 }
 
 .ftb-color {
-  background: #607587;
+  background: var(--ftb-color);
 }
-
-
-/* card text */
 
 .creative-ecosystem-card h3 {
   margin: 0;
@@ -589,11 +545,6 @@
 
   color: var(--creative-text);
 }
-
-
-/* =========================================
-   TABLET
-========================================= */
 
 @media (max-width: 1000px) {
 
@@ -635,11 +586,6 @@
     width: calc(100% - 50px);
   }
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 750px) {
 
@@ -688,9 +634,6 @@
     display: none;
   }
 
-
-  /* programme */
-
   .creative-programme {
     display: block;
   }
@@ -733,17 +676,11 @@
     font-size: 12px;
   }
 
-
-  /* bottom */
-
   .creative-bottom {
     width: 100%;
 
     padding: 45px 24px;
   }
-
-
-  /* related */
 
   .creative-related h2 {
     font-size: 26px;
@@ -775,9 +712,6 @@
     text-align: left;
   }
 
-
-  /* CTA */
-
   .creative-cta {
     flex-direction: column;
 
@@ -801,9 +735,6 @@
 
     font-size: 8px;
   }
-
-
-  /* ecosystem */
 
   .creative-ecosystem {
     padding-top: 50px;

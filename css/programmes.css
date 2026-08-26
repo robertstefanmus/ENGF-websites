@@ -6,444 +6,742 @@
   --programmes-line: #ded2bf;
   --programmes-gold: #d0ad63;
 
+  --programmes-intro-text: #786d63;
+  --programmes-filter-text: #6f554c;
+  --programmes-eyebrow-text: #5f4843;
+  --programmes-meta-label: #6b5049;
+  --programmes-meta-text: #2f2b28;
+  --programmes-status-border: #e2d3b4;
+  --programmes-status-text: #8a7158;
+  --programmes-note-border: #c5a154;
+  --programmes-note-bg: rgba(255, 255, 255, 0.34);
+
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, sans-serif;
+
+  --container-max-width: 1160px;
+  --hero-intro-max-width: 650px;
+  --card-copy-max-width: 640px;
+  --note-max-width: 720px;
+
+  --hero-min-height: 355px;
+  --list-min-height: 480px;
+  --empty-min-height: 230px;
+
+  --card-meta-width: 470px;
+  --card-meta-width-tablet: 390px;
+
+  --transition-fast: 0.2s ease;
+  --transition-filter: 0.18s ease;
 }
 
 * {
+
   box-sizing: border-box;
+
 }
 
 body {
+
   margin: 0;
+
   background: var(--programmes-bg);
+
   color: var(--programmes-text);
+
 }
 
 .programmes-container {
-  width: min(1160px, calc(100% - 80px));
+
+  width: min(var(--container-max-width), calc(100% - 80px));
+
   margin: 0 auto;
+
 }
 
-/* HERO */
-
 .programmes-hero {
-  min-height: 355px;
+
+  min-height: var(--hero-min-height);
+
   display: flex;
+
   align-items: center;
+
   background: var(--programmes-bg);
+
   border-top: 1px solid var(--programmes-line);
+
   border-bottom: 1px solid var(--programmes-line);
+
 }
 
 .programmes-hero-inner {
+
   padding: 65px 0 58px;
+
 }
 
 .programmes-kicker {
+
   display: block;
+
   margin-bottom: 26px;
+
   font-family: var(--font-sans);
+
   font-size: 8px;
+
   font-weight: 600;
+
   letter-spacing: 4px;
+
   color: var(--programmes-burgundy);
+
 }
 
 .programmes-hero h1 {
+
   margin: 0;
+
   font-family: var(--font-display);
+
   font-size: 64px;
+
   font-weight: 400;
-  line-height: .95;
+
+  line-height: 0.95;
+
   color: var(--programmes-burgundy);
+
 }
 
 .programmes-hero p {
-  max-width: 650px;
+
+  max-width: var(--hero-intro-max-width);
+
   margin: 32px 0 0;
+
   font-family: var(--font-display);
+
   font-size: 20px;
+
   font-style: italic;
+
   line-height: 1.7;
-  color: #786d63;
+
+  color: var(--programmes-intro-text);
+
 }
 
-/* FILTER */
-
 .programme-filter-section {
+
   background: var(--programmes-bg);
+
   border-bottom: 1px solid var(--programmes-line);
+
 }
 
 .programme-filters {
+
   min-height: 66px;
+
   display: flex;
+
   align-items: center;
+
   gap: 7px;
+
   overflow-x: auto;
+
   scrollbar-width: none;
+
 }
 
 .programme-filters::-webkit-scrollbar {
+
   display: none;
+
 }
 
 .programme-filter {
+
   flex: 0 0 auto;
+
   min-height: 28px;
+
   padding: 0 12px;
+
   border: 1px solid var(--programmes-line);
+
   background: transparent;
+
   font-family: var(--font-sans);
+
   font-size: 7px;
+
   font-weight: 600;
+
   letter-spacing: 2px;
-  color: #6f554c;
+
+  color: var(--programmes-filter-text);
+
   cursor: pointer;
-  transition: background .2s ease, color .2s ease, border-color .2s ease;
+
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+
 }
 
 .programme-filter:hover {
+
   border-color: var(--programmes-burgundy);
+
 }
 
 .programme-filter.is-active {
+
   border-color: var(--programmes-burgundy);
+
   background: var(--programmes-burgundy);
+
   color: var(--programmes-bg);
+
 }
 
-/* LIST */
-
 .programmes-list-section {
-  min-height: 480px;
+
+  min-height: var(--list-min-height);
+
   padding: 44px 0 78px;
+
   background: var(--programmes-bg);
+
 }
 
 .programmes-list {
+
   border-top: 1px solid var(--programmes-line);
+
 }
 
 .programme-card {
+
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 470px;
+
+  grid-template-columns: minmax(0, 1fr) var(--card-meta-width);
+
   gap: 55px;
+
   padding: 28px 0 30px;
+
   border-bottom: 1px solid var(--programmes-line);
+
   opacity: 1;
+
   transform: translateY(0);
-  transition: opacity .18s ease, transform .18s ease;
+
+  transition: opacity var(--transition-filter), transform var(--transition-filter);
+
 }
 
 .programme-card-main {
+
   min-width: 0;
+
 }
 
 .programme-eyebrow {
+
   display: block;
+
   margin-bottom: 15px;
+
   font-family: var(--font-sans);
+
   font-size: 8px;
+
   font-weight: 600;
+
   letter-spacing: 2.2px;
-  color: #5f4843;
+
+  color: var(--programmes-eyebrow-text);
+
 }
 
 .programme-card-main h2 {
+
   margin: 0;
+
   font-family: var(--font-display);
+
   font-size: 25px;
+
   font-weight: 400;
+
   line-height: 1.15;
+
   color: var(--programmes-burgundy);
+
 }
 
 .programme-card-main > p {
-  max-width: 640px;
+
+  max-width: var(--card-copy-max-width);
+
   margin: 12px 0 0;
+
   font-family: var(--font-sans);
+
   font-size: 12px;
+
   line-height: 1.55;
+
   color: var(--programmes-text);
+
 }
 
 .programme-actions {
+
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 18px;
+
   margin-top: 20px;
+
 }
 
 .programme-actions a {
+
   font-family: var(--font-sans);
+
   font-size: 8px;
+
   font-weight: 600;
+
   letter-spacing: 2px;
+
   text-decoration: none;
+
   color: var(--programmes-burgundy);
-  transition: opacity .2s ease;
+
+  transition: opacity var(--transition-fast);
+
 }
 
 .programme-actions a:hover {
-  opacity: .6;
+
+  opacity: 0.6;
+
 }
 
-/* META */
-
 .programme-card-meta {
+
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   align-content: start;
+
   column-gap: 38px;
+
   row-gap: 17px;
+
 }
 
 .programme-meta-item span {
+
   display: block;
+
   margin-bottom: 5px;
+
   font-family: var(--font-sans);
+
   font-size: 8px;
+
   font-weight: 600;
+
   letter-spacing: 2px;
-  color: #6b5049;
+
+  color: var(--programmes-meta-label);
+
 }
 
 .programme-meta-item p {
+
   margin: 0;
+
   font-family: var(--font-sans);
+
   font-size: 12px;
+
   line-height: 1.4;
-  color: #2f2b28;
+
+  color: var(--programmes-meta-text);
+
 }
 
 .programme-status {
+
   grid-column: 1 / -1;
+
   width: max-content;
+
   max-width: 100%;
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 7px;
+
   padding: 5px 9px;
-  border: 1px solid #e2d3b4;
+
+  border: 1px solid var(--programmes-status-border);
+
   font-family: var(--font-sans);
+
   font-size: 7px;
+
   font-weight: 500;
+
   letter-spacing: 2px;
-  color: #8a7158;
+
+  color: var(--programmes-status-text);
+
 }
 
 .programme-status-dot {
+
   width: 6px;
+
   height: 6px;
+
   flex: 0 0 auto;
+
   border-radius: 50%;
+
   background: var(--programmes-gold);
+
 }
 
-/* FILTER STATES */
-
 .programme-card.is-filtering-out {
+
   opacity: 0;
+
   transform: translateY(5px);
+
 }
 
 .programme-card[hidden] {
+
   display: none !important;
+
 }
 
 .programmes-empty {
-  min-height: 230px;
+
+  min-height: var(--empty-min-height);
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   padding: 50px 20px;
+
   border-top: 1px solid var(--programmes-line);
+
   font-family: var(--font-display);
+
   font-size: 23px;
+
   font-weight: 400;
+
   text-align: center;
-  color: #786d63;
+
+  color: var(--programmes-intro-text);
+
 }
 
 .programmes-empty[hidden] {
-  display: none;
-}
 
-/* NOTE */
+  display: none;
+
+}
 
 .programmes-note {
-  max-width: 720px;
+
+  max-width: var(--note-max-width);
+
   margin-top: 44px;
+
   padding: 17px 20px;
-  border-left: 1px solid #c5a154;
-  background: rgba(255,255,255,.34);
+
+  border-left: 1px solid var(--programmes-note-border);
+
+  background: var(--programmes-note-bg);
+
   font-family: var(--font-sans);
+
   font-size: 12px;
+
   line-height: 1.55;
+
   color: var(--programmes-text);
+
 }
 
-/* TABLET */
-
 @media (max-width: 1000px) {
+
   .programmes-container {
+
     width: calc(100% - 50px);
+
   }
 
   .programmes-hero {
+
     min-height: 330px;
+
   }
 
   .programmes-hero h1 {
+
     font-size: 54px;
+
   }
 
   .programmes-hero p {
+
     max-width: 620px;
+
     font-size: 18px;
+
   }
 
   .programme-card {
-    grid-template-columns: minmax(0, 1fr) 390px;
+
+    grid-template-columns: minmax(0, 1fr) var(--card-meta-width-tablet);
+
     gap: 35px;
+
   }
 
   .programme-card-meta {
+
     column-gap: 25px;
+
   }
+
 }
 
-/* MOBILE */
-
 @media (max-width: 750px) {
+
   .programmes-hero {
+
     min-height: auto;
+
   }
 
   .programmes-container {
+
     width: 100%;
+
     padding-left: 24px;
+
     padding-right: 24px;
+
   }
 
   .programmes-hero-inner {
+
     padding-top: 54px;
+
     padding-bottom: 50px;
+
   }
 
   .programmes-kicker {
+
     margin-bottom: 22px;
+
     font-size: 7px;
+
     letter-spacing: 3px;
+
   }
 
   .programmes-hero h1 {
+
     font-size: 44px;
+
   }
 
   .programmes-hero p {
+
     margin-top: 26px;
+
     font-size: 16px;
+
     line-height: 1.6;
+
   }
 
   .programme-filter-section .programmes-container {
+
     padding-right: 0;
+
   }
 
   .programme-filters {
+
     min-height: 62px;
+
     gap: 6px;
+
     padding-right: 24px;
+
   }
 
   .programme-filter {
+
     min-height: 27px;
+
     padding: 0 10px;
+
     font-size: 7px;
+
   }
 
   .programmes-list-section {
+
     padding: 34px 0 55px;
+
   }
 
   .programme-card {
+
     display: block;
+
     padding: 26px 0 28px;
+
   }
 
   .programme-eyebrow {
+
     font-size: 7px;
+
     line-height: 1.4;
+
   }
 
   .programme-card-main h2 {
+
     font-size: 22px;
+
   }
 
   .programme-card-main > p {
+
     font-size: 12px;
+
   }
 
   .programme-actions {
+
     gap: 15px;
+
     margin-top: 18px;
+
   }
 
   .programme-card-meta {
+
     margin-top: 28px;
+
     padding-top: 22px;
+
     border-top: 1px solid var(--programmes-line);
+
     column-gap: 20px;
+
     row-gap: 18px;
+
   }
 
   .programme-meta-item span {
+
     font-size: 7px;
+
   }
 
   .programme-meta-item p {
+
     font-size: 11px;
+
   }
 
   .programmes-empty {
+
     min-height: 200px;
+
     font-size: 20px;
+
   }
 
   .programmes-note {
+
     max-width: 100%;
+
     margin-top: 34px;
+
     padding: 16px 17px;
+
     font-size: 11px;
+
   }
+
 }
 
 @media (max-width: 430px) {
+
   .programmes-container {
+
     padding-left: 20px;
+
     padding-right: 20px;
+
   }
 
   .programmes-hero h1 {
+
     font-size: 40px;
+
   }
 
   .programme-filter-section .programmes-container {
+
     padding-right: 0;
+
   }
 
   .programme-filters {
+
     padding-right: 20px;
+
   }
 
   .programme-card-meta {
+
     grid-template-columns: 1fr;
+
   }
 
   .programme-status {
+
     grid-column: 1;
+
   }
 }

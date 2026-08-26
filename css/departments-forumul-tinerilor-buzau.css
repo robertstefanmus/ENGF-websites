@@ -5,19 +5,37 @@
   --ftb-muted: #aaa095;
   --ftb-line: #ded2bf;
   --ftb-blue: #607587;
+  --ftb-breadcrumb: #4f3531;
+  --ftb-department-text: #5e3533;
+  --ftb-intro-text: #786d63;
+  --ftb-tag-text: #795c51;
+  --ftb-note-border: #c9ab60;
+  --ftb-note-bg: rgba(255, 255, 255, 0.3);
+  --ftb-card-hover: rgba(255, 255, 255, 0.18);
+  --ftb-mark-line: rgba(113, 64, 47, 0.06);
+
+  --institute-color: #7c1731;
+  --academy-color: #b58c3c;
+  --agora-color: #2c2926;
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "DM Sans", Arial, sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  --hero-max-width: 1440px;
+  --bottom-max-width: 1385px;
+  --hero-min-height: 595px;
+  --programme-image-min-height: 690px;
+  --intro-max-width: 780px;
+  --programme-text-max-width: 760px;
+  --note-max-width: 865px;
+
+  --transition-fast: 0.2s ease;
 }
-
-
-/* =========================================
-   HERO
-========================================= */
 
 .ftb-hero {
   position: relative;
-  min-height: 595px;
+  min-height: var(--hero-min-height);
 
   background: var(--ftb-bg);
 
@@ -28,15 +46,12 @@
 }
 
 .ftb-hero-inner {
-  width: min(1440px, calc(100% - 80px));
+  width: min(var(--hero-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
   padding: 70px 0 65px;
 }
-
-
-/* breadcrumb */
 
 .department-breadcrumb {
   display: flex;
@@ -47,7 +62,7 @@
   font-size: 9px;
   letter-spacing: 3px;
 
-  color: #4f3531;
+  color: var(--ftb-breadcrumb);
 }
 
 .department-breadcrumb a {
@@ -56,11 +71,8 @@
 
   padding-bottom: 3px;
 
-  border-bottom: 1px solid #4f3531;
+  border-bottom: 1px solid var(--ftb-breadcrumb);
 }
-
-
-/* department label */
 
 .department-type {
   display: flex;
@@ -76,7 +88,7 @@
 
   letter-spacing: 2.7px;
 
-  color: #5e3533;
+  color: var(--ftb-department-text);
 }
 
 .ftb-dot {
@@ -89,9 +101,6 @@
 
   background: var(--ftb-blue);
 }
-
-
-/* title */
 
 .ftb-hero h1 {
   margin: 30px 0 0;
@@ -107,11 +116,8 @@
   color: var(--ftb-burgundy);
 }
 
-
-/* intro */
-
 .ftb-intro {
-  max-width: 780px;
+  max-width: var(--intro-max-width);
 
   margin: 42px 0 0;
 
@@ -122,11 +128,8 @@
 
   line-height: 1.7;
 
-  color: #786d63;
+  color: var(--ftb-intro-text);
 }
-
-
-/* tags */
 
 .ftb-tags {
   display: flex;
@@ -147,11 +150,8 @@
 
   letter-spacing: 2.4px;
 
-  color: #795c51;
+  color: var(--ftb-tag-text);
 }
-
-
-/* decorative circle */
 
 .ftb-mark {
   position: absolute;
@@ -162,7 +162,7 @@
   top: -20px;
   right: -65px;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--ftb-mark-line);
   border-radius: 50%;
 
   opacity: 0.45;
@@ -176,7 +176,7 @@
 
   position: absolute;
 
-  border: 1px solid rgba(113, 64, 47, 0.06);
+  border: 1px solid var(--ftb-mark-line);
   border-radius: 50%;
 }
 
@@ -188,11 +188,6 @@
   inset: 95px;
 }
 
-
-/* =========================================
-   PROGRAMME OF WORK
-========================================= */
-
 .ftb-programme {
   display: grid;
 
@@ -203,11 +198,8 @@
   border-bottom: 1px solid var(--ftb-line);
 }
 
-
-/* image */
-
 .ftb-programme-image {
-  min-height: 690px;
+  min-height: var(--programme-image-min-height);
 
   overflow: hidden;
 }
@@ -221,9 +213,6 @@
   object-fit: cover;
   object-position: center;
 }
-
-
-/* programme content */
 
 .ftb-programme-content {
   background: var(--ftb-bg);
@@ -249,9 +238,6 @@
   color: var(--ftb-burgundy);
 }
 
-
-/* rows */
-
 .ftb-programme-item {
   display: grid;
 
@@ -271,7 +257,7 @@
 .ftb-programme-number {
   padding-top: 2px;
 
-  font-family: "Courier New", monospace;
+  font-family: var(--font-mono);
 
   font-size: 9px;
 
@@ -294,7 +280,7 @@
 }
 
 .ftb-programme-item p {
-  max-width: 760px;
+  max-width: var(--programme-text-max-width);
 
   margin: 13px 0 0;
 
@@ -307,32 +293,22 @@
   color: var(--ftb-text);
 }
 
-
-/* =========================================
-   BOTTOM SECTION
-========================================= */
-
 .ftb-bottom {
-  width: min(1385px, calc(100% - 80px));
+  width: min(var(--bottom-max-width), calc(100% - 80px));
 
   margin: 0 auto;
 
   padding: 72px 0 55px;
 }
 
-
-/* =========================================
-   NOTICE
-========================================= */
-
 .ftb-note {
-  max-width: 865px;
+  max-width: var(--note-max-width);
 
   padding: 20px 22px;
 
-  border-left: 2px solid #c9ab60;
+  border-left: 2px solid var(--ftb-note-border);
 
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--ftb-note-bg);
 
   font-family: var(--font-sans);
 
@@ -342,11 +318,6 @@
 
   color: var(--ftb-text);
 }
-
-
-/* =========================================
-   CTA
-========================================= */
 
 .ftb-cta {
   display: flex;
@@ -402,8 +373,8 @@
   color: var(--ftb-burgundy);
 
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .ftb-cta-button:hover {
@@ -411,11 +382,6 @@
 
   color: var(--ftb-bg);
 }
-
-
-/* =========================================
-   ELSEWHERE IN ECOSYSTEM
-========================================= */
 
 .ftb-ecosystem {
   padding: 70px 0 30px;
@@ -455,7 +421,7 @@
 
   text-decoration: none;
 
-  transition: background 0.2s ease;
+  transition: background var(--transition-fast);
 }
 
 .ftb-ecosystem-card:last-child {
@@ -463,11 +429,8 @@
 }
 
 .ftb-ecosystem-card:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--ftb-card-hover);
 }
-
-
-/* dots */
 
 .ftb-card-dot {
   display: block;
@@ -481,19 +444,16 @@
 }
 
 .institute-color {
-  background: #7c1731;
+  background: var(--institute-color);
 }
 
 .academy-color {
-  background: #b58c3c;
+  background: var(--academy-color);
 }
 
 .agora-color {
-  background: #2c2926;
+  background: var(--agora-color);
 }
-
-
-/* ecosystem typography */
 
 .ftb-ecosystem-card h3 {
   margin: 0;
@@ -522,11 +482,6 @@
   color: var(--ftb-text);
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 1000px) {
 
   .ftb-hero-inner {
@@ -542,7 +497,6 @@
 
     font-size: 19px;
   }
-
 
   .ftb-programme {
     grid-template-columns: 40% 60%;
@@ -566,17 +520,11 @@
     font-size: 13px;
   }
 
-
   .ftb-bottom {
     width: calc(100% - 50px);
   }
 
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 750px) {
 
@@ -584,20 +532,17 @@
     min-height: auto;
   }
 
-
   .ftb-hero-inner {
     width: 100%;
 
     padding: 55px 24px;
   }
 
-
   .department-breadcrumb {
     font-size: 8px;
 
     letter-spacing: 2.4px;
   }
-
 
   .department-type {
     font-size: 8px;
@@ -607,19 +552,16 @@
     letter-spacing: 2px;
   }
 
-
   .ftb-dot {
     width: 9px;
     height: 9px;
   }
-
 
   .ftb-hero h1 {
     font-size: 45px;
 
     line-height: 1;
   }
-
 
   .ftb-intro {
     margin-top: 28px;
@@ -629,30 +571,23 @@
     line-height: 1.55;
   }
 
-
   .ftb-tags {
     margin-top: 30px;
   }
-
 
   .ftb-mark {
     display: none;
   }
 
-
-  /* programme */
-
   .ftb-programme {
     display: block;
   }
-
 
   .ftb-programme-image {
     min-height: 0;
 
     height: 430px;
   }
-
 
   .ftb-programme-title {
     height: auto;
@@ -664,7 +599,6 @@
     letter-spacing: 3px;
   }
 
-
   .ftb-programme-item {
     display: block;
 
@@ -673,18 +607,15 @@
     padding: 28px 24px;
   }
 
-
   .ftb-programme-number {
     display: block;
 
     margin-bottom: 16px;
   }
 
-
   .ftb-programme-item h2 {
     font-size: 21px;
   }
-
 
   .ftb-programme-item p {
     margin-top: 10px;
@@ -692,22 +623,15 @@
     font-size: 12px;
   }
 
-
-  /* bottom */
-
   .ftb-bottom {
     width: 100%;
 
     padding: 45px 24px;
   }
 
-
   .ftb-note {
     font-size: 12px;
   }
-
-
-  /* CTA */
 
   .ftb-cta {
     flex-direction: column;
@@ -721,11 +645,9 @@
     padding: 34px 0;
   }
 
-
   .ftb-cta h2 {
     font-size: 23px;
   }
-
 
   .ftb-cta-button {
     min-width: 170px;
@@ -735,18 +657,13 @@
     font-size: 8px;
   }
 
-
-  /* ecosystem */
-
   .ftb-ecosystem {
     padding-top: 50px;
   }
 
-
   .ftb-ecosystem-grid {
     grid-template-columns: 1fr;
   }
-
 
   .ftb-ecosystem-card {
     min-height: auto;
@@ -758,16 +675,13 @@
     border-bottom: 1px solid var(--ftb-line);
   }
 
-
   .ftb-ecosystem-card:last-child {
     border-bottom: 0;
   }
 
-
   .ftb-ecosystem-card h3 {
     font-size: 20px;
   }
-
 
   .ftb-ecosystem-card p {
     font-size: 12px;
