@@ -5,6 +5,7 @@
     aria-label="Open accessibility settings"
     aria-expanded="false"
     aria-controls="accessibility-panel"
+    data-i18n-aria-label="accessibility_open"
 >
     <img
         src="images/accessibility.png"
@@ -13,35 +14,50 @@
     >
 </button>
 
+
 <div
     id="accessibility-panel"
     class="accessibility-panel"
     role="dialog"
     aria-label="Accessibility settings"
+    data-i18n-aria-label="accessibility_settings"
     hidden
 >
+
     <div class="accessibility-header">
-        <h2>Accessibility</h2>
+
+        <h2 data-i18n="accessibility_title">
+            Accessibility
+        </h2>
 
         <button
             id="accessibility-close"
             class="accessibility-close"
             type="button"
             aria-label="Close accessibility settings"
+            data-i18n-aria-label="accessibility_close"
         >
             ×
         </button>
+
     </div>
 
+
     <div class="accessibility-options">
+
         <div class="accessibility-option">
-            <span>Text size</span>
+
+            <span data-i18n="text_size">
+                Text size
+            </span>
 
             <div class="accessibility-size-controls">
+
                 <button
                     id="text-decrease"
                     type="button"
                     aria-label="Decrease text size"
+                    data-i18n-aria-label="text_decrease"
                 >
                     A−
                 </button>
@@ -50,45 +66,61 @@
                     id="text-increase"
                     type="button"
                     aria-label="Increase text size"
+                    data-i18n-aria-label="text_increase"
                 >
                     A+
                 </button>
+
             </div>
+
         </div>
+
 
         <button
             id="toggle-contrast"
             class="accessibility-action"
             type="button"
             aria-pressed="false"
+            data-i18n="high_contrast"
         >
             High contrast
         </button>
+
 
         <button
             id="toggle-links"
             class="accessibility-action"
             type="button"
             aria-pressed="false"
+            data-i18n="underline_links"
         >
             Underline links
         </button>
+
 
         <button
             id="toggle-readable"
             class="accessibility-action"
             type="button"
             aria-pressed="false"
+            data-i18n="readable_font"
         >
             Readable font
         </button>
+
 
         <button
             id="accessibility-reset"
             class="accessibility-reset"
             type="button"
+            data-i18n="reset_settings"
         >
             RESET SETTINGS
         </button>
+
     </div>
+
 </div>
+
+ <script src="js/translation-accessibility.js">
+  </script>
