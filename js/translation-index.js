@@ -228,7 +228,10 @@ function initIndexTranslations() {
                 "EMAIL ADDRESS",
 
             "subscribe_button":
-                "SUBSCRIBE"
+                "SUBSCRIBE",
+
+                "email":"Enter your email address to subscribe "
+
         },
 
 
@@ -458,7 +461,9 @@ function initIndexTranslations() {
                 "ADRESĂ DE EMAIL",
 
             "subscribe_button":
-                "ABONEAZĂ-TE"
+                "ABONEAZĂ-TE",
+            
+            "email": "Introdu adresa ta de e-mail pentru a te abona"
         },
 
 
@@ -688,7 +693,9 @@ function initIndexTranslations() {
                 "INDIRIZZO EMAIL",
 
             "subscribe_button":
-                "ISCRIVITI"
+                "ISCRIVITI",
+            
+            "email": "Inserisci il tuo indirizzo e-mail per iscriverti"
         }
     };
 

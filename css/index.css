@@ -489,7 +489,7 @@ a {
 }
 
 .sub-heading {
-  color: #7a3138 !important;
+  color: var(--color-primary) !important;
 }
 
 .main-title {
@@ -505,16 +505,22 @@ a {
 }
 
 .content-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 50px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+    align-items: start;
+}
+
+.image-wrapper {
+    width: 100%;
 }
 
 .image-wrapper img {
-  width: 70%;
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .details-wrapper {
@@ -590,7 +596,7 @@ a {
 .value {
   font-size: 13px;
   line-height: 1.4;
-  color: #3b2023;
+  color: var(--color-primary);
 }
 
 .btn {
@@ -656,7 +662,7 @@ a {
 
 .insights-tag,
 .events-tag {
-  color: #7a3138;
+  color: var(--color-primary)
 }
 
 .research-header h2,
@@ -754,7 +760,7 @@ a {
 
 .partnership-kicker {
   margin-bottom: 24px;
-  color: #7a3138;
+  color: var(--color-primary);
 }
 
 .partnership-copy h2 {
@@ -918,7 +924,7 @@ a {
 
     letter-spacing: 4px;
 
-    color: #6b0010;
+    color: var(--color-primary);
 }
 
 .newsletter h2 {
@@ -934,7 +940,7 @@ a {
 
     letter-spacing: -0.5px;
 
-    color: #59000c;
+    color: var(--color-primary);
 }
 
 .newsletter__form {
@@ -966,7 +972,7 @@ a {
 
     letter-spacing: 2.8px;
 
-    color: #52000b;
+    color: var(--color-primary);
 }
 
 .newsletter__field input {
@@ -997,7 +1003,7 @@ a {
 }
 
 .newsletter__field input:focus {
-    border-bottom-color: #59000c;
+    border-bottom-color: var(--color-primary);
 }
 
 .newsletter__field input:user-invalid {
@@ -1022,7 +1028,7 @@ a {
 
     letter-spacing: 2.8px;
 
-    color: #59000c;
+    color: var(--color-primary);
 
     cursor: pointer;
 }
@@ -1032,7 +1038,7 @@ a {
 }
 
 .newsletter__form button:focus-visible {
-    outline: 1px solid #59000c;
+    outline: 1px solid var(--color-primary);
     outline-offset: 6px;
 }
 

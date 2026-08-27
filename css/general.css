@@ -35,8 +35,8 @@
   --color-language-separator: #c2bbb1;
   --color-language-muted: #bbb4aa;
   --color-language-active: #6e3137;
+  --color-nav-active: #681018;
   --color-button-hover: #21060b;
-  --color-white: #fff;
   --color-white: #fff;
   --color-footer-bright: #d8d1c8;
   --color-footer-heading: #8d8984;
@@ -1705,7 +1705,7 @@ body.menu-open {
 
   .nav a.active,
   .nav a[aria-current="page"] {
-    color: var(--color-burgundy);
+    color: var(--color-nav-active);
   }
 
   .nav a.active::after,
@@ -1727,7 +1727,7 @@ body.menu-open {
   .ecosystem-menu > a[aria-current="page"],
   .ecosystem-menu.current-menu-item > a,
   .ecosystem-menu.current_page_item > a {
-    color: var(--color-burgundy);
+    color: var(--color-nav-active);
   }
 
   .ecosystem-menu.active > a::after,
@@ -1823,4 +1823,100 @@ body.menu-open {
   .white-panel .box:nth-child(6)::before { background: var(--dot-06); }
   .white-panel .box:nth-child(7)::before { background: var(--dot-07); }
   .white-panel .box:nth-child(8)::before { background: var(--dot-08-desktop); }
+}
+
+@media (min-width: 801px) {
+  .topbar {
+    column-gap: 0;
+  }
+
+  .brand-group {
+    margin-right: clamp(14px, 1.5vw, 28px);
+  }
+
+  .nav {
+    gap: clamp(9px, 0.9vw, 18px);
+    justify-content: flex-end;
+  }
+
+  .nav a {
+    font-size: clamp(0.52rem, 0.52vw, 0.64rem);
+    letter-spacing: clamp(0.08em, 0.1vw, 0.14em);
+  }
+
+  .lang-switcher {
+    margin-left: clamp(10px, 1vw, 18px);
+    margin-right: clamp(8px, 0.8vw, 14px);
+  }
+
+  .get-involved-btn {
+    width: clamp(112px, 9vw, 138px);
+    font-size: clamp(0.55rem, 0.52vw, 0.62rem);
+    letter-spacing: 0.13em;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1500px) {
+  .topbar {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .brand-group {
+    margin-right: 14px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+  }
+
+  .lang-switcher {
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .lang-switcher label:not(:last-child)::after {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .get-involved-btn {
+    width: 112px;
+    font-size: 0.54rem;
+    letter-spacing: 0.11em;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1250px) {
+  .brand-name {
+    display: none;
+  }
+
+  .brand-group {
+    margin-right: 10px;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .nav a {
+    font-size: 0.49rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 800px) {
+  .mobile-menu a.active,
+  .mobile-menu a[aria-current="page"] {
+    color: var(--color-burgundy);
+    font-weight: 600;
+  }
 }

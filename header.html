@@ -56,7 +56,7 @@
 
         <div class="ecosystem-menu">
 
-            <a class="lang-text"
+            <a class="lang-text ecosystem-trigger"
                data-i18n="nav_ecosystem">
                 ECOSYSTEM
             </a>
@@ -224,7 +224,7 @@
          LANGUAGE SWITCHER
     ========================================== -->
 
-    <fieldset class="lang-switcher">
+    <fieldset class="lang-switcher" aria-label="Language">
 
         <label>
             <input type="radio"
@@ -396,6 +396,63 @@
 
 </header>
 
+
+
+<script>
+(function () {
+    function normalisePath(value) {
+        if (!value) return "index";
+
+        value = value.split("#")[0].split("?")[0];
+        value = value.replace(/^https?:\/\/[^/]+/i, "");
+        value = value.replace(/^\/+|\/+$/g, "");
+
+        if (!value) return "index";
+
+        const parts = value.split("/");
+        let page = parts[parts.length - 1] || "index";
+
+        page = page.replace(/\.html?$/i, "");
+        return page || "index";
+    }
+
+    const currentPage = normalisePath(window.location.pathname);
+
+    const ecosystemPages = new Set([
+        "institute",
+        "academy",
+        "forumul-tinerilor-buzau",
+        "agora",
+        "forum",
+        "community",
+        "creative-youth-platform",
+        "digital-education"
+    ]);
+
+    document.querySelectorAll(".nav a[href], .mobile-menu a[href], .white-panel a[href]").forEach(function (link) {
+        const linkPage = normalisePath(link.getAttribute("href"));
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+
+    if (ecosystemPages.has(currentPage)) {
+        const ecosystemMenu = document.querySelector(".ecosystem-menu");
+        const ecosystemTrigger = document.querySelector(".ecosystem-trigger");
+
+        if (ecosystemMenu) {
+            ecosystemMenu.classList.add("active");
+        }
+
+        if (ecosystemTrigger) {
+            ecosystemTrigger.classList.add("active");
+            ecosystemTrigger.setAttribute("aria-current", "page");
+        }
+    }
+})();
+</script>
 
 <script src="js/mobile-view.js"></script>
 <script src="js/components.js"></script>
